@@ -669,14 +669,15 @@ const state = {
   quickFilters: new Set(["noNights"]),
   selectedCategory: "all",
   ratePeriod: "month",
-  searchQuery: "Infermiere Valli di Lanzo o Torino Nord, senza notti",
+  searchQuery: "Ricerca personalizzata per distanza e disponibilita",
   wizardStep: 1,
   filteredJobs: [],
   searchCompleted: false,
   searchOrigin: null,
+  locationRequestInFlight: false,
+  locationRequestAttempted: false,
   searchProfile: {
     role: "",
-    area: "",
     distance: 0,
     origin: null,
     shifts: "",
@@ -1391,7 +1392,7 @@ function infoMap(job, workplace) {
       </div>
       <div class="info-map-item place">
         <span>Sede</span>
-        <strong>${job.distance} km da te</strong>
+        <strong>${distanceLabelForJob(job, " da te")}</strong>
         <small>${workplace.facts[0]}</small>
       </div>
       <div class="info-map-item effort">
@@ -1478,7 +1479,7 @@ function requestSignals() {
       twoShifts: "due turni",
       any: "turni aperti"
     }[profile.shifts];
-    return [searchRoleLabels[profile.role], searchAreaLabels[profile.area], shift].filter(Boolean);
+    return [searchRoleLabels[profile.role], searchDistanceLabel(profile), shift].filter(Boolean);
   }
   const query = state.searchQuery.toLowerCase();
   const signals = [];
@@ -1506,20 +1507,12 @@ const searchRoleLabels = {
   oss: "OSS"
 };
 
-const searchAreaLabels = {
-  "valli-lanzo": "Valli di Lanzo",
-  "torino-nord": "Torino Nord e cintura",
-  limitrofi: "Comuni limitrofi",
-  italia: "Tutta Italia"
-};
-
 function jobMatchesSearchProfile(job) {
   const profile = state.searchProfile;
   if (!state.searchCompleted) return false;
   if (job.publicationStatus !== "published") return false;
   if (profile.role === "oss" && job.category !== "oss") return false;
   if (profile.role === "infermiere" && job.category === "oss") return false;
-  if (profile.area !== "italia" && (!Array.isArray(job.searchAreas) || !job.searchAreas.includes(profile.area))) return false;
   const distance = distanceFromSearchOrigin(job);
   if (distance === null || distance > Number(profile.distance)) return false;
   if (profile.contracts.length && !profile.contracts.includes(job.contract)) return false;
@@ -1553,19 +1546,22 @@ function distanceFromSearchOrigin(job) {
   return Number(distanceInKm(origin, destination).toFixed(1));
 }
 
-function searchOriginLabel() {
-  return state.searchProfile.origin?.label || "la posizione selezionata";
+function distanceLabelForJob(job, suffix = "") {
+  const distance = distanceFromSearchOrigin(job);
+  return distance === null ? "Distanza non disponibile" : `${distance} km${suffix}`;
+}
+
+function searchDistanceLabel(profile = state.searchProfile) {
+  const distance = Number(profile.distance);
+  if (distance >= 9999) return "in tutta Italia";
+  return distance ? `entro ${distance} km dalla tua posizione` : "raggio da definire";
 }
 
 function resultsSummaryForProfile() {
   const profile = state.searchProfile;
-  const distanceLabel = profile.distance >= 9999
-    ? "nessun limite di distanza"
-    : profile.distance ? `entro ${profile.distance} km da ${searchOriginLabel()}` : "";
   const parts = [
     searchRoleLabels[profile.role],
-    searchAreaLabels[profile.area],
-    distanceLabel,
+    searchDistanceLabel(profile),
     profile.shifts === "noNights" ? "senza notti" : profile.shifts === "dayOnly" ? "solo diurno" : profile.shifts === "twoShifts" ? "due turni" : ""
   ].filter(Boolean);
   return parts.join(" · ");
@@ -1589,7 +1585,7 @@ function renderResultsTriage() {
   const profile = state.searchProfile;
   const sourceCount = new Set(state.filteredJobs.flatMap((job) => sourceEntries(job).map(({ name }) => name))).size;
   resultsTriage.innerHTML = `
-    <div><small>Profilo</small><strong>${searchRoleLabels[profile.role]}</strong><span>${searchAreaLabels[profile.area]}</span></div>
+    <div><small>Profilo</small><strong>${searchRoleLabels[profile.role]}</strong><span>${searchDistanceLabel(profile)}</span></div>
     <div><small>Vincolo principale</small><strong>${profile.shifts === "noNights" ? "Senza notti" : profile.shifts === "dayOnly" ? "Solo diurno" : profile.shifts === "twoShifts" ? "Due turni" : "Turni aperti"}</strong><span>${availabilityPreferenceLabel()}</span></div>
     <div><small>Risultati nel perimetro</small><strong>${state.filteredJobs.length}</strong><span>${sourceCount} fonti nelle schede</span></div>
   `;
@@ -1599,7 +1595,11 @@ function renderScreening() {
   if (!screeningGrid) return;
   const publishedJobs = jobs.filter((job) => job.publicationStatus === "published");
   const excludedByNight = publishedJobs.filter((job) => job.nights).length;
-  const outsideDistance = publishedJobs.filter((job) => job.distance > Number(document.getElementById("distanceFilter").value)).length;
+  const activeDistance = Number(document.getElementById("distanceFilter").value);
+  const outsideDistance = publishedJobs.filter((job) => {
+    const distance = distanceFromSearchOrigin(job);
+    return distance === null || distance > activeDistance;
+  }).length;
   const visibleSources = new Set(state.filteredJobs.flatMap((job) => sourceEntries(job).map(({ name }) => name)));
   const signals = requestSignals();
 
@@ -1646,7 +1646,7 @@ function renderPersonalMarket() {
   const profile = state.searchProfile;
   const salaryObservations = state.filteredJobs.filter((job) => !isSalaryMissing(job));
   const role = searchRoleLabels[profile.role];
-  const area = searchAreaLabels[profile.area];
+  const area = searchDistanceLabel(profile);
 
   personalMarketPanel.innerHTML = `
     <div class="personal-market-copy">
@@ -1686,7 +1686,7 @@ function jobCard(job) {
       <span class="match-badge">${formatMatch(job)}</span>
       ${sourceChips(job, 2)}
       <div class="job-meta">
-        <div class="meta-item"><small>Distanza</small><strong>${job.distance} km</strong></div>
+        <div class="meta-item"><small>Distanza</small><strong>${distanceLabelForJob(job)}</strong></div>
         <div class="meta-item"><small>Contratto</small><strong>${job.contract}</strong></div>
         <div class="meta-item"><small>Turni</small><strong>${job.shifts}</strong></div>
         <div class="meta-item"><small>Scadenza</small><strong>${job.deadlineLabel}</strong></div>
@@ -1719,7 +1719,7 @@ function jobListCard(job) {
               <span class="job-type">${job.type}</span>
               ${sponsorBadge(job)}
               <h3>${job.title}</h3>
-              <p>${job.company} · ${job.location} · ${job.distance} km</p>
+              <p>${job.company} · ${job.location} · ${distanceLabelForJob(job)}</p>
               ${sourceProvenance(job)}
               <span class="workplace-score">${workplace.rating} ★ · ${workplace.reviewCount} opinioni sul posto</span>
               ${sourceChips(job)}
@@ -1848,7 +1848,8 @@ function applyJobFilters() {
   state.filteredJobs = jobs.filter((job) => {
     if (!jobMatchesSearchProfile(job)) return false;
     if (state.selectedCategory !== "all" && job.category !== state.selectedCategory) return false;
-    if (job.distance > maxDistance) return false;
+    const jobDistance = distanceFromSearchOrigin(job);
+    if (jobDistance === null || jobDistance > maxDistance) return false;
     if (contracts.length && !contracts.includes(job.contract)) return false;
     if (shiftPreference === "noNights" && job.nights) return false;
     if (shiftPreference === "dayOnly" && job.shifts !== "Solo diurni") return false;
@@ -1858,7 +1859,7 @@ function applyJobFilters() {
 
   const sort = document.getElementById("sortJobs").value;
   state.filteredJobs.sort((a, b) => {
-    if (sort === "distance") return a.distance - b.distance;
+    if (sort === "distance") return (distanceFromSearchOrigin(a) ?? Infinity) - (distanceFromSearchOrigin(b) ?? Infinity);
     if (sort === "deadline") return a.deadline.localeCompare(b.deadline);
     return b.match - a.match;
   });
@@ -2103,7 +2104,7 @@ function renderDetail(jobId) {
           <div>
             <span class="job-type">${job.type}</span>
             <h1>${job.title}</h1>
-            <div class="detail-company">${job.company} · ${job.location} · ${job.distance} km</div>
+            <div class="detail-company">${job.company} · ${job.location} · ${distanceLabelForJob(job)}</div>
             <span class="verified-badge">Fonte controllata · ${job.checked}</span>
             ${sponsorBadge(job)}
           </div>
@@ -2444,6 +2445,8 @@ function navigate(route) {
 
   if (route === "results") {
     applyJobFilters();
+  } else if (route === "home") {
+    requestSearchLocation({ automatic: true });
   } else if (route === "detail") {
     renderDetail(state.selectedJobId);
   } else if (route === "apply") {
@@ -2529,6 +2532,52 @@ function collectSponsorRequest() {
     "Nota: priorità di evidenza solo se compatibile con le ricerche degli utenti.",
     ...fields.map(([label, value]) => `${label}: ${value}`)
   ].join("\n\n");
+}
+
+function requestSearchLocation({ automatic = false, force = false } = {}) {
+  const locationInput = document.getElementById("searchLocation");
+  const locationHint = document.getElementById("searchLocationHint");
+
+  if (state.locationRequestInFlight || (automatic && state.locationRequestAttempted)) return;
+  if (state.searchOrigin && !force) {
+    if (locationInput) locationInput.value = "Posizione attuale acquisita";
+    return;
+  }
+
+  if (automatic) state.locationRequestAttempted = true;
+  if (!navigator.geolocation) {
+    if (locationHint) locationHint.textContent = "La posizione non è disponibile su questo dispositivo: aggiorna il browser o usa un dispositivo con servizi di localizzazione attivi.";
+    return;
+  }
+
+  state.locationRequestInFlight = true;
+  if (locationInput) locationInput.value = "Rilevamento in corso...";
+  if (locationHint) locationHint.textContent = "Consenti l'uso della posizione per calcolare il raggio in km. Non viene salvata.";
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      state.locationRequestInFlight = false;
+      state.searchOrigin = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+        label: "la tua posizione attuale"
+      };
+      if (locationInput) locationInput.value = "Posizione attuale acquisita";
+      if (locationHint) locationHint.textContent = "Posizione pronta: il raggio in km partirà da qui. Puoi aggiornarla dal mirino.";
+      showToast("Posizione pronta per la ricerca");
+    },
+    (error) => {
+      state.locationRequestInFlight = false;
+      state.searchOrigin = null;
+      if (locationInput) locationInput.value = "";
+      const message = error?.code === 1
+        ? "Per cercare entro un raggio in km, consenti la posizione nelle impostazioni del browser e poi tocca il mirino."
+        : "Non riesco a rilevare la posizione. Controlla connessione e servizi di localizzazione, poi tocca il mirino.";
+      if (locationHint) locationHint.textContent = message;
+      showToast("Posizione non disponibile");
+    },
+    { enableHighAccuracy: false, timeout: 12000, maximumAge: 300000 }
+  );
 }
 
 document.addEventListener("click", (event) => {
@@ -2658,32 +2707,7 @@ document.addEventListener("click", (event) => {
     navigate("info");
     window.setTimeout(() => document.getElementById("sourceRegistry")?.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
   } else if (action === "locate-search") {
-    const locationInput = document.getElementById("searchLocation");
-    const locationHint = document.getElementById("searchLocationHint");
-    if (!navigator.geolocation) {
-      if (locationHint) locationHint.textContent = "La geolocalizzazione non è disponibile su questo dispositivo.";
-      return;
-    }
-    if (locationHint) locationHint.textContent = "Sto acquisendo la posizione...";
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        state.searchOrigin = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-          label: "la tua posizione attuale"
-        };
-        if (locationInput) locationInput.value = "Posizione attuale acquisita";
-        if (locationHint) locationHint.textContent = "Raggio pronto: la distanza sarà calcolata da questa posizione.";
-        showToast("Posizione acquisita solo per questa ricerca");
-      },
-      () => {
-        state.searchOrigin = null;
-        if (locationInput) locationInput.value = "";
-        if (locationHint) locationHint.textContent = "Autorizza la posizione per calcolare correttamente il raggio in km.";
-        showToast("Posizione non autorizzata");
-      },
-      { enableHighAccuracy: false, timeout: 12000, maximumAge: 300000 }
-    );
+    requestSearchLocation({ force: true });
   }
 });
 
@@ -2695,14 +2719,7 @@ document.addEventListener("input", (event) => {
 
 document.getElementById("searchForm").addEventListener("submit", (event) => {
   event.preventDefault();
-  const form = event.currentTarget;
-  if (!form.checkValidity()) {
-    form.reportValidity();
-    return;
-  }
-
   const role = document.getElementById("searchRole").value;
-  const area = document.getElementById("searchArea").value;
   const distance = Number(document.getElementById("searchDistance").value);
   const shifts = document.getElementById("searchShifts").value;
   const availability = document.getElementById("searchAvailability").value;
@@ -2710,15 +2727,27 @@ document.getElementById("searchForm").addEventListener("submit", (event) => {
   const notes = document.getElementById("searchNotes").value.trim();
   const origin = validCoordinates(state.searchOrigin);
 
+  const requiredFields = [
+    [role, "il profilo professionale", "searchRole"],
+    [distance, "la distanza massima", "searchDistance"],
+    [shifts, "l'organizzazione dei turni", "searchShifts"],
+    [availability, "la disponibilità", "searchAvailability"]
+  ];
+  const missingField = requiredFields.find(([value]) => !value);
+  if (missingField) {
+    showToast(`Completa ${missingField[1]}`);
+    document.getElementById(missingField[2])?.focus();
+    return;
+  }
+
   if (!origin) {
-    showToast("Seleziona prima la tua posizione");
-    document.getElementById("searchLocation")?.focus();
+    showToast("Attendi o autorizza la posizione per calcolare il raggio");
+    document.querySelector('[data-action="locate-search"]')?.focus();
     return;
   }
 
   state.searchProfile = {
     role,
-    area,
     distance,
     origin: { ...origin, label: state.searchOrigin.label },
     shifts,
@@ -2728,11 +2757,12 @@ document.getElementById("searchForm").addEventListener("submit", (event) => {
   };
   state.searchCompleted = true;
   state.searchQuery = resultsSummaryForProfile();
-  state.localProfile = { role: searchRoleLabels[role], area: searchAreaLabels[area] };
+  state.localProfile = { role: searchRoleLabels[role], area: "Ricerca per distanza" };
   writeLocalJson(LOCAL_STORAGE_KEYS.profile, state.localProfile);
   syncResultControlsFromSearch();
   document.getElementById("resultsSummary").textContent = resultsSummaryForProfile();
   navigate("results");
+  window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
 });
 
 document.getElementById("offerReviewForm")?.addEventListener("submit", (event) => {

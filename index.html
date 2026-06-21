@@ -8,7 +8,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>RadarSanità</title>
-  <link rel="stylesheet" href="styles.css?v=45">
+  <link rel="stylesheet" href="styles.css?v=46">
 </head>
 <body>
   <div class="app-shell">
@@ -89,7 +89,7 @@
       <section class="view active" id="view-intro" data-view="intro">
         <div class="intro-hero">
           <div class="intro-copy">
-            <span class="eyebrow">RadarSanità · Valli di Lanzo e Torino Nord</span>
+            <span class="eyebrow">RadarSanità · Ricerca lavoro sanitaria</span>
             <h1>Una bussola visiva per scegliere lavoro sanitario senza perdere tempo.</h1>
             <p>
               Fonti visibili, tariffe confrontabili e candidatura assistita ma
@@ -416,7 +416,7 @@
             </div>
           </div>
           <div class="flow-steps">
-            <div class="flow-step"><span>1</span><strong>Richiesta</strong><p>Ruolo, zona, turni e vincoli personali.</p></div>
+            <div class="flow-step"><span>1</span><strong>Richiesta</strong><p>Ruolo, raggio dalla tua posizione, turni e vincoli personali.</p></div>
             <div class="flow-step"><span>2</span><strong>Scrematura</strong><p>Duplicati accorpati e offerte non coerenti escluse.</p></div>
             <div class="flow-step"><span>3</span><strong>Dossier</strong><p>Dati ordinati per fiducia, valore e sforzo.</p></div>
             <div class="flow-step"><span>4</span><strong>Candidatura</strong><p>Bozza pronta, documenti elencati e invio manuale sul canale ufficiale.</p></div>
@@ -427,12 +427,12 @@
       <section class="view" id="view-home" data-view="home">
         <div class="home-hero">
           <div class="hero-copy">
-            <span class="eyebrow">Focus iniziale: Valli di Lanzo · Torino Nord</span>
+            <span class="eyebrow">Ricerca su misura</span>
             <h1>Costruisci una ricerca che parte da te.</h1>
             <p>
-              RadarSanita parte da questo territorio per clienti e fonti dirette,
-              ma puoi estendere la tua ricerca in tutta Italia. Prima scegli ruolo,
-              area, disponibilita e vincoli; poi vengono elaborati solo risultati coerenti.
+              Parti dalla tua posizione attuale e scegli il raggio di ricerca. Puoi
+              cercare vicino a te o in tutta Italia: vengono elaborati solo risultati
+              coerenti con il tuo profilo e i tuoi vincoli.
             </p>
           </div>
 
@@ -460,31 +460,23 @@
                 <section class="search-intake-step">
                   <span>02</span>
                   <div>
-                    <h2>Zona</h2>
+                    <h2>Distanza</h2>
                     <div class="location-field">
                       <label for="searchLocation">La tua posizione di partenza</label>
                       <div>
-                        <input id="searchLocation" type="text" readonly required placeholder="Usa la posizione attuale">
-                        <button class="location-button" type="button" data-action="locate-search" aria-label="Usa la mia posizione attuale" title="Usa la mia posizione attuale">⌖</button>
+                        <input id="searchLocation" type="text" readonly aria-describedby="searchLocationHint" placeholder="Rilevamento della posizione...">
+                        <button class="location-button" type="button" data-action="locate-search" aria-label="Aggiorna la mia posizione attuale" title="Aggiorna la mia posizione attuale">⌖</button>
                       </div>
-                      <small id="searchLocationHint">Tocca il mirino per autorizzare la posizione: il raggio in km parte da qui.</small>
+                      <small id="searchLocationHint">La posizione attuale viene richiesta all'apertura della ricerca e serve solo a calcolare il raggio in km.</small>
                     </div>
-                    <label for="searchArea">Dove vuoi lavorare?</label>
-                    <select id="searchArea" required>
-                      <option value="">Scegli l'area</option>
-                      <option value="valli-lanzo">Valli di Lanzo</option>
-                      <option value="torino-nord">Torino Nord e cintura</option>
-                      <option value="limitrofi">Comuni limitrofi</option>
-                      <option value="italia">Tutta Italia</option>
-                    </select>
-                    <label for="searchDistance">Distanza massima</label>
+                    <label for="searchDistance">Entro quale distanza vuoi cercare?</label>
                     <select id="searchDistance" required>
                       <option value="">Scegli una distanza</option>
                       <option value="10">Entro 10 km</option>
                       <option value="15">Entro 15 km</option>
                       <option value="30">Entro 30 km</option>
                       <option value="50">Entro 50 km</option>
-                      <option value="9999">Nessun limite per ricerca nazionale</option>
+                      <option value="9999">In tutta Italia</option>
                     </select>
                   </div>
                 </section>
@@ -541,7 +533,7 @@
               <button class="primary-button search-button intake-submit" type="submit">
                 Elabora la mia ricerca
               </button>
-              <p class="search-intake-note">Nessuna bacheca generale: vedrai solo risultati nel perimetro scelto.</p>
+            <p class="search-intake-note">Nessuna bacheca generale: vedrai solo risultati nel raggio e con i criteri scelti.</p>
             </form>
 
             <aside class="live-radar-panel" aria-label="Radar ricerca">
@@ -577,7 +569,7 @@
           <div>
             <span class="eyebrow">Risultati</span>
             <h1>Offerte adatte a te</h1>
-            <p id="resultsSummary">Infermiere · Torino · senza notti</p>
+            <p id="resultsSummary">La tua ricerca personalizzata</p>
           </div>
         </div>
 
@@ -891,7 +883,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=45"></script>
-  <script src="app.js?v=45"></script>
+  <script src="data.js?v=46"></script>
+  <script src="app.js?v=46"></script>
 </body>
 </html>
