@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-labelledby="title desc">
+  <title id="title">Sede e ambiente</title>
+  <desc id="desc">Una struttura, una posizione e segnali di contesto.</desc>
+  <rect width="180" height="120" rx="22" fill="#f4fbf8"/>
+  <rect x="28" y="45" width="72" height="48" rx="8" fill="#ffffff" stroke="#cde7e1" stroke-width="2"/>
+  <path d="M38 45V30h52v15" fill="#dff3ee"/>
+  <rect x="43" y="56" width="13" height="13" rx="3" fill="#0f766e"/>
+  <rect x="70" y="56" width="13" height="13" rx="3" fill="#9fd8ce"/>
+  <rect x="57" y="78" width="16" height="15" rx="4" fill="#0b4f4a"/>
+  <path d="M127 30c-16 0-29 13-29 29 0 22 29 42 29 42s29-20 29-42c0-16-13-29-29-29z" fill="#fff1de" stroke="#9a5a22" stroke-width="3"/>
+  <circle cx="127" cy="59" r="10" fill="#9a5a22"/>
+</svg>

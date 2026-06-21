@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-labelledby="title desc">
+  <title id="title">Dicci la tua</title>
+  <desc id="desc">Due conversazioni e una scheda con risposte aperte.</desc>
+  <rect width="180" height="120" rx="22" fill="#f4fbf8"/>
+  <rect x="24" y="24" width="68" height="44" rx="16" fill="#ffffff" stroke="#cde7e1" stroke-width="2"/>
+  <path d="M45 68l-10 15 24-12" fill="#ffffff" stroke="#cde7e1" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="44" y="39" width="30" height="6" rx="3" fill="#0f766e"/>
+  <rect x="108" y="34" width="48" height="36" rx="15" fill="#0f766e"/>
+  <path d="M137 70l11 13-24-11" fill="#0f766e"/>
+  <rect x="119" y="48" width="24" height="5" rx="2.5" fill="#ffffff"/>
+  <rect x="50" y="82" width="84" height="16" rx="8" fill="#e3f4f0"/>
+  <circle cx="45" cy="90" r="5" fill="#9a5a22"/>
+  <rect x="62" y="87" width="52" height="6" rx="3" fill="#9fd8ce"/>
+</svg>

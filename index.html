@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>RadarSanità</title>
+  <link rel="stylesheet" href="styles.css?v=45">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <button class="brand" data-route="intro" aria-label="Vai alla presentazione">
+        <span class="brand-mark" aria-hidden="true">
+          <svg class="logo-mark" viewBox="0 0 48 48" role="img">
+            <path class="logo-signal" d="M8 29h8l3-7 5 13 4-8h4"></path>
+            <circle class="logo-origin" cx="32" cy="27" r="3"></circle>
+            <path class="logo-wave inner" d="M35 23a8 8 0 0 1 0 8"></path>
+            <path class="logo-wave outer" d="M39 19a14 14 0 0 1 0 16"></path>
+          </svg>
+        </span>
+        <span>
+          <strong class="brand-wordmark"><span>Radar</span><span>Sanità</span></strong>
+          <small>Infermieri e OSS</small>
+        </span>
+      </button>
+
+      <nav class="desktop-nav" aria-label="Navigazione principale">
+        <button class="nav-item active" data-route="intro">
+          <span class="nav-icon">◐</span>
+          Presentazione
+        </button>
+        <button class="nav-item" data-route="info">
+          <span class="nav-icon">i</span>
+          Info
+        </button>
+        <button class="nav-item" data-route="home">
+          <span class="nav-icon">⌂</span>
+          Cerca lavoro
+        </button>
+        <button class="nav-item" data-route="saved">
+          <span class="nav-icon">♡</span>
+          Salvate
+          <span class="nav-count" id="savedCount">0</span>
+        </button>
+        <button class="nav-item" data-route="applications">
+          <span class="nav-icon">✓</span>
+          Candidature
+          <span class="nav-count" id="applicationCount">0</span>
+        </button>
+        <button class="nav-item" data-route="feedback">
+          <span class="nav-icon">✎</span>
+          Dicci la tua
+        </button>
+        <button class="nav-item" data-route="employers">
+          <span class="nav-icon">＋</span>
+          Per strutture
+        </button>
+      </nav>
+
+      <div class="profile-card">
+        <div class="avatar">U0</div>
+        <div>
+          <strong>Utente 0</strong>
+          <small>Profilo privato su questo dispositivo</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="mobile-header">
+        <button class="brand" data-route="intro" aria-label="Vai alla presentazione">
+          <span class="brand-mark" aria-hidden="true">
+            <svg class="logo-mark" viewBox="0 0 48 48" role="img">
+              <path class="logo-signal" d="M8 29h8l3-7 5 13 4-8h4"></path>
+              <circle class="logo-origin" cx="32" cy="27" r="3"></circle>
+              <path class="logo-wave inner" d="M35 23a8 8 0 0 1 0 8"></path>
+              <path class="logo-wave outer" d="M39 19a14 14 0 0 1 0 16"></path>
+            </svg>
+          </span>
+          <span><strong class="brand-wordmark"><span>Radar</span><span>Sanità</span></strong></span>
+        </button>
+        <span class="avatar small-avatar" aria-label="Utente 0">U0</span>
+      </header>
+
+      <section class="view active" id="view-intro" data-view="intro">
+        <div class="intro-hero">
+          <div class="intro-copy">
+            <span class="eyebrow">RadarSanità · Valli di Lanzo e Torino Nord</span>
+            <h1>Una bussola visiva per scegliere lavoro sanitario senza perdere tempo.</h1>
+            <p>
+              Fonti visibili, tariffe confrontabili e candidatura assistita ma
+              non automatica: tutto pensato per infermieri e OSS che
+              vogliono decidere prima di investire tempo.
+            </p>
+            <div class="intro-signal-strip" aria-label="Segnali principali">
+              <span><strong>Media tracciabili</strong> foto o loghi solo dalla fonte</span>
+              <span><strong>Fonti visibili</strong> enti, portali e albi</span>
+              <span><strong>Decisione rapida</strong> turni, distanza, contratto</span>
+            </div>
+            <div class="risk-mode-strip" aria-label="Modalità pilota a rischio minimo">
+              <span><strong>Beta privata</strong> prime funzioni disponibili a Utente 0</span>
+              <span><strong>Nessuna intermediazione</strong> invio finale sempre personale</span>
+              <span><strong>Zero API obbligatorie</strong> prompt copiabili nei modelli già disponibili</span>
+            </div>
+            <div class="intro-actions">
+              <button class="primary-button" data-route="home">Cerca offerte</button>
+              <button class="secondary-button" data-route="info">Come funziona</button>
+            </div>
+            <div class="intro-proof-strip" aria-label="Copertura iniziale">
+              <div><strong>13</strong><span>fonti iniziali</span></div>
+              <div><strong>3</strong><span>livelli di verifica</span></div>
+              <div><strong>0</strong><span>invii automatici</span></div>
+            </div>
+          </div>
+
+          <aside class="intro-panel product-preview" aria-label="Anteprima scheda offerta">
+            <div class="preview-window-bar">
+              <span></span><span></span><span></span>
+              <strong>Dossier offerta</strong>
+            </div>
+            <div class="preview-job">
+              <span class="job-type">Molto adatta</span>
+              <strong>Infermiere ambulatoriale · Torino</strong>
+              <small>8 km · niente notti · part-time 30 ore</small>
+            </div>
+            <div class="preview-decision-row">
+              <div><small>Fiducia</small><strong>Alta</strong></div>
+              <div><small>Candidatura</small><strong>bozza pronta</strong></div>
+              <div><small>Da chiarire</small><strong>1 dato</strong></div>
+            </div>
+            <div class="preview-accordion">
+              <span>Contratto e stipendio</span><strong>chiaro</strong>
+            </div>
+            <div class="preview-accordion">
+              <span>Turni e criticità</span><strong>2 avvisi</strong>
+            </div>
+            <div class="preview-accordion">
+              <span>Recensioni colleghi</span><strong>3,9/5</strong>
+            </div>
+            <div class="preview-market-line">
+              <span>Borsa tariffe</span>
+              <svg viewBox="0 0 180 52" aria-hidden="true">
+                <path d="M6 39 C34 28, 47 34, 70 23 S112 17, 132 25 S158 29, 174 14"></path>
+              </svg>
+            </div>
+            <div class="preview-trust-strip">
+              <span>Fonte primaria</span>
+              <span>Controllata oggi</span>
+              <span>Duplicati uniti</span>
+            </div>
+          </aside>
+        </div>
+
+        <section class="landing-choice-map" aria-label="Percorsi principali">
+          <article data-route="home">
+            <img src="assets/function-visuals/filter-search.svg" alt="Lente e filtro per cercare offerte sanitarie">
+            <div>
+              <span class="route-icon">⌕</span>
+              <strong>Cerca offerte</strong>
+              <p>Filtra opportunità sanitarie per zona, turni, contratto e fonte.</p>
+            </div>
+          </article>
+          <article data-route="info">
+            <img src="assets/function-visuals/radar-scan.svg" alt="Radar che separa fonti e segnali">
+            <div>
+              <span class="route-icon">i</span>
+              <strong>Capisci il metodo</strong>
+              <p>Vedi come vengono separati dati ufficiali, segnali di contesto e criticità.</p>
+            </div>
+          </article>
+          <article data-route="feedback">
+            <img src="assets/function-visuals/feedback-voice.svg" alt="Conversazioni e risposte aperte">
+            <div>
+              <span class="route-icon">✎</span>
+              <strong>Dicci la tua</strong>
+              <p>Racconta problemi concreti di lavoro, turni, gestione o organizzazione.</p>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <section class="view" id="view-info" data-view="info">
+        <div class="info-hero">
+          <div>
+            <span class="eyebrow">Come funziona</span>
+            <h1>Informazioni ordinate per decidere, non per riempire una pagina.</h1>
+            <p>
+              RadarSanità tiene separati offerte, fonti, foto reali, recensioni,
+              tariffe e passaggi di candidatura. Così ogni dato ha un ruolo chiaro.
+            </p>
+          </div>
+          <div class="info-source-card" aria-label="Fonti consultate">
+            <span>Fonti mostrate nella scheda</span>
+            <div class="source-dock-row">
+              <button class="source-avatar source-asl" type="button" data-source-full="ASL: Azienda Sanitaria Locale, bandi e avvisi aziendali">ASL</button>
+              <button class="source-avatar source-opi" type="button" data-source-full="OPI: Ordine delle Professioni Infermieristiche">OPI</button>
+              <button class="source-avatar source-rsa" type="button" data-source-full="RSA: Residenza Sanitaria Assistenziale o struttura privata">RSA</button>
+              <button class="source-avatar source-indeed" type="button" data-source-full="Indeed: portale lavoro generalista">id</button>
+              <button class="source-avatar source-infojobs" type="button" data-source-full="InfoJobs: portale lavoro generalista">ij</button>
+              <button class="source-avatar source-linkedin" type="button" data-source-full="LinkedIn: social e portale professionale">in</button>
+              <button class="source-avatar source-albo" type="button" data-source-full="Albo: albo pretorio o portale pubblico ufficiale">Al</button>
+            </div>
+            <p class="source-explainer" data-source-explainer>Tocca una sigla per vedere cosa significa.</p>
+          </div>
+        </div>
+
+        <section class="human-navigation" aria-label="Navigazione guidata">
+          <article>
+            <img src="assets/function-visuals/place-context.svg" alt="Mappa stilizzata con sede, percorso e contesto sanitario">
+            <div>
+              <span class="route-icon">1</span>
+              <strong>Parti dai luoghi</strong>
+              <p>Sede, distanza, collegamenti e contesto restano leggibili prima della candidatura.</p>
+            </div>
+          </article>
+          <article>
+            <img src="assets/function-visuals/radar-scan.svg" alt="Radar stilizzato che distingue fonti e segnali">
+            <div>
+              <span class="route-icon">2</span>
+              <strong>Controlla le fonti</strong>
+              <p>Vedi e apri la fonte: ente, datore, portale, albo o segnalazione pubblica.</p>
+            </div>
+          </article>
+          <article>
+            <img src="assets/function-visuals/doc-steps.svg" alt="Passaggi stilizzati per valutare e preparare una candidatura">
+            <div>
+              <span class="route-icon">3</span>
+              <strong>Decidi con meno attrito</strong>
+              <p>Turni, stipendio, documenti e candidatura vengono letti insieme.</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="source-registry-section" id="sourceRegistry" aria-labelledby="sourceRegistryTitle">
+          <div class="source-registry-heading">
+            <div>
+              <span class="eyebrow">Registro fonti</span>
+              <h2 id="sourceRegistryTitle">Le fonti consultate sono sempre apribili.</h2>
+              <p>Le fonti ufficiali, i datori diretti, i portali e i canali professionali restano separati. Tocca un nome per aprire il sito originale.</p>
+            </div>
+            <img src="assets/function-visuals/radar-scan.svg" alt="Radar stilizzato che collega fonti diverse">
+          </div>
+          <div class="source-registry-list" id="sourceRegistryList" aria-live="polite"></div>
+        </section>
+
+        <section class="intro-problem">
+          <div>
+            <span class="eyebrow">Il problema reale</span>
+            <h2>Il lavoro sanitario non si sceglie da un titolo e un link.</h2>
+          </div>
+          <div class="problem-list">
+            <span>Contratto e turni spesso separati</span>
+            <span>Fonti con affidabilità diversa</span>
+            <span>Stipendi difficili da confrontare</span>
+            <span>Candidature con passaggi nascosti</span>
+          </div>
+        </section>
+
+        <section class="decision-principles" aria-labelledby="decisionPrinciplesTitle">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Informazioni che guidano</span>
+              <h2 id="decisionPrinciplesTitle">La scheda mette in evidenza prima ciò che cambia la decisione.</h2>
+            </div>
+          </div>
+          <div class="principle-grid">
+            <article class="principle-card trust">
+              <span class="principle-kicker">01</span>
+              <img class="function-visual" src="assets/function-visuals/trust-stars.svg" alt="Stelle e verifica per valutare la fiducia">
+              <h3>Fiducia</h3>
+              <p>Fonte primaria, data del controllo e duplicati sono sempre vicini al dato.</p>
+            </article>
+            <article class="principle-card value">
+              <span class="principle-kicker">02</span>
+              <img class="function-visual" src="assets/function-visuals/rate-market-clean.svg" alt="Linea delle tariffe che oscilla">
+              <h3>Convenienza</h3>
+              <p>Compenso, turni, distanza e mercato vengono letti insieme, non a pezzi.</p>
+            </article>
+            <article class="principle-card effort">
+              <span class="principle-kicker">03</span>
+              <img class="function-visual" src="assets/function-visuals/doc-steps.svg" alt="Documenti e passaggi controllati">
+              <h3>Passaggi</h3>
+              <p>Documenti, SPID/CIE, partita IVA e dati mancanti sono espliciti prima di aprire il canale ufficiale.</p>
+            </article>
+            <article class="principle-card proof">
+              <span class="principle-kicker">04</span>
+              <img class="function-visual" src="assets/function-visuals/place-context.svg" alt="Sede sanitaria e posizione sul territorio">
+              <h3>Sede e ambiente</h3>
+              <p>Logistica, organizzazione e opinioni dei colleghi sono utili, ma restano separati dai dati ufficiali.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="coverage-dashboard" aria-labelledby="coverageTitle">
+          <div class="coverage-copy">
+            <span class="eyebrow">Copertura, non solo ricerca</span>
+            <h2 id="coverageTitle">RadarSanità controlla fonti diverse e ti mostra solo ciò che ha senso per te.</h2>
+            <p>
+              Nel prodotto reale ogni numero sarà verificabile: fonte controllata,
+              ultimo aggiornamento, duplicati accorpati e motivi di esclusione.
+            </p>
+            <img class="section-visual" src="assets/function-visuals/radar-scan.svg" alt="Radar che controlla fonti locali">
+          </div>
+          <div class="coverage-grid">
+            <div class="coverage-tile">
+              <strong id="coverageMonitored">0</strong>
+              <span>fonti nel registro</span>
+            </div>
+            <div class="coverage-tile">
+              <strong id="coverageChecked">0</strong>
+              <span>famiglie coperte</span>
+            </div>
+            <div class="coverage-tile">
+              <strong id="coverageDuplicates">0</strong>
+              <span>ufficiali o dirette</span>
+            </div>
+            <div class="coverage-tile muted-tile">
+              <strong id="coverageExcluded">0</strong>
+              <span>segnalazioni pubbliche</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="intro-grid">
+          <article class="intro-card">
+            <span class="intro-icon">⌕</span>
+            <img class="function-visual" src="assets/function-visuals/filter-search.svg" alt="Lente e filtro per scremare le offerte">
+            <h2>Trova e screma</h2>
+            <p>
+              Cerca in più fonti, unisce offerte duplicate e mostra solo quelle
+              compatibili con profilo, distanza, turni, contratto e categoria.
+            </p>
+          </article>
+          <article class="intro-card">
+            <span class="intro-icon">IA</span>
+            <img class="function-visual" src="assets/function-visuals/ai-check.svg" alt="Scheda controllata dall'assistente IA">
+            <h2>Spiega e controlla</h2>
+            <p>
+              Le regole locali e la revisione assistita riassumono fonti, rischi,
+              scadenze e requisiti. I dati importanti restano collegati alla fonte.
+            </p>
+          </article>
+          <article class="intro-card">
+            <span class="intro-icon">€</span>
+            <img class="function-visual" src="assets/function-visuals/rate-market-clean.svg" alt="Grafico oscillante della borsa tariffe">
+            <h2>Confronta il mercato</h2>
+            <p>
+              Confronta compensi e andamento del mercato per capire se una proposta
+              è sopra, sotto o in linea con offerte simili nella stessa area.
+            </p>
+          </article>
+        </div>
+
+        <section class="dossier-showcase" aria-labelledby="dossierTitle">
+          <div>
+            <span class="eyebrow">Dentro ogni risultato</span>
+            <h2 id="dossierTitle">Ogni offerta diventa una risposta: conviene, posso farlo, mi fido?</h2>
+            <p>
+              Le informazioni non hanno lo stesso peso. RadarSanità mette in alto i
+              segnali rapidi e lascia i dettagli in sezioni apribili quando servono.
+            </p>
+          </div>
+          <div class="dossier-path">
+            <div><img class="path-visual" src="assets/function-visuals/rate-market-clean.svg" alt=""><small>Conviene?</small><strong>Compenso · distanza · turni</strong></div>
+            <div><img class="path-visual" src="assets/function-visuals/doc-steps.svg" alt=""><small>Posso farlo?</small><strong>Requisiti · documenti · vincoli</strong></div>
+            <div><img class="path-visual" src="assets/function-visuals/trust-stars.svg" alt=""><small>Mi fido?</small><strong>Fonte · controllo · copertura</strong></div>
+            <div><img class="path-visual" src="assets/function-visuals/filter-search.svg" alt=""><small>Quanto pesa?</small><strong>Account · SPID/CIE · invio manuale</strong></div>
+          </div>
+        </section>
+
+        <section class="how-it-works">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Tutto in un posto</span>
+              <h2>Come ti aiuta RadarSanità</h2>
+            </div>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">1</span>
+              <img class="step-visual" src="assets/function-visuals/filter-search.svg" alt="">
+              <h3>Trova</h3>
+              <p>Seleziona solo le offerte coerenti con ciò che cerchi.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">2</span>
+              <img class="step-visual" src="assets/function-visuals/ai-check.svg" alt="">
+              <h3>Capisci</h3>
+              <p>Contratto, turni, requisiti e problemi sono già spiegati.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">3</span>
+              <img class="step-visual" src="assets/function-visuals/place-context.svg" alt="">
+              <h3>Valuta il posto</h3>
+              <p>Foto, logistica e opinioni dei colleghi restano separate dai dati ufficiali.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">4</span>
+              <img class="step-visual" src="assets/function-visuals/doc-steps.svg" alt="">
+              <h3>Prepara candidatura</h3>
+              <p>Generi checklist e bozza; l'invio finale resta sul canale ufficiale e sotto il tuo controllo.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="intro-flow" aria-labelledby="introFlowTitle">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Dal segnale all'azione</span>
+              <h2 id="introFlowTitle">La ricerca porta a una decisione, non a un elenco infinito.</h2>
+            </div>
+          </div>
+          <div class="flow-steps">
+            <div class="flow-step"><span>1</span><strong>Richiesta</strong><p>Ruolo, zona, turni e vincoli personali.</p></div>
+            <div class="flow-step"><span>2</span><strong>Scrematura</strong><p>Duplicati accorpati e offerte non coerenti escluse.</p></div>
+            <div class="flow-step"><span>3</span><strong>Dossier</strong><p>Dati ordinati per fiducia, valore e sforzo.</p></div>
+            <div class="flow-step"><span>4</span><strong>Candidatura</strong><p>Bozza pronta, documenti elencati e invio manuale sul canale ufficiale.</p></div>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" id="view-home" data-view="home">
+        <div class="home-hero">
+          <div class="hero-copy">
+            <span class="eyebrow">Focus iniziale: Valli di Lanzo · Torino Nord</span>
+            <h1>Costruisci una ricerca che parte da te.</h1>
+            <p>
+              RadarSanita parte da questo territorio per clienti e fonti dirette,
+              ma puoi estendere la tua ricerca in tutta Italia. Prima scegli ruolo,
+              area, disponibilita e vincoli; poi vengono elaborati solo risultati coerenti.
+            </p>
+          </div>
+
+          <div class="search-workbench">
+            <form class="search-panel" id="searchForm">
+              <div class="search-intake-heading">
+                <span class="eyebrow">La tua ricerca</span>
+                <strong>Completa tutti i passaggi per vedere risultati.</strong>
+              </div>
+
+              <div class="search-intake-grid">
+                <section class="search-intake-step">
+                  <span>01</span>
+                  <div>
+                    <h2>Profilo</h2>
+                    <label for="searchRole">Quale lavoro cerchi?</label>
+                    <select id="searchRole" required>
+                      <option value="">Scegli il tuo profilo</option>
+                      <option value="infermiere">Infermiere/a</option>
+                      <option value="oss">OSS</option>
+                    </select>
+                  </div>
+                </section>
+
+                <section class="search-intake-step">
+                  <span>02</span>
+                  <div>
+                    <h2>Zona</h2>
+                    <div class="location-field">
+                      <label for="searchLocation">La tua posizione di partenza</label>
+                      <div>
+                        <input id="searchLocation" type="text" readonly required placeholder="Usa la posizione attuale">
+                        <button class="location-button" type="button" data-action="locate-search" aria-label="Usa la mia posizione attuale" title="Usa la mia posizione attuale">⌖</button>
+                      </div>
+                      <small id="searchLocationHint">Tocca il mirino per autorizzare la posizione: il raggio in km parte da qui.</small>
+                    </div>
+                    <label for="searchArea">Dove vuoi lavorare?</label>
+                    <select id="searchArea" required>
+                      <option value="">Scegli l'area</option>
+                      <option value="valli-lanzo">Valli di Lanzo</option>
+                      <option value="torino-nord">Torino Nord e cintura</option>
+                      <option value="limitrofi">Comuni limitrofi</option>
+                      <option value="italia">Tutta Italia</option>
+                    </select>
+                    <label for="searchDistance">Distanza massima</label>
+                    <select id="searchDistance" required>
+                      <option value="">Scegli una distanza</option>
+                      <option value="10">Entro 10 km</option>
+                      <option value="15">Entro 15 km</option>
+                      <option value="30">Entro 30 km</option>
+                      <option value="50">Entro 50 km</option>
+                      <option value="9999">Nessun limite per ricerca nazionale</option>
+                    </select>
+                  </div>
+                </section>
+
+                <section class="search-intake-step">
+                  <span>03</span>
+                  <div>
+                    <h2>Vincoli</h2>
+                    <label for="searchShifts">Quale organizzazione accetti?</label>
+                    <select id="searchShifts" required>
+                      <option value="">Scegli i turni</option>
+                      <option value="noNights">Escludi le notti</option>
+                      <option value="dayOnly">Solo orario diurno</option>
+                      <option value="twoShifts">Due turni</option>
+                      <option value="any">Valuto qualsiasi turno</option>
+                    </select>
+                    <label for="searchAvailability">Quando saresti disponibile?</label>
+                    <select id="searchAvailability" required>
+                      <option value="">Scegli la disponibilita</option>
+                      <option value="days">Entro pochi giorni</option>
+                      <option value="weeks">Entro poche settimane</option>
+                      <option value="months">Tra alcuni mesi</option>
+                      <option value="any">Da concordare</option>
+                    </select>
+                  </div>
+                </section>
+              </div>
+
+              <fieldset class="intake-contracts">
+                <legend>Contratto che valuti</legend>
+                <label class="check-row"><input type="checkbox" value="Indeterminato" name="intakeContract"> Tempo indeterminato</label>
+                <label class="check-row"><input type="checkbox" value="Determinato" name="intakeContract"> Tempo determinato</label>
+                <label class="check-row"><input type="checkbox" value="Partita IVA" name="intakeContract"> Partita IVA</label>
+              </fieldset>
+
+              <label class="search-label" for="searchNotes">Cosa vuoi evitare o trovare? <span>facoltativo</span></label>
+              <textarea id="searchNotes" rows="3" autocomplete="off" placeholder="Es. festivi solo occasionali, preferisco ambulatorio, auto disponibile..."></textarea>
+
+              <div class="source-dock" aria-label="Miniature fonti consultate">
+                <span>Fonti che RadarSanita incrocia per la tua ricerca</span>
+                <div class="source-dock-row">
+                  <button class="source-avatar source-asl" type="button" data-source-full="ASL: Azienda Sanitaria Locale, bandi e avvisi aziendali">ASL</button>
+                  <button class="source-avatar source-opi" type="button" data-source-full="OPI: Ordine delle Professioni Infermieristiche">OPI</button>
+                  <button class="source-avatar source-rsa" type="button" data-source-full="RSA: Residenza Sanitaria Assistenziale o struttura privata">RSA</button>
+                  <button class="source-avatar source-indeed" type="button" data-source-full="Indeed: portale lavoro generalista">id</button>
+                  <button class="source-avatar source-infojobs" type="button" data-source-full="InfoJobs: portale lavoro generalista">ij</button>
+                  <button class="source-avatar source-linkedin" type="button" data-source-full="LinkedIn: social e portale professionale">in</button>
+                  <button class="source-avatar source-albo" type="button" data-source-full="Albo: albo pretorio o portale pubblico ufficiale">Al</button>
+                </div>
+                <p class="source-explainer" data-source-explainer>Tocca una sigla per vedere cosa significa.</p>
+                <button class="text-button source-registry-link" type="button" data-action="open-sources">Consulta tutte le fonti</button>
+              </div>
+
+              <button class="primary-button search-button intake-submit" type="submit">
+                Elabora la mia ricerca
+              </button>
+              <p class="search-intake-note">Nessuna bacheca generale: vedrai solo risultati nel perimetro scelto.</p>
+            </form>
+
+            <aside class="live-radar-panel" aria-label="Radar ricerca">
+              <div class="radar-panel-head">
+                <span>Ricerca su misura</span>
+                <strong>13 fonti iniziali</strong>
+              </div>
+              <div class="radar-scope" aria-hidden="true">
+                <span class="radar-ring r1"></span>
+                <span class="radar-ring r2"></span>
+                <span class="radar-ring r3"></span>
+                <span class="radar-axis horizontal"></span>
+                <span class="radar-axis vertical"></span>
+                <span class="radar-sweep"></span>
+                <span class="radar-hit hit-a"></span>
+                <span class="radar-hit hit-b"></span>
+                <span class="radar-hit hit-c"></span>
+              </div>
+              <div class="radar-legend">
+                <span><strong>Profilo</strong> prima scelta</span>
+                <span><strong>Vincoli</strong> prima dei risultati</span>
+                <span><strong>Fonti</strong> solo nel perimetro scelto</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="view" id="view-results" data-view="results">
+        <div class="page-header">
+          <button class="back-button" data-route="home" aria-label="Torna alla home">←</button>
+          <div>
+            <span class="eyebrow">Risultati</span>
+            <h1>Offerte adatte a te</h1>
+            <p id="resultsSummary">Infermiere · Torino · senza notti</p>
+          </div>
+        </div>
+
+        <div class="triage-strip" id="resultsTriage" aria-label="Sintesi della tua ricerca">
+          <div><small>Prima scelta</small><strong>Ambulatoriale</strong><span>Massima compatibilità</span></div>
+          <div><small>Da leggere</small><strong>2 criticità</strong><span>Retribuzione e festivi</span></div>
+          <div><small>Scartate</small><strong>31 offerte</strong><span>Fuori profilo o distanza</span></div>
+        </div>
+
+        <div class="results-layout">
+          <aside class="filters-panel">
+            <div class="filter-panel-header">
+              <h2>Filtri</h2>
+              <button class="text-button" id="resetFilters">Azzera</button>
+            </div>
+
+            <label class="field-label" for="categoryFilter">Tipologia</label>
+            <select id="categoryFilter">
+              <option value="all">Tutte</option>
+              <option value="privato">Lavoro privato</option>
+              <option value="concorso">Concorsi e avvisi</option>
+              <option value="lp">Libera professione</option>
+              <option value="oss">Opportunità OSS</option>
+            </select>
+
+            <label class="field-label spaced-label" for="distanceFilter">Distanza massima</label>
+            <select id="distanceFilter">
+              <option value="100">Qualsiasi</option>
+              <option value="30" selected>30 km</option>
+              <option value="15">15 km</option>
+              <option value="10">10 km</option>
+              <option value="50">50 km</option>
+              <option value="9999">Nessun limite nazionale</option>
+            </select>
+
+            <fieldset>
+              <legend>Contratto</legend>
+              <label class="check-row">
+                <input type="checkbox" value="Indeterminato" name="contract">
+                Tempo indeterminato
+              </label>
+              <label class="check-row">
+                <input type="checkbox" value="Determinato" name="contract">
+                Tempo determinato
+              </label>
+              <label class="check-row">
+                <input type="checkbox" value="Partita IVA" name="contract">
+                Partita IVA
+              </label>
+            </fieldset>
+
+            <label class="field-label spaced-label" for="shiftFilter">Turni</label>
+            <select id="shiftFilter">
+              <option value="any">Qualsiasi organizzazione</option>
+              <option value="noNights" selected>Senza notti</option>
+              <option value="dayOnly">Solo orario diurno</option>
+              <option value="twoShifts">Due turni</option>
+            </select>
+
+            <label class="field-label spaced-label" for="availabilityFilter">Disponibilità a iniziare</label>
+            <select id="availabilityFilter">
+              <option value="any" selected>Da concordare</option>
+              <option value="days">Entro pochi giorni</option>
+              <option value="weeks">Entro poche settimane</option>
+              <option value="months">Tra alcuni mesi</option>
+            </select>
+
+            <button class="primary-button full-button" id="applyFilters">
+              Applica filtri
+            </button>
+          </aside>
+
+          <div class="results-content">
+            <section class="screening-panel" aria-labelledby="screeningTitle">
+              <div>
+                <span class="eyebrow">Scrematura guidata</span>
+                <h2 id="screeningTitle">Perché vedi questi risultati</h2>
+                <p id="screeningSummary">RadarSanità applica filtri dichiarati e accorpa le offerte uguali trovate su più fonti.</p>
+              </div>
+              <div class="screening-grid" id="screeningGrid"></div>
+            </section>
+
+            <section class="personal-market-panel" id="personalMarketPanel" aria-live="polite"></section>
+
+            <div class="results-toolbar">
+              <strong id="resultCount">0 offerte</strong>
+              <label>
+                Ordina
+                <select id="sortJobs">
+                  <option value="match">Più adatte</option>
+                  <option value="distance">Più vicine</option>
+                  <option value="deadline">Scadenza</option>
+                </select>
+              </label>
+            </div>
+            <div class="job-list" id="jobList"></div>
+            <div class="empty-state hidden" id="emptyState">
+              <span class="empty-icon">⌕</span>
+              <h2>Nessuna offerta verificata per la tua ricerca</h2>
+              <p>RadarSanita non mostra annunci generici, esempi o schede senza fonte e candidatura validate.</p>
+              <button class="secondary-button" id="emptyReset">Modifica la ricerca</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="view-detail" data-view="detail">
+        <div id="jobDetail"></div>
+      </section>
+
+      <section class="view" id="view-apply" data-view="apply">
+        <div id="applicationWizard"></div>
+      </section>
+
+      <section class="view" id="view-saved" data-view="saved">
+        <div class="page-header">
+          <button class="back-button" data-route="home">←</button>
+          <div>
+            <span class="eyebrow">Area personale</span>
+            <h1>Offerte salvate</h1>
+            <p>Le opportunità che vuoi rivedere con calma.</p>
+          </div>
+        </div>
+        <div class="job-list" id="savedJobs"></div>
+        <div class="empty-state" id="savedEmpty">
+          <span class="empty-icon">♡</span>
+          <h2>Non hai ancora salvato offerte</h2>
+          <p>Usa il cuore sulle offerte che vuoi ritrovare qui.</p>
+          <button class="primary-button" data-route="home">Avvia una ricerca</button>
+        </div>
+      </section>
+
+      <section class="view" id="view-applications" data-view="applications">
+        <div class="page-header">
+          <button class="back-button" data-route="home">←</button>
+          <div>
+            <span class="eyebrow">Area personale</span>
+            <h1>Le tue candidature</h1>
+            <p>Bozze, checklist e passaggi preparati per candidarti personalmente sui canali ufficiali.</p>
+          </div>
+        </div>
+
+        <div class="application-list" id="applicationsList" aria-live="polite"></div>
+      </section>
+
+      <section class="view" id="view-feedback" data-view="feedback">
+        <div class="feedback-hero">
+          <div>
+            <span class="eyebrow">Dicci la tua</span>
+            <h1>Racconta cosa pesa davvero nel lavoro sanitario.</h1>
+            <p>
+              Rispondi con episodi concreti: turni, carichi, clima, crescita,
+              burocrazia, famiglia, ricerca lavoro, gestione personale o qualunque
+              altro problema che incontri davvero.
+            </p>
+          </div>
+          <aside class="feedback-note-card">
+            <span>Due percorsi</span>
+            <strong>Professionisti e strutture</strong>
+            <p>Le domande cambiano in base a chi vive il reparto e a chi organizza il personale.</p>
+          </aside>
+        </div>
+
+        <div class="feedback-role-toggle" role="group" aria-label="Scegli il percorso">
+          <button class="selected" type="button" data-feedback-role="candidate">
+            <span>IN</span>
+            Infermieri e OSS
+          </button>
+          <button type="button" data-feedback-role="employer">
+            <span>EN</span>
+            Enti e strutture
+          </button>
+        </div>
+
+        <form class="feedback-form" id="feedbackForm">
+          <div class="feedback-panel" data-feedback-panel="candidate">
+            <div class="feedback-question">
+              <label for="fbCandidateSearch">Negli ultimi mesi, quale problema lavorativo ti ha pesato di più?</label>
+              <textarea id="fbCandidateSearch" rows="4" placeholder="Turni, carichi, notti, clima, stipendio, distanza, famiglia, formazione, burocrazia, altro..."></textarea>
+            </div>
+            <div class="feedback-question">
+              <label for="fbCandidateMissing">Racconta un episodio concreto in cui ti sei sentito bloccato o poco ascoltato.</label>
+              <textarea id="fbCandidateMissing" rows="4" placeholder="Cosa è successo, chi era coinvolto, cosa hai provato a fare e cosa non ha funzionato?"></textarea>
+            </div>
+            <div class="feedback-question">
+              <label for="fbCandidateAbandoned">Quale decisione o attività rimandi spesso perché è troppo faticosa?</label>
+              <textarea id="fbCandidateAbandoned" rows="4" placeholder="Cambiare lavoro, chiedere informazioni, organizzare turni, fare documenti, parlare con coordinatori, formarti..."></textarea>
+            </div>
+            <div class="feedback-question">
+              <label for="fbCandidateWorkaround">Come provi a risolvere oggi e cosa ti costa?</label>
+              <textarea id="fbCandidateWorkaround" rows="4" placeholder="Colleghi, gruppi, chiamate, note, agenzie, famiglia, rinunce, straordinari, compromessi, tempo perso..."></textarea>
+            </div>
+          </div>
+
+          <div class="feedback-panel hidden" data-feedback-panel="employer">
+            <div class="feedback-question">
+              <label for="fbEmployerSearch">Quale problema organizzativo o di personale pesa di più oggi?</label>
+              <textarea id="fbEmployerSearch" rows="4" placeholder="Turnover, assenze, copertura turni, clima interno, candidature, costi, formazione, documenti, qualità assistenziale..."></textarea>
+            </div>
+            <div class="feedback-question">
+              <label for="fbEmployerBlock">Racconta l'ultimo episodio in cui il problema ha creato un costo concreto.</label>
+              <textarea id="fbEmployerBlock" rows="4" placeholder="Turno scoperto, urgenza, agenzia, straordinari, lamentele, colloqui saltati, reparto in difficoltà..."></textarea>
+            </div>
+            <div class="feedback-question">
+              <label for="fbEmployerRepeat">Quale attività ripetitiva porta via più tempo al coordinamento?</label>
+              <textarea id="fbEmployerRepeat" rows="4" placeholder="Telefonate, chiarimenti, turni, documenti, colloqui, inserimenti, gestione assenze, comunicazioni interne..."></textarea>
+            </div>
+            <div class="feedback-question">
+              <label for="fbEmployerTools">Come lo gestite oggi e cosa non funziona bene?</label>
+              <textarea id="fbEmployerTools" rows="4" placeholder="Fogli, gestionali, chat, agenzie, passaparola, procedure interne, riunioni, soluzioni manuali o temporanee..."></textarea>
+            </div>
+          </div>
+
+          <div class="feedback-actions">
+            <button class="primary-button" type="button" data-action="copy-feedback">Copia risposte</button>
+            <button class="secondary-button" type="reset">Ripulisci</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="view" id="view-employers" data-view="employers">
+        <div class="sponsor-page">
+          <section class="sponsor-hero">
+            <div>
+              <span class="eyebrow">Enti e strutture</span>
+              <h1>Sponsorizzazioni dichiarate, solo se compatibili con le ricerche.</h1>
+              <p>
+                Le strutture possono chiedere priorità di evidenza sulla piattaforma.
+                La visibilità commerciale resta separata dalla compatibilità: un annuncio
+                sponsorizzato compare in evidenza solo quando è pertinente per ruolo,
+                zona, turni e requisiti cercati dall'utente.
+              </p>
+              <div class="sponsor-safety-strip">
+                <span>Nessuna vendita di profili</span>
+                <span>Nessun pay-per-hire</span>
+                <span>Sponsorizzazione dichiarata</span>
+              </div>
+            </div>
+            <img src="assets/function-visuals/trust-stars.svg" alt="Priorità dichiarata e compatibilità verificata">
+          </section>
+
+          <form class="sponsor-form" id="sponsorForm">
+            <div class="sponsor-risk-note">
+              RadarSanità in questa fase non fa intermediazione, selezione o invio di candidati alle strutture. Raccoglie richieste commerciali per dare evidenza dichiarata a offerte compatibili e migliorare la chiarezza delle informazioni pubblicate.
+            </div>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="sponsorStructure">Nome struttura o ente</label>
+                <input id="sponsorStructure" placeholder="Es. RSA, clinica, cooperativa, ente pubblico">
+              </div>
+              <div class="form-field">
+                <label for="sponsorReferent">Referente</label>
+                <input id="sponsorReferent" placeholder="Nome e ruolo">
+              </div>
+              <div class="form-field">
+                <label for="sponsorContact">Email o telefono</label>
+                <input id="sponsorContact" placeholder="Contatto per essere richiamati">
+              </div>
+              <div class="form-field">
+                <label for="sponsorArea">Zona e profili cercati</label>
+                <input id="sponsorArea" placeholder="Es. Torino Nord, infermieri, OSS, notti, RSA">
+              </div>
+              <div class="form-field full">
+                <label for="sponsorMessage">Messaggio</label>
+                <textarea id="sponsorMessage" rows="7" placeholder="Scrivi cosa vuoi sponsorizzare, per quale periodo, quali profili cerchi e quali dati vuoi rendere visibili."></textarea>
+              </div>
+            </div>
+            <div class="sponsor-note">
+              La richiesta non altera i risultati organici: serve a valutare una posizione in evidenza dichiarata e compatibile, senza costi tecnici aggiuntivi nella fase pilota.
+            </div>
+            <div class="sponsor-actions">
+              <button class="primary-button" type="button" data-action="copy-sponsor-request">Copia richiesta</button>
+              <button class="secondary-button" type="reset">Ripulisci</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Navigazione mobile">
+      <button class="mobile-nav-item active" data-route="intro">
+        <span>◐</span>
+        Home
+      </button>
+      <button class="mobile-nav-item" data-route="info">
+        <span>i</span>
+        Info
+      </button>
+      <button class="mobile-nav-item" data-route="home">
+        <span>⌂</span>
+        Cerca
+      </button>
+      <button class="mobile-nav-item" data-route="saved">
+        <span>♡</span>
+        Salvate
+      </button>
+      <button class="mobile-nav-item" data-route="applications">
+        <span>✓</span>
+        Cand.
+      </button>
+      <button class="mobile-nav-item" data-route="feedback">
+        <span>✎</span>
+        Dicci
+      </button>
+      <button class="mobile-nav-item" data-route="employers">
+        <span>＋</span>
+        Enti
+      </button>
+    </nav>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js?v=45"></script>
+  <script src="app.js?v=45"></script>
+</body>
+</html>
