@@ -1016,7 +1016,17 @@ function matchTrail(job) {
 }
 
 function workplaceFor(job) {
-  return workplaceProfiles[job.id];
+  return workplaceProfiles[job.id] || {
+    media: job.media || { type: "none", reason: "Nessuna immagine ufficiale verificata" },
+    facts: [
+      `Sede dichiarata: ${job.location}`,
+      "Informazioni sul posto da chiedere alla struttura"
+    ],
+    rating: null,
+    reviewCount: 0,
+    verifiedReviews: 0,
+    reviews: []
+  };
 }
 
 function verifiedOfferMedia(job) {
@@ -1516,7 +1526,7 @@ function jobMatchesSearchProfile(job) {
   const distance = distanceFromSearchOrigin(job);
   if (distance === null || distance > Number(profile.distance)) return false;
   if (profile.contracts.length && !profile.contracts.includes(job.contract)) return false;
-  if (profile.shifts === "noNights" && job.nights) return false;
+  if (profile.shifts === "noNights" && job.nights !== false) return false;
   if (profile.shifts === "dayOnly" && job.shifts !== "Solo diurni") return false;
   if (profile.shifts === "twoShifts" && !job.shifts.toLowerCase().includes("due")) return false;
   return true;
@@ -1604,23 +1614,27 @@ function renderScreening() {
   const signals = requestSignals();
 
   const sourceLinks = state.filteredJobs.flatMap((job) => sourceEntries(job));
-  const registry = sourceRegistryMetrics();
+  const snapshot = window.RADAR_DATA?.searchSnapshot || {};
+  const snapshotLabel = String(snapshot.checked || "data non indicata");
+  const snapshotSources = Number(snapshot.sourcesUsed) || new Set(
+    publishedJobs.flatMap((job) => sourceEntries(job).map(({ name }) => name))
+  ).size;
   const screeningTitle = document.getElementById("screeningTitle");
 
   if (!state.filteredJobs.length) {
-    if (screeningTitle) screeningTitle.textContent = "Esito della tua ricerca";
-    screeningSummary.textContent = "Non ci sono ancora offerte pubblicate che rispettano tutti i criteri. Le fonti qui sotto sono mappate e consultabili, ma non vengono presentate come risultati della tua ricerca.";
+    if (screeningTitle) screeningTitle.textContent = "Nessun risultato con questi vincoli";
+    screeningSummary.textContent = `La raccolta verificata del ${snapshotLabel} contiene ${publishedJobs.length} schede attive da ${snapshotSources} fonti. Nessuna scheda rispetta tutti i filtri selezionati: non sostituiamo il risultato con annunci generici.`;
     screeningGrid.innerHTML = `
-      <div class="screening-tile"><strong>0</strong><span>offerte validate per il tuo profilo</span></div>
-      <div class="screening-tile"><strong>0</strong><span>fonti effettivamente usate</span></div>
-      <button class="screening-tile source-screening-link" data-action="open-sources"><strong>${registry.linked}</strong><span>fonti apribili nel registro</span></button>
-      <button class="screening-tile source-screening-link" data-action="open-sources"><strong>${registry.sources}</strong><span>fonti mappate, non risultati</span></button>
+      <div class="screening-tile"><strong>0</strong><span>risultati adatti ai filtri</span></div>
+      <div class="screening-tile"><strong>${publishedJobs.length}</strong><span>schede attive nella raccolta</span></div>
+      <div class="screening-tile"><strong>${snapshotSources}</strong><span>fonti usate nella raccolta</span></div>
+      <div class="screening-tile warning-screening"><strong>${excludedByNight + outsideDistance}</strong><span>escluse dai filtri attivi</span></div>
     `;
     return;
   }
 
   if (screeningTitle) screeningTitle.textContent = "Perché vedi questi risultati";
-  screeningSummary.textContent = `Filtri applicati: ${signals.join(", ")}; ${availabilityPreferenceLabel()}. Le offerte uguali sono accorpate e ogni dato resta collegato alla fonte.`;
+  screeningSummary.textContent = `Raccolta verificata il ${snapshotLabel}. Filtri applicati: ${signals.join(", ")}; ${availabilityPreferenceLabel()}. Apri ogni scheda per vedere fonte, dati dichiarati e canale di candidatura.`;
   screeningGrid.innerHTML = `
     <div class="screening-tile">
       <strong>${sourceLinks.filter(({ url }) => url).length}</strong>
@@ -1631,8 +1645,8 @@ function renderScreening() {
       <span>fonti nei risultati visibili</span>
     </div>
     <div class="screening-tile">
-      <strong>${registry.sources}</strong>
-      <span>fonti nel registro</span>
+      <strong>${snapshotSources}</strong>
+      <span>fonti usate nella raccolta</span>
     </div>
     <div class="screening-tile warning-screening">
       <strong>${excludedByNight + outsideDistance}</strong>
@@ -1860,7 +1874,7 @@ function applyJobFilters() {
   const sort = document.getElementById("sortJobs").value;
   state.filteredJobs.sort((a, b) => {
     if (sort === "distance") return (distanceFromSearchOrigin(a) ?? Infinity) - (distanceFromSearchOrigin(b) ?? Infinity);
-    if (sort === "deadline") return a.deadline.localeCompare(b.deadline);
+    if (sort === "deadline") return String(a.deadline || "9999-12-31").localeCompare(String(b.deadline || "9999-12-31"));
     return b.match - a.match;
   });
 
@@ -2086,6 +2100,29 @@ function renderDetail(jobId) {
   const workplace = workplaceFor(job);
   state.selectedJobId = job.id;
   const saved = state.saved.has(job.id);
+  const colleagueSection = workplace.reviews.length
+    ? detailSection(`Cosa dicono i colleghi · ${workplace.rating}/5`, `
+        <div class="review-summary">
+          <div><strong>${workplace.rating}/5</strong><span>${workplace.reviewCount} opinioni raccolte</span></div>
+          <span>${workplace.verifiedReviews} esperienze professionali verificate</span>
+        </div>
+        <div class="review-list">
+          ${workplace.reviews.map((review) => `
+            <article class="review-card">
+              <div class="review-card-top">
+                <span class="review-stars" aria-label="${review.score} stelle su 5">${stars(review.score)}</span>
+                <small>${review.period}</small>
+              </div>
+              <strong>${review.role}</strong>
+              <p>${review.text}</p>
+              <span class="review-verified">✓ ${review.source}</span>
+            </article>
+          `).join("")}
+        </div>
+      `, { icon: "7", tone: "reviews", meta: "Esperienze separate dai dati ufficiali" })
+    : detailSection("Esperienze sul posto", `
+        <p class="content-note">Per questa offerta non sono state raccolte opinioni del personale. RadarSanita non sostituisce questo dato con recensioni inventate o non attribuite.</p>
+      `, { icon: "7", tone: "reviews", meta: "Nessuna recensione associata alla fonte" });
   jobDetail.innerHTML = `
     <div class="detail-page">
       <div class="detail-topbar">
@@ -2182,29 +2219,7 @@ function renderDetail(jobId) {
             nome della fonte, mai una foto AI o di un altro luogo.
           </p>
         `, { icon: "6", tone: "place", meta: "Logistica e contesto non ufficiale" })}
-        ${detailSection(`Cosa dicono i colleghi · ${workplace.rating}/5`, `
-          <div class="review-summary">
-            <div><strong>${workplace.rating}/5</strong><span>${workplace.reviewCount} opinioni raccolte</span></div>
-            <span>${workplace.verifiedReviews} esperienze professionali verificate</span>
-          </div>
-          <div class="review-list">
-            ${workplace.reviews.map((review) => `
-              <article class="review-card">
-                <div class="review-card-top">
-                  <span class="review-stars" aria-label="${review.score} stelle su 5">${stars(review.score)}</span>
-                  <small>${review.period}</small>
-                </div>
-                <strong>${review.role}</strong>
-                <p>${review.text}</p>
-                <span class="review-verified">✓ ${review.source}</span>
-              </article>
-            `).join("")}
-          </div>
-          <div class="prototype-disclaimer">
-            Recensioni simulate per mostrare la funzione. Nel prodotto reale opinioni,
-            fonte, anzianità e verifica saranno sempre separate dai dati ufficiali.
-          </div>
-        `, { icon: "7", tone: "reviews", meta: "Prova sociale separata dai dati ufficiali" })}
+        ${colleagueSection}
         ${detailSection("Come candidarsi", `
           ${applicationEffortPanel(job)}
           <div class="ai-external-note">
