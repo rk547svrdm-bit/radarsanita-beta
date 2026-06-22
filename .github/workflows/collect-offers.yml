@@ -1,0 +1,40 @@
+name: Aggiorna offerte pubbliche
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-offers-collector
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il sito
+        uses: actions/checkout@v4
+
+      - name: Prepara Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Controlla fonti pubbliche
+        run: node automation/collect-offers.mjs
+
+      - name: Pubblica indice aggiornato
+        run: |
+          if git diff --quiet -- live-offers.json; then
+            echo "Nessuna variazione dell'indice."
+            exit 0
+          fi
+          git config user.name "RadarSanita collector"
+          git config user.email "noreply@github.com"
+          git add live-offers.json
+          git commit -m "Aggiorna indice offerte pubbliche"
+          git push

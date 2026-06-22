@@ -1,0 +1,376 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-06-22T18:40:04.683Z",
+  "checkedLabel": "22 giugno 2026 alle ore 20:40",
+  "method": "Verifica automatica di pagine pubbliche autorizzate nel registro RadarSanita",
+  "sourcesChecked": 3,
+  "outcomes": [
+    {
+      "id": "manpower-hospice-carignano-2026-06",
+      "status": "verified",
+      "error": null
+    },
+    {
+      "id": "san-camillo-torino-infermieri-2026-06",
+      "status": "verified",
+      "error": null
+    },
+    {
+      "id": "san-camillo-torino-oss-2026-06",
+      "status": "verified",
+      "error": null
+    }
+  ],
+  "jobs": [
+    {
+      "id": "manpower-hospice-carignano-2026-06",
+      "publicationStatus": "published",
+      "title": "Infermiere/a per Hospice",
+      "company": "Struttura socio-sanitaria (nome non pubblicato nell'annuncio)",
+      "location": "Carignano (TO)",
+      "coordinates": {
+        "lat": 44.9056,
+        "lng": 7.6723
+      },
+      "contract": "Tempo determinato",
+      "schedule": "Full time",
+      "shifts": "Tre turni, 7 giorni su 7",
+      "nights": true,
+      "deadline": "2026-06-30",
+      "deadlineLabel": "30 giugno 2026",
+      "salary": "Non pubblicato",
+      "match": 88,
+      "type": "Selezione sanitaria",
+      "category": "privato",
+      "summary": "Manpower ricerca un/una infermiere/a per un hospice a Carignano. L'annuncio dichiara inserimento full time, su tre turni, con contratto iniziale di sei mesi.",
+      "reasons": [
+        "Ruolo infermieristico dichiarato",
+        "Scadenza pubblicata dalla fonte",
+        "Candidatura disponibile sul portale della fonte"
+      ],
+      "warning": "Sono previsti turni di notte. La struttura e la retribuzione non sono nominate nell'annuncio.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione all'Ordine/FNOPI",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Disponibilita ai turni",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Automunito/a",
+          "Richiesto dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo determinato, 6 mesi iniziali"
+        ],
+        [
+          "Orario",
+          "Full time"
+        ],
+        [
+          "Retribuzione",
+          "Non pubblicata"
+        ],
+        [
+          "Sede",
+          "Carignano (TO)"
+        ],
+        [
+          "Scadenza",
+          "30 giugno 2026"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Mattino",
+          "07:00-15:00"
+        ],
+        [
+          "Pomeriggio",
+          "15:00-23:00"
+        ],
+        [
+          "Notte",
+          "23:00-07:00"
+        ],
+        [
+          "Copertura",
+          "7 giorni su 7"
+        ]
+      ],
+      "application": {
+        "channel": "Pulsante Candidati ora sul portale Manpower",
+        "destinationUrl": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
+        "contactEmail": null,
+        "documents": [
+          "CV (da verificare nel portale)",
+          "Laurea in Infermieristica",
+          "Iscrizione all'Ordine/FNOPI"
+        ],
+        "missing": "Confermare i documenti richiesti nel portale e la disponibilita ai tre turni",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere/a per Hospice. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Manpower Italia - annuncio 995101",
+      "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
+      "checked": "22 giugno 2026 alle ore 20:40",
+      "sources": [
+        {
+          "name": "Manpower Italia - annuncio 995101",
+          "kind": "primaria",
+          "url": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
+          "checked": "22 giugno 2026 alle ore 20:40"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "L'annuncio non pubblica una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "san-camillo-torino-infermieri-2026-06",
+      "publicationStatus": "published",
+      "title": "Autocandidatura infermieri",
+      "company": "Presidio Sanitario San Camillo",
+      "location": "Strada Santa Margherita 136, Torino",
+      "coordinates": {
+        "lat": 45.0527,
+        "lng": 7.7186
+      },
+      "contract": "Non dichiarato",
+      "schedule": "Non dichiarato",
+      "shifts": "Non dichiarati",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Nessuna scadenza dichiarata",
+      "salary": "Non pubblicato",
+      "match": 80,
+      "type": "Canale diretto della struttura",
+      "category": "privato",
+      "summary": "Il Presidio Sanitario San Camillo di Torino mantiene un modulo ufficiale di autocandidatura dedicato agli infermieri. La pagina non dichiara un numero di posti, un contratto o una turnazione.",
+      "reasons": [
+        "Canale di candidatura diretto della struttura",
+        "Modulo dedicato al profilo infermieristico",
+        "Fonte primaria consultabile"
+      ],
+      "warning": "E un canale di autocandidatura, non un annuncio con posto, contratto o turni gia dichiarati.",
+      "requirements": [
+        [
+          "Curriculum vitae",
+          "Richiesto nel modulo della struttura"
+        ],
+        [
+          "Certificati",
+          "Campo previsto nel modulo, se pertinenti"
+        ],
+        [
+          "Turni e contratto",
+          "Non dichiarati nella pagina"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Non dichiarato"
+        ],
+        [
+          "Orario",
+          "Non dichiarato"
+        ],
+        [
+          "Retribuzione",
+          "Non pubblicata"
+        ],
+        [
+          "Sede",
+          "Strada Santa Margherita 136, Torino"
+        ],
+        [
+          "Scadenza",
+          "Nessuna scadenza dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Turni",
+          "Non dichiarati"
+        ],
+        [
+          "Notti",
+          "Non dichiarate"
+        ],
+        [
+          "Festivi",
+          "Non dichiarati"
+        ],
+        [
+          "Da chiarire",
+          "Organizzazione del reparto e disponibilita richiesta"
+        ]
+      ],
+      "application": {
+        "channel": "Modulo ufficiale di autocandidatura della struttura",
+        "destinationUrl": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-infermiere",
+        "contactEmail": null,
+        "documents": [
+          "Curriculum vitae",
+          "Certificati, se pertinenti"
+        ],
+        "missing": "Chiedere prima di inviare: reparto, turni, contratto e retribuzione",
+        "message": "Buongiorno, desidero sottoporre la mia autocandidatura come infermiere/a. Allego il curriculum e resto disponibile per un confronto sulle esigenze della struttura. Cordiali saluti."
+      },
+      "source": "Presidio Sanitario San Camillo - Lavora con noi",
+      "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
+      "checked": "22 giugno 2026 alle ore 20:40",
+      "sources": [
+        {
+          "name": "Presidio Sanitario San Camillo - Lavora con noi",
+          "kind": "primaria",
+          "url": "https://www.sancamillotorino.net/lavora-con-noi",
+          "checked": "22 giugno 2026 alle ore 20:40"
+        },
+        {
+          "name": "Modulo ufficiale autocandidatura infermieri",
+          "kind": "primaria",
+          "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-infermiere",
+          "checked": "22 giugno 2026 alle ore 20:40"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "Nessuna foto ufficiale della struttura e della candidatura e stata aggiunta alla scheda."
+      }
+    },
+    {
+      "id": "san-camillo-torino-oss-2026-06",
+      "publicationStatus": "published",
+      "title": "Autocandidatura OSS",
+      "company": "Presidio Sanitario San Camillo",
+      "location": "Strada Santa Margherita 136, Torino",
+      "coordinates": {
+        "lat": 45.0527,
+        "lng": 7.7186
+      },
+      "contract": "Non dichiarato",
+      "schedule": "Non dichiarato",
+      "shifts": "Non dichiarati",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Nessuna scadenza dichiarata",
+      "salary": "Non pubblicato",
+      "match": 80,
+      "type": "Canale diretto della struttura",
+      "category": "oss",
+      "summary": "Il Presidio Sanitario San Camillo di Torino mantiene un modulo ufficiale di autocandidatura dedicato agli OSS. La pagina non dichiara un numero di posti, un contratto o una turnazione.",
+      "reasons": [
+        "Canale di candidatura diretto della struttura",
+        "Modulo dedicato al profilo OSS",
+        "Fonte primaria consultabile"
+      ],
+      "warning": "E un canale di autocandidatura, non un annuncio con posto, contratto o turni gia dichiarati.",
+      "requirements": [
+        [
+          "Curriculum vitae",
+          "Richiesto nel modulo della struttura"
+        ],
+        [
+          "Certificati",
+          "Campo previsto nel modulo, se pertinenti"
+        ],
+        [
+          "Turni e contratto",
+          "Non dichiarati nella pagina"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Non dichiarato"
+        ],
+        [
+          "Orario",
+          "Non dichiarato"
+        ],
+        [
+          "Retribuzione",
+          "Non pubblicata"
+        ],
+        [
+          "Sede",
+          "Strada Santa Margherita 136, Torino"
+        ],
+        [
+          "Scadenza",
+          "Nessuna scadenza dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Turni",
+          "Non dichiarati"
+        ],
+        [
+          "Notti",
+          "Non dichiarate"
+        ],
+        [
+          "Festivi",
+          "Non dichiarati"
+        ],
+        [
+          "Da chiarire",
+          "Organizzazione del reparto e disponibilita richiesta"
+        ]
+      ],
+      "application": {
+        "channel": "Modulo ufficiale di autocandidatura della struttura",
+        "destinationUrl": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-oss",
+        "contactEmail": null,
+        "documents": [
+          "Curriculum vitae",
+          "Certificati, se pertinenti"
+        ],
+        "missing": "Chiedere prima di inviare: reparto, turni, contratto e retribuzione",
+        "message": "Buongiorno, desidero sottoporre la mia autocandidatura come OSS. Allego il curriculum e resto disponibile per un confronto sulle esigenze della struttura. Cordiali saluti."
+      },
+      "source": "Presidio Sanitario San Camillo - Lavora con noi",
+      "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
+      "checked": "22 giugno 2026 alle ore 20:40",
+      "sources": [
+        {
+          "name": "Presidio Sanitario San Camillo - Lavora con noi",
+          "kind": "primaria",
+          "url": "https://www.sancamillotorino.net/lavora-con-noi",
+          "checked": "22 giugno 2026 alle ore 20:40"
+        },
+        {
+          "name": "Modulo ufficiale autocandidatura OSS",
+          "kind": "primaria",
+          "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-oss",
+          "checked": "22 giugno 2026 alle ore 20:40"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "Nessuna foto ufficiale della struttura e della candidatura e stata aggiunta alla scheda."
+      }
+    }
+  ]
+}

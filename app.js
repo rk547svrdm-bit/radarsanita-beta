@@ -364,6 +364,7 @@ var coverageStats = window.RADAR_DATA?.coverageStats || {
 };
 
 var sourceRegistry = window.RADAR_DATA?.sourceRegistry || { families: [] };
+var liveOfferIndexState = "pending";
 
 var marketRates = window.RADAR_DATA?.marketRates || [
   {
@@ -690,6 +691,31 @@ const state = {
   applicationRecords: loadApplicationRecords(),
   applicationDrafts: {}
 };
+
+async function hydrateLiveOfferIndex() {
+  try {
+    const response = await fetch(`live-offers.json?updated=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const index = await response.json();
+    if (!Array.isArray(index.jobs)) throw new Error("Indice offerte non valido");
+
+    jobs = index.jobs.filter((job) => job?.publicationStatus === "published");
+    liveOfferIndexState = "ready";
+    if (window.RADAR_DATA) {
+      window.RADAR_DATA.searchSnapshot = {
+        ...(window.RADAR_DATA.searchSnapshot || {}),
+        checked: index.checkedLabel || "data non indicata",
+        sourcesUsed: Number(index.sourcesChecked) || 0,
+        method: index.method || "Indice pubblico aggiornato"
+      };
+    }
+
+    if (state.searchCompleted) applyJobFilters();
+  } catch {
+    // The embedded source-backed index remains available when the refresh file is unreachable.
+    liveOfferIndexState = "fallback";
+  }
+}
 
 const views = Array.from(document.querySelectorAll("[data-view]"));
 const navItems = Array.from(document.querySelectorAll("[data-route]"));
@@ -2833,3 +2859,4 @@ renderRateMarket();
 applyJobFilters();
 renderApplicationsList();
 updateCounts();
+void hydrateLiveOfferIndex();
