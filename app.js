@@ -1549,8 +1549,10 @@ function jobMatchesSearchProfile(job) {
   if (job.publicationStatus !== "published") return false;
   if (profile.role === "oss" && job.category !== "oss") return false;
   if (profile.role === "infermiere" && job.category === "oss") return false;
-  const distance = distanceFromSearchOrigin(job);
-  if (distance === null || distance > Number(profile.distance)) return false;
+  if (Number(profile.distance) < 9999) {
+    const distance = distanceFromSearchOrigin(job);
+    if (distance === null || distance > Number(profile.distance)) return false;
+  }
   if (profile.contracts.length && !profile.contracts.includes(job.contract)) return false;
   if (profile.shifts === "noNights" && job.nights !== false) return false;
   if (profile.shifts === "dayOnly" && job.shifts !== "Solo diurni") return false;
@@ -1632,7 +1634,7 @@ function renderScreening() {
   const publishedJobs = jobs.filter((job) => job.publicationStatus === "published");
   const excludedByNight = publishedJobs.filter((job) => job.nights).length;
   const activeDistance = Number(document.getElementById("distanceFilter").value);
-  const outsideDistance = publishedJobs.filter((job) => {
+  const outsideDistance = activeDistance >= 9999 ? 0 : publishedJobs.filter((job) => {
     const distance = distanceFromSearchOrigin(job);
     return distance === null || distance > activeDistance;
   }).length;
@@ -1889,7 +1891,7 @@ function applyJobFilters() {
     if (!jobMatchesSearchProfile(job)) return false;
     if (state.selectedCategory !== "all" && job.category !== state.selectedCategory) return false;
     const jobDistance = distanceFromSearchOrigin(job);
-    if (jobDistance === null || jobDistance > maxDistance) return false;
+    if (maxDistance < 9999 && (jobDistance === null || jobDistance > maxDistance)) return false;
     if (contracts.length && !contracts.includes(job.contract)) return false;
     if (shiftPreference === "noNights" && job.nights) return false;
     if (shiftPreference === "dayOnly" && job.shifts !== "Solo diurni") return false;
@@ -2781,7 +2783,7 @@ document.getElementById("searchForm").addEventListener("submit", (event) => {
     return;
   }
 
-  if (!origin) {
+  if (!origin && distance < 9999) {
     showToast("Attendi o autorizza la posizione per calcolare il raggio");
     document.querySelector('[data-action="locate-search"]')?.focus();
     return;
@@ -2790,7 +2792,7 @@ document.getElementById("searchForm").addEventListener("submit", (event) => {
   state.searchProfile = {
     role,
     distance,
-    origin: { ...origin, label: state.searchOrigin.label },
+    origin: origin ? { ...origin, label: state.searchOrigin.label } : null,
     shifts,
     availability,
     contracts,
