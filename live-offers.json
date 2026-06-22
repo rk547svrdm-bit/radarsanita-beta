@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-22T18:40:04.683Z",
-  "checkedLabel": "22 giugno 2026 alle ore 20:40",
+  "updatedAt": "2026-06-22T18:41:24.388Z",
+  "checkedLabel": "22 giugno 2026 alle ore 20:41",
   "method": "Verifica automatica di pagine pubbliche autorizzate nel registro RadarSanita",
   "sourcesChecked": 3,
   "outcomes": [
@@ -121,13 +121,13 @@
       },
       "source": "Manpower Italia - annuncio 995101",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-      "checked": "22 giugno 2026 alle ore 20:40",
+      "checked": "22 giugno 2026 alle ore 20:41",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 995101",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-          "checked": "22 giugno 2026 alle ore 20:40"
+          "checked": "22 giugno 2026 alle ore 20:41"
         }
       ],
       "media": {
@@ -232,19 +232,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "22 giugno 2026 alle ore 20:40",
+      "checked": "22 giugno 2026 alle ore 20:41",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "22 giugno 2026 alle ore 20:40"
+          "checked": "22 giugno 2026 alle ore 20:41"
         },
         {
           "name": "Modulo ufficiale autocandidatura infermieri",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-infermiere",
-          "checked": "22 giugno 2026 alle ore 20:40"
+          "checked": "22 giugno 2026 alle ore 20:41"
         }
       ],
       "media": {
@@ -349,19 +349,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "22 giugno 2026 alle ore 20:40",
+      "checked": "22 giugno 2026 alle ore 20:41",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "22 giugno 2026 alle ore 20:40"
+          "checked": "22 giugno 2026 alle ore 20:41"
         },
         {
           "name": "Modulo ufficiale autocandidatura OSS",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-oss",
-          "checked": "22 giugno 2026 alle ore 20:40"
+          "checked": "22 giugno 2026 alle ore 20:41"
         }
       ],
       "media": {
