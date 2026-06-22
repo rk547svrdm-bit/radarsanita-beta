@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-22T18:41:24.388Z",
-  "checkedLabel": "22 giugno 2026 alle ore 20:41",
+  "updatedAt": "2026-06-22T18:49:07.402Z",
+  "checkedLabel": "22 giugno 2026 alle ore 20:49",
   "method": "Verifica automatica di pagine pubbliche autorizzate nel registro RadarSanita",
-  "sourcesChecked": 3,
+  "sourcesChecked": 4,
   "outcomes": [
     {
       "id": "manpower-hospice-carignano-2026-06",
@@ -18,6 +18,16 @@
     {
       "id": "san-camillo-torino-oss-2026-06",
       "status": "verified",
+      "error": null
+    },
+    {
+      "id": "manpower-discovered-1000000",
+      "status": "discovered",
+      "error": null
+    },
+    {
+      "id": "manpower-discovered-1007740",
+      "status": "discovered",
       "error": null
     }
   ],
@@ -121,13 +131,13 @@
       },
       "source": "Manpower Italia - annuncio 995101",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-      "checked": "22 giugno 2026 alle ore 20:41",
+      "checked": "22 giugno 2026 alle ore 20:49",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 995101",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-          "checked": "22 giugno 2026 alle ore 20:41"
+          "checked": "22 giugno 2026 alle ore 20:49"
         }
       ],
       "media": {
@@ -232,19 +242,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "22 giugno 2026 alle ore 20:41",
+      "checked": "22 giugno 2026 alle ore 20:49",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "22 giugno 2026 alle ore 20:41"
+          "checked": "22 giugno 2026 alle ore 20:49"
         },
         {
           "name": "Modulo ufficiale autocandidatura infermieri",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-infermiere",
-          "checked": "22 giugno 2026 alle ore 20:41"
+          "checked": "22 giugno 2026 alle ore 20:49"
         }
       ],
       "media": {
@@ -349,19 +359,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "22 giugno 2026 alle ore 20:41",
+      "checked": "22 giugno 2026 alle ore 20:49",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "22 giugno 2026 alle ore 20:41"
+          "checked": "22 giugno 2026 alle ore 20:49"
         },
         {
           "name": "Modulo ufficiale autocandidatura OSS",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-oss",
-          "checked": "22 giugno 2026 alle ore 20:41"
+          "checked": "22 giugno 2026 alle ore 20:49"
         }
       ],
       "media": {
@@ -370,6 +380,234 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "Nessuna foto ufficiale della struttura e della candidatura e stata aggiunta alla scheda."
+      }
+    },
+    {
+      "id": "manpower-discovered-1000000",
+      "publicationStatus": "published",
+      "title": "INFERMIERE/A PESCARA E PROVINCIA",
+      "company": "Azienda cliente non nominata nell'annuncio",
+      "location": "Pescara, Italia",
+      "coordinates": {
+        "lat": 42.3102619,
+        "lng": 13.9575901
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo determinato",
+      "schedule": "Tempo pieno",
+      "shifts": "Non dichiarati",
+      "nights": null,
+      "deadline": "2026-06-30",
+      "deadlineLabel": "30 giugno 2026",
+      "salary": "Non pubblicato",
+      "match": 76,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Manpower per infermiere/a con sede indicata a Pescara. Condizioni disponibili nella fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Pagina fonte pubblica",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione e nome del datore non sono pubblicati nell'annuncio.",
+      "requirements": [
+        [
+          "Requisiti",
+          "Da verificare nella pagina fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo determinato"
+        ],
+        [
+          "Orario",
+          "Tempo pieno"
+        ],
+        [
+          "Turni",
+          "Non dichiarati"
+        ],
+        [
+          "Retribuzione",
+          "Non pubblicata"
+        ],
+        [
+          "Scadenza",
+          "30 giugno 2026"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Non dichiarati"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Pescara, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Manpower"
+        ]
+      ],
+      "application": {
+        "channel": "Pulsante Candidati ora sul portale Manpower",
+        "destinationUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Requisiti dichiarati nell'annuncio"
+        ],
+        "missing": "Confermare documenti e disponibilita prima dell'invio",
+        "message": "Buongiorno, desidero candidarmi alla posizione di INFERMIERE/A PESCARA E PROVINCIA. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Manpower Italia - annuncio 1000000",
+      "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
+      "checked": "22 giugno 2026 alle ore 20:49",
+      "sources": [
+        {
+          "name": "Manpower Italia - annuncio 1000000",
+          "kind": "primaria",
+          "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
+          "checked": "22 giugno 2026 alle ore 20:49"
+        },
+        {
+          "name": "Manpower Italia - catalogo pubblico",
+          "kind": "duplicato",
+          "url": "https://www.manpower.it/it/all-jobs",
+          "checked": "22 giugno 2026 alle ore 20:49"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "Nessuna foto verificabile della struttura e pubblicata nella scheda."
+      }
+    },
+    {
+      "id": "manpower-discovered-1007740",
+      "publicationStatus": "published",
+      "title": "INFERMIERI PER ASL ALESSANDRIA",
+      "company": "Azienda cliente non nominata nell'annuncio",
+      "location": "Alessandria, Italia",
+      "coordinates": {
+        "lat": 44.8349534,
+        "lng": 8.7450304
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo determinato",
+      "schedule": "Tempo pieno",
+      "shifts": "Tre turni",
+      "nights": true,
+      "deadline": "2026-06-30",
+      "deadlineLabel": "30 giugno 2026",
+      "salary": "Non pubblicato",
+      "match": 76,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Manpower per infermiere/a con sede indicata a Alessandria. Condizioni disponibili nella fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Pagina fonte pubblica",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione e nome del datore non sono pubblicati nell'annuncio.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Automunito/a",
+          "Richiesto dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo determinato"
+        ],
+        [
+          "Orario",
+          "Tempo pieno"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "Non pubblicata"
+        ],
+        [
+          "Scadenza",
+          "30 giugno 2026"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Previste"
+        ],
+        [
+          "Sede",
+          "Alessandria, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Manpower"
+        ]
+      ],
+      "application": {
+        "channel": "Pulsante Candidati ora sul portale Manpower",
+        "destinationUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Requisiti dichiarati nell'annuncio"
+        ],
+        "missing": "Confermare documenti e disponibilita prima dell'invio",
+        "message": "Buongiorno, desidero candidarmi alla posizione di INFERMIERI PER ASL ALESSANDRIA. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Manpower Italia - annuncio 1007740",
+      "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
+      "checked": "22 giugno 2026 alle ore 20:49",
+      "sources": [
+        {
+          "name": "Manpower Italia - annuncio 1007740",
+          "kind": "primaria",
+          "url": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
+          "checked": "22 giugno 2026 alle ore 20:49"
+        },
+        {
+          "name": "Manpower Italia - catalogo pubblico",
+          "kind": "duplicato",
+          "url": "https://www.manpower.it/it/all-jobs",
+          "checked": "22 giugno 2026 alle ore 20:49"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "Nessuna foto verificabile della struttura e pubblicata nella scheda."
       }
     }
   ]
