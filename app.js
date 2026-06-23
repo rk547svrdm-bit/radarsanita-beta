@@ -2577,10 +2577,25 @@ function collectSponsorRequest() {
   ].join("\n\n");
 }
 
+function nationalSearchFallbackMarkup(message) {
+  return `${message} <button class="location-fallback-button" type="button" data-action="use-national-search">Continua in tutta Italia</button>.`;
+}
+
+function useNationalSearchFallback() {
+  state.searchOrigin = null;
+  const locationInput = document.getElementById("searchLocation");
+  const locationHint = document.getElementById("searchLocationHint");
+  const distanceInput = document.getElementById("searchDistance");
+  if (locationInput) locationInput.value = "Ricerca in tutta Italia";
+  if (distanceInput) distanceInput.value = "9999";
+  if (locationHint) locationHint.textContent = "Ricerca nazionale pronta: non richiede la posizione del dispositivo.";
+  showToast("Ricerca nazionale impostata");
+}
+
 function requestSearchLocation({ automatic = false, force = false } = {}) {
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
-  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=50";
+  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=51";
 
   if (state.locationRequestInFlight || (automatic && state.locationRequestAttempted)) return;
   if (state.searchOrigin && !force) {
@@ -2591,18 +2606,18 @@ function requestSearchLocation({ automatic = false, force = false } = {}) {
   if (automatic) state.locationRequestAttempted = true;
   if (window.location.protocol === "file:") {
     if (locationHint) {
-      locationHint.innerHTML = `La posizione non può essere usata aprendo un file locale. <a href="${publicAppUrl}" target="_blank" rel="noreferrer noopener">Apri la versione online</a>.`;
+      locationHint.innerHTML = `La posizione non può essere usata aprendo un file locale. <a href="${publicAppUrl}" target="_blank" rel="noreferrer noopener">Apri la versione online</a> oppure ${nationalSearchFallbackMarkup("")}`;
     }
     showToast("Apri la versione online per usare la posizione");
     return;
   }
   if (!window.isSecureContext) {
-    if (locationHint) locationHint.textContent = "La posizione richiede una connessione protetta. Apri la versione online HTTPS.";
+    if (locationHint) locationHint.innerHTML = nationalSearchFallbackMarkup("La posizione richiede una connessione protetta.");
     showToast("La posizione richiede la versione online");
     return;
   }
   if (!navigator.geolocation) {
-    if (locationHint) locationHint.textContent = "La posizione non è disponibile su questo dispositivo: aggiorna il browser o usa un dispositivo con servizi di localizzazione attivi.";
+    if (locationHint) locationHint.innerHTML = nationalSearchFallbackMarkup("Questo browser non mette a disposizione la posizione.");
     return;
   }
 
@@ -2627,9 +2642,9 @@ function requestSearchLocation({ automatic = false, force = false } = {}) {
       state.searchOrigin = null;
       if (locationInput) locationInput.value = "";
       const message = error?.code === 1
-        ? "Per cercare entro un raggio in km, consenti la posizione nelle impostazioni del browser e poi tocca il mirino."
-        : "Non riesco a rilevare la posizione. Controlla connessione e servizi di localizzazione, poi tocca il mirino.";
-      if (locationHint) locationHint.textContent = message;
+        ? "Questo browser non ha autorizzato la posizione. Apri il sito nel browser Safari completo per usare il raggio in km, oppure"
+        : "Non riesco a rilevare la posizione in questo browser. Puoi riprovare dal mirino oppure";
+      if (locationHint) locationHint.innerHTML = nationalSearchFallbackMarkup(message);
       showToast("Posizione non disponibile");
     },
     { enableHighAccuracy: false, timeout: 12000, maximumAge: 300000 }
@@ -2764,6 +2779,8 @@ document.addEventListener("click", (event) => {
     window.setTimeout(() => document.getElementById("sourceRegistry")?.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
   } else if (action === "locate-search") {
     requestSearchLocation({ force: true });
+  } else if (action === "use-national-search") {
+    useNationalSearchFallback();
   }
 });
 

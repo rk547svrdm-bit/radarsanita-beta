@@ -7340,6 +7340,25 @@ a.source-registry-item:focus-visible {
   line-height: 1.35;
 }
 
+.location-fallback-button {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--teal-700);
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.location-fallback-button:hover,
+.location-fallback-button:focus-visible {
+  color: var(--teal-950);
+}
+
 .search-panel textarea {
   min-height: 78px;
   padding: 10px 11px;
