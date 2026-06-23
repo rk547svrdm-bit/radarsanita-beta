@@ -2580,6 +2580,7 @@ function collectSponsorRequest() {
 function requestSearchLocation({ automatic = false, force = false } = {}) {
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
+  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=50";
 
   if (state.locationRequestInFlight || (automatic && state.locationRequestAttempted)) return;
   if (state.searchOrigin && !force) {
@@ -2588,6 +2589,18 @@ function requestSearchLocation({ automatic = false, force = false } = {}) {
   }
 
   if (automatic) state.locationRequestAttempted = true;
+  if (window.location.protocol === "file:") {
+    if (locationHint) {
+      locationHint.innerHTML = `La posizione non può essere usata aprendo un file locale. <a href="${publicAppUrl}" target="_blank" rel="noreferrer noopener">Apri la versione online</a>.`;
+    }
+    showToast("Apri la versione online per usare la posizione");
+    return;
+  }
+  if (!window.isSecureContext) {
+    if (locationHint) locationHint.textContent = "La posizione richiede una connessione protetta. Apri la versione online HTTPS.";
+    showToast("La posizione richiede la versione online");
+    return;
+  }
   if (!navigator.geolocation) {
     if (locationHint) locationHint.textContent = "La posizione non è disponibile su questo dispositivo: aggiorna il browser o usa un dispositivo con servizi di localizzazione attivi.";
     return;
