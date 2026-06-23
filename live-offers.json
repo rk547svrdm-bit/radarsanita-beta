@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-22T18:50:55.384Z",
-  "checkedLabel": "22 giugno 2026 alle ore 20:50",
+  "updatedAt": "2026-06-23T14:10:18.876Z",
+  "checkedLabel": "23 giugno 2026 alle ore 16:10",
   "method": "Verifica automatica di pagine pubbliche autorizzate nel registro RadarSanita",
   "sourcesChecked": 4,
   "outcomes": [
@@ -131,13 +131,13 @@
       },
       "source": "Manpower Italia - annuncio 995101",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-      "checked": "22 giugno 2026 alle ore 20:50",
+      "checked": "23 giugno 2026 alle ore 16:10",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 995101",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-          "checked": "22 giugno 2026 alle ore 20:50"
+          "checked": "23 giugno 2026 alle ore 16:10"
         }
       ],
       "media": {
@@ -242,19 +242,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "22 giugno 2026 alle ore 20:50",
+      "checked": "23 giugno 2026 alle ore 16:10",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "22 giugno 2026 alle ore 20:50"
+          "checked": "23 giugno 2026 alle ore 16:10"
         },
         {
           "name": "Modulo ufficiale autocandidatura infermieri",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-infermiere",
-          "checked": "22 giugno 2026 alle ore 20:50"
+          "checked": "23 giugno 2026 alle ore 16:10"
         }
       ],
       "media": {
@@ -359,19 +359,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "22 giugno 2026 alle ore 20:50",
+      "checked": "23 giugno 2026 alle ore 16:10",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "22 giugno 2026 alle ore 20:50"
+          "checked": "23 giugno 2026 alle ore 16:10"
         },
         {
           "name": "Modulo ufficiale autocandidatura OSS",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-oss",
-          "checked": "22 giugno 2026 alle ore 20:50"
+          "checked": "23 giugno 2026 alle ore 16:10"
         }
       ],
       "media": {
@@ -469,19 +469,19 @@
       },
       "source": "Manpower Italia - annuncio 1000000",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
-      "checked": "22 giugno 2026 alle ore 20:50",
+      "checked": "23 giugno 2026 alle ore 16:10",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1000000",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
-          "checked": "22 giugno 2026 alle ore 20:50"
+          "checked": "23 giugno 2026 alle ore 16:10"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "22 giugno 2026 alle ore 20:50"
+          "checked": "23 giugno 2026 alle ore 16:10"
         }
       ],
       "media": {
@@ -587,19 +587,19 @@
       },
       "source": "Manpower Italia - annuncio 1007740",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
-      "checked": "22 giugno 2026 alle ore 20:50",
+      "checked": "23 giugno 2026 alle ore 16:10",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1007740",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
-          "checked": "22 giugno 2026 alle ore 20:50"
+          "checked": "23 giugno 2026 alle ore 16:10"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "22 giugno 2026 alle ore 20:50"
+          "checked": "23 giugno 2026 alle ore 16:10"
         }
       ],
       "media": {
