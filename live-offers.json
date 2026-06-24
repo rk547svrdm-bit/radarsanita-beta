@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-23T14:10:18.876Z",
-  "checkedLabel": "23 giugno 2026 alle ore 16:10",
+  "updatedAt": "2026-06-24T12:36:05.400Z",
+  "checkedLabel": "24 giugno 2026 alle ore 14:36",
   "method": "Verifica automatica di pagine pubbliche autorizzate nel registro RadarSanita",
   "sourcesChecked": 4,
   "outcomes": [
@@ -21,12 +21,17 @@
       "error": null
     },
     {
-      "id": "manpower-discovered-1000000",
+      "id": "manpower-discovered-1016466",
       "status": "discovered",
       "error": null
     },
     {
-      "id": "manpower-discovered-1007740",
+      "id": "manpower-discovered-1016157",
+      "status": "discovered",
+      "error": null
+    },
+    {
+      "id": "manpower-discovered-1000000",
       "status": "discovered",
       "error": null
     }
@@ -131,13 +136,13 @@
       },
       "source": "Manpower Italia - annuncio 995101",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-      "checked": "23 giugno 2026 alle ore 16:10",
+      "checked": "24 giugno 2026 alle ore 14:35",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 995101",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-          "checked": "23 giugno 2026 alle ore 16:10"
+          "checked": "24 giugno 2026 alle ore 14:35"
         }
       ],
       "media": {
@@ -242,19 +247,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "23 giugno 2026 alle ore 16:10",
+      "checked": "24 giugno 2026 alle ore 14:35",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "23 giugno 2026 alle ore 16:10"
+          "checked": "24 giugno 2026 alle ore 14:35"
         },
         {
           "name": "Modulo ufficiale autocandidatura infermieri",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-infermiere",
-          "checked": "23 giugno 2026 alle ore 16:10"
+          "checked": "24 giugno 2026 alle ore 14:35"
         }
       ],
       "media": {
@@ -359,19 +364,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "23 giugno 2026 alle ore 16:10",
+      "checked": "24 giugno 2026 alle ore 14:35",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "23 giugno 2026 alle ore 16:10"
+          "checked": "24 giugno 2026 alle ore 14:35"
         },
         {
           "name": "Modulo ufficiale autocandidatura OSS",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-oss",
-          "checked": "23 giugno 2026 alle ore 16:10"
+          "checked": "24 giugno 2026 alle ore 14:35"
         }
       ],
       "media": {
@@ -380,6 +385,224 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "Nessuna foto ufficiale della struttura e della candidatura e stata aggiunta alla scheda."
+      }
+    },
+    {
+      "id": "manpower-discovered-1016466",
+      "publicationStatus": "published",
+      "title": "OSS",
+      "company": "Azienda cliente non nominata nell'annuncio",
+      "location": "Friuli-Venezia Giulia, Italia",
+      "coordinates": {
+        "lat": 46.151042,
+        "lng": 13.055904
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo determinato",
+      "schedule": "Tempo pieno",
+      "shifts": "Due turni",
+      "nights": null,
+      "deadline": "2026-07-31",
+      "deadlineLabel": "31 luglio 2026",
+      "salary": "Non pubblicato",
+      "match": 76,
+      "type": "Selezione tramite agenzia",
+      "category": "oss",
+      "summary": "Annuncio Manpower per OSS con sede indicata a Friuli-Venezia Giulia. Condizioni disponibili nella fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Pagina fonte pubblica",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione e nome del datore non sono pubblicati nell'annuncio.",
+      "requirements": [
+        [
+          "Requisiti",
+          "Da verificare nella pagina fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo determinato"
+        ],
+        [
+          "Orario",
+          "Tempo pieno"
+        ],
+        [
+          "Turni",
+          "Due turni"
+        ],
+        [
+          "Retribuzione",
+          "Non pubblicata"
+        ],
+        [
+          "Scadenza",
+          "31 luglio 2026"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Due turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Friuli-Venezia Giulia, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Manpower"
+        ]
+      ],
+      "application": {
+        "channel": "Pulsante Candidati ora sul portale Manpower",
+        "destinationUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss/1016466",
+        "contactEmail": null,
+        "documents": [
+          "Documenti da verificare nel portale"
+        ],
+        "missing": "Confermare documenti e disponibilita prima dell'invio",
+        "message": "Buongiorno, desidero candidarmi alla posizione di OSS. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Manpower Italia - annuncio 1016466",
+      "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss/1016466",
+      "checked": "24 giugno 2026 alle ore 14:36",
+      "sources": [
+        {
+          "name": "Manpower Italia - annuncio 1016466",
+          "kind": "primaria",
+          "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss/1016466",
+          "checked": "24 giugno 2026 alle ore 14:36"
+        },
+        {
+          "name": "Manpower Italia - catalogo pubblico",
+          "kind": "duplicato",
+          "url": "https://www.manpower.it/it/all-jobs",
+          "checked": "24 giugno 2026 alle ore 14:36"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "Nessuna foto verificabile della struttura e pubblicata nella scheda."
+      }
+    },
+    {
+      "id": "manpower-discovered-1016157",
+      "publicationStatus": "published",
+      "title": "OSS - CON ALLOGGIO",
+      "company": "Azienda cliente non nominata nell'annuncio",
+      "location": "Con Alloggio, Italia",
+      "coordinates": {
+        "lat": 45.4358988,
+        "lng": 10.6044873
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo determinato",
+      "schedule": "Tempo pieno",
+      "shifts": "Non dichiarati",
+      "nights": true,
+      "deadline": "2026-07-31",
+      "deadlineLabel": "31 luglio 2026",
+      "salary": "Non pubblicato",
+      "match": 76,
+      "type": "Selezione tramite agenzia",
+      "category": "oss",
+      "summary": "Annuncio Manpower per OSS con sede indicata a Con Alloggio. Condizioni disponibili nella fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Pagina fonte pubblica",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione e nome del datore non sono pubblicati nell'annuncio.",
+      "requirements": [
+        [
+          "Requisiti",
+          "Da verificare nella pagina fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo determinato"
+        ],
+        [
+          "Orario",
+          "Tempo pieno"
+        ],
+        [
+          "Turni",
+          "Non dichiarati"
+        ],
+        [
+          "Retribuzione",
+          "Non pubblicata"
+        ],
+        [
+          "Scadenza",
+          "31 luglio 2026"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Non dichiarati"
+        ],
+        [
+          "Notti",
+          "Previste"
+        ],
+        [
+          "Sede",
+          "Con Alloggio, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Manpower"
+        ]
+      ],
+      "application": {
+        "channel": "Pulsante Candidati ora sul portale Manpower",
+        "destinationUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-con-alloggio/1016157",
+        "contactEmail": null,
+        "documents": [
+          "Documenti da verificare nel portale"
+        ],
+        "missing": "Confermare documenti e disponibilita prima dell'invio",
+        "message": "Buongiorno, desidero candidarmi alla posizione di OSS - CON ALLOGGIO. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Manpower Italia - annuncio 1016157",
+      "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-con-alloggio/1016157",
+      "checked": "24 giugno 2026 alle ore 14:36",
+      "sources": [
+        {
+          "name": "Manpower Italia - annuncio 1016157",
+          "kind": "primaria",
+          "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-con-alloggio/1016157",
+          "checked": "24 giugno 2026 alle ore 14:36"
+        },
+        {
+          "name": "Manpower Italia - catalogo pubblico",
+          "kind": "duplicato",
+          "url": "https://www.manpower.it/it/all-jobs",
+          "checked": "24 giugno 2026 alle ore 14:36"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "Nessuna foto verificabile della struttura e pubblicata nella scheda."
       }
     },
     {
@@ -469,137 +692,19 @@
       },
       "source": "Manpower Italia - annuncio 1000000",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
-      "checked": "23 giugno 2026 alle ore 16:10",
+      "checked": "24 giugno 2026 alle ore 14:36",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1000000",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
-          "checked": "23 giugno 2026 alle ore 16:10"
+          "checked": "24 giugno 2026 alle ore 14:36"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "23 giugno 2026 alle ore 16:10"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "Nessuna foto verificabile della struttura e pubblicata nella scheda."
-      }
-    },
-    {
-      "id": "manpower-discovered-1007740",
-      "publicationStatus": "published",
-      "title": "INFERMIERI PER ASL ALESSANDRIA",
-      "company": "Azienda cliente non nominata nell'annuncio",
-      "location": "Alessandria, Italia",
-      "coordinates": {
-        "lat": 44.8349534,
-        "lng": 8.7450304
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo determinato",
-      "schedule": "Tempo pieno",
-      "shifts": "Tre turni",
-      "nights": true,
-      "deadline": "2026-06-30",
-      "deadlineLabel": "30 giugno 2026",
-      "salary": "Non pubblicato",
-      "match": 76,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Manpower per infermiere/a con sede indicata a Alessandria. Condizioni disponibili nella fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Pagina fonte pubblica",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione e nome del datore non sono pubblicati nell'annuncio.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Automunito/a",
-          "Richiesto dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo determinato"
-        ],
-        [
-          "Orario",
-          "Tempo pieno"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "Non pubblicata"
-        ],
-        [
-          "Scadenza",
-          "30 giugno 2026"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Previste"
-        ],
-        [
-          "Sede",
-          "Alessandria, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Manpower"
-        ]
-      ],
-      "application": {
-        "channel": "Pulsante Candidati ora sul portale Manpower",
-        "destinationUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Requisiti dichiarati nell'annuncio"
-        ],
-        "missing": "Confermare documenti e disponibilita prima dell'invio",
-        "message": "Buongiorno, desidero candidarmi alla posizione di INFERMIERI PER ASL ALESSANDRIA. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Manpower Italia - annuncio 1007740",
-      "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
-      "checked": "23 giugno 2026 alle ore 16:10",
-      "sources": [
-        {
-          "name": "Manpower Italia - annuncio 1007740",
-          "kind": "primaria",
-          "url": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
-          "checked": "23 giugno 2026 alle ore 16:10"
-        },
-        {
-          "name": "Manpower Italia - catalogo pubblico",
-          "kind": "duplicato",
-          "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "23 giugno 2026 alle ore 16:10"
+          "checked": "24 giugno 2026 alle ore 14:36"
         }
       ],
       "media": {
