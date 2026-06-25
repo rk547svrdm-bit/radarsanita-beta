@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-24T12:36:05.400Z",
-  "checkedLabel": "24 giugno 2026 alle ore 14:36",
+  "updatedAt": "2026-06-25T13:29:33.879Z",
+  "checkedLabel": "25 giugno 2026 alle ore 15:29",
   "method": "Verifica automatica di pagine pubbliche autorizzate nel registro RadarSanita",
   "sourcesChecked": 4,
   "outcomes": [
@@ -136,13 +136,13 @@
       },
       "source": "Manpower Italia - annuncio 995101",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-      "checked": "24 giugno 2026 alle ore 14:35",
+      "checked": "25 giugno 2026 alle ore 15:29",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 995101",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-          "checked": "24 giugno 2026 alle ore 14:35"
+          "checked": "25 giugno 2026 alle ore 15:29"
         }
       ],
       "media": {
@@ -247,19 +247,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "24 giugno 2026 alle ore 14:35",
+      "checked": "25 giugno 2026 alle ore 15:29",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "24 giugno 2026 alle ore 14:35"
+          "checked": "25 giugno 2026 alle ore 15:29"
         },
         {
           "name": "Modulo ufficiale autocandidatura infermieri",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-infermiere",
-          "checked": "24 giugno 2026 alle ore 14:35"
+          "checked": "25 giugno 2026 alle ore 15:29"
         }
       ],
       "media": {
@@ -364,19 +364,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "24 giugno 2026 alle ore 14:35",
+      "checked": "25 giugno 2026 alle ore 15:29",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "24 giugno 2026 alle ore 14:35"
+          "checked": "25 giugno 2026 alle ore 15:29"
         },
         {
           "name": "Modulo ufficiale autocandidatura OSS",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-oss",
-          "checked": "24 giugno 2026 alle ore 14:35"
+          "checked": "25 giugno 2026 alle ore 15:29"
         }
       ],
       "media": {
@@ -473,19 +473,19 @@
       },
       "source": "Manpower Italia - annuncio 1016466",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss/1016466",
-      "checked": "24 giugno 2026 alle ore 14:36",
+      "checked": "25 giugno 2026 alle ore 15:29",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1016466",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss/1016466",
-          "checked": "24 giugno 2026 alle ore 14:36"
+          "checked": "25 giugno 2026 alle ore 15:29"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "24 giugno 2026 alle ore 14:36"
+          "checked": "25 giugno 2026 alle ore 15:29"
         }
       ],
       "media": {
@@ -582,19 +582,19 @@
       },
       "source": "Manpower Italia - annuncio 1016157",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-con-alloggio/1016157",
-      "checked": "24 giugno 2026 alle ore 14:36",
+      "checked": "25 giugno 2026 alle ore 15:29",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1016157",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-con-alloggio/1016157",
-          "checked": "24 giugno 2026 alle ore 14:36"
+          "checked": "25 giugno 2026 alle ore 15:29"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "24 giugno 2026 alle ore 14:36"
+          "checked": "25 giugno 2026 alle ore 15:29"
         }
       ],
       "media": {
@@ -692,19 +692,19 @@
       },
       "source": "Manpower Italia - annuncio 1000000",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
-      "checked": "24 giugno 2026 alle ore 14:36",
+      "checked": "25 giugno 2026 alle ore 15:29",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1000000",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
-          "checked": "24 giugno 2026 alle ore 14:36"
+          "checked": "25 giugno 2026 alle ore 15:29"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "24 giugno 2026 alle ore 14:36"
+          "checked": "25 giugno 2026 alle ore 15:29"
         }
       ],
       "media": {
