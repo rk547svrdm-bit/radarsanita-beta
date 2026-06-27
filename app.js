@@ -1789,11 +1789,16 @@ function renderSearchAnalysis() {
     <div class="search-analysis-list">
       ${evaluatedJobs.map((job) => {
         const reasons = rejectionReasonsForJob(job);
+        const sourceUrl = httpsUrl(sourceEntries(job).find((entry) => entry.url)?.url || job.sourceUrl);
         return `
           <article>
             <span>${escapeHtml(job.source || "Fonte verificata")}</span>
             <b>${escapeHtml(job.title)}</b>
             <small>${escapeHtml(reasons.length ? reasons.join(" · ") : "compatibile: modifica un filtro secondario")}</small>
+            <div class="search-analysis-actions">
+              <button type="button" data-action="detail" data-job-id="${escapeHtml(job.id)}">Apri scheda</button>
+              ${sourceUrl ? `<a href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Fonte</a>` : ""}
+            </div>
           </article>
         `;
       }).join("")}
@@ -2690,7 +2695,7 @@ function useNationalSearchFallback(message = "Ricerca nazionale pronta: non rich
 function requestSearchLocation({ automatic = false, force = false } = {}) {
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
-  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=52";
+  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=53";
 
   if (state.locationRequestInFlight || (automatic && state.locationRequestAttempted)) return;
   if (state.searchOrigin && !force) {

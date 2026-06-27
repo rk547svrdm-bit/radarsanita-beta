@@ -8,7 +8,18 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>RadarSanità</title>
-  <link rel="stylesheet" href="styles.css?v=52">
+  <script>
+    (() => {
+      const targetVersion = 53;
+      const params = new URLSearchParams(window.location.search);
+      const currentVersion = Number(params.get("v"));
+      if (currentVersion && currentVersion < targetVersion) {
+        params.set("v", String(targetVersion));
+        window.location.replace(`${window.location.pathname}?${params.toString()}${window.location.hash}`);
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css?v=53">
 </head>
 <body>
   <div class="app-shell">
@@ -96,6 +107,7 @@
               non automatica: tutto pensato per infermieri e OSS che
               vogliono decidere prima di investire tempo.
             </p>
+            <img class="brand-hero-visual" src="assets/function-visuals/radarsanita-signature.svg" alt="Radar sanitario stilizzato con impulso, bussola e punti di ricerca">
             <div class="intro-signal-strip" aria-label="Segnali principali">
               <span><strong>Media tracciabili</strong> foto o loghi solo dalla fonte</span>
               <span><strong>Fonti visibili</strong> enti, portali e albi</span>
@@ -869,7 +881,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=52"></script>
-  <script src="app.js?v=52"></script>
+  <script src="data.js?v=53"></script>
+  <script src="app.js?v=53"></script>
 </body>
 </html>
