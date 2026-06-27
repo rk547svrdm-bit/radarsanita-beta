@@ -8,7 +8,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>RadarSanità</title>
-  <link rel="stylesheet" href="styles.css?v=51">
+  <link rel="stylesheet" href="styles.css?v=52">
 </head>
 <body>
   <div class="app-shell">
@@ -507,9 +507,9 @@
 
               <fieldset class="intake-contracts">
                 <legend>Contratto che valuti</legend>
-                <label class="check-row"><input type="checkbox" value="Indeterminato" name="intakeContract"> Tempo indeterminato</label>
-                <label class="check-row"><input type="checkbox" value="Determinato" name="intakeContract"> Tempo determinato</label>
-                <label class="check-row"><input type="checkbox" value="Partita IVA" name="intakeContract"> Partita IVA</label>
+                <label class="check-row"><input type="checkbox" value="Tempo indeterminato" name="intakeContract"> Tempo indeterminato</label>
+                <label class="check-row"><input type="checkbox" value="Tempo determinato" name="intakeContract"> Tempo determinato</label>
+                <label class="check-row"><input type="checkbox" value="Partita IVA / libera professione" name="intakeContract"> Partita IVA</label>
               </fieldset>
 
               <label class="search-label" for="searchNotes">Cosa vuoi evitare o trovare? <span>facoltativo</span></label>
@@ -593,15 +593,15 @@
             <fieldset>
               <legend>Contratto</legend>
               <label class="check-row">
-                <input type="checkbox" value="Indeterminato" name="contract">
+                <input type="checkbox" value="Tempo indeterminato" name="contract">
                 Tempo indeterminato
               </label>
               <label class="check-row">
-                <input type="checkbox" value="Determinato" name="contract">
+                <input type="checkbox" value="Tempo determinato" name="contract">
                 Tempo determinato
               </label>
               <label class="check-row">
-                <input type="checkbox" value="Partita IVA" name="contract">
+                <input type="checkbox" value="Partita IVA / libera professione" name="contract">
                 Partita IVA
               </label>
             </fieldset>
@@ -654,7 +654,8 @@
             <div class="empty-state hidden" id="emptyState">
               <span class="empty-icon">⌕</span>
               <h2>Nessuna offerta verificata per la tua ricerca</h2>
-              <p>RadarSanita non mostra annunci generici, esempi o schede senza fonte e candidatura validate.</p>
+              <p>La raccolta viene analizzata, ma nessuna scheda supera tutti i vincoli impostati.</p>
+              <div class="search-analysis" id="searchAnalysis"></div>
               <button class="secondary-button" id="emptyReset">Modifica la ricerca</button>
             </div>
           </div>
@@ -868,7 +869,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=51"></script>
-  <script src="app.js?v=51"></script>
+  <script src="data.js?v=52"></script>
+  <script src="app.js?v=52"></script>
 </body>
 </html>

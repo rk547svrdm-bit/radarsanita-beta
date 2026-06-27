@@ -1356,14 +1356,19 @@ function applicationEffort(job) {
 }
 
 function deadlineSignal(job) {
-  const demoToday = new Date("2026-06-19T12:00:00");
+  if (!job.deadline) {
+    return { value: job.deadlineLabel, note: "Scadenza non indicata nella fonte", level: "medium" };
+  }
+  const today = new Date();
   const deadline = new Date(`${job.deadline}T12:00:00`);
-  const days = Math.ceil((deadline - demoToday) / 86400000);
+  const days = Math.ceil((deadline - today) / 86400000);
 
   if (!Number.isFinite(days)) {
     return { value: job.deadlineLabel, note: "Scadenza indicata nella fonte", level: "medium" };
   }
 
+  if (days < 0) return { value: "Scaduta", note: "Scadenza superata nella fonte", level: "high" };
+  if (days === 0) return { value: "Oggi", note: "Scade oggi", level: "high" };
   if (days <= 4) return { value: "Alta", note: `Scade tra ${days} giorni`, level: "high" };
   if (days <= 10) return { value: "Media", note: `Scade tra ${days} giorni`, level: "medium" };
   return { value: "Bassa", note: `Scade tra ${days} giorni`, level: "low" };
@@ -1553,10 +1558,8 @@ function jobMatchesSearchProfile(job) {
     const distance = distanceFromSearchOrigin(job);
     if (distance === null || distance > Number(profile.distance)) return false;
   }
-  if (profile.contracts.length && !profile.contracts.includes(job.contract)) return false;
-  if (profile.shifts === "noNights" && job.nights !== false) return false;
-  if (profile.shifts === "dayOnly" && job.shifts !== "Solo diurni") return false;
-  if (profile.shifts === "twoShifts" && !job.shifts.toLowerCase().includes("due")) return false;
+  if (!contractMatches(job, profile.contracts)) return false;
+  if (!shiftMatches(job, profile.shifts)) return false;
   return true;
 }
 
@@ -1605,16 +1608,50 @@ function resultsSummaryForProfile() {
   return parts.join(" · ");
 }
 
+function normalized(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function normalizeContractValue(value) {
+  const text = normalized(value);
+  if (!text) return "";
+  if (text.includes("indeterminato")) return "tempo-indeterminato";
+  if (text.includes("determinato")) return "tempo-determinato";
+  if (text.includes("partita iva") || text.includes("libera professione")) return "partita-iva";
+  return text;
+}
+
+function contractMatches(job, selectedContracts = []) {
+  if (!selectedContracts.length) return true;
+  const selected = new Set(selectedContracts.map(normalizeContractValue));
+  return selected.has(normalizeContractValue(job.contract));
+}
+
+function shiftMatches(job, preference) {
+  const shifts = normalized(job.shifts);
+  if (!preference || preference === "any") return true;
+  if (preference === "noNights") return job.nights !== true;
+  if (preference === "dayOnly") return job.nights === false || shifts.includes("solo diurn");
+  if (preference === "twoShifts") return shifts.includes("due turni") || shifts.includes("2 turni");
+  return true;
+}
+
 function syncResultControlsFromSearch() {
   const profile = state.searchProfile;
   const roleCategory = profile.role === "oss" ? "oss" : "all";
+  const selectedContracts = new Set(profile.contracts.map(normalizeContractValue));
   selectCategory(roleCategory);
   document.getElementById("categoryFilter").value = roleCategory;
   document.getElementById("distanceFilter").value = String(profile.distance);
   document.getElementById("shiftFilter").value = profile.shifts;
   document.getElementById("availabilityFilter").value = profile.availability;
   document.querySelectorAll('input[name="contract"]').forEach((input) => {
-    input.checked = profile.contracts.includes(input.value);
+    input.checked = selectedContracts.has(normalizeContractValue(input.value));
   });
 }
 
@@ -1701,6 +1738,65 @@ function renderPersonalMarket() {
     <div class="personal-market-status ${salaryObservations.length ? "available" : "empty"}">
       <strong>${salaryObservations.length ? `${salaryObservations.length} osservazioni` : "In attesa di dati verificati"}</strong>
       <span>${salaryObservations.length ? "Dati da offerte pubblicate nel tuo perimetro" : "Nessun valore stimato o inventato viene mostrato."}</span>
+    </div>
+  `;
+}
+
+function rejectionReasonsForJob(job) {
+  const profile = state.searchProfile;
+  const reasons = [];
+  if (profile.role === "oss" && job.category !== "oss") reasons.push("profilo diverso da OSS");
+  if (profile.role === "infermiere" && job.category === "oss") reasons.push("profilo OSS, non infermieristico");
+  if (Number(profile.distance) < 9999) {
+    const distance = distanceFromSearchOrigin(job);
+    if (distance === null) reasons.push("distanza non calcolabile dalla tua posizione");
+    if (distance !== null && distance > Number(profile.distance)) reasons.push(`${distance} km, fuori dal raggio scelto`);
+  }
+  if (!contractMatches(job, profile.contracts)) reasons.push(`contratto: ${job.contract}`);
+  if (!shiftMatches(job, profile.shifts)) {
+    const shiftLabel = job.shifts || "turni non dichiarati";
+    reasons.push(`turni: ${shiftLabel}`);
+  }
+  if (state.selectedCategory !== "all" && job.category !== state.selectedCategory) reasons.push("tipologia diversa dal filtro risultati");
+
+  const filterContracts = Array.from(document.querySelectorAll('input[name="contract"]:checked')).map((input) => input.value);
+  if (!contractMatches(job, filterContracts)) reasons.push(`filtro contratto non compatibile`);
+  const filterShift = document.getElementById("shiftFilter")?.value || "any";
+  if (!shiftMatches(job, filterShift)) reasons.push("filtro turni non compatibile");
+
+  return [...new Set(reasons)].slice(0, 3);
+}
+
+function renderSearchAnalysis() {
+  const container = document.getElementById("searchAnalysis");
+  if (!container) return;
+  if (!state.searchCompleted || state.filteredJobs.length) {
+    container.innerHTML = "";
+    return;
+  }
+
+  const evaluatedJobs = jobs
+    .filter((job) => job.publicationStatus === "published")
+    .slice(0, 6);
+
+  if (!evaluatedJobs.length) {
+    container.innerHTML = `<strong>Nessuna scheda attiva nell'indice locale.</strong>`;
+    return;
+  }
+
+  container.innerHTML = `
+    <strong>${evaluatedJobs.length} schede verificate analizzate</strong>
+    <div class="search-analysis-list">
+      ${evaluatedJobs.map((job) => {
+        const reasons = rejectionReasonsForJob(job);
+        return `
+          <article>
+            <span>${escapeHtml(job.source || "Fonte verificata")}</span>
+            <b>${escapeHtml(job.title)}</b>
+            <small>${escapeHtml(reasons.length ? reasons.join(" · ") : "compatibile: modifica un filtro secondario")}</small>
+          </article>
+        `;
+      }).join("")}
     </div>
   `;
 }
@@ -1892,10 +1988,8 @@ function applyJobFilters() {
     if (state.selectedCategory !== "all" && job.category !== state.selectedCategory) return false;
     const jobDistance = distanceFromSearchOrigin(job);
     if (maxDistance < 9999 && (jobDistance === null || jobDistance > maxDistance)) return false;
-    if (contracts.length && !contracts.includes(job.contract)) return false;
-    if (shiftPreference === "noNights" && job.nights) return false;
-    if (shiftPreference === "dayOnly" && job.shifts !== "Solo diurni") return false;
-    if (shiftPreference === "twoShifts" && !job.shifts.toLowerCase().includes("due")) return false;
+    if (!contractMatches(job, contracts)) return false;
+    if (!shiftMatches(job, shiftPreference)) return false;
     return true;
   });
 
@@ -1927,6 +2021,7 @@ function renderResults() {
   renderResultsTriage();
   renderScreening();
   renderPersonalMarket();
+  renderSearchAnalysis();
 }
 
 function detailSection(title, content, options = {}) {
@@ -2581,21 +2676,21 @@ function nationalSearchFallbackMarkup(message) {
   return `${message} <button class="location-fallback-button" type="button" data-action="use-national-search">Continua in tutta Italia</button>.`;
 }
 
-function useNationalSearchFallback() {
+function useNationalSearchFallback(message = "Ricerca nazionale pronta: non richiede la posizione del dispositivo.") {
   state.searchOrigin = null;
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
   const distanceInput = document.getElementById("searchDistance");
   if (locationInput) locationInput.value = "Ricerca in tutta Italia";
   if (distanceInput) distanceInput.value = "9999";
-  if (locationHint) locationHint.textContent = "Ricerca nazionale pronta: non richiede la posizione del dispositivo.";
+  if (locationHint) locationHint.textContent = message;
   showToast("Ricerca nazionale impostata");
 }
 
 function requestSearchLocation({ automatic = false, force = false } = {}) {
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
-  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=51";
+  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=52";
 
   if (state.locationRequestInFlight || (automatic && state.locationRequestAttempted)) return;
   if (state.searchOrigin && !force) {
@@ -2640,12 +2735,10 @@ function requestSearchLocation({ automatic = false, force = false } = {}) {
     (error) => {
       state.locationRequestInFlight = false;
       state.searchOrigin = null;
-      if (locationInput) locationInput.value = "";
       const message = error?.code === 1
-        ? "Questo browser non ha autorizzato la posizione. Apri il sito nel browser Safari completo per usare il raggio in km, oppure"
-        : "Non riesco a rilevare la posizione in questo browser. Puoi riprovare dal mirino oppure";
-      if (locationHint) locationHint.innerHTML = nationalSearchFallbackMarkup(message);
-      showToast("Posizione non disponibile");
+        ? "Questo browser non ha autorizzato la posizione. Ho impostato la ricerca in tutta Italia; apri Safari completo o riprova dal mirino per usare il raggio in km."
+        : "Non riesco a rilevare la posizione in questo browser. Ho impostato la ricerca in tutta Italia; puoi riprovare dal mirino per usare il raggio in km.";
+      useNationalSearchFallback(message);
     },
     { enableHighAccuracy: false, timeout: 12000, maximumAge: 300000 }
   );
