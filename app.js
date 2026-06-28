@@ -673,6 +673,8 @@ const state = {
   searchQuery: "Ricerca personalizzata per distanza e disponibilita",
   wizardStep: 1,
   filteredJobs: [],
+  exactResultsCount: 0,
+  softFallbackActive: false,
   searchCompleted: false,
   searchOrigin: null,
   locationRequestInFlight: false,
@@ -1536,6 +1538,7 @@ function availabilityPreferenceLabel() {
   const availability = state.searchProfile.availability || document.getElementById("availabilityFilter")?.value || "any";
   const labels = {
     any: "disponibilità da concordare",
+    immediate: "disponibile da subito",
     days: "inizio entro pochi giorni",
     weeks: "inizio entro poche settimane",
     months: "inizio tra alcuni mesi"
@@ -1560,6 +1563,19 @@ function jobMatchesSearchProfile(job) {
   }
   if (!contractMatches(job, profile.contracts)) return false;
   if (!shiftMatches(job, profile.shifts)) return false;
+  return true;
+}
+
+function jobMatchesBaseSearchProfile(job) {
+  const profile = state.searchProfile;
+  if (!state.searchCompleted) return false;
+  if (job.publicationStatus !== "published") return false;
+  if (profile.role === "oss" && job.category !== "oss") return false;
+  if (profile.role === "infermiere" && job.category === "oss") return false;
+  if (Number(profile.distance) < 9999) {
+    const distance = distanceFromSearchOrigin(job);
+    if (distance === null || distance > Number(profile.distance)) return false;
+  }
   return true;
 }
 
@@ -1662,7 +1678,7 @@ function renderResultsTriage() {
   resultsTriage.innerHTML = `
     <div><small>Profilo</small><strong>${searchRoleLabels[profile.role]}</strong><span>${searchDistanceLabel(profile)}</span></div>
     <div><small>Vincolo principale</small><strong>${profile.shifts === "noNights" ? "Senza notti" : profile.shifts === "dayOnly" ? "Solo diurno" : profile.shifts === "twoShifts" ? "Due turni" : "Turni aperti"}</strong><span>${availabilityPreferenceLabel()}</span></div>
-    <div><small>Risultati nel perimetro</small><strong>${state.filteredJobs.length}</strong><span>${sourceCount} fonti nelle schede</span></div>
+    <div><small>${state.softFallbackActive ? "Da verificare" : "Risultati nel perimetro"}</small><strong>${state.filteredJobs.length}</strong><span>${sourceCount} fonti nelle schede</span></div>
   `;
 }
 
@@ -1698,8 +1714,10 @@ function renderScreening() {
     return;
   }
 
-  if (screeningTitle) screeningTitle.textContent = "Perché vedi questi risultati";
-  screeningSummary.textContent = `Raccolta verificata il ${snapshotLabel}. Filtri applicati: ${signals.join(", ")}; ${availabilityPreferenceLabel()}. Apri ogni scheda per vedere fonte, dati dichiarati e canale di candidatura.`;
+  if (screeningTitle) screeningTitle.textContent = state.softFallbackActive ? "Nessuna corrispondenza perfetta: ecco cosa verificare" : "Perché vedi questi risultati";
+  screeningSummary.textContent = state.softFallbackActive
+    ? `Raccolta verificata il ${snapshotLabel}. I vincoli selezionati non hanno prodotto una corrispondenza perfetta; mostro schede reali nel perimetro per controllare fonte, turni, contratto e candidatura.`
+    : `Raccolta verificata il ${snapshotLabel}. Filtri applicati: ${signals.join(", ")}; ${availabilityPreferenceLabel()}. Apri ogni scheda per vedere fonte, dati dichiarati e canale di candidatura.`;
   screeningGrid.innerHTML = `
     <div class="screening-tile">
       <strong>${sourceLinks.filter(({ url }) => url).length}</strong>
@@ -1715,7 +1733,7 @@ function renderScreening() {
     </div>
     <div class="screening-tile warning-screening">
       <strong>${excludedByNight + outsideDistance}</strong>
-      <span>scartate per filtri attivi</span>
+      <span>${state.softFallbackActive ? "vincoli da verificare" : "scartate per filtri attivi"}</span>
     </div>
   `;
 }
@@ -1726,18 +1744,21 @@ function renderPersonalMarket() {
   const salaryObservations = state.filteredJobs.filter((job) => !isSalaryMissing(job));
   const role = searchRoleLabels[profile.role];
   const area = searchDistanceLabel(profile);
+  const visibleSources = new Set(state.filteredJobs.flatMap((job) => sourceEntries(job).map(({ name }) => name)));
+  const snapshot = window.RADAR_DATA?.searchSnapshot || {};
+  const snapshotSources = Number(snapshot.sourcesUsed) || visibleSources.size;
 
   personalMarketPanel.innerHTML = `
     <div class="personal-market-copy">
       <span class="eyebrow">Borsa del tuo perimetro</span>
       <h2>${role} · ${area}</h2>
-      <p>Compensi e trend compaiono soltanto quando esistono offerte validate con retribuzione pubblicata nel tuo perimetro.</p>
+      <p>Area e profilo sono quelli della ricerca appena elaborata. Fonti nella raccolta: ${snapshotSources}; fonti nei risultati visibili: ${visibleSources.size}.</p>
       <button class="text-button" data-action="open-sources">Vedi le fonti della borsa</button>
     </div>
     <img src="assets/function-visuals/rate-market-clean.svg" alt="Grafico stilizzato della borsa tariffe">
     <div class="personal-market-status ${salaryObservations.length ? "available" : "empty"}">
       <strong>${salaryObservations.length ? `${salaryObservations.length} osservazioni` : "In attesa di dati verificati"}</strong>
-      <span>${salaryObservations.length ? "Dati da offerte pubblicate nel tuo perimetro" : "Nessun valore stimato o inventato viene mostrato."}</span>
+      <span>${salaryObservations.length ? "Dati da offerte pubblicate nel tuo perimetro" : "Nessun valore stimato o inventato viene mostrato finché le fonti non pubblicano retribuzioni."}</span>
     </div>
   `;
 }
@@ -1861,6 +1882,7 @@ function jobListCard(job) {
             <div>
               <span class="job-type">${job.type}</span>
               ${sponsorBadge(job)}
+              ${state.softFallbackActive ? `<span class="verify-badge">Da verificare sui vincoli</span>` : ""}
               <h3>${job.title}</h3>
               <p>${job.company} · ${job.location} · ${distanceLabelForJob(job)}</p>
               ${sourceProvenance(job)}
@@ -1981,6 +2003,8 @@ function renderRateMarket() {
 function applyJobFilters() {
   if (!state.searchCompleted) {
     state.filteredJobs = [];
+    state.exactResultsCount = 0;
+    state.softFallbackActive = false;
     return;
   }
   const maxDistance = Number(document.getElementById("distanceFilter").value);
@@ -1988,7 +2012,7 @@ function applyJobFilters() {
     .map((input) => input.value);
   const shiftPreference = document.getElementById("shiftFilter").value;
 
-  state.filteredJobs = jobs.filter((job) => {
+  const exactMatches = jobs.filter((job) => {
     if (!jobMatchesSearchProfile(job)) return false;
     if (state.selectedCategory !== "all" && job.category !== state.selectedCategory) return false;
     const jobDistance = distanceFromSearchOrigin(job);
@@ -1997,6 +2021,21 @@ function applyJobFilters() {
     if (!shiftMatches(job, shiftPreference)) return false;
     return true;
   });
+
+  state.exactResultsCount = exactMatches.length;
+  state.softFallbackActive = false;
+  state.filteredJobs = exactMatches;
+
+  if (!state.filteredJobs.length) {
+    state.filteredJobs = jobs.filter((job) => {
+      if (!jobMatchesBaseSearchProfile(job)) return false;
+      if (state.selectedCategory !== "all" && job.category !== state.selectedCategory) return false;
+      const jobDistance = distanceFromSearchOrigin(job);
+      if (maxDistance < 9999 && (jobDistance === null || jobDistance > maxDistance)) return false;
+      return true;
+    });
+    state.softFallbackActive = state.filteredJobs.length > 0;
+  }
 
   const sort = document.getElementById("sortJobs").value;
   state.filteredJobs.sort((a, b) => {
@@ -2020,7 +2059,9 @@ function selectCategory(category) {
 function renderResults() {
   const empty = document.getElementById("emptyState");
   const resultCount = document.getElementById("resultCount");
-  resultCount.textContent = `${state.filteredJobs.length} ${state.filteredJobs.length === 1 ? "offerta" : "offerte"}`;
+  resultCount.textContent = state.softFallbackActive
+    ? `${state.filteredJobs.length} ${state.filteredJobs.length === 1 ? "scheda da verificare" : "schede da verificare"}`
+    : `${state.filteredJobs.length} ${state.filteredJobs.length === 1 ? "offerta" : "offerte"}`;
   jobList.innerHTML = state.filteredJobs.map(jobListCard).join("");
   empty.classList.toggle("hidden", state.filteredJobs.length > 0);
   renderResultsTriage();
@@ -2686,16 +2727,57 @@ function useNationalSearchFallback(message = "Ricerca nazionale pronta: non rich
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
   const distanceInput = document.getElementById("searchDistance");
+  const mapPin = document.getElementById("mapPin");
   if (locationInput) locationInput.value = "Ricerca in tutta Italia";
   if (distanceInput) distanceInput.value = "9999";
   if (locationHint) locationHint.textContent = message;
+  if (mapPin) mapPin.classList.add("hidden");
   showToast("Ricerca nazionale impostata");
+}
+
+function setSearchOrigin(lat, lng, label, pin = null) {
+  const coordinates = validCoordinates({ lat, lng });
+  if (!coordinates) return false;
+  state.searchOrigin = { ...coordinates, label };
+  const locationInput = document.getElementById("searchLocation");
+  const locationHint = document.getElementById("searchLocationHint");
+  if (locationInput) locationInput.value = label;
+  if (locationHint) locationHint.textContent = `Raggio pronto: i km partiranno da ${label}.`;
+  if (pin) {
+    const mapPin = document.getElementById("mapPin");
+    if (mapPin) {
+      mapPin.style.left = `${pin.x}%`;
+      mapPin.style.top = `${pin.y}%`;
+      mapPin.classList.remove("hidden");
+    }
+  }
+  showToast("Punto di partenza impostato");
+  return true;
+}
+
+function setSearchOriginFromMapEvent(event) {
+  const map = event.currentTarget;
+  const rect = map.getBoundingClientRect();
+  const x = Math.min(100, Math.max(0, ((event.clientX - rect.left) / rect.width) * 100));
+  const y = Math.min(100, Math.max(0, ((event.clientY - rect.top) / rect.height) * 100));
+  const lng = 6.2 + (x / 100) * 12.9;
+  const lat = 47.4 - (y / 100) * 11.4;
+  setSearchOrigin(lat, lng, `Punto scelto sulla mappa (${lat.toFixed(2)}, ${lng.toFixed(2)})`, { x, y });
+}
+
+function setSearchOriginFromPreset(target) {
+  const lat = Number(target.dataset.lat);
+  const lng = Number(target.dataset.lng);
+  const label = target.dataset.label || "punto scelto";
+  const x = ((lng - 6.2) / 12.9) * 100;
+  const y = ((47.4 - lat) / 11.4) * 100;
+  setSearchOrigin(lat, lng, label, { x: Math.min(100, Math.max(0, x)), y: Math.min(100, Math.max(0, y)) });
 }
 
 function requestSearchLocation({ automatic = false, force = false } = {}) {
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
-  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=53";
+  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=54";
 
   if (state.locationRequestInFlight || (automatic && state.locationRequestAttempted)) return;
   if (state.searchOrigin && !force) {
@@ -2735,6 +2817,7 @@ function requestSearchLocation({ automatic = false, force = false } = {}) {
       };
       if (locationInput) locationInput.value = "Posizione attuale acquisita";
       if (locationHint) locationHint.textContent = "Posizione pronta: il raggio in km partirà da qui. Puoi aggiornarla dal mirino.";
+      document.getElementById("mapPin")?.classList.add("hidden");
       showToast("Posizione pronta per la ricerca");
     },
     (error) => {
@@ -2879,6 +2962,8 @@ document.addEventListener("click", (event) => {
     requestSearchLocation({ force: true });
   } else if (action === "use-national-search") {
     useNationalSearchFallback();
+  } else if (action === "map-location") {
+    setSearchOriginFromPreset(actionTarget);
   }
 });
 
@@ -2982,6 +3067,7 @@ function resetFilters() {
 
 document.getElementById("resetFilters").addEventListener("click", resetFilters);
 document.getElementById("emptyReset").addEventListener("click", () => navigate("home"));
+document.getElementById("italyMap")?.addEventListener("click", setSearchOriginFromMapEvent);
 
 renderCoverageDashboard();
 renderSourceRegistry();
