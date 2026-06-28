@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RadarSanita - Simulazione mercato</title>
+  <style>
+    :root {
+      --ink:#123332; --muted:#617673; --green:#0f766e; --soft:#eaf7f3; --line:#d6ebe6;
+      --paper:#f7fbf9; --white:#fff;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:linear-gradient(180deg,#fff,#f0faf6); font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.45; }
+    main { width:min(1120px,100%); margin:0 auto; padding:34px 20px 60px; }
+    .hero { display:grid; gap:14px; padding:28px; border:1px solid var(--line); border-radius:18px; background:var(--white); box-shadow:0 18px 50px rgba(15,118,110,.08); }
+    .eyebrow { color:var(--green); font-size:12px; font-weight:850; text-transform:uppercase; }
+    h1 { max-width:850px; margin:0; font-size:clamp(34px,5vw,58px); line-height:1; }
+    p { max-width:780px; color:var(--muted); margin:0; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .card { padding:18px; border:1px solid var(--line); border-radius:14px; background:var(--white); }
+    .card span, small { color:var(--muted); font-weight:750; }
+    .card h3 { margin:8px 0; font-size:24px; line-height:1.1; }
+    .kpis { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:18px 0; }
+    .kpi { padding:16px; border:1px solid var(--line); border-radius:14px; background:var(--soft); }
+    .kpi strong { display:block; font-size:28px; }
+    .meter { height:10px; margin:12px 0 7px; overflow:hidden; border-radius:999px; background:#dcefea; }
+    .meter i { display:block; height:100%; border-radius:inherit; background:var(--green); }
+    .charts { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin:18px 0; }
+    .chart { padding:16px; border:1px solid var(--line); border-radius:14px; background:#fff; }
+    svg { width:100%; height:130px; overflow:visible; }
+    polyline { fill:none; stroke:var(--green); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+    table { width:100%; border-collapse:collapse; margin-top:12px; overflow:hidden; border:1px solid var(--line); border-radius:14px; background:#fff; }
+    th,td { padding:10px 12px; border-bottom:1px solid var(--line); text-align:right; font-size:14px; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--green); background:#f2faf7; }
+    .note { margin-top:18px; padding:16px; border:1px solid var(--line); border-radius:14px; background:#fff; }
+    @media (max-width:800px) { .grid,.kpis,.charts { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <span class="eyebrow">Simulazione Monte Carlo - 5.000 run per scenario</span>
+    <h1>Esito: test piccolo prima di investire</h1>
+    <p>
+      Perimetro: Torino/Piemonte, 18 mesi, marketplace tra infermieri/OSS e strutture.
+      Il risultato non prova il mercato, ma indica se i numeri sono abbastanza promettenti
+      da giustificare un test reale con budget controllato.
+    </p>
+  </section>
+
+  <section class="kpis">
+    <div class="kpi"><small>Utenti attivi M18</small><strong>514</strong><span>P10 323 / P90 770</span></div>
+    <div class="kpi"><small>Enti paganti M18</small><strong>15</strong><span>P10 10 / P90 24</span></div>
+    <div class="kpi"><small>MRR M18</small><strong>EUR 3.706</strong><span>P10 EUR 2.343 / P90 EUR 5.848</span></div>
+    <div class="kpi"><small>Prob. utile M18</small><strong>0%</strong><span>break-even entro 18 mesi 0%</span></div>
+  </section>
+
+  <section class="grid">
+    
+            <article class="card">
+              <span>Penetrazione</span>
+              <h3>EUR 2.893 MRR mediano al mese 18</h3>
+              <p>509 utenti attivi/mese, 18 enti paganti.</p>
+              <div class="meter"><i style="width:0%"></i></div>
+              <small>Probabilita utile mese 18: 0%</small>
+            </article>
+            
+            <article class="card">
+              <span>Base</span>
+              <h3>EUR 3.706 MRR mediano al mese 18</h3>
+              <p>514 utenti attivi/mese, 15 enti paganti.</p>
+              <div class="meter"><i style="width:0%"></i></div>
+              <small>Probabilita utile mese 18: 0%</small>
+            </article>
+            
+            <article class="card">
+              <span>Premium</span>
+              <h3>EUR 3.855 MRR mediano al mese 18</h3>
+              <p>503 utenti attivi/mese, 11 enti paganti.</p>
+              <div class="meter"><i style="width:0%"></i></div>
+              <small>Probabilita utile mese 18: 0%</small>
+            </article>
+            
+  </section>
+
+  <section class="charts">
+    <div class="chart"><strong>MRR mediano</strong><svg viewBox="0 0 460 120"><polyline points="0.0,114.0 27.1,109.1 54.1,104.4 81.2,99.4 108.2,92.0 135.3,84.8 162.4,78.2 189.4,72.0 216.5,65.7 243.5,59.3 270.6,53.0 297.6,47.4 324.7,39.5 351.8,32.0 378.8,24.9 405.9,18.3 432.9,11.9 460.0,6.0"/></svg></div>
+    <div class="chart"><strong>Utenti attivi mediani</strong><svg viewBox="0 0 460 120"><polyline points="0.0,114.0 27.1,101.4 54.1,92.2 81.2,78.8 108.2,68.8 135.3,61.4 162.4,56.6 189.4,54.4 216.5,46.4 243.5,35.8 270.6,28.8 297.6,25.7 324.7,20.4 351.8,16.1 378.8,12.9 405.9,10.1 432.9,7.8 460.0,6.0"/></svg></div>
+    <div class="chart"><strong>Enti paganti mediani</strong><svg viewBox="0 0 460 120"><polyline points="0.0,114.0 27.1,109.4 54.1,104.7 81.2,100.0 108.2,92.7 135.3,85.7 162.4,78.9 189.4,72.6 216.5,66.4 243.5,60.1 270.6,53.9 297.6,48.2 324.7,40.3 351.8,32.7 378.8,25.4 405.9,18.6 432.9,12.0 460.0,6.0"/></svg></div>
+  </section>
+
+  <section class="note">
+    <h2>Tabella scenario base - valori mediani</h2>
+    <table>
+      <thead><tr><th>Mese</th><th>Visite</th><th>Utenti attivi</th><th>Candidature</th><th>Enti paganti</th><th>MRR</th><th>Utile operativo</th></tr></thead>
+      <tbody>
+            <tr>
+              <td>1</td>
+              <td>1.109</td>
+              <td>77</td>
+              <td>25</td>
+              <td>1</td>
+              <td>EUR 165</td>
+              <td>EUR -3.859</td>
+            </tr>
+            
+            <tr>
+              <td>2</td>
+              <td>1.133</td>
+              <td>128</td>
+              <td>41</td>
+              <td>1</td>
+              <td>EUR 325</td>
+              <td>EUR -3.721</td>
+            </tr>
+            
+            <tr>
+              <td>3</td>
+              <td>1.204</td>
+              <td>165</td>
+              <td>54</td>
+              <td>2</td>
+              <td>EUR 480</td>
+              <td>EUR -3.588</td>
+            </tr>
+            
+            <tr>
+              <td>4</td>
+              <td>1.637</td>
+              <td>219</td>
+              <td>72</td>
+              <td>3</td>
+              <td>EUR 644</td>
+              <td>EUR -4.049</td>
+            </tr>
+            
+            <tr>
+              <td>5</td>
+              <td>1.709</td>
+              <td>260</td>
+              <td>85</td>
+              <td>4</td>
+              <td>EUR 887</td>
+              <td>EUR -5.942</td>
+            </tr>
+            
+            <tr>
+              <td>6</td>
+              <td>1.760</td>
+              <td>290</td>
+              <td>94</td>
+              <td>4</td>
+              <td>EUR 1.122</td>
+              <td>EUR -5.745</td>
+            </tr>
+            
+            <tr>
+              <td>7</td>
+              <td>1.771</td>
+              <td>309</td>
+              <td>101</td>
+              <td>5</td>
+              <td>EUR 1.339</td>
+              <td>EUR -5.559</td>
+            </tr>
+            
+            <tr>
+              <td>8</td>
+              <td>1.717</td>
+              <td>318</td>
+              <td>104</td>
+              <td>6</td>
+              <td>EUR 1.543</td>
+              <td>EUR -5.383</td>
+            </tr>
+            
+            <tr>
+              <td>9</td>
+              <td>2.102</td>
+              <td>350</td>
+              <td>114</td>
+              <td>7</td>
+              <td>EUR 1.747</td>
+              <td>EUR -5.209</td>
+            </tr>
+            
+            <tr>
+              <td>10</td>
+              <td>2.402</td>
+              <td>393</td>
+              <td>128</td>
+              <td>8</td>
+              <td>EUR 1.959</td>
+              <td>EUR -5.630</td>
+            </tr>
+            
+            <tr>
+              <td>11</td>
+              <td>2.422</td>
+              <td>422</td>
+              <td>138</td>
+              <td>9</td>
+              <td>EUR 2.163</td>
+              <td>EUR -5.455</td>
+            </tr>
+            
+            <tr>
+              <td>12</td>
+              <td>2.343</td>
+              <td>434</td>
+              <td>142</td>
+              <td>10</td>
+              <td>EUR 2.348</td>
+              <td>EUR -5.292</td>
+            </tr>
+            
+            <tr>
+              <td>13</td>
+              <td>2.537</td>
+              <td>456</td>
+              <td>149</td>
+              <td>11</td>
+              <td>EUR 2.608</td>
+              <td>EUR -7.273</td>
+            </tr>
+            
+            <tr>
+              <td>14</td>
+              <td>2.560</td>
+              <td>473</td>
+              <td>155</td>
+              <td>12</td>
+              <td>EUR 2.855</td>
+              <td>EUR -7.064</td>
+            </tr>
+            
+            <tr>
+              <td>15</td>
+              <td>2.610</td>
+              <td>486</td>
+              <td>159</td>
+              <td>13</td>
+              <td>EUR 3.087</td>
+              <td>EUR -6.861</td>
+            </tr>
+            
+            <tr>
+              <td>16</td>
+              <td>2.647</td>
+              <td>498</td>
+              <td>162</td>
+              <td>14</td>
+              <td>EUR 3.303</td>
+              <td>EUR -6.670</td>
+            </tr>
+            
+            <tr>
+              <td>17</td>
+              <td>2.679</td>
+              <td>507</td>
+              <td>165</td>
+              <td>14</td>
+              <td>EUR 3.514</td>
+              <td>EUR -6.494</td>
+            </tr>
+            
+            <tr>
+              <td>18</td>
+              <td>2.689</td>
+              <td>514</td>
+              <td>167</td>
+              <td>15</td>
+              <td>EUR 3.706</td>
+              <td>EUR -6.329</td>
+            </tr>
+            </tbody>
+    </table>
+  </section>
+
+  <section class="note">
+    <h2>Ipotesi principali</h2>
+    <p>
+      TAM professionisti stimato scalando iscritti infermieristici nazionali e popolazione Piemonte,
+      piu una componente OSS addressable. Candidate side freemium; monetizzazione principale lato enti.
+      Tariffe simulate: Penetrazione EUR 59/129/249, Base EUR 89/179/399, Premium EUR 129/249/599.
+      Il modello include stagionalita, retention, referral, crescita SEO, conversione lead->trial->paid,
+      churn enti, spesa marketing e costi operativi.
+    </p>
+  </section>
+
+  <section class="note">
+    <h2>Soglie per un pilot reale di 60-90 giorni</h2>
+    <p>
+      Per considerare il mercato promettente prima di investire sul prodotto completo:
+      1.500-2.000 visite/mese, 250-350 registrazioni totali, 120-180 utenti attivi mensili,
+      almeno 50 candidature generate, 8-12 enti in pipeline e 3-5 enti disposti a pagare
+      o firmare una lettera di interesse. Sotto queste soglie il modello suggerisce di
+      cambiare canale o riposizionare l'offerta B2B.
+    </p>
+  </section>
+
+  <section class="note">
+    <h2>Fonti dati usate per calibrare il modello</h2>
+    <p>
+      FNOPI/FNOPI DataCorner e albo nazionale per dimensionamento professionale; ISTAT Demo per
+      popolazione residente e scala territoriale; FNOPI-AlmaLaurea per segnale di forte occupabilita
+      del percorso infermieristico. Dove non esiste un benchmark pubblico diretto, il range e indicato
+      come ipotesi del modello e puo essere modificato nel codice.
+    </p>
+  </section>
+</main>
+</body>
+</html>

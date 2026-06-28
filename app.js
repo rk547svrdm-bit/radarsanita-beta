@@ -683,8 +683,8 @@ const state = {
     role: "",
     distance: 0,
     origin: null,
-    shifts: "",
-    availability: "",
+    shifts: ["any"],
+    availability: ["any"],
     contracts: [],
     notes: ""
   },
@@ -703,6 +703,7 @@ async function hydrateLiveOfferIndex() {
 
     jobs = index.jobs.filter((job) => job?.publicationStatus === "published");
     liveOfferIndexState = "ready";
+    updateLiveSourceCounters(index.sourcesChecked);
     if (window.RADAR_DATA) {
       window.RADAR_DATA.searchSnapshot = {
         ...(window.RADAR_DATA.searchSnapshot || {}),
@@ -716,6 +717,7 @@ async function hydrateLiveOfferIndex() {
   } catch {
     // The embedded source-backed index remains available when the refresh file is unreachable.
     liveOfferIndexState = "fallback";
+    updateLiveSourceCounters(window.RADAR_DATA?.searchSnapshot?.sourcesUsed);
   }
 }
 
@@ -737,6 +739,14 @@ const offerReviewOutput = document.getElementById("offerReviewOutput");
 const resultsTriage = document.getElementById("resultsTriage");
 const sourceRegistryList = document.getElementById("sourceRegistryList");
 const personalMarketPanel = document.getElementById("personalMarketPanel");
+
+function updateLiveSourceCounters(count) {
+  const safeCount = Number(count) || 13;
+  const introCount = document.getElementById("introSourceCount");
+  const radarCount = document.getElementById("radarSourceCount");
+  if (introCount) introCount.textContent = String(safeCount);
+  if (radarCount) radarCount.textContent = `${safeCount} fonti controllate`;
+}
 
 function getJob(id) {
   return jobs.find((job) => job.id === id) || jobs[0];
@@ -1513,16 +1523,71 @@ function sponsorBadge(job) {
   return `<span class="sponsored-badge">In evidenza</span>`;
 }
 
+function choiceArray(value) {
+  if (Array.isArray(value)) return value.filter(Boolean);
+  if (!value) return [];
+  return [value];
+}
+
+function readCheckedValues(name) {
+  return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`))
+    .map((input) => input.value)
+    .filter(Boolean);
+}
+
+function setCheckedValues(name, values, fallback = "any") {
+  const selected = new Set(choiceArray(values));
+  if (!selected.size && fallback) selected.add(fallback);
+  document.querySelectorAll(`input[name="${name}"]`).forEach((input) => {
+    input.checked = selected.has(input.value);
+  });
+}
+
+function keepAnyChoiceExclusive(groupName, changedInput) {
+  if (!changedInput?.checked) {
+    const checked = readCheckedValues(groupName);
+    if (!checked.length) setCheckedValues(groupName, ["any"]);
+    return;
+  }
+  const inputs = Array.from(document.querySelectorAll(`input[name="${groupName}"]`));
+  if (changedInput.value === "any") {
+    inputs.forEach((input) => {
+      input.checked = input === changedInput;
+    });
+    return;
+  }
+  inputs.forEach((input) => {
+    if (input.value === "any") input.checked = false;
+  });
+}
+
+function compactChoices(values, fallback = "any") {
+  const selected = choiceArray(values);
+  if (!selected.length) return fallback ? [fallback] : [];
+  return selected.includes("any") && selected.length > 1
+    ? selected.filter((value) => value !== "any")
+    : selected;
+}
+
+function choicesLabel(values, labels, fallback) {
+  const selected = compactChoices(values, "any");
+  if (!selected.length || selected.includes("any")) return fallback;
+  return selected.map((value) => labels[value]).filter(Boolean).join(", ");
+}
+
+function shiftPreferenceLabel(values) {
+  return choicesLabel(values, shiftPreferenceLabels, "turni aperti");
+}
+
+function availabilityPreferenceLabel(values = state.searchProfile.availability) {
+  const selected = values || readCheckedValues("availabilityFilter");
+  return choicesLabel(selected, availabilityPreferenceLabels, "disponibilità da concordare");
+}
+
 function requestSignals() {
   if (state.searchCompleted) {
     const profile = state.searchProfile;
-    const shift = {
-      noNights: "senza notti",
-      dayOnly: "solo diurno",
-      twoShifts: "due turni",
-      any: "turni aperti"
-    }[profile.shifts];
-    return [searchRoleLabels[profile.role], searchDistanceLabel(profile), shift].filter(Boolean);
+    return [searchRoleLabels[profile.role], searchDistanceLabel(profile), shiftPreferenceLabel(profile.shifts)].filter(Boolean);
   }
   const query = state.searchQuery.toLowerCase();
   const signals = [];
@@ -1534,22 +1599,64 @@ function requestSignals() {
   return signals.length ? signals : ["preferenze del profilo"];
 }
 
-function availabilityPreferenceLabel() {
-  const availability = state.searchProfile.availability || document.getElementById("availabilityFilter")?.value || "any";
-  const labels = {
-    any: "disponibilità da concordare",
-    immediate: "disponibile da subito",
-    days: "inizio entro pochi giorni",
-    weeks: "inizio entro poche settimane",
-    months: "inizio tra alcuni mesi"
-  };
-  return labels[availability] || labels.any;
-}
-
 const searchRoleLabels = {
   infermiere: "Infermiere/a",
   oss: "OSS"
 };
+
+const shiftPreferenceLabels = {
+  any: "turni aperti",
+  noNights: "senza notti",
+  dayOnly: "solo diurno",
+  twoShifts: "due turni",
+  threeShifts: "tre turni"
+};
+
+const availabilityPreferenceLabels = {
+  any: "disponibilità da concordare",
+  immediate: "disponibile da subito",
+  days: "inizio entro pochi giorni",
+  weeks: "inizio entro poche settimane",
+  months: "inizio tra alcuni mesi"
+};
+
+const italianPlaceCatalog = [
+  ["Torino", 45.0703, 7.6869],
+  ["Lanzo Torinese", 45.2763, 7.4787],
+  ["Ciriè", 45.2341, 7.6016],
+  ["Venaria Reale", 45.1356, 7.6316],
+  ["San Mauro Torinese", 45.1038, 7.7682],
+  ["Ivrea", 45.4676, 7.8758],
+  ["Alessandria", 44.9125, 8.6189],
+  ["Asti", 44.9008, 8.2066],
+  ["Cuneo", 44.3845, 7.5427],
+  ["Novara", 45.4469, 8.6222],
+  ["Milano", 45.4642, 9.19],
+  ["Bergamo", 45.6983, 9.6773],
+  ["Capriate San Gervasio", 45.6107, 9.5307],
+  ["Brescia", 45.5416, 10.2118],
+  ["Varese", 45.8206, 8.8251],
+  ["Genova", 44.4056, 8.9463],
+  ["Bologna", 44.4949, 11.3426],
+  ["Parma", 44.8015, 10.328],
+  ["Modena", 44.6471, 10.9252],
+  ["Firenze", 43.7696, 11.2558],
+  ["Pisa", 43.7228, 10.4017],
+  ["Venezia", 45.4408, 12.3155],
+  ["Padova", 45.4064, 11.8768],
+  ["Verona", 45.4384, 10.9916],
+  ["Roma", 41.9028, 12.4964],
+  ["Orvieto", 42.7185, 12.1107],
+  ["Napoli", 40.8518, 14.2681],
+  ["Salerno", 40.6824, 14.7681],
+  ["Bari", 41.1171, 16.8719],
+  ["Lecce", 40.352, 18.169],
+  ["Pescara", 42.4618, 14.2161],
+  ["Ancona", 43.6158, 13.5189],
+  ["Palermo", 38.1157, 13.3615],
+  ["Catania", 37.5079, 15.083],
+  ["Cagliari", 39.2238, 9.1217]
+].map(([label, lat, lng]) => ({ label, lat, lng }));
 
 function jobMatchesSearchProfile(job) {
   const profile = state.searchProfile;
@@ -1619,7 +1726,8 @@ function resultsSummaryForProfile() {
   const parts = [
     searchRoleLabels[profile.role],
     searchDistanceLabel(profile),
-    profile.shifts === "noNights" ? "senza notti" : profile.shifts === "dayOnly" ? "solo diurno" : profile.shifts === "twoShifts" ? "due turni" : ""
+    shiftPreferenceLabel(profile.shifts),
+    availabilityPreferenceLabel(profile.availability)
   ].filter(Boolean);
   return parts.join(" · ");
 }
@@ -1649,12 +1757,16 @@ function contractMatches(job, selectedContracts = []) {
 }
 
 function shiftMatches(job, preference) {
+  const preferences = compactChoices(preference, "any");
   const shifts = normalized(job.shifts);
-  if (!preference || preference === "any") return true;
-  if (preference === "noNights") return job.nights !== true;
-  if (preference === "dayOnly") return job.nights === false || shifts.includes("solo diurn");
-  if (preference === "twoShifts") return shifts.includes("due turni") || shifts.includes("2 turni");
-  return true;
+  if (!preferences.length || preferences.includes("any")) return true;
+  return preferences.some((selected) => {
+    if (selected === "noNights") return job.nights !== true;
+    if (selected === "dayOnly") return job.nights === false || shifts.includes("solo diurn");
+    if (selected === "twoShifts") return shifts.includes("due turni") || shifts.includes("2 turni");
+    if (selected === "threeShifts") return shifts.includes("tre turni") || shifts.includes("3 turni");
+    return false;
+  });
 }
 
 function syncResultControlsFromSearch() {
@@ -1664,8 +1776,8 @@ function syncResultControlsFromSearch() {
   selectCategory(roleCategory);
   document.getElementById("categoryFilter").value = roleCategory;
   document.getElementById("distanceFilter").value = String(profile.distance);
-  document.getElementById("shiftFilter").value = profile.shifts;
-  document.getElementById("availabilityFilter").value = profile.availability;
+  setCheckedValues("shiftFilter", profile.shifts);
+  setCheckedValues("availabilityFilter", profile.availability);
   document.querySelectorAll('input[name="contract"]').forEach((input) => {
     input.checked = selectedContracts.has(normalizeContractValue(input.value));
   });
@@ -1677,7 +1789,7 @@ function renderResultsTriage() {
   const sourceCount = new Set(state.filteredJobs.flatMap((job) => sourceEntries(job).map(({ name }) => name))).size;
   resultsTriage.innerHTML = `
     <div><small>Profilo</small><strong>${searchRoleLabels[profile.role]}</strong><span>${searchDistanceLabel(profile)}</span></div>
-    <div><small>Vincolo principale</small><strong>${profile.shifts === "noNights" ? "Senza notti" : profile.shifts === "dayOnly" ? "Solo diurno" : profile.shifts === "twoShifts" ? "Due turni" : "Turni aperti"}</strong><span>${availabilityPreferenceLabel()}</span></div>
+    <div><small>Vincoli scelti</small><strong>${shiftPreferenceLabel(profile.shifts)}</strong><span>${availabilityPreferenceLabel(profile.availability)}</span></div>
     <div><small>${state.softFallbackActive ? "Da verificare" : "Risultati nel perimetro"}</small><strong>${state.filteredJobs.length}</strong><span>${sourceCount} fonti nelle schede</span></div>
   `;
 }
@@ -1782,7 +1894,7 @@ function rejectionReasonsForJob(job) {
 
   const filterContracts = Array.from(document.querySelectorAll('input[name="contract"]:checked')).map((input) => input.value);
   if (!contractMatches(job, filterContracts)) reasons.push(`filtro contratto non compatibile`);
-  const filterShift = document.getElementById("shiftFilter")?.value || "any";
+  const filterShift = readCheckedValues("shiftFilter");
   if (!shiftMatches(job, filterShift)) reasons.push("filtro turni non compatibile");
 
   return [...new Set(reasons)].slice(0, 3);
@@ -2010,7 +2122,7 @@ function applyJobFilters() {
   const maxDistance = Number(document.getElementById("distanceFilter").value);
   const contracts = Array.from(document.querySelectorAll('input[name="contract"]:checked'))
     .map((input) => input.value);
-  const shiftPreference = document.getElementById("shiftFilter").value;
+  const shiftPreference = readCheckedValues("shiftFilter");
 
   const exactMatches = jobs.filter((job) => {
     if (!jobMatchesSearchProfile(job)) return false;
@@ -2718,6 +2830,78 @@ function collectSponsorRequest() {
   ].join("\n\n");
 }
 
+function updateSelectedPlaceCard(label, note = "Il raggio partirà da qui quando scegli una distanza in km.") {
+  const card = document.getElementById("selectedPlaceCard");
+  if (!card) return;
+  card.innerHTML = `
+    <span>Origine</span>
+    <strong>${escapeHtml(label)}</strong>
+    <small>${escapeHtml(note)}</small>
+  `;
+}
+
+function findCatalogPlace(value) {
+  const target = normalized(value);
+  if (!target) return null;
+  return italianPlaceCatalog.find((place) => normalized(place.label) === target)
+    || italianPlaceCatalog.find((place) => normalized(place.label).startsWith(target));
+}
+
+async function geocodeItalianPlace(value) {
+  const label = String(value || "").trim();
+  if (!label) return null;
+  const knownPlace = findCatalogPlace(label);
+  if (knownPlace) return knownPlace;
+  if (window.location.protocol === "file:" || !window.isSecureContext) return null;
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 8000);
+  try {
+    const url = new URL("https://nominatim.openstreetmap.org/search");
+    url.searchParams.set("format", "jsonv2");
+    url.searchParams.set("limit", "1");
+    url.searchParams.set("countrycodes", "it");
+    url.searchParams.set("q", `${label}, Italia`);
+    const response = await fetch(url, { signal: controller.signal });
+    if (!response.ok) return null;
+    const [result] = await response.json();
+    if (!result) return null;
+    const lat = Number(result.lat);
+    const lng = Number(result.lon);
+    const display = String(result.display_name || label).split(",")[0] || label;
+    return validCoordinates({ lat, lng }) ? { label: display, lat, lng } : null;
+  } catch {
+    return null;
+  } finally {
+    window.clearTimeout(timeout);
+  }
+}
+
+async function selectSearchPlaceFromInput() {
+  const placeInput = document.getElementById("searchPlace");
+  const requestedPlace = placeInput?.value.trim();
+  if (!requestedPlace) {
+    showToast("Scrivi una città o un comune");
+    placeInput?.focus();
+    return;
+  }
+  const button = document.querySelector('[data-action="select-place"]');
+  button?.setAttribute("disabled", "disabled");
+  const previousText = button?.textContent;
+  if (button) button.textContent = "Cerco...";
+  const place = await geocodeItalianPlace(requestedPlace);
+  if (button) {
+    button.textContent = previousText || "Imposta";
+    button.removeAttribute("disabled");
+  }
+  if (!place) {
+    showToast("Località non trovata: prova un comune più preciso");
+    placeInput?.focus();
+    return;
+  }
+  if (placeInput) placeInput.value = place.label;
+  setSearchOrigin(place.lat, place.lng, place.label);
+}
+
 function nationalSearchFallbackMarkup(message) {
   return `${message} <button class="location-fallback-button" type="button" data-action="use-national-search">Continua in tutta Italia</button>.`;
 }
@@ -2727,11 +2911,12 @@ function useNationalSearchFallback(message = "Ricerca nazionale pronta: non rich
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
   const distanceInput = document.getElementById("searchDistance");
-  const mapPin = document.getElementById("mapPin");
+  const placeInput = document.getElementById("searchPlace");
   if (locationInput) locationInput.value = "Ricerca in tutta Italia";
+  if (placeInput) placeInput.value = "";
   if (distanceInput) distanceInput.value = "9999";
   if (locationHint) locationHint.textContent = message;
-  if (mapPin) mapPin.classList.add("hidden");
+  updateSelectedPlaceCard("Tutta Italia", "Nessun raggio locale: vengono mostrate le offerte pubblicate nella raccolta nazionale.");
   showToast("Ricerca nazionale impostata");
 }
 
@@ -2741,16 +2926,11 @@ function setSearchOrigin(lat, lng, label, pin = null) {
   state.searchOrigin = { ...coordinates, label };
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
+  const placeInput = document.getElementById("searchPlace");
   if (locationInput) locationInput.value = label;
+  if (placeInput && label !== "la tua posizione attuale") placeInput.value = label;
   if (locationHint) locationHint.textContent = `Raggio pronto: i km partiranno da ${label}.`;
-  if (pin) {
-    const mapPin = document.getElementById("mapPin");
-    if (mapPin) {
-      mapPin.style.left = `${pin.x}%`;
-      mapPin.style.top = `${pin.y}%`;
-      mapPin.classList.remove("hidden");
-    }
-  }
+  updateSelectedPlaceCard(label, `Coordinate impostate: ${coordinates.lat.toFixed(3)}, ${coordinates.lng.toFixed(3)}.`);
   showToast("Punto di partenza impostato");
   return true;
 }
@@ -2769,15 +2949,13 @@ function setSearchOriginFromPreset(target) {
   const lat = Number(target.dataset.lat);
   const lng = Number(target.dataset.lng);
   const label = target.dataset.label || "punto scelto";
-  const x = ((lng - 6.2) / 12.9) * 100;
-  const y = ((47.4 - lat) / 11.4) * 100;
-  setSearchOrigin(lat, lng, label, { x: Math.min(100, Math.max(0, x)), y: Math.min(100, Math.max(0, y)) });
+  setSearchOrigin(lat, lng, label);
 }
 
 function requestSearchLocation({ automatic = false, force = false } = {}) {
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
-  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=54";
+  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=55";
 
   if (state.locationRequestInFlight || (automatic && state.locationRequestAttempted)) return;
   if (state.searchOrigin && !force) {
@@ -2817,7 +2995,7 @@ function requestSearchLocation({ automatic = false, force = false } = {}) {
       };
       if (locationInput) locationInput.value = "Posizione attuale acquisita";
       if (locationHint) locationHint.textContent = "Posizione pronta: il raggio in km partirà da qui. Puoi aggiornarla dal mirino.";
-      document.getElementById("mapPin")?.classList.add("hidden");
+      updateSelectedPlaceCard("Posizione attuale", "Il raggio parte dalla posizione concessa dal browser.");
       showToast("Posizione pronta per la ricerca");
     },
     (error) => {
@@ -2861,7 +3039,7 @@ document.addEventListener("click", (event) => {
   const categoryTarget = event.target.closest("[data-category]");
   if (categoryTarget) {
     selectCategory(categoryTarget.dataset.category);
-    document.getElementById("shiftFilter").value = "any";
+    setCheckedValues("shiftFilter", ["any"]);
     document.getElementById("resultsSummary").textContent =
       categoryLabels[state.selectedCategory];
     navigate("results");
@@ -2964,6 +3142,8 @@ document.addEventListener("click", (event) => {
     useNationalSearchFallback();
   } else if (action === "map-location") {
     setSearchOriginFromPreset(actionTarget);
+  } else if (action === "select-place") {
+    void selectSearchPlaceFromInput();
   }
 });
 
@@ -2973,12 +3153,26 @@ document.addEventListener("input", (event) => {
   }
 });
 
+document.getElementById("searchPlace")?.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter") return;
+  event.preventDefault();
+  void selectSearchPlaceFromInput();
+});
+
+document.addEventListener("change", (event) => {
+  const target = event.target;
+  if (!(target instanceof HTMLInputElement)) return;
+  if (["searchShift", "searchAvailability", "shiftFilter", "availabilityFilter"].includes(target.name)) {
+    keepAnyChoiceExclusive(target.name, target);
+  }
+});
+
 document.getElementById("searchForm").addEventListener("submit", (event) => {
   event.preventDefault();
   const role = document.getElementById("searchRole").value;
   const distance = Number(document.getElementById("searchDistance").value);
-  const shifts = document.getElementById("searchShifts").value;
-  const availability = document.getElementById("searchAvailability").value;
+  const shifts = compactChoices(readCheckedValues("searchShift"));
+  const availability = compactChoices(readCheckedValues("searchAvailability"));
   const contracts = Array.from(document.querySelectorAll('input[name="intakeContract"]:checked')).map((input) => input.value);
   const notes = document.getElementById("searchNotes").value.trim();
   const origin = validCoordinates(state.searchOrigin);
@@ -2986,13 +3180,14 @@ document.getElementById("searchForm").addEventListener("submit", (event) => {
   const requiredFields = [
     [role, "il profilo professionale", "searchRole"],
     [distance, "la distanza massima", "searchDistance"],
-    [shifts, "l'organizzazione dei turni", "searchShifts"],
-    [availability, "la disponibilità", "searchAvailability"]
+    [shifts.length, "l'organizzazione dei turni", "searchShift"],
+    [availability.length, "la disponibilità", "searchAvailability"]
   ];
   const missingField = requiredFields.find(([value]) => !value);
   if (missingField) {
     showToast(`Completa ${missingField[1]}`);
     document.getElementById(missingField[2])?.focus();
+    document.querySelector(`input[name="${missingField[2]}"]`)?.focus();
     return;
   }
 
@@ -3049,8 +3244,9 @@ document.querySelectorAll(".filter-chip").forEach((chip) => {
 document.getElementById("showAllJobs")?.addEventListener("click", () => navigate("results"));
 document.getElementById("applyFilters").addEventListener("click", applyJobFilters);
 document.getElementById("sortJobs").addEventListener("change", applyJobFilters);
-document.getElementById("shiftFilter").addEventListener("change", applyJobFilters);
-document.getElementById("availabilityFilter").addEventListener("change", applyJobFilters);
+document.querySelectorAll('input[name="shiftFilter"], input[name="availabilityFilter"]').forEach((input) => {
+  input.addEventListener("change", applyJobFilters);
+});
 document.getElementById("categoryFilter").addEventListener("change", (event) => {
   selectCategory(event.target.value);
   applyJobFilters();
@@ -3075,4 +3271,5 @@ renderRateMarket();
 applyJobFilters();
 renderApplicationsList();
 updateCounts();
+updateLiveSourceCounters(window.RADAR_DATA?.searchSnapshot?.sourcesUsed);
 void hydrateLiveOfferIndex();

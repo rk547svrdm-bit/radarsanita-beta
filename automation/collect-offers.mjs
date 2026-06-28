@@ -6,13 +6,30 @@ const root = process.cwd();
 const dataPath = path.join(root, "data.js");
 const outputPath = path.join(root, "live-offers.json");
 const requestTimeoutMs = 15000;
-const maxCatalogCandidates = 8;
+const maxCatalogCandidates = 40;
+const maxRandstadCandidates = 60;
 const discoveryCatalogs = [
   {
     name: "Manpower Italia - catalogo pubblico",
     url: "https://www.manpower.it/it/all-jobs"
   }
 ];
+const randstadCatalogs = [
+  "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+  "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
+  "https://www.randstad.it/offerte-lavoro/q-infermiere/page-3/",
+  "https://www.randstad.it/offerte-lavoro/q-oss/",
+  "https://www.randstad.it/offerte-lavoro/q-oss/page-2/"
+];
+const italianRegions = new Set([
+  "abruzzo", "basilicata", "calabria", "campania", "emilia romagna", "friuli venezia giulia",
+  "lazio", "liguria", "lombardia", "marche", "molise", "piemonte", "puglia", "sardegna",
+  "sicilia", "toscana", "trentino alto adige", "umbria", "valle d'aosta", "veneto", "italia"
+]);
+const invalidLocalities = new Set([
+  "alloggio", "con alloggio", "con vitto e alloggio", "italia", "provincia", "inserimento diretto",
+  "rsa", "ospedale", "struttura sanitaria", "privato", "tempo indeterminato"
+]);
 
 function readSeedJobs() {
   const sandbox = { window: {} };
@@ -39,6 +56,13 @@ function normalized(value) {
     .toLowerCase()
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function validLocality(city) {
+  const value = normalized(city);
+  if (!value || italianRegions.has(value) || invalidLocalities.has(value)) return false;
+  if (/alloggio|provincia|territorio nazionale|italia|remoto|smart working/.test(value)) return false;
+  return value.length >= 3;
 }
 
 function isExpired(deadline) {
@@ -189,18 +213,13 @@ function titleCase(value) {
 
 function locationFromTitle(title, posting) {
   const locality = String(posting?.jobLocation?.address?.addressLocality || "").trim();
-  const italianRegions = new Set([
-    "abruzzo", "basilicata", "calabria", "campania", "emilia romagna", "friuli venezia giulia",
-    "lazio", "liguria", "lombardia", "marche", "molise", "piemonte", "puglia", "sardegna",
-    "sicilia", "toscana", "trentino alto adige", "umbria", "valle d'aosta", "veneto", "italia"
-  ]);
-  if (locality && !italianRegions.has(normalized(locality))) return locality;
+  if (validLocality(locality)) return locality;
   const asl = String(title).match(/\basl\s+([a-zà-ÿ' -]+)$/i);
-  if (asl) return titleCase(asl[1]);
+  if (asl && validLocality(asl[1])) return titleCase(asl[1]);
   const province = String(title).match(/\binfermier[^\s]*(?:\s*\/\s*[a-z]+)?\s+([a-zà-ÿ' -]+?)\s+e\s+provincia\b/i);
-  if (province) return titleCase(province[1]);
+  if (province && validLocality(province[1])) return titleCase(province[1]);
   const trailing = String(title).match(/[-|]\s*([a-zà-ÿ' ]+)$/i);
-  return trailing ? titleCase(trailing[1]) : null;
+  return trailing && validLocality(trailing[1]) ? titleCase(trailing[1]) : null;
 }
 
 function contractFromText(text) {
@@ -216,6 +235,14 @@ function shiftsFromText(text) {
   if (/solo diurn/i.test(text)) return "Solo diurni";
   if (/turni/i.test(text)) return "Turni da verificare";
   return "Non dichiarati";
+}
+
+function salaryFromText(text) {
+  const value = String(text || "").replace(/\s+/g, " ");
+  const range = value.match(/(?:\d{1,3}(?:[.\s]\d{3})*|\d+)\s*€\s*-\s*(?:\d{1,3}(?:[.\s]\d{3})*|\d+)\s*€\s*(?:oraria|annuale|mensile)?/i);
+  if (range) return range[0].trim();
+  const ccnl = value.match(/\bccnl\b[^.]{0,90}/i);
+  return ccnl ? ccnl[0].trim() : "Non pubblicato";
 }
 
 function requirementsFromText(text) {
@@ -257,7 +284,7 @@ async function buildManpowerJob(candidate) {
   const deadline = parseItalianDeadline(html);
   const text = htmlText(posting?.description || html);
   const city = locationFromTitle(title, posting);
-  if (!deadline || isExpired(deadline) || !city) return null;
+  if (!deadline || isExpired(deadline) || !city || !validLocality(city)) return null;
   const coordinates = await geocodeCity(city);
   if (!coordinates) return null;
 
@@ -330,6 +357,120 @@ async function buildManpowerJob(candidate) {
   };
 }
 
+function extractRandstadCandidates(html, pageUrl) {
+  const results = [];
+  for (const match of html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
+    const href = match[1].match(/\bhref=['"]([^'"]*\/offerte-lavoro\/[^'"]+\/)['"]/i)?.[1];
+    if (!href) continue;
+    const url = new URL(decodeEntities(href), pageUrl).href;
+    const title = htmlText(match[2]);
+    if (!title || !isHealthcareRole(title)) continue;
+    const start = Math.max(0, match.index - 1200);
+    const end = Math.min(html.length, match.index + 5200);
+    const context = htmlText(html.slice(start, end));
+    results.push({ url, title, context, catalogUrl: pageUrl });
+  }
+  return [...new Map(results.map((item) => [item.url, item])).values()];
+}
+
+function cityFromRandstadUrl(url) {
+  const slug = decodeURIComponent(new URL(url).pathname.split("/").filter(Boolean).pop() || "");
+  const match = slug.match(/_([a-z0-9-]+)_[0-9a-f-]+$/i);
+  if (!match) return null;
+  const city = titleCase(match[1].replace(/-/g, " "));
+  return validLocality(city) ? city : null;
+}
+
+function randstadIdFromUrl(url) {
+  const slug = new URL(url).pathname.split("/").filter(Boolean).pop() || "";
+  return `randstad-${slug.replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "").toLowerCase()}`;
+}
+
+async function buildRandstadJob(candidate) {
+  let detailHtml = "";
+  try {
+    detailHtml = await fetchPublicPage(candidate.url);
+  } catch {
+    detailHtml = "";
+  }
+  const detailText = htmlText(detailHtml);
+  const text = `${candidate.context} ${detailText}`;
+  const title = candidate.title.trim();
+  const city = cityFromRandstadUrl(candidate.url) || locationFromTitle(title, null);
+  if (!city || !validLocality(city)) return null;
+  const coordinates = await geocodeCity(city);
+  if (!coordinates) return null;
+
+  const isOss = /\boss(?:[\s/\-]|$)/.test(normalized(title));
+  const contract = contractFromText(text);
+  const shifts = shiftsFromText(text);
+  const nights = /notturn/i.test(text) ? true : shifts === "Solo diurni" ? false : null;
+  const salary = salaryFromText(text);
+  const checked = checkedLabel();
+  const sourceName = `Randstad Italia - ${candidate.url.split("/").filter(Boolean).pop()}`;
+  const roleLabel = isOss ? "OSS" : "infermiere/a";
+  const schedule = /part[\s-]?time/i.test(text) ? "Part-time" : /full[\s-]?time/i.test(text) ? "Full-time" : "Orario da verificare";
+
+  return {
+    id: randstadIdFromUrl(candidate.url),
+    publicationStatus: "published",
+    title,
+    company: "Struttura sanitaria tramite Randstad Healthcare",
+    location: `${city}, Italia`,
+    coordinates,
+    coordinatePrecision: "city",
+    contract,
+    schedule,
+    shifts,
+    nights,
+    deadline: null,
+    deadlineLabel: "Scadenza non dichiarata",
+    salary,
+    match: salary === "Non pubblicato" ? 78 : 84,
+    type: "Selezione tramite agenzia",
+    category: isOss ? "oss" : "privato",
+    summary: `Annuncio Randstad per ${roleLabel} con sede indicata a ${city}. Condizioni e candidatura sono sulla fonte originale.`,
+    reasons: ["Ruolo sanitario dichiarato", "Fonte pubblica Randstad", "Candidatura sul canale originale"],
+    warning: salary === "Non pubblicato" ? "Retribuzione non pubblicata o da verificare nella fonte." : "Retribuzione estratta dalla fonte pubblica.",
+    requirements: requirementsFromText(text),
+    contractDetails: [
+      ["Contratto", contract],
+      ["Orario", schedule],
+      ["Turni", shifts],
+      ["Retribuzione", salary],
+      ["Scadenza", "Non dichiarata"]
+    ],
+    shiftDetails: [
+      ["Organizzazione", shifts],
+      ["Notti", nights === true ? "Previste" : nights === false ? "Non previste" : "Da verificare"],
+      ["Sede", `${city}, Italia`],
+      ["Fonte", "Dettaglio annuncio Randstad"]
+    ],
+    application: {
+      channel: "Candidatura sul portale Randstad",
+      destinationUrl: candidate.url,
+      contactEmail: null,
+      documents: ["CV", "Dati profilo richiesti dal portale"],
+      missing: "Completare login Randstad e confermare disponibilita",
+      message: `Buongiorno, desidero candidarmi alla posizione di ${title}. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti.`
+    },
+    source: sourceName,
+    sourceUrl: candidate.url,
+    checked,
+    sources: [
+      { name: sourceName, kind: "primaria", url: candidate.url, checked },
+      { name: "Randstad Italia - ricerca pubblica", kind: "duplicato", url: candidate.catalogUrl, checked }
+    ],
+    media: {
+      type: "none",
+      url: null,
+      sourceUrl: null,
+      alt: "",
+      reason: "La fonte pubblica non espone una foto verificabile della struttura."
+    }
+  };
+}
+
 async function discoverCatalogJobs(existingIds) {
   const discovered = [];
   for (const catalog of discoveryCatalogs) {
@@ -355,6 +496,36 @@ async function discoverCatalogJobs(existingIds) {
   return discovered;
 }
 
+async function discoverRandstadJobs(existingIds) {
+  const discovered = [];
+  const candidatesByUrl = new Map();
+  for (const catalogUrl of randstadCatalogs) {
+    try {
+      const html = await fetchPublicPage(catalogUrl);
+      for (const candidate of extractRandstadCandidates(html, catalogUrl)) {
+        candidatesByUrl.set(candidate.url, candidate);
+      }
+    } catch (error) {
+      console.warn(`Catalogo Randstad non raggiungibile (${catalogUrl}): ${error.message}`);
+    }
+  }
+
+  for (const candidate of [...candidatesByUrl.values()].slice(0, maxRandstadCandidates)) {
+    const id = randstadIdFromUrl(candidate.url);
+    if (existingIds.has(id)) continue;
+    try {
+      const job = await buildRandstadJob(candidate);
+      if (job) {
+        discovered.push(job);
+        existingIds.add(job.id);
+      }
+    } catch (error) {
+      console.warn(`Annuncio Randstad non importato (${candidate.url}): ${error.message}`);
+    }
+  }
+  return discovered;
+}
+
 const seedJobs = readSeedJobs();
 const previousJobs = readPreviousIndex();
 const previousById = new Map(previousJobs.map((job) => [job.id, job]));
@@ -362,21 +533,31 @@ const outcomes = await Promise.all(seedJobs.map((job) => verifyJob(job, previous
 const verifiedSeeds = outcomes
   .filter(({ status }) => status !== "expired" && status !== "not-found")
   .map(({ job }) => job);
-const discoveredJobs = await discoverCatalogJobs(new Set(verifiedSeeds.map((job) => job.id)));
+const knownIds = new Set(verifiedSeeds.map((job) => job.id));
+const discoveredManpowerJobs = await discoverCatalogJobs(knownIds);
+const randstadJobs = await discoverRandstadJobs(knownIds);
+const discoveredJobs = [...discoveredManpowerJobs, ...randstadJobs];
 const jobs = [...verifiedSeeds, ...discoveredJobs];
+const sourceUrlsChecked = new Set([
+  ...seedJobs.map((job) => job.sourceUrl).filter(Boolean),
+  ...discoveryCatalogs.map((catalog) => catalog.url),
+  ...randstadCatalogs,
+  ...jobs.flatMap((job) => [job.sourceUrl, job.application?.destinationUrl]).filter(Boolean)
+]);
 
 const payload = {
   schemaVersion: 1,
   updatedAt: new Date().toISOString(),
   checkedLabel: checkedLabel(),
-  method: "Verifica automatica di pagine pubbliche autorizzate nel registro RadarSanita",
-  sourcesChecked: seedJobs.length + discoveryCatalogs.length,
+  method: "Verifica automatica di pagine pubbliche e discovery multi-fonte RadarSanita",
+  sourcesChecked: sourceUrlsChecked.size,
   outcomes: [
     ...outcomes.map(({ status, job, error }) => ({ id: job.id, status, error: error || null })),
-    ...discoveredJobs.map((job) => ({ id: job.id, status: "discovered", error: null }))
+    ...discoveredManpowerJobs.map((job) => ({ id: job.id, status: "discovered-manpower", error: null })),
+    ...randstadJobs.map((job) => ({ id: job.id, status: "discovered-randstad", error: null }))
   ],
   jobs
 };
 
 fs.writeFileSync(outputPath, `${JSON.stringify(payload, null, 2)}\n`);
-console.log(`Indice aggiornato: ${jobs.length}/${seedJobs.length} schede disponibili.`);
+console.log(`Indice aggiornato: ${jobs.length} schede disponibili (${discoveredManpowerJobs.length} Manpower, ${randstadJobs.length} Randstad).`);
