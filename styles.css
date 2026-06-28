@@ -1992,6 +1992,10 @@ fieldset {
   font-weight: 800;
 }
 
+.empty-operator-score {
+  color: #6b6259;
+}
+
 .list-card-body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -2339,6 +2343,10 @@ fieldset {
 .dossier-proof .source-chips {
   justify-content: flex-end;
   margin: 0;
+}
+
+.source-detail-button {
+  width: fit-content;
 }
 
 .why-box strong {
@@ -2861,6 +2869,41 @@ fieldset {
   color: var(--ink);
   font-size: 12px;
   line-height: 1.35;
+}
+
+.market-source-strip {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.market-source-strip a,
+.market-source-strip > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 5px 10px 5px 5px;
+  border: 1px solid #d8e9e5;
+  border-radius: 999px;
+  color: var(--teal-950);
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.market-source-strip .source-avatar {
+  width: 24px;
+  height: 24px;
+  flex-basis: 24px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.empty-market-panel {
+  grid-template-columns: 1fr;
 }
 
 .warning-box {
@@ -6081,6 +6124,8 @@ body {
 }
 
 .source-avatar {
+  position: relative;
+  overflow: hidden;
   display: inline-grid;
   width: 31px;
   height: 31px;
@@ -6098,8 +6143,30 @@ body {
 
 button.source-avatar {
   padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.74);
   font-family: inherit;
   cursor: pointer;
+}
+
+.source-logo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: inherit;
+  background: #ffffff;
+  object-fit: contain;
+}
+
+.source-logo-fallback {
+  display: none;
+}
+
+.source-logo-fallback.visible {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
 }
 
 .source-avatar.selected {
@@ -6165,6 +6232,10 @@ button.source-avatar {
   border-radius: 7px;
   font-size: 8px;
   box-shadow: none;
+}
+
+.source-chip .source-logo-img {
+  padding: 3px;
 }
 
 .source-trust-card {
@@ -6597,7 +6668,7 @@ button.source-avatar {
 
 @media (max-width: 760px) {
   .mobile-nav {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     min-height: 72px;
     padding-inline: 6px;
   }
@@ -7820,7 +7891,7 @@ a.source-registry-item:focus-visible {
 
 .personal-market-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 160px minmax(180px, 0.58fr);
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 260px) minmax(180px, 0.58fr);
   gap: 18px;
   align-items: center;
   margin: 18px 0;
@@ -7844,12 +7915,21 @@ a.source-registry-item:focus-visible {
   line-height: 1.45;
 }
 
-.personal-market-panel > img {
+.personal-market-chart {
+  min-width: 0;
+}
+
+.personal-market-chart img,
+.personal-market-chart .market-chart-wrap {
   width: 100%;
   padding: 10px;
   border: 1px solid #d8e9e5;
   border-radius: 8px;
   background: #ffffff;
+}
+
+.personal-market-chart .market-chart-wrap {
+  margin: 0;
 }
 
 .personal-market-status {
@@ -7900,7 +7980,7 @@ a.source-registry-item:focus-visible {
   }
 
   .personal-market-panel {
-    grid-template-columns: minmax(0, 1fr) 94px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
 
@@ -7921,7 +8001,8 @@ a.source-registry-item:focus-visible {
     width: 100%;
   }
 
-  .personal-market-status {
+  .personal-market-status,
+  .personal-market-chart {
     grid-column: 1 / -1;
   }
 }

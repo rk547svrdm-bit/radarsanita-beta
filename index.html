@@ -19,7 +19,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=55">
+  <link rel="stylesheet" href="styles.css?v=56">
 </head>
 <body>
   <div class="app-shell">
@@ -196,243 +196,52 @@
       </section>
 
       <section class="view" id="view-info" data-view="info">
-        <div class="info-hero">
+        <div class="info-hero compact-info-hero">
           <div>
             <span class="eyebrow">Come funziona</span>
-            <h1>Informazioni ordinate per decidere, non per riempire una pagina.</h1>
+            <h1>Poche informazioni, ma utili alla scelta.</h1>
             <p>
-              RadarSanità tiene separati offerte, fonti, foto reali, recensioni,
-              tariffe e passaggi di candidatura. Così ogni dato ha un ruolo chiaro.
+              RadarSanità cerca offerte reali, mostra le fonti consultate, calcola
+              la borsa dalle retribuzioni pubblicate e tiene separate le esperienze
+              professionali dalle recensioni di pazienti o parenti.
             </p>
           </div>
-          <div class="info-source-card" aria-label="Fonti consultate">
-            <span>Fonti mostrate nella scheda</span>
-            <div class="source-dock-row">
-              <button class="source-avatar source-asl" type="button" data-source-full="ASL: Azienda Sanitaria Locale, bandi e avvisi aziendali">ASL</button>
-              <button class="source-avatar source-opi" type="button" data-source-full="OPI: Ordine delle Professioni Infermieristiche">OPI</button>
-              <button class="source-avatar source-rsa" type="button" data-source-full="RSA: Residenza Sanitaria Assistenziale o struttura privata">RSA</button>
-              <button class="source-avatar source-indeed" type="button" data-source-full="Indeed: portale lavoro generalista">id</button>
-              <button class="source-avatar source-infojobs" type="button" data-source-full="InfoJobs: portale lavoro generalista">ij</button>
-              <button class="source-avatar source-linkedin" type="button" data-source-full="LinkedIn: social e portale professionale">in</button>
-              <button class="source-avatar source-albo" type="button" data-source-full="Albo: albo pretorio o portale pubblico ufficiale">Al</button>
-            </div>
-            <p class="source-explainer" data-source-explainer>Tocca una sigla per vedere cosa significa.</p>
-          </div>
+          <img class="section-visual" src="assets/function-visuals/radar-scan.svg" alt="Radar stilizzato che collega fonti sanitarie">
         </div>
 
-        <section class="human-navigation" aria-label="Navigazione guidata">
-          <article>
-            <img src="assets/function-visuals/place-context.svg" alt="Mappa stilizzata con sede, percorso e contesto sanitario">
-            <div>
-              <span class="route-icon">1</span>
-              <strong>Parti dai luoghi</strong>
-              <p>Sede, distanza, collegamenti e contesto restano leggibili prima della candidatura.</p>
-            </div>
-          </article>
-          <article>
-            <img src="assets/function-visuals/radar-scan.svg" alt="Radar stilizzato che distingue fonti e segnali">
-            <div>
-              <span class="route-icon">2</span>
-              <strong>Controlla le fonti</strong>
-              <p>Vedi e apri la fonte: ente, datore, portale, albo o segnalazione pubblica.</p>
-            </div>
-          </article>
-          <article>
-            <img src="assets/function-visuals/doc-steps.svg" alt="Passaggi stilizzati per valutare e preparare una candidatura">
-            <div>
-              <span class="route-icon">3</span>
-              <strong>Decidi con meno attrito</strong>
-              <p>Turni, stipendio, documenti e candidatura vengono letti insieme.</p>
-            </div>
-          </article>
+        <section class="decision-principles compact-principles" aria-label="Metodo sintetico">
+          <div class="principle-grid">
+            <article class="principle-card trust">
+              <span class="principle-kicker">01</span>
+              <img class="function-visual" src="assets/function-visuals/filter-search.svg" alt="Lente e filtro">
+              <h3>Risultati solo dopo la ricerca</h3>
+              <p>Profilo, posizione, raggio, turni e disponibilità definiscono cosa viene mostrato.</p>
+            </article>
+            <article class="principle-card value">
+              <span class="principle-kicker">02</span>
+              <img class="function-visual" src="assets/function-visuals/rate-market-clean.svg" alt="Grafico delle tariffe">
+              <h3>Borsa da dati pubblicati</h3>
+              <p>Il range nasce dalle retribuzioni lette nelle offerte consultate, non da esempi grafici.</p>
+            </article>
+            <article class="principle-card proof">
+              <span class="principle-kicker">03</span>
+              <img class="function-visual" src="assets/function-visuals/trust-stars.svg" alt="Stelle e verifica">
+              <h3>Fonti e operatori separati</h3>
+              <p>Loghi e link delle fonti restano visibili; le opinioni valgono solo se professionali.</p>
+            </article>
+          </div>
         </section>
 
         <section class="source-registry-section" id="sourceRegistry" aria-labelledby="sourceRegistryTitle">
           <div class="source-registry-heading">
             <div>
-              <span class="eyebrow">Registro fonti</span>
-              <h2 id="sourceRegistryTitle">Le fonti consultate sono sempre apribili.</h2>
-              <p>Le fonti ufficiali, i datori diretti, i portali e i canali professionali restano separati. Tocca un nome per aprire il sito originale.</p>
+              <span class="eyebrow">Fonti consultate</span>
+              <h2 id="sourceRegistryTitle">Ogni fonte deve essere apribile.</h2>
+              <p>I loghi nelle schede derivano dai domini reali consultati. Nessuna legenda astratta sostituisce il sito originale.</p>
             </div>
             <img src="assets/function-visuals/radar-scan.svg" alt="Radar stilizzato che collega fonti diverse">
           </div>
           <div class="source-registry-list" id="sourceRegistryList" aria-live="polite"></div>
-        </section>
-
-        <section class="intro-problem">
-          <div>
-            <span class="eyebrow">Il problema reale</span>
-            <h2>Il lavoro sanitario non si sceglie da un titolo e un link.</h2>
-          </div>
-          <div class="problem-list">
-            <span>Contratto e turni spesso separati</span>
-            <span>Fonti con affidabilità diversa</span>
-            <span>Stipendi difficili da confrontare</span>
-            <span>Candidature con passaggi nascosti</span>
-          </div>
-        </section>
-
-        <section class="decision-principles" aria-labelledby="decisionPrinciplesTitle">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Informazioni che guidano</span>
-              <h2 id="decisionPrinciplesTitle">La scheda mette in evidenza prima ciò che cambia la decisione.</h2>
-            </div>
-          </div>
-          <div class="principle-grid">
-            <article class="principle-card trust">
-              <span class="principle-kicker">01</span>
-              <img class="function-visual" src="assets/function-visuals/trust-stars.svg" alt="Stelle e verifica per valutare la fiducia">
-              <h3>Fiducia</h3>
-              <p>Fonte primaria, data del controllo e duplicati sono sempre vicini al dato.</p>
-            </article>
-            <article class="principle-card value">
-              <span class="principle-kicker">02</span>
-              <img class="function-visual" src="assets/function-visuals/rate-market-clean.svg" alt="Linea delle tariffe che oscilla">
-              <h3>Convenienza</h3>
-              <p>Compenso, turni, distanza e mercato vengono letti insieme, non a pezzi.</p>
-            </article>
-            <article class="principle-card effort">
-              <span class="principle-kicker">03</span>
-              <img class="function-visual" src="assets/function-visuals/doc-steps.svg" alt="Documenti e passaggi controllati">
-              <h3>Passaggi</h3>
-              <p>Documenti, SPID/CIE, partita IVA e dati mancanti sono espliciti prima di aprire il canale ufficiale.</p>
-            </article>
-            <article class="principle-card proof">
-              <span class="principle-kicker">04</span>
-              <img class="function-visual" src="assets/function-visuals/place-context.svg" alt="Sede sanitaria e posizione sul territorio">
-              <h3>Sede e ambiente</h3>
-              <p>Logistica, organizzazione e opinioni dei colleghi sono utili, ma restano separati dai dati ufficiali.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="coverage-dashboard" aria-labelledby="coverageTitle">
-          <div class="coverage-copy">
-            <span class="eyebrow">Copertura, non solo ricerca</span>
-            <h2 id="coverageTitle">RadarSanità controlla fonti diverse e ti mostra solo ciò che ha senso per te.</h2>
-            <p>
-              Nel prodotto reale ogni numero sarà verificabile: fonte controllata,
-              ultimo aggiornamento, duplicati accorpati e motivi di esclusione.
-            </p>
-            <img class="section-visual" src="assets/function-visuals/radar-scan.svg" alt="Radar che controlla fonti locali">
-          </div>
-          <div class="coverage-grid">
-            <div class="coverage-tile">
-              <strong id="coverageMonitored">0</strong>
-              <span>fonti nel registro</span>
-            </div>
-            <div class="coverage-tile">
-              <strong id="coverageChecked">0</strong>
-              <span>famiglie coperte</span>
-            </div>
-            <div class="coverage-tile">
-              <strong id="coverageDuplicates">0</strong>
-              <span>ufficiali o dirette</span>
-            </div>
-            <div class="coverage-tile muted-tile">
-              <strong id="coverageExcluded">0</strong>
-              <span>segnalazioni pubbliche</span>
-            </div>
-          </div>
-        </section>
-
-        <div class="intro-grid">
-          <article class="intro-card">
-            <span class="intro-icon">⌕</span>
-            <img class="function-visual" src="assets/function-visuals/filter-search.svg" alt="Lente e filtro per scremare le offerte">
-            <h2>Trova e screma</h2>
-            <p>
-              Cerca in più fonti, unisce offerte duplicate e mostra solo quelle
-              compatibili con profilo, distanza, turni, contratto e categoria.
-            </p>
-          </article>
-          <article class="intro-card">
-            <span class="intro-icon">IA</span>
-            <img class="function-visual" src="assets/function-visuals/ai-check.svg" alt="Scheda controllata dall'assistente IA">
-            <h2>Spiega e controlla</h2>
-            <p>
-              Le regole locali e la revisione assistita riassumono fonti, rischi,
-              scadenze e requisiti. I dati importanti restano collegati alla fonte.
-            </p>
-          </article>
-          <article class="intro-card">
-            <span class="intro-icon">€</span>
-            <img class="function-visual" src="assets/function-visuals/rate-market-clean.svg" alt="Grafico oscillante della borsa tariffe">
-            <h2>Confronta il mercato</h2>
-            <p>
-              Confronta compensi e andamento del mercato per capire se una proposta
-              è sopra, sotto o in linea con offerte simili nella stessa area.
-            </p>
-          </article>
-        </div>
-
-        <section class="dossier-showcase" aria-labelledby="dossierTitle">
-          <div>
-            <span class="eyebrow">Dentro ogni risultato</span>
-            <h2 id="dossierTitle">Ogni offerta diventa una risposta: conviene, posso farlo, mi fido?</h2>
-            <p>
-              Le informazioni non hanno lo stesso peso. RadarSanità mette in alto i
-              segnali rapidi e lascia i dettagli in sezioni apribili quando servono.
-            </p>
-          </div>
-          <div class="dossier-path">
-            <div><img class="path-visual" src="assets/function-visuals/rate-market-clean.svg" alt=""><small>Conviene?</small><strong>Compenso · distanza · turni</strong></div>
-            <div><img class="path-visual" src="assets/function-visuals/doc-steps.svg" alt=""><small>Posso farlo?</small><strong>Requisiti · documenti · vincoli</strong></div>
-            <div><img class="path-visual" src="assets/function-visuals/trust-stars.svg" alt=""><small>Mi fido?</small><strong>Fonte · controllo · copertura</strong></div>
-            <div><img class="path-visual" src="assets/function-visuals/filter-search.svg" alt=""><small>Quanto pesa?</small><strong>Account · SPID/CIE · invio manuale</strong></div>
-          </div>
-        </section>
-
-        <section class="how-it-works">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Tutto in un posto</span>
-              <h2>Come ti aiuta RadarSanità</h2>
-            </div>
-          </div>
-
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-number">1</span>
-              <img class="step-visual" src="assets/function-visuals/filter-search.svg" alt="">
-              <h3>Trova</h3>
-              <p>Seleziona solo le offerte coerenti con ciò che cerchi.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-number">2</span>
-              <img class="step-visual" src="assets/function-visuals/ai-check.svg" alt="">
-              <h3>Capisci</h3>
-              <p>Contratto, turni, requisiti e problemi sono già spiegati.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-number">3</span>
-              <img class="step-visual" src="assets/function-visuals/place-context.svg" alt="">
-              <h3>Valuta il posto</h3>
-              <p>Foto, logistica e opinioni dei colleghi restano separate dai dati ufficiali.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-number">4</span>
-              <img class="step-visual" src="assets/function-visuals/doc-steps.svg" alt="">
-              <h3>Prepara candidatura</h3>
-              <p>Generi checklist e bozza; l'invio finale resta sul canale ufficiale e sotto il tuo controllo.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="intro-flow" aria-labelledby="introFlowTitle">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Dal segnale all'azione</span>
-              <h2 id="introFlowTitle">La ricerca porta a una decisione, non a un elenco infinito.</h2>
-            </div>
-          </div>
-          <div class="flow-steps">
-            <div class="flow-step"><span>1</span><strong>Richiesta</strong><p>Ruolo, raggio dalla tua posizione, turni e vincoli personali.</p></div>
-            <div class="flow-step"><span>2</span><strong>Scrematura</strong><p>Duplicati accorpati e offerte non coerenti escluse.</p></div>
-            <div class="flow-step"><span>3</span><strong>Dossier</strong><p>Dati ordinati per fiducia, valore e sforzo.</p></div>
-            <div class="flow-step"><span>4</span><strong>Candidatura</strong><p>Bozza pronta, documenti elencati e invio manuale sul canale ufficiale.</p></div>
-          </div>
         </section>
       </section>
 
@@ -919,10 +728,6 @@
         <span>♡</span>
         Salvate
       </button>
-      <button class="mobile-nav-item" data-route="applications">
-        <span>✓</span>
-        Cand.
-      </button>
       <button class="mobile-nav-item" data-route="feedback">
         <span>✎</span>
         Dicci
@@ -936,7 +741,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=55"></script>
-  <script src="app.js?v=55"></script>
+  <script src="data.js?v=56"></script>
+  <script src="app.js?v=56"></script>
 </body>
 </html>

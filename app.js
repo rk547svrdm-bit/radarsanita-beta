@@ -445,7 +445,7 @@ var workplaceProfiles = window.RADAR_DATA?.workplaceProfiles || {
   aurora: {
     media: {
       type: "none",
-      reason: "Nessuna foto ufficiale collegata a una fonte per questa scheda dimostrativa."
+      reason: "Nessuna foto ufficiale collegata a una fonte verificabile per questa scheda."
     },
     facts: ["Zona urbana servita dai mezzi", "Ingresso accessibile", "Attività prevalentemente ambulatoriale"],
     rating: "4,2",
@@ -471,7 +471,7 @@ var workplaceProfiles = window.RADAR_DATA?.workplaceProfiles || {
   "rsa-collina": {
     media: {
       type: "none",
-      reason: "Nessuna foto ufficiale collegata a una fonte per questa scheda dimostrativa."
+      reason: "Nessuna foto ufficiale collegata a una fonte verificabile per questa scheda."
     },
     facts: ["Struttura con giardino", "Parcheggio interno", "Nucleo riabilitativo dedicato"],
     rating: "3,9",
@@ -497,7 +497,7 @@ var workplaceProfiles = window.RADAR_DATA?.workplaceProfiles || {
   "domiciliare-nord": {
     media: {
       type: "none",
-      reason: "Nessuna foto ufficiale collegata a una fonte per questa scheda dimostrativa."
+      reason: "Nessuna foto ufficiale collegata a una fonte verificabile per questa scheda."
     },
     facts: ["Sede operativa di quartiere", "Area di lavoro concordabile", "Spostamenti con mezzo proprio"],
     rating: "4,4",
@@ -523,7 +523,7 @@ var workplaceProfiles = window.RADAR_DATA?.workplaceProfiles || {
   "asl-chivasso": {
     media: {
       type: "none",
-      reason: "Nessuna foto ufficiale collegata a una fonte per questa scheda dimostrativa."
+      reason: "Nessuna foto ufficiale collegata a una fonte verificabile per questa scheda."
     },
     facts: ["Presidio ospedaliero", "Collegamenti ferroviari vicini", "Possibili assegnazioni su più sedi"],
     rating: "3,7",
@@ -549,7 +549,7 @@ var workplaceProfiles = window.RADAR_DATA?.workplaceProfiles || {
   "asl-lp-ivrea": {
     media: {
       type: "none",
-      reason: "Nessuna foto ufficiale collegata a una fonte per questa scheda dimostrativa."
+      reason: "Nessuna foto ufficiale collegata a una fonte verificabile per questa scheda."
     },
     facts: ["Presidio pubblico", "Parcheggio nelle vicinanze", "Incarico su sede definita"],
     rating: "3,8",
@@ -575,7 +575,7 @@ var workplaceProfiles = window.RADAR_DATA?.workplaceProfiles || {
   "oss-rivoli": {
     media: {
       type: "none",
-      reason: "Nessuna foto ufficiale collegata a una fonte per questa scheda dimostrativa."
+      reason: "Nessuna foto ufficiale collegata a una fonte verificabile per questa scheda."
     },
     facts: ["Struttura residenziale", "Fermata autobus vicina", "Spogliatoi e mensa interna"],
     rating: "4,0",
@@ -975,12 +975,152 @@ function salaryFact(job) {
   return `<span class="fact-pill">${job.salary}</span>`;
 }
 
+function parseItalianNumber(value) {
+  const cleaned = String(value || "")
+    .replace(/\s/g, "")
+    .replace(/\.(?=\d{3}(?:\D|$))/g, "")
+    .replace(",", ".");
+  const number = Number(cleaned);
+  return Number.isFinite(number) ? number : null;
+}
+
+function salaryObservation(job) {
+  if (!job || isSalaryMissing(job)) return null;
+  const salary = String(job.salary || "");
+  const matches = salary.match(/\d+(?:[.\s]\d{3})*(?:,\d+)?/g) || [];
+  const values = matches.map(parseItalianNumber).filter((value) => Number.isFinite(value));
+  if (!values.length) return null;
+
+  let low = Math.min(...values);
+  let high = Math.max(...values);
+  let unit = "oraria";
+  let method = "Tariffa oraria pubblicata";
+  const lower = salary.toLowerCase();
+
+  if (/annua|annuale|ral/.test(lower) || high > 5000) {
+    low = low / 1650;
+    high = high / 1650;
+    unit = "annuale-convertita";
+    method = "Range annuo convertito in lordo/ora stimato";
+  } else if (/mensile|mese/.test(lower) || high > 80) {
+    low = low / 160;
+    high = high / 160;
+    unit = "mensile-convertita";
+    method = "Range mensile convertito in lordo/ora stimato";
+  }
+
+  if (!Number.isFinite(low) || !Number.isFinite(high) || high < 7 || low < 6) return null;
+
+  return {
+    jobId: job.id,
+    title: job.title,
+    source: job.source,
+    sourceUrl: job.sourceUrl,
+    raw: salary,
+    low,
+    high,
+    mid: (low + high) / 2,
+    unit,
+    method
+  };
+}
+
+function salaryObservationsForJobs(jobList) {
+  return jobList.map(salaryObservation).filter(Boolean);
+}
+
+function median(values) {
+  const sorted = values.filter((value) => Number.isFinite(value)).sort((a, b) => a - b);
+  if (!sorted.length) return null;
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
+}
+
+function marketSummaryFromObservations(observations) {
+  const valid = observations.filter((item) => Number.isFinite(item.low) && Number.isFinite(item.high));
+  if (!valid.length) return null;
+  const lows = valid.map((item) => item.low);
+  const highs = valid.map((item) => item.high);
+  const mids = valid.map((item) => item.mid);
+  const domains = new Set(valid.map((item) => sourceDomain(item.sourceUrl)).filter(Boolean));
+  return {
+    observations: valid,
+    count: valid.length,
+    min: Math.min(...lows),
+    max: Math.max(...highs),
+    median: median(mids),
+    converted: valid.filter((item) => item.unit !== "oraria").length,
+    domains
+  };
+}
+
+function formatHourlyRange(low, high) {
+  if (!Number.isFinite(low) || !Number.isFinite(high)) return "dato non calcolabile";
+  if (Math.abs(low - high) < 0.25) return `€${formatMarketNumber(low)}/h`;
+  return `€${formatMarketNumber(low)}-${formatMarketNumber(high)}/h`;
+}
+
+function marketObservationsForJob(job) {
+  const comparableJobs = state.searchCompleted && state.filteredJobs.length
+    ? state.filteredJobs.filter((item) => item.category === job.category)
+    : jobs.filter((item) => item.category === job.category);
+  const observations = salaryObservationsForJobs(comparableJobs);
+  const own = salaryObservation(job);
+  if (own && !observations.some((item) => item.jobId === own.jobId)) observations.unshift(own);
+  return observations;
+}
+
+function observedMarketChart(summary) {
+  if (!summary) return "";
+  const values = summary.observations.map((item) => item.mid).sort((a, b) => a - b);
+  const width = 250;
+  const height = 92;
+  const pad = 10;
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const spread = Math.max(max - min, 1);
+  const points = values.map((value, index) => {
+    const x = pad + (values.length === 1 ? 0.5 : index / (values.length - 1)) * (width - pad * 2);
+    const y = height - pad - ((value - min) / spread) * (height - pad * 2);
+    return `${Number(x.toFixed(1))},${Number(y.toFixed(1))}`;
+  }).join(" ");
+  return `
+    <div class="market-chart-wrap trend-flat observed-market-chart">
+      <svg class="market-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Distribuzione tariffe osservate">
+        <line class="chart-grid" x1="${pad}" y1="${pad}" x2="${width - pad}" y2="${pad}"></line>
+        <line class="chart-grid" x1="${pad}" y1="${height / 2}" x2="${width - pad}" y2="${height / 2}"></line>
+        <line class="chart-grid" x1="${pad}" y1="${height - pad}" x2="${width - pad}" y2="${height - pad}"></line>
+        <polyline class="chart-line" points="${points}"></polyline>
+        ${points.split(" ").map((point) => {
+          const [x, y] = point.split(",");
+          return `<circle class="chart-dot" cx="${x}" cy="${y}" r="3.4"></circle>`;
+        }).join("")}
+      </svg>
+      <div class="market-chart-labels">
+        <span>min</span>
+        <span>mediana ${formatHourlyRange(summary.median, summary.median)}</span>
+        <span>max</span>
+      </div>
+    </div>
+  `;
+}
+
 function httpsUrl(value) {
   try {
     const url = new URL(String(value || ""));
     return url.protocol === "https:" ? url.href : null;
   } catch {
     return null;
+  }
+}
+
+function sourceDomain(value) {
+  const url = httpsUrl(value);
+  if (!url) return "";
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return "";
   }
 }
 
@@ -1004,6 +1144,24 @@ function sourceEntries(job) {
       checked: String(source?.checked || "")
     };
   });
+}
+
+function sourceLogoUrl(entry) {
+  const domain = sourceDomain(entry?.url);
+  return domain ? `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=64` : "";
+}
+
+function sourceAvatarMarkup(entry, className = "source-avatar", decorative = false) {
+  const [iconClass, iconLabel] = sourceIconMeta(entry.name || "Fonte", entry.kind || "separata");
+  const fullLabel = sourceFullLabel(entry.name || "Fonte", entry.kind || "separata");
+  const logoUrl = sourceLogoUrl(entry);
+  const sourceLabel = escapeHtml(entry.name || "Fonte");
+  const content = logoUrl
+    ? `<img class="source-logo-img" src="${logoUrl}" alt="${decorative ? "" : sourceLabel}" loading="lazy" onerror="this.remove();this.nextElementSibling.classList.add('visible')"><span class="source-logo-fallback">${iconLabel}</span>`
+    : `<span class="source-logo-fallback visible">${iconLabel}</span>`;
+  return decorative
+    ? `<span class="${className} ${iconClass}" aria-hidden="true">${content}</span>`
+    : `<button class="${className} ${iconClass}" type="button" aria-label="${escapeHtml(fullLabel)}" data-source-full="${escapeHtml(fullLabel)}">${content}</button>`;
 }
 
 function sourceCount(job) {
@@ -1037,6 +1195,10 @@ function sourceProvenance(job) {
       ${sourceNameMarkup({ ...entry, name: job.source || entry.name }, "source-provenance-name")}
     </p>
   `;
+}
+
+function jobSourceUrl(job) {
+  return httpsUrl(job.sourceUrl) || httpsUrl(job.application?.destinationUrl) || httpsUrl(sourceEntries(job)[0]?.url);
 }
 
 function matchTrail(job) {
@@ -1403,16 +1565,32 @@ function valueSignal(job) {
   };
 }
 
+function professionalReviewsFor(job) {
+  const workplace = workplaceFor(job);
+  return Array.isArray(workplace.reviews)
+    ? workplace.reviews.filter((review) => /infermier|oss|profession|lavorativ|operat|dipendent|collabor/i.test(`${review.role} ${review.source}`))
+    : [];
+}
+
+function operatorFeedbackBadge(job) {
+  const reviews = professionalReviewsFor(job);
+  if (!reviews.length) {
+    return `<span class="workplace-score empty-operator-score">Opinioni operatori non ancora raccolte</span>`;
+  }
+  const workplace = workplaceFor(job);
+  return `<span class="workplace-score">${workplace.rating} ★ · ${reviews.length} segnali da operatori</span>`;
+}
+
 function decisionStrip(job) {
   const trust = sourceConfidence(job);
-  const effort = applicationEffort(job);
   const urgency = deadlineSignal(job);
   const value = valueSignal(job);
+  const operatorReviews = professionalReviewsFor(job);
 
   const cells = [
     ["trust", "Fiducia dati", trust.value, trust.note, trust.level],
     ["value", "Convenienza", value.value, value.note, value.level],
-    ["effort", "Passaggi candidatura", effort.value, effort.note, effort.level],
+    ["effort", "Operatori", operatorReviews.length ? `${operatorReviews.length} segnali` : "Non raccolti", operatorReviews.length ? "Esperienze professionali separate" : "Nessuna recensione pazienti/parenti", operatorReviews.length ? "medium" : "low"],
     ["urgency", "Urgenza", urgency.value, urgency.note, urgency.level]
   ];
 
@@ -1430,7 +1608,7 @@ function decisionStrip(job) {
 }
 
 function infoMap(job, workplace) {
-  const effort = applicationEffort(job);
+  const operatorReviews = professionalReviewsFor(job);
   return `
     <div class="info-map" aria-label="Mappa delle informazioni principali">
       <div class="info-map-item money">
@@ -1449,9 +1627,9 @@ function infoMap(job, workplace) {
         <small>${workplace.facts[0]}</small>
       </div>
       <div class="info-map-item effort">
-        <span>Candidatura</span>
-        <strong>${effort.value}</strong>
-        <small>${effort.note}</small>
+        <span>Operatori</span>
+        <strong>${operatorReviews.length ? `${operatorReviews.length} segnali` : "non raccolti"}</strong>
+        <small>Separati da recensioni pazienti</small>
       </div>
     </div>
   `;
@@ -1467,11 +1645,9 @@ function sourceTrustPanel(job) {
       <div class="source-trust-grid">
         ${sourceEntries(job).map((entry) => {
           const [label, description] = sourceKindMeta(entry.kind);
-          const [iconClass, iconLabel] = sourceIconMeta(entry.name, entry.kind);
-          const fullLabel = sourceFullLabel(entry.name, entry.kind);
           return `
             <div class="source-trust-card source-${entry.kind}">
-              <button class="source-avatar ${iconClass}" type="button" data-source-full="${fullLabel}">${iconLabel}</button>
+              ${sourceAvatarMarkup(entry)}
               <small>${label}</small>
               ${sourceNameMarkup(entry, "source-trust-name")}
               <span>${description}</span>
@@ -1505,11 +1681,9 @@ function sourceChips(job, limit = 3) {
   return `
     <div class="source-chips" aria-label="Fonti dell'offerta">
       ${sourceEntries(job).slice(0, limit).map((entry) => {
-        const [iconClass, iconLabel] = sourceIconMeta(entry.name, entry.kind);
-        const fullLabel = sourceFullLabel(entry.name, entry.kind);
         return `
         <span class="source-chip source-${entry.kind}">
-          <button class="source-avatar ${iconClass}" type="button" data-source-full="${fullLabel}">${iconLabel}</button>
+          ${sourceAvatarMarkup(entry)}
           ${sourceNameMarkup(entry, "source-chip-name")}
         </span>
       `;
@@ -1853,7 +2027,8 @@ function renderScreening() {
 function renderPersonalMarket() {
   if (!personalMarketPanel || !state.searchCompleted) return;
   const profile = state.searchProfile;
-  const salaryObservations = state.filteredJobs.filter((job) => !isSalaryMissing(job));
+  const salaryObservations = salaryObservationsForJobs(state.filteredJobs);
+  const summary = marketSummaryFromObservations(salaryObservations);
   const role = searchRoleLabels[profile.role];
   const area = searchDistanceLabel(profile);
   const visibleSources = new Set(state.filteredJobs.flatMap((job) => sourceEntries(job).map(({ name }) => name)));
@@ -1864,13 +2039,15 @@ function renderPersonalMarket() {
     <div class="personal-market-copy">
       <span class="eyebrow">Borsa del tuo perimetro</span>
       <h2>${role} · ${area}</h2>
-      <p>Area e profilo sono quelli della ricerca appena elaborata. Fonti nella raccolta: ${snapshotSources}; fonti nei risultati visibili: ${visibleSources.size}.</p>
+      <p>Calcolata solo da retribuzioni pubblicate nelle offerte della ricerca. Fonti nella raccolta: ${snapshotSources}; fonti nei risultati visibili: ${visibleSources.size}.</p>
       <button class="text-button" data-action="open-sources">Vedi le fonti della borsa</button>
     </div>
-    <img src="assets/function-visuals/rate-market-clean.svg" alt="Grafico stilizzato della borsa tariffe">
-    <div class="personal-market-status ${salaryObservations.length ? "available" : "empty"}">
-      <strong>${salaryObservations.length ? `${salaryObservations.length} osservazioni` : "In attesa di dati verificati"}</strong>
-      <span>${salaryObservations.length ? "Dati da offerte pubblicate nel tuo perimetro" : "Nessun valore stimato o inventato viene mostrato finché le fonti non pubblicano retribuzioni."}</span>
+    <div class="personal-market-chart">
+      ${summary ? observedMarketChart(summary) : `<img src="assets/function-visuals/rate-market-clean.svg" alt="Grafico stilizzato della borsa tariffe">`}
+    </div>
+    <div class="personal-market-status ${summary ? "available" : "empty"}">
+      <strong>${summary ? formatHourlyRange(summary.min, summary.max) : "Nessun range affidabile"}</strong>
+      <span>${summary ? `${summary.count} retribuzioni pubblicate · mediana ${formatHourlyRange(summary.median, summary.median)}${summary.converted ? ` · ${summary.converted} convertite da annuo/mensile` : ""}` : "Nessun valore viene stimato se le fonti non pubblicano retribuzioni."}</span>
     </div>
   `;
 }
@@ -1942,6 +2119,7 @@ function renderSearchAnalysis() {
 function jobCard(job) {
   const saved = state.saved.has(job.id);
   const workplace = workplaceFor(job);
+  const sourceUrl = jobSourceUrl(job);
   return `
     <article class="job-card">
       ${renderOfferMedia(job)}
@@ -1974,9 +2152,7 @@ function jobCard(job) {
         <button class="secondary-button" data-action="detail" data-job-id="${job.id}">
           Vedi tutto
         </button>
-        <button class="primary-button" data-action="apply" data-job-id="${job.id}">
-          Prepara
-        </button>
+        ${sourceUrl ? `<a class="primary-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Apri fonte</a>` : ""}
       </div>
     </article>
   `;
@@ -1985,6 +2161,7 @@ function jobCard(job) {
 function jobListCard(job) {
   const saved = state.saved.has(job.id);
   const workplace = workplaceFor(job);
+  const sourceUrl = jobSourceUrl(job);
   return `
     <article class="job-list-card">
       <div class="job-list-layout">
@@ -1998,7 +2175,7 @@ function jobListCard(job) {
               <h3>${job.title}</h3>
               <p>${job.company} · ${job.location} · ${distanceLabelForJob(job)}</p>
               ${sourceProvenance(job)}
-              <span class="workplace-score">${workplace.rating} ★ · ${workplace.reviewCount} opinioni sul posto</span>
+              ${operatorFeedbackBadge(job)}
               ${sourceChips(job)}
             </div>
             <button
@@ -2020,9 +2197,7 @@ function jobListCard(job) {
               <button class="secondary-button" data-action="detail" data-job-id="${job.id}">
                 Apri dettagli
               </button>
-              <button class="primary-button" data-action="apply" data-job-id="${job.id}">
-                Prepara candidatura
-              </button>
+              ${sourceUrl ? `<a class="primary-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Apri fonte</a>` : ""}
             </div>
           </div>
         </div>
@@ -2060,10 +2235,9 @@ function renderSourceRegistry() {
       <div class="source-registry-items">
         ${(Array.isArray(family.sources) ? family.sources : []).map((entry) => {
           const url = httpsUrl(entry.url);
-          const [iconClass, iconLabel] = sourceIconMeta(entry.name || "Fonte", entry.kind || "separata");
           const description = escapeHtml(entry.scope || sourceKindMeta(entry.kind || "separata")[1]);
           const body = `
-            <span class="source-avatar ${iconClass}" aria-hidden="true">${iconLabel}</span>
+            ${sourceAvatarMarkup(entry, "source-avatar", true)}
             <span><strong>${escapeHtml(entry.name || "Fonte")}</strong><small>${description}</small></span>
           `;
           return url
@@ -2201,32 +2375,54 @@ function detailSection(title, content, options = {}) {
 }
 
 function marketPanel(job) {
-  const market = marketForJob(job);
-  const stats = marketStats(market);
+  const observations = marketObservationsForJob(job);
+  const summary = marketSummaryFromObservations(observations);
+  if (!summary) {
+    return `
+      <div class="market-panel empty-market-panel">
+        <div class="market-panel-main">
+          <span>Borsa tariffe</span>
+          <strong>Nessun range affidabile</strong>
+          <p>Le offerte simili consultate non pubblicano una retribuzione leggibile. RadarSanità non sostituisce questo vuoto con stime inventate.</p>
+        </div>
+      </div>
+    `;
+  }
+  const own = salaryObservation(job);
+  const ownPosition = own
+    ? own.mid > summary.median + 1 ? "sopra la mediana osservata" : own.mid < summary.median - 1 ? "sotto la mediana osservata" : "in linea con la mediana osservata"
+    : "compenso dell'offerta non pubblicato";
   return `
-    <div class="market-panel trend-${stats.direction}">
+    <div class="market-panel trend-flat">
       <div class="market-panel-main">
-        <span>${market.label}</span>
-        <strong>${formatMarketValue(market, stats.current)}</strong>
-        <p>${formatMarketDelta(market, stats.delta)} rispetto a ${stats.trend.startLabel}. ${market.signal}</p>
-        ${ratePeriodControls(true)}
+        <span>Borsa reale del perimetro</span>
+        <strong>${formatHourlyRange(summary.min, summary.max)}</strong>
+        <p>${summary.count} retribuzioni pubblicate da offerte consultate. Questa offerta è ${ownPosition}.</p>
       </div>
       <div class="market-panel-chart">
-        ${marketChart(market, { compact: true })}
+        ${observedMarketChart(summary)}
       </div>
       <div class="market-panel-grid">
-        <div><small>Trend ${stats.trend.label}</small><strong>${formatTrendPercent(stats.percent)}</strong></div>
-        <div><small>Range osservato</small><strong>${market.range}</strong></div>
-        <div><small>Domanda</small><strong>${market.demand}</strong></div>
-        <div><small>Urgenza</small><strong>${market.urgent}</strong></div>
-        <div><small>Netto stimato</small><strong>${market.net}</strong></div>
-        <div><small>Stato dato</small><strong>${market.status}</strong></div>
+        <div><small>Mediana</small><strong>${formatHourlyRange(summary.median, summary.median)}</strong></div>
+        <div><small>Range osservato</small><strong>${formatHourlyRange(summary.min, summary.max)}</strong></div>
+        <div><small>Osservazioni</small><strong>${summary.count}</strong></div>
+        <div><small>Fonti con dato</small><strong>${summary.domains.size}</strong></div>
+        <div><small>Conversioni</small><strong>${summary.converted ? `${summary.converted} annue/mensili` : "nessuna"}</strong></div>
+        <div><small>Stato dato</small><strong>Da offerte pubblicate</strong></div>
+      </div>
+      <div class="market-source-strip">
+        ${summary.observations.slice(0, 5).map((item) => {
+          const pseudoEntry = { name: item.source || "Fonte", kind: "primaria", url: item.sourceUrl };
+          const url = httpsUrl(item.sourceUrl);
+          const body = `${sourceAvatarMarkup(pseudoEntry, "source-avatar", true)}<span>${escapeHtml(formatHourlyRange(item.low, item.high))}</span>`;
+          return url
+            ? `<a href="${url}" target="_blank" rel="noreferrer noopener">${body}</a>`
+            : `<span>${body}</span>`;
+        }).join("")}
       </div>
     </div>
     <div class="prototype-disclaimer">
-      Borsa tariffe dimostrativa: nel prodotto reale il range nasce da offerte
-      pubblicate, esiti candidature, segnalazioni verificate e conferme dei
-      datori. Non sostituisce bando, CCNL o contratto individuale.
+      Borsa calcolata da retribuzioni pubblicate nelle fonti consultate. I range annui o mensili vengono convertiti in lordo/ora stimato e non sostituiscono bando, CCNL o contratto individuale.
     </div>
   `;
 }
@@ -2379,16 +2575,18 @@ function dataGrid(items, options = {}) {
 function renderDetail(jobId) {
   const job = getJob(jobId);
   const workplace = workplaceFor(job);
+  const professionalReviews = professionalReviewsFor(job);
+  const sourceUrl = jobSourceUrl(job);
   state.selectedJobId = job.id;
   const saved = state.saved.has(job.id);
-  const colleagueSection = workplace.reviews.length
-    ? detailSection(`Cosa dicono i colleghi · ${workplace.rating}/5`, `
+  const colleagueSection = professionalReviews.length
+    ? detailSection(`Segnali da operatori · ${workplace.rating}/5`, `
         <div class="review-summary">
-          <div><strong>${workplace.rating}/5</strong><span>${workplace.reviewCount} opinioni raccolte</span></div>
-          <span>${workplace.verifiedReviews} esperienze professionali verificate</span>
+          <div><strong>${workplace.rating}/5</strong><span>${professionalReviews.length} segnali professionali</span></div>
+          <span>Solo esperienze di operatori, non recensioni pazienti o parenti</span>
         </div>
         <div class="review-list">
-          ${workplace.reviews.map((review) => `
+          ${professionalReviews.map((review) => `
             <article class="review-card">
               <div class="review-card-top">
                 <span class="review-stars" aria-label="${review.score} stelle su 5">${stars(review.score)}</span>
@@ -2401,9 +2599,9 @@ function renderDetail(jobId) {
           `).join("")}
         </div>
       `, { icon: "7", tone: "reviews", meta: "Esperienze separate dai dati ufficiali" })
-    : detailSection("Esperienze sul posto", `
-        <p class="content-note">Per questa offerta non sono state raccolte opinioni del personale. RadarSanita non sostituisce questo dato con recensioni inventate o non attribuite.</p>
-      `, { icon: "7", tone: "reviews", meta: "Nessuna recensione associata alla fonte" });
+    : detailSection("Opinioni operatori", `
+        <p class="content-note">Per questa offerta non sono ancora state raccolte opinioni da operatori fruitori della piattaforma o da fonti professionali verificabili. RadarSanita non usa recensioni di pazienti o parenti per valutare il luogo di lavoro.</p>
+      `, { icon: "7", tone: "reviews", meta: "Nessun segnale professionale associato" });
   jobDetail.innerHTML = `
     <div class="detail-page">
       <div class="detail-topbar">
@@ -2438,12 +2636,6 @@ function renderDetail(jobId) {
 
         ${decisionStrip(job)}
 
-        <div class="why-box">
-          <strong>Perché compare nella tua ricerca</strong>
-          <span class="why-evidence-note">Motivi ricavati da zona, turni, contratto e requisiti dichiarati.</span>
-          <ul class="why-list">${job.reasons.map((reason) => `<li>${reason}</li>`).join("")}</ul>
-        </div>
-
         ${infoMap(job, workplace)}
 
         <div class="dossier-proof">
@@ -2452,18 +2644,9 @@ function renderDetail(jobId) {
             <span>RadarSanità accorpa duplicati e tiene separati dati ufficiali, fonti secondarie e profilo workplace.</span>
           </div>
           ${sourceChips(job)}
+          ${sourceUrl ? `<a class="primary-button source-detail-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Apri fonte originale</a>` : ""}
         </div>
       </section>
-
-      <div class="sticky-apply-bar">
-        <div>
-          <strong>Scade il ${job.deadlineLabel}</strong>
-          <small>Account richiesto solo se vuoi salvare bozza, checklist e dati approvati. Invio finale manuale.</small>
-        </div>
-        <button class="primary-button" data-action="apply" data-job-id="${job.id}">
-          Prepara candidatura
-        </button>
-      </div>
 
       <div class="detail-sections">
         ${detailSection("In breve", `
@@ -2475,10 +2658,10 @@ function renderDetail(jobId) {
           tone: "money",
           meta: "Dati economici e condizioni formali"
         })}
-        ${detailSection("Borsa tariffe del mercato", marketPanel(job), {
+        ${detailSection("Borsa reale del perimetro", marketPanel(job), {
           icon: "3",
           tone: "market",
-          meta: "Confronto con opportunità simili nella zona"
+          meta: "Calcolata da retribuzioni pubblicate"
         })}
         ${detailSection("Orari e turni", dataGrid(job.shiftDetails), {
           icon: "4",
@@ -2501,13 +2684,6 @@ function renderDetail(jobId) {
           </p>
         `, { icon: "6", tone: "place", meta: "Logistica e contesto non ufficiale" })}
         ${colleagueSection}
-        ${detailSection("Come candidarsi", `
-          ${applicationEffortPanel(job)}
-          <div class="ai-external-note">
-            <strong>Rischio minimo: assistenza, non delega</strong>
-            <span>Prepari profilo locale, checklist e bozza; gli allegati e l'invio restano personali sul canale ufficiale.</span>
-          </div>
-        `, { icon: "8", tone: "application", meta: "Documenti, conferme e passaggi sensibili" })}
         ${detailSection("Fonte e aggiornamento", `
           ${sourceTrustPanel(job)}
           <div class="source-line"><strong>Fonte</strong><span>${job.source}</span></div>
@@ -2955,7 +3131,7 @@ function setSearchOriginFromPreset(target) {
 function requestSearchLocation({ automatic = false, force = false } = {}) {
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
-  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=55";
+  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=56";
 
   if (state.locationRequestInFlight || (automatic && state.locationRequestAttempted)) return;
   if (state.searchOrigin && !force) {
