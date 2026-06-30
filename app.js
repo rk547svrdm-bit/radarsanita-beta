@@ -602,7 +602,9 @@ var workplaceProfiles = window.RADAR_DATA?.workplaceProfiles || {
 
 const LOCAL_STORAGE_KEYS = {
   profile: "radarSanita.profile.v1",
-  applications: "radarSanita.applications.v1"
+  applications: "radarSanita.applications.v1",
+  feedbackSubmissions: "radarSanita.feedbackSubmissions.v1",
+  sponsorRequests: "radarSanita.sponsorRequests.v1"
 };
 
 function readLocalJson(key, fallback) {
@@ -739,6 +741,8 @@ const offerReviewOutput = document.getElementById("offerReviewOutput");
 const resultsTriage = document.getElementById("resultsTriage");
 const sourceRegistryList = document.getElementById("sourceRegistryList");
 const personalMarketPanel = document.getElementById("personalMarketPanel");
+const feedbackRegistry = document.getElementById("feedbackRegistry");
+const sponsorRegistry = document.getElementById("sponsorRegistry");
 
 function updateLiveSourceCounters(count) {
   const safeCount = Number(count) || 13;
@@ -1079,27 +1083,33 @@ function marketObservationsForJob(job) {
 function observedMarketChart(summary) {
   if (!summary) return "";
   const values = summary.observations.map((item) => item.mid).sort((a, b) => a - b);
-  const width = 250;
-  const height = 92;
-  const pad = 10;
+  const width = 300;
+  const height = 116;
+  const pad = 14;
   const min = Math.min(...values);
   const max = Math.max(...values);
   const spread = Math.max(max - min, 1);
-  const points = values.map((value, index) => {
+  const pointList = values.map((value, index) => {
     const x = pad + (values.length === 1 ? 0.5 : index / (values.length - 1)) * (width - pad * 2);
     const y = height - pad - ((value - min) / spread) * (height - pad * 2);
     return `${Number(x.toFixed(1))},${Number(y.toFixed(1))}`;
-  }).join(" ");
+  });
+  const points = pointList.join(" ");
+  const dotStep = Math.max(1, Math.ceil(pointList.length / 18));
   return `
     <div class="market-chart-wrap trend-flat observed-market-chart">
       <svg class="market-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Distribuzione tariffe osservate">
         <line class="chart-grid" x1="${pad}" y1="${pad}" x2="${width - pad}" y2="${pad}"></line>
         <line class="chart-grid" x1="${pad}" y1="${height / 2}" x2="${width - pad}" y2="${height / 2}"></line>
         <line class="chart-grid" x1="${pad}" y1="${height - pad}" x2="${width - pad}" y2="${height - pad}"></line>
+        <polygon class="chart-area" points="${pad},${height - pad} ${points} ${width - pad},${height - pad}"></polygon>
         <polyline class="chart-line" points="${points}"></polyline>
-        ${points.split(" ").map((point) => {
+        ${pointList.map((point, index) => {
+          if (index % dotStep !== 0 && index !== pointList.length - 1) return "";
           const [x, y] = point.split(",");
-          return `<circle class="chart-dot" cx="${x}" cy="${y}" r="3.4"></circle>`;
+          const latestClass = index === pointList.length - 1 ? " latest-dot" : "";
+          const radius = index === pointList.length - 1 ? 2.8 : 1.45;
+          return `<circle class="chart-dot${latestClass}" cx="${x}" cy="${y}" r="${radius}"></circle>`;
         }).join("")}
       </svg>
       <div class="market-chart-labels">
@@ -1581,10 +1591,10 @@ function professionalReviewsFor(job) {
 function operatorFeedbackBadge(job) {
   const reviews = professionalReviewsFor(job);
   if (!reviews.length) {
-    return `<span class="workplace-score empty-operator-score">Opinioni operatori non ancora raccolte</span>`;
+    return `<span class="workplace-score empty-operator-score">Reputazione professionale da approfondire</span>`;
   }
   const workplace = workplaceFor(job);
-  return `<span class="workplace-score">${workplace.rating} ★ · ${reviews.length} segnali da operatori</span>`;
+  return `<span class="workplace-score">${workplace.rating} ★ · ${reviews.length} segnali professionali</span>`;
 }
 
 function decisionStrip(job) {
@@ -1595,8 +1605,8 @@ function decisionStrip(job) {
 
   const cells = [
     ["trust", "Fiducia dati", trust.value, trust.note, trust.level],
-    ["value", "Convenienza", value.value, value.note, value.level],
-    ["effort", "Operatori", operatorReviews.length ? `${operatorReviews.length} segnali` : "Non raccolti", operatorReviews.length ? "Esperienze professionali separate" : "Nessuna recensione pazienti/parenti", operatorReviews.length ? "medium" : "low"],
+    ["value", "Mercato", value.value, value.note, value.level],
+    ["effort", "Reputazione", operatorReviews.length ? `${operatorReviews.length} segnali` : "Da approfondire", operatorReviews.length ? "Esperienze professionali disponibili" : "Nessun segnale professionale collegato", operatorReviews.length ? "medium" : "low"],
     ["urgency", "Urgenza", urgency.value, urgency.note, urgency.level]
   ];
 
@@ -1633,9 +1643,9 @@ function infoMap(job, workplace) {
         <small>${workplace.facts[0]}</small>
       </div>
       <div class="info-map-item effort">
-        <span>Operatori</span>
+        <span>Reputazione</span>
         <strong>${operatorReviews.length ? `${operatorReviews.length} segnali` : "non raccolti"}</strong>
-        <small>Separati da recensioni pazienti</small>
+        <small>Esperienze professionali</small>
       </div>
     </div>
   `;
@@ -2037,16 +2047,13 @@ function renderPersonalMarket() {
   const summary = marketSummaryFromObservations(salaryObservations);
   const role = searchRoleLabels[profile.role];
   const area = searchDistanceLabel(profile);
-  const visibleSources = new Set(state.filteredJobs.flatMap((job) => sourceEntries(job).map(({ name }) => name)));
-  const snapshot = window.RADAR_DATA?.searchSnapshot || {};
-  const snapshotSources = Number(snapshot.sourcesUsed) || visibleSources.size;
 
   personalMarketPanel.innerHTML = `
     <div class="personal-market-copy">
-      <span class="eyebrow">Borsa del tuo perimetro</span>
+      <span class="eyebrow">Stima mercato tariffe</span>
       <h2>${role} · ${area}</h2>
-      <p>Calcolata solo da retribuzioni pubblicate nelle offerte della ricerca. Fonti nella raccolta: ${snapshotSources}; fonti nei risultati visibili: ${visibleSources.size}.</p>
-      <button class="text-button" data-action="open-sources">Vedi le fonti della borsa</button>
+      <p>Confronta le retribuzioni pubblicate nelle offerte trovate per il tuo ruolo e nel perimetro scelto. Serve a capire se il mercato si sta muovendo verso il basso, in linea o verso offerte piu alte.</p>
+      <button class="text-button" data-action="open-sources">Controlla l'origine dei dati</button>
     </div>
     <div class="personal-market-chart">
       ${summary ? observedMarketChart(summary) : `<img src="assets/function-visuals/rate-market-clean.svg" alt="Grafico stilizzato della borsa tariffe">`}
@@ -2158,7 +2165,7 @@ function jobCard(job) {
         <button class="secondary-button" data-action="detail" data-job-id="${job.id}">
           Vedi tutto
         </button>
-        ${sourceUrl ? `<a class="primary-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Apri fonte</a>` : ""}
+        ${sourceUrl ? `<a class="primary-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Candidati</a>` : ""}
       </div>
     </article>
   `;
@@ -2209,7 +2216,7 @@ function jobListCard(job, index = 0, total = 1) {
               <button class="secondary-button" data-action="detail" data-job-id="${job.id}">
                 Entra nella scheda
               </button>
-              ${sourceUrl ? `<a class="primary-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Apri fonte</a>` : ""}
+              ${sourceUrl ? `<a class="primary-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Candidati</a>` : ""}
             </div>
             <small class="deck-card-hint">Scorri verso il basso per la prossima offerta.</small>
           </div>
@@ -2395,9 +2402,9 @@ function marketPanel(job) {
     return `
       <div class="market-panel empty-market-panel">
         <div class="market-panel-main">
-          <span>Borsa tariffe</span>
+          <span>Stima mercato tariffe</span>
           <strong>Nessun range affidabile</strong>
-          <p>Le offerte simili consultate non pubblicano una retribuzione leggibile. RadarSanità non sostituisce questo vuoto con stime inventate.</p>
+          <p>Le offerte simili consultate non pubblicano una retribuzione leggibile. RadarSanità non sostituisce questo vuoto con valori inventati.</p>
         </div>
       </div>
     `;
@@ -2409,9 +2416,9 @@ function marketPanel(job) {
   return `
     <div class="market-panel trend-flat">
       <div class="market-panel-main">
-        <span>Borsa reale del perimetro</span>
+        <span>Stima mercato tariffe</span>
         <strong>${formatHourlyRange(summary.min, summary.max)}</strong>
-        <p>${summary.count} retribuzioni pubblicate da offerte consultate. Questa offerta è ${ownPosition}.</p>
+        <p>Stima in tempo reale sul ruolo e sull'area della ricerca, basata su ${summary.count} retribuzioni pubblicate nelle offerte trovate. Questa offerta è ${ownPosition}.</p>
       </div>
       <div class="market-panel-chart">
         ${observedMarketChart(summary)}
@@ -2436,7 +2443,7 @@ function marketPanel(job) {
       </div>
     </div>
     <div class="prototype-disclaimer">
-      Borsa calcolata da retribuzioni pubblicate nelle fonti consultate. I range annui o mensili vengono convertiti in lordo/ora stimato e non sostituiscono bando, CCNL o contratto individuale.
+      Stima calcolata da retribuzioni pubblicate nelle fonti consultate. I range annui o mensili vengono convertiti in lordo/ora stimato e non sostituiscono bando, CCNL o contratto individuale.
     </div>
   `;
 }
@@ -2586,6 +2593,25 @@ function dataGrid(items, options = {}) {
   `;
 }
 
+function withoutMoneyRows(rows = []) {
+  return rows.filter(([label]) => !/retribuzione|compenso|stipendio|ral/i.test(String(label || "")));
+}
+
+function professionalOpinionLinks(job) {
+  const workplace = workplaceFor(job);
+  const terms = [job.company, job.location, workplace.name]
+    .filter(Boolean)
+    .join(" ");
+  const workQuery = encodeURIComponent(`${terms} opinioni lavoro infermieri OSS dipendenti`);
+  const employerQuery = encodeURIComponent(`${job.company} recensioni lavoro operatori sanitari`);
+  return `
+    <div class="external-opinion-links" aria-label="Ricerche esterne sulla reputazione professionale">
+      <a href="https://www.google.com/search?q=${workQuery}" target="_blank" rel="noreferrer noopener">Cerca opinioni lavoro</a>
+      <a href="https://www.google.com/search?q=${employerQuery}" target="_blank" rel="noreferrer noopener">Cerca segnali sul datore</a>
+    </div>
+  `;
+}
+
 function renderDetail(jobId) {
   const job = getJob(jobId);
   const workplace = workplaceFor(job);
@@ -2594,10 +2620,10 @@ function renderDetail(jobId) {
   state.selectedJobId = job.id;
   const saved = state.saved.has(job.id);
   const colleagueSection = professionalReviews.length
-    ? detailSection(`Segnali da operatori · ${workplace.rating}/5`, `
+    ? detailSection(`Reputazione professionale · ${workplace.rating}/5`, `
         <div class="review-summary">
-          <div><strong>${workplace.rating}/5</strong><span>${professionalReviews.length} segnali professionali</span></div>
-          <span>Solo esperienze di operatori, non recensioni pazienti o parenti</span>
+          <div><strong>${workplace.rating}/5</strong><span>${professionalReviews.length} segnali professionali disponibili</span></div>
+          <span>Valutazioni utili per capire organizzazione, clima e affidabilita percepita.</span>
         </div>
         <div class="review-list">
           ${professionalReviews.map((review) => `
@@ -2612,10 +2638,12 @@ function renderDetail(jobId) {
             </article>
           `).join("")}
         </div>
-      `, { icon: "7", tone: "reviews", meta: "Esperienze separate dai dati ufficiali" })
-    : detailSection("Opinioni operatori", `
-        <p class="content-note">Per questa offerta non sono ancora state raccolte opinioni da operatori fruitori della piattaforma o da fonti professionali verificabili. RadarSanita non usa recensioni di pazienti o parenti per valutare il luogo di lavoro.</p>
-      `, { icon: "7", tone: "reviews", meta: "Nessun segnale professionale associato" });
+        ${professionalOpinionLinks(job)}
+      `, { icon: "7", tone: "reviews", meta: "Esperienze professionali collegate" })
+    : detailSection("Reputazione professionale", `
+        <p class="content-note">Per questa offerta non sono ancora presenti valutazioni professionali collegate alla struttura. Puoi approfondire i segnali online sul datore o sul luogo prima di candidarti.</p>
+        ${professionalOpinionLinks(job)}
+      `, { icon: "7", tone: "reviews", meta: "Da approfondire prima della decisione" });
   jobDetail.innerHTML = `
     <div class="detail-page">
       <div class="detail-topbar">
@@ -2645,20 +2673,18 @@ function renderDetail(jobId) {
           <div class="summary-tile"><small>Contratto</small><strong>${job.contract}</strong></div>
           <div class="summary-tile"><small>Orario</small><strong>${job.schedule}</strong></div>
           <div class="summary-tile"><small>Turni</small><strong>${job.shifts}</strong></div>
-          <div class="summary-tile"><small>Compenso</small><strong>${job.salary}</strong></div>
+          <div class="summary-tile"><small>Distanza</small><strong>${distanceLabelForJob(job)}</strong></div>
         </div>
 
         ${decisionStrip(job)}
 
-        ${infoMap(job, workplace)}
-
         <div class="dossier-proof">
           <div>
-            <strong>Dossier costruito da ${sourceCount(job)} fonti</strong>
-            <span>RadarSanità accorpa duplicati e tiene separati dati ufficiali, fonti secondarie e profilo workplace.</span>
+            <strong>Informazioni raccolte da ${sourceCount(job)} fonti</strong>
+            <span>Apri la candidatura sul sito ufficiale e verifica i dettagli prima dell'invio.</span>
           </div>
           ${sourceChips(job)}
-          ${sourceUrl ? `<a class="primary-button source-detail-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Apri fonte originale</a>` : ""}
+          ${sourceUrl ? `<a class="primary-button source-detail-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Candidati sul sito ufficiale</a>` : ""}
         </div>
       </section>
 
@@ -2667,15 +2693,15 @@ function renderDetail(jobId) {
           <p>${job.summary}</p>
           <div class="warning-box">${job.warning}</div>
         `, { open: true, icon: "1", tone: "overview", meta: "Il riassunto operativo prima dei dettagli" })}
-        ${detailSection("Contratto e stipendio", dataGrid(job.contractDetails), {
+        ${detailSection("Contratto e condizioni", dataGrid(withoutMoneyRows(job.contractDetails)), {
           icon: "2",
           tone: "money",
-          meta: "Dati economici e condizioni formali"
+          meta: "Condizioni formali dichiarate"
         })}
-        ${detailSection("Borsa reale del perimetro", marketPanel(job), {
+        ${detailSection("Stima mercato tariffe", marketPanel(job), {
           icon: "3",
           tone: "market",
-          meta: "Calcolata da retribuzioni pubblicate"
+          meta: "Retribuzioni pubblicate nel perimetro"
         })}
         ${detailSection("Orari e turni", dataGrid(job.shiftDetails), {
           icon: "4",
@@ -2692,9 +2718,8 @@ function renderDetail(jobId) {
             ${workplace.facts.map((fact) => `<span>${fact}</span>`).join("")}
           </div>
           <p class="content-note">
-            Una foto appare solo se pubblicata dalla struttura o dalla fonte e
-            collegata al suo URL. Se non esiste, RadarSanita mostra il logo o il
-            nome della fonte, mai una foto AI o di un altro luogo.
+            Usa questi dati per capire se la sede e l'organizzazione dichiarata
+            sono compatibili con i tuoi vincoli prima di candidarti.
           </p>
         `, { icon: "6", tone: "place", meta: "Logistica e contesto non ufficiale" })}
         ${colleagueSection}
@@ -2705,6 +2730,17 @@ function renderDetail(jobId) {
           <div class="source-line"><strong>Scadenza</strong><span>${job.deadlineLabel}</span></div>
           <div class="source-line"><strong>Copertura</strong><span>${sourceEntries(job).map(({ name, kind }) => `${escapeHtml(name)} (${escapeHtml(kind)})`).join(", ")}</span></div>
         `, { icon: "9", tone: "source", meta: "Da dove arriva ogni informazione" })}
+      </div>
+      <div class="sticky-offer-cta" aria-label="Azioni offerta sempre disponibili">
+        <button
+          class="save-button sticky-save-button ${saved ? "saved" : ""}"
+          data-action="save"
+          data-job-id="${job.id}"
+          aria-label="${saved ? "Rimuovi dai salvati" : "Salva offerta"}"
+        >${saved ? "♥" : "♡"}</button>
+        ${sourceUrl
+          ? `<a class="primary-button sticky-apply-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Candidati</a>`
+          : `<button class="primary-button sticky-apply-button" type="button" disabled>Candidatura non disponibile</button>`}
       </div>
     </div>
   `;
@@ -3018,6 +3054,87 @@ function collectSponsorRequest() {
     "Nota: priorità di evidenza solo se compatibile con le ricerche degli utenti.",
     ...fields.map(([label, value]) => `${label}: ${value}`)
   ].join("\n\n");
+}
+
+function localDateLabel(value) {
+  try {
+    return new Intl.DateTimeFormat("it-IT", {
+      dateStyle: "short",
+      timeStyle: "short"
+    }).format(new Date(value));
+  } catch {
+    return "data non disponibile";
+  }
+}
+
+function readLocalSubmissions(key) {
+  const submissions = readLocalJson(key, []);
+  return Array.isArray(submissions) ? submissions.slice(0, 40) : [];
+}
+
+function saveLocalSubmission(key, text, meta = {}) {
+  const submission = {
+    id: `${Date.now()}-${Math.random().toString(16).slice(2, 8)}`,
+    createdAt: new Date().toISOString(),
+    text,
+    ...meta
+  };
+  const next = [submission, ...readLocalSubmissions(key)].slice(0, 40);
+  writeLocalJson(key, next);
+  renderLocalRegistries();
+  return submission;
+}
+
+function registryText(key, title) {
+  const items = readLocalSubmissions(key);
+  if (!items.length) return "";
+  return [
+    title,
+    ...items.map((item, index) => [
+      `#${index + 1} · ${localDateLabel(item.createdAt)}${item.role ? ` · ${item.role}` : ""}`,
+      item.text
+    ].join("\n"))
+  ].join("\n\n---\n\n");
+}
+
+function renderRegistry(container, key, title, emptyText) {
+  if (!container) return;
+  const items = readLocalSubmissions(key);
+  container.innerHTML = `
+    <div class="local-submissions-heading">
+      <div>
+        <span class="eyebrow">Registro locale</span>
+        <h2>${title}</h2>
+        <p>Questi dati sono salvati solo nel browser di questo dispositivo.</p>
+      </div>
+      <button class="secondary-button" type="button" data-action="copy-local-registry" data-registry="${key}">Copia registro</button>
+    </div>
+    ${items.length ? `
+      <div class="local-submissions-list">
+        ${items.slice(0, 5).map((item) => `
+          <article class="local-submission-card">
+            <small>${localDateLabel(item.createdAt)}${item.role ? ` · ${escapeHtml(item.role)}` : ""}</small>
+            <p>${escapeHtml(item.text).replace(/\n/g, "<br>")}</p>
+          </article>
+        `).join("")}
+      </div>
+    ` : `<p class="local-submissions-empty">${emptyText}</p>`}
+  `;
+}
+
+function renderLocalRegistries() {
+  renderRegistry(
+    feedbackRegistry,
+    LOCAL_STORAGE_KEYS.feedbackSubmissions,
+    "Risposte raccolte",
+    "Nessuna risposta salvata su questo dispositivo."
+  );
+  renderRegistry(
+    sponsorRegistry,
+    LOCAL_STORAGE_KEYS.sponsorRequests,
+    "Richieste enti salvate",
+    "Nessuna richiesta salvata su questo dispositivo."
+  );
 }
 
 function updateSelectedPlaceCard(label, note = "Il raggio partirà da qui quando scegli una distanza in km.") {
@@ -3387,26 +3504,48 @@ document.addEventListener("click", (event) => {
       showToast("Scrivi almeno una risposta");
       return;
     }
+    const activeRole = document.querySelector("[data-feedback-role].selected")?.dataset.feedbackRole || "candidate";
+    saveLocalSubmission(LOCAL_STORAGE_KEYS.feedbackSubmissions, text, {
+      role: activeRole === "employer" ? "Enti e strutture" : "Infermieri e OSS"
+    });
     if (!navigator.clipboard?.writeText) {
-      showToast("Risposte pronte da selezionare");
+      showToast("Risposte salvate in questo dispositivo");
       return;
     }
     navigator.clipboard.writeText(text)
-      .then(() => showToast("Risposte copiate"))
-      .catch(() => showToast("Risposte pronte da selezionare"));
+      .then(() => showToast("Risposte salvate e copiate"))
+      .catch(() => showToast("Risposte salvate in questo dispositivo"));
   } else if (action === "copy-sponsor-request") {
     const text = collectSponsorRequest();
     if (!text) {
       showToast("Compila almeno un campo");
       return;
     }
+    saveLocalSubmission(LOCAL_STORAGE_KEYS.sponsorRequests, text, { role: "Enti e strutture" });
     if (!navigator.clipboard?.writeText) {
-      showToast("Richiesta pronta da selezionare");
+      showToast("Richiesta salvata in questo dispositivo");
       return;
     }
     navigator.clipboard.writeText(text)
-      .then(() => showToast("Richiesta sponsor copiata"))
-      .catch(() => showToast("Richiesta pronta da selezionare"));
+      .then(() => showToast("Richiesta salvata e copiata"))
+      .catch(() => showToast("Richiesta salvata in questo dispositivo"));
+  } else if (action === "copy-local-registry") {
+    const key = target.dataset.registry;
+    const title = key === LOCAL_STORAGE_KEYS.sponsorRequests
+      ? "Registro richieste enti RadarSanità"
+      : "Registro risposte RadarSanità";
+    const text = registryText(key, title);
+    if (!text) {
+      showToast("Nessun elemento salvato");
+      return;
+    }
+    if (!navigator.clipboard?.writeText) {
+      showToast("Registro pronto nella pagina");
+      return;
+    }
+    navigator.clipboard.writeText(text)
+      .then(() => showToast("Registro copiato"))
+      .catch(() => showToast("Registro pronto nella pagina"));
   } else if (action === "open-sources") {
     navigate("info");
     window.setTimeout(() => document.getElementById("sourceRegistry")?.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
@@ -3545,6 +3684,7 @@ setupSearchVerticalFlow();
 renderCoverageDashboard();
 renderSourceRegistry();
 renderRateMarket();
+renderLocalRegistries();
 applyJobFilters();
 renderApplicationsList();
 updateCounts();

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-29T16:49:48.067Z",
-  "checkedLabel": "29 giugno 2026 alle ore 18:49",
+  "updatedAt": "2026-06-28T09:31:35.813Z",
+  "checkedLabel": "28 giugno 2026 alle ore 11:31",
   "method": "Verifica automatica di pagine pubbliche e discovery multi-fonte RadarSanita",
   "sourcesChecked": 68,
   "outcomes": [
@@ -66,6 +66,11 @@
       "error": null
     },
     {
+      "id": "randstad-infermieri-torrita-di-siena-13012be0-6fac-439a-9957-6e7aa006c09d",
+      "status": "discovered-randstad",
+      "error": null
+    },
+    {
       "id": "randstad-infermiere-per-ospedale-pubblico-torino-torino-842abe1c-ad02-493c-b279-7c32465c0080",
       "status": "discovered-randstad",
       "error": null
@@ -76,17 +81,7 @@
       "error": null
     },
     {
-      "id": "randstad-infermieri-torrita-di-siena-13012be0-6fac-439a-9957-6e7aa006c09d",
-      "status": "discovered-randstad",
-      "error": null
-    },
-    {
       "id": "randstad-infermiere-triggiano-a01917d4-4484-45d2-a25c-6733b1736f17",
-      "status": "discovered-randstad",
-      "error": null
-    },
-    {
-      "id": "randstad-infermiere-rozzano-87f86104-7603-422b-b880-4903abc95a92",
       "status": "discovered-randstad",
       "error": null
     },
@@ -96,12 +91,17 @@
       "error": null
     },
     {
-      "id": "randstad-infermiere-ausl-aosta-aosta-9404ac0c-f73b-4b47-aa3c-e57e13c871e3",
+      "id": "randstad-infermiere-rozzano-87f86104-7603-422b-b880-4903abc95a92",
       "status": "discovered-randstad",
       "error": null
     },
     {
       "id": "randstad-infermiere-brescia-5ff458cd-1ec9-4ba4-9a90-68b473632cdd",
+      "status": "discovered-randstad",
+      "error": null
+    },
+    {
+      "id": "randstad-infermiere-ausl-aosta-aosta-9404ac0c-f73b-4b47-aa3c-e57e13c871e3",
       "status": "discovered-randstad",
       "error": null
     },
@@ -121,11 +121,6 @@
       "error": null
     },
     {
-      "id": "randstad-infermiere-appiano-gentile-04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1",
-      "status": "discovered-randstad",
-      "error": null
-    },
-    {
       "id": "randstad-infermiere-codigoro-65af6fd8-f0ab-4177-adfe-18aea46483f9",
       "status": "discovered-randstad",
       "error": null
@@ -141,7 +136,17 @@
       "error": null
     },
     {
+      "id": "randstad-infermiere-appiano-gentile-04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1",
+      "status": "discovered-randstad",
+      "error": null
+    },
+    {
       "id": "randstad-infermiere-mfnb-milano-8c4c4540-f03f-48fe-97fc-ca43826c4f1e",
+      "status": "discovered-randstad",
+      "error": null
+    },
+    {
+      "id": "randstad-infermiere-matera-c5b85020-22ff-4853-9b02-bf7a8e0b19c3",
       "status": "discovered-randstad",
       "error": null
     },
@@ -166,6 +171,11 @@
       "error": null
     },
     {
+      "id": "randstad-infermiere-cotignola-06e526e3-d90f-41f2-af71-5a2e7653a282",
+      "status": "discovered-randstad",
+      "error": null
+    },
+    {
       "id": "randstad-infermiere-per-rsa-capriate-san-gervasio-44ac560b-9a82-40cb-bd22-3e67daab8438",
       "status": "discovered-randstad",
       "error": null
@@ -176,12 +186,7 @@
       "error": null
     },
     {
-      "id": "randstad-infermiere-cotignola-06e526e3-d90f-41f2-af71-5a2e7653a282",
-      "status": "discovered-randstad",
-      "error": null
-    },
-    {
-      "id": "randstad-infermiere-firenze-97704e0d-3f10-4cfc-9502-59beadba6a9c",
+      "id": "randstad-infermieri-fmnb-orbassano-fdd99969-0501-41ed-af30-bf7e388202b4",
       "status": "discovered-randstad",
       "error": null
     },
@@ -191,7 +196,7 @@
       "error": null
     },
     {
-      "id": "randstad-infermieri-fmnb-orbassano-fdd99969-0501-41ed-af30-bf7e388202b4",
+      "id": "randstad-infermiere-firenze-97704e0d-3f10-4cfc-9502-59beadba6a9c",
       "status": "discovered-randstad",
       "error": null
     },
@@ -206,12 +211,12 @@
       "error": null
     },
     {
-      "id": "randstad-infermieri-disponibilita-alloggio-cortina-d-ampezzo-ae7c18ac-f6c1-434f-9c92-b68098ffcc6e",
+      "id": "randstad-infermieri-asl-teramo-teramo-18964115-c4d1-4d50-9f05-bb0e7dfc18b0",
       "status": "discovered-randstad",
       "error": null
     },
     {
-      "id": "randstad-infermieri-asl-teramo-mfnb-teramo-18964115-c4d1-4d50-9f05-bb0e7dfc18b0",
+      "id": "randstad-infermieri-disponibilita-alloggio-cortina-d-ampezzo-ae7c18ac-f6c1-434f-9c92-b68098ffcc6e",
       "status": "discovered-randstad",
       "error": null
     },
@@ -241,17 +246,22 @@
       "error": null
     },
     {
+      "id": "randstad-infermiere-per-hospice-torino-b94bcb46-4d96-424c-832d-4b8ac562091c",
+      "status": "discovered-randstad",
+      "error": null
+    },
+    {
       "id": "randstad-infermiere-per-presidio-ospedaliero-pinerolo-collegno-6517fefa-45d7-483d-aa06-68514abfd463",
       "status": "discovered-randstad",
       "error": null
     },
     {
-      "id": "randstad-infermiere-per-hospice-fmnb-torino-b94bcb46-4d96-424c-832d-4b8ac562091c",
+      "id": "randstad-infermiere-per-poliambulatorio-torino-torino-2c2ce764-00d4-4214-94da-b7bb8c37e7bd",
       "status": "discovered-randstad",
       "error": null
     },
     {
-      "id": "randstad-infermiere-per-poliambulatorio-torino-torino-2c2ce764-00d4-4214-94da-b7bb8c37e7bd",
+      "id": "randstad-infermiere-montesegale-dcf87ee1-ec4d-4779-b873-aea149c05d70",
       "status": "discovered-randstad",
       "error": null
     },
@@ -297,16 +307,6 @@
     },
     {
       "id": "randstad-infermiere-strumentista-per-poliambulatorio-cagliari-cagliari-22c002db-1eaf-4f73-95bc-1271d817b62f",
-      "status": "discovered-randstad",
-      "error": null
-    },
-    {
-      "id": "randstad-infermiere-neolaureato-per-ospedale-con-alloggio-a-bologna-bologna-e603f075-13ab-4c3d-9483-94b210ec432e",
-      "status": "discovered-randstad",
-      "error": null
-    },
-    {
-      "id": "randstad-infermiere-strumentista-per-ospedale-privato-roma-b2aadfaa-b38b-4353-b940-e62291cf0924",
       "status": "discovered-randstad",
       "error": null
     }
@@ -411,13 +411,13 @@
       },
       "source": "Manpower Italia - annuncio 995101",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 995101",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -522,19 +522,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Modulo ufficiale autocandidatura infermieri",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-infermiere",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -639,19 +639,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Modulo ufficiale autocandidatura OSS",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-oss",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -748,19 +748,19 @@
       },
       "source": "Manpower Italia - annuncio 1016466",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss/1016466",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1016466",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss/1016466",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -858,19 +858,19 @@
       },
       "source": "Manpower Italia - annuncio 1000000",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1000000",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -976,19 +976,19 @@
       },
       "source": "Manpower Italia - annuncio 1007740",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1007740",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -1090,19 +1090,19 @@
       },
       "source": "Randstad Italia - infermiere_pavia_82efd43c-0392-4d5d-9c01-a56704b78cda",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_pavia_82efd43c-0392-4d5d-9c01-a56704b78cda/",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_pavia_82efd43c-0392-4d5d-9c01-a56704b78cda",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_pavia_82efd43c-0392-4d5d-9c01-a56704b78cda/",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -1200,19 +1200,19 @@
       },
       "source": "Randstad Italia - infermiere-per-ospedale-torino_collegno_ac94db14-8bd8-4b5f-812f-078a3e75a43e",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-torino_collegno_ac94db14-8bd8-4b5f-812f-078a3e75a43e/",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-ospedale-torino_collegno_ac94db14-8bd8-4b5f-812f-078a3e75a43e",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-torino_collegno_ac94db14-8bd8-4b5f-812f-078a3e75a43e/",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -1310,19 +1310,19 @@
       },
       "source": "Randstad Italia - infermiere-per-ospedale-pubblico-di-torino_torino_4e3d14fa-32db-493f-8e5b-414b3a0adb98",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico-di-torino_torino_4e3d14fa-32db-493f-8e5b-414b3a0adb98/",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-ospedale-pubblico-di-torino_torino_4e3d14fa-32db-493f-8e5b-414b3a0adb98",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico-di-torino_torino_4e3d14fa-32db-493f-8e5b-414b3a0adb98/",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -1424,19 +1424,19 @@
       },
       "source": "Randstad Italia - infermiere_ferrara_756055dd-300d-430f-81f5-4f3ebadebf5c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_ferrara_756055dd-300d-430f-81f5-4f3ebadebf5c/",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_ferrara_756055dd-300d-430f-81f5-4f3ebadebf5c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_ferrara_756055dd-300d-430f-81f5-4f3ebadebf5c/",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -1538,19 +1538,19 @@
       },
       "source": "Randstad Italia - infermiere_imola_3b7fad0b-5b6e-4744-a4e2-48c140096c0c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_imola_3b7fad0b-5b6e-4744-a4e2-48c140096c0c/",
-      "checked": "29 giugno 2026 alle ore 18:47",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_imola_3b7fad0b-5b6e-4744-a4e2-48c140096c0c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_imola_3b7fad0b-5b6e-4744-a4e2-48c140096c0c/",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:47"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -1652,243 +1652,19 @@
       },
       "source": "Randstad Italia - infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      }
-    },
-    {
-      "id": "randstad-infermiere-per-ospedale-pubblico-torino-torino-842abe1c-ad02-493c-b279-7c32465c0080",
-      "publicationStatus": "published",
-      "title": "infermiere per ospedale pubblico - torino",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Torino, Italia",
-      "coordinates": {
-        "lat": 45.0677551,
-        "lng": 7.6824892
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo indeterminato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "28.000 € - 34.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Torino. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo indeterminato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "28.000 € - 34.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Torino, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere per ospedale pubblico - torino. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080/",
-      "checked": "29 giugno 2026 alle ore 18:48",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      }
-    },
-    {
-      "id": "randstad-infermiere-genova-0e029c4d-8b4a-4b41-abb6-db761d026e59",
-      "publicationStatus": "published",
-      "title": "infermiere",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Genova, Italia",
-      "coordinates": {
-        "lat": 44.40726,
-        "lng": 8.9338624
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo indeterminato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "22.000 € - 28.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Genova. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo indeterminato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "22.000 € - 28.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Genova, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59/",
-      "checked": "29 giugno 2026 alle ore 18:48",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -1990,19 +1766,243 @@
       },
       "source": "Randstad Italia - infermieri_torrita-di-siena_13012be0-6fac-439a-9957-6e7aa006c09d",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri_torrita-di-siena_13012be0-6fac-439a-9957-6e7aa006c09d/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermieri_torrita-di-siena_13012be0-6fac-439a-9957-6e7aa006c09d",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri_torrita-di-siena_13012be0-6fac-439a-9957-6e7aa006c09d/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "randstad-infermiere-per-ospedale-pubblico-torino-torino-842abe1c-ad02-493c-b279-7c32465c0080",
+      "publicationStatus": "published",
+      "title": "infermiere per ospedale pubblico - torino",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Torino, Italia",
+      "coordinates": {
+        "lat": 45.0677551,
+        "lng": 7.6824892
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo indeterminato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "28.000 € - 34.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Torino. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo indeterminato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "28.000 € - 34.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Torino, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere per ospedale pubblico - torino. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080/",
+      "checked": "28 giugno 2026 alle ore 11:30",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080/",
+          "checked": "28 giugno 2026 alle ore 11:30"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "28 giugno 2026 alle ore 11:30"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "randstad-infermiere-genova-0e029c4d-8b4a-4b41-abb6-db761d026e59",
+      "publicationStatus": "published",
+      "title": "infermiere",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Genova, Italia",
+      "coordinates": {
+        "lat": 44.40726,
+        "lng": 8.9338624
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo indeterminato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "22.000 € - 28.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Genova. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo indeterminato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "22.000 € - 28.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Genova, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59/",
+      "checked": "28 giugno 2026 alle ore 11:30",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59/",
+          "checked": "28 giugno 2026 alle ore 11:30"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -2104,129 +2104,19 @@
       },
       "source": "Randstad Italia - infermiere_triggiano_a01917d4-4484-45d2-a25c-6733b1736f17",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_triggiano_a01917d4-4484-45d2-a25c-6733b1736f17/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_triggiano_a01917d4-4484-45d2-a25c-6733b1736f17",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_triggiano_a01917d4-4484-45d2-a25c-6733b1736f17/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      }
-    },
-    {
-      "id": "randstad-infermiere-rozzano-87f86104-7603-422b-b880-4903abc95a92",
-      "publicationStatus": "published",
-      "title": "infermiere",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Rozzano, Italia",
-      "coordinates": {
-        "lat": 45.3829973,
-        "lng": 9.1545305
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo indeterminato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "22.000 € - 28.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Rozzano. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo indeterminato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "22.000 € - 28.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Rozzano, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92/",
-      "checked": "29 giugno 2026 alle ore 18:48",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -2328,19 +2218,19 @@
       },
       "source": "Randstad Italia - infermiere_cortemaggiore_0cdc7063-76fe-47e9-9e8b-cc571d5aa527",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_cortemaggiore_0cdc7063-76fe-47e9-9e8b-cc571d5aa527/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_cortemaggiore_0cdc7063-76fe-47e9-9e8b-cc571d5aa527",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_cortemaggiore_0cdc7063-76fe-47e9-9e8b-cc571d5aa527/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -2352,14 +2242,14 @@
       }
     },
     {
-      "id": "randstad-infermiere-ausl-aosta-aosta-9404ac0c-f73b-4b47-aa3c-e57e13c871e3",
+      "id": "randstad-infermiere-rozzano-87f86104-7603-422b-b880-4903abc95a92",
       "publicationStatus": "published",
-      "title": "infermiere ausl aosta",
+      "title": "infermiere",
       "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Aosta, Italia",
+      "location": "Rozzano, Italia",
       "coordinates": {
-        "lat": 45.7373075,
-        "lng": 7.3204025
+        "lat": 45.3829973,
+        "lng": 9.1545305
       },
       "coordinatePrecision": "city",
       "contract": "Tempo indeterminato",
@@ -2368,11 +2258,11 @@
       "nights": null,
       "deadline": null,
       "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "28.000 € - 34.000 € annuale",
+      "salary": "22.000 € - 28.000 € annuale",
       "match": 84,
       "type": "Selezione tramite agenzia",
       "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Aosta. Condizioni e candidatura sono sulla fonte originale.",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Rozzano. Condizioni e candidatura sono sulla fonte originale.",
       "reasons": [
         "Ruolo sanitario dichiarato",
         "Fonte pubblica Randstad",
@@ -2400,7 +2290,7 @@
         ],
         [
           "Retribuzione",
-          "28.000 € - 34.000 € annuale"
+          "22.000 € - 28.000 € annuale"
         ],
         [
           "Scadenza",
@@ -2418,7 +2308,7 @@
         ],
         [
           "Sede",
-          "Aosta, Italia"
+          "Rozzano, Italia"
         ],
         [
           "Fonte",
@@ -2427,30 +2317,30 @@
       ],
       "application": {
         "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3/",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92/",
         "contactEmail": null,
         "documents": [
           "CV",
           "Dati profilo richiesti dal portale"
         ],
         "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere ausl aosta. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
       },
-      "source": "Randstad Italia - infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "source": "Randstad Italia - infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92/",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
-          "name": "Randstad Italia - infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3",
+          "name": "Randstad Italia - infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92",
           "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92/",
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -2552,19 +2442,129 @@
       },
       "source": "Randstad Italia - infermiere_brescia_5ff458cd-1ec9-4ba4-9a90-68b473632cdd",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_brescia_5ff458cd-1ec9-4ba4-9a90-68b473632cdd/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_brescia_5ff458cd-1ec9-4ba4-9a90-68b473632cdd",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_brescia_5ff458cd-1ec9-4ba4-9a90-68b473632cdd/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "randstad-infermiere-ausl-aosta-aosta-9404ac0c-f73b-4b47-aa3c-e57e13c871e3",
+      "publicationStatus": "published",
+      "title": "infermiere ausl aosta",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Aosta, Italia",
+      "coordinates": {
+        "lat": 45.7373075,
+        "lng": 7.3204025
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo indeterminato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "28.000 € - 34.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Aosta. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo indeterminato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "28.000 € - 34.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Aosta, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere ausl aosta. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3/",
+      "checked": "28 giugno 2026 alle ore 11:30",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3/",
+          "checked": "28 giugno 2026 alle ore 11:30"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -2586,7 +2586,7 @@
         "lng": 10.8595388
       },
       "coordinatePrecision": "city",
-      "contract": "Tempo determinato",
+      "contract": "Tempo indeterminato",
       "schedule": "Part-time",
       "shifts": "Tre turni",
       "nights": true,
@@ -2616,7 +2616,7 @@
       "contractDetails": [
         [
           "Contratto",
-          "Tempo determinato"
+          "Tempo indeterminato"
         ],
         [
           "Orario",
@@ -2666,19 +2666,19 @@
       },
       "source": "Randstad Italia - infermiere_laces_6813b467-49e5-4733-b37f-c71ae2286b84",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_laces_6813b467-49e5-4733-b37f-c71ae2286b84/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_laces_6813b467-49e5-4733-b37f-c71ae2286b84",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_laces_6813b467-49e5-4733-b37f-c71ae2286b84/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -2780,19 +2780,19 @@
       },
       "source": "Randstad Italia - infermieri_mantova_3138734a-73a7-40d5-a485-e953c5284416",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri_mantova_3138734a-73a7-40d5-a485-e953c5284416/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermieri_mantova_3138734a-73a7-40d5-a485-e953c5284416",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri_mantova_3138734a-73a7-40d5-a485-e953c5284416/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -2890,129 +2890,19 @@
       },
       "source": "Randstad Italia - infermiere-ospedale-pubblico_collegno_e5e49563-611e-4066-b668-b781504492d3",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico_collegno_e5e49563-611e-4066-b668-b781504492d3/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-ospedale-pubblico_collegno_e5e49563-611e-4066-b668-b781504492d3",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico_collegno_e5e49563-611e-4066-b668-b781504492d3/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      }
-    },
-    {
-      "id": "randstad-infermiere-appiano-gentile-04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1",
-      "publicationStatus": "published",
-      "title": "infermiere",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Appiano Gentile, Italia",
-      "coordinates": {
-        "lat": 45.7346371,
-        "lng": 8.979101
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo indeterminato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "28.000 € - 34.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Appiano Gentile. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo indeterminato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "28.000 € - 34.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Appiano Gentile, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1/",
-      "checked": "29 giugno 2026 alle ore 18:48",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -3114,19 +3004,19 @@
       },
       "source": "Randstad Italia - infermiere_codigoro_65af6fd8-f0ab-4177-adfe-18aea46483f9",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_codigoro_65af6fd8-f0ab-4177-adfe-18aea46483f9/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_codigoro_65af6fd8-f0ab-4177-adfe-18aea46483f9",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_codigoro_65af6fd8-f0ab-4177-adfe-18aea46483f9/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -3228,19 +3118,19 @@
       },
       "source": "Randstad Italia - infermiere_bologna_2488678a-3298-479d-b233-bf742bd4cc72",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_2488678a-3298-479d-b233-bf742bd4cc72/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_bologna_2488678a-3298-479d-b233-bf742bd4cc72",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_2488678a-3298-479d-b233-bf742bd4cc72/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -3342,19 +3232,129 @@
       },
       "source": "Randstad Italia - infermiere_bologna_ea7bd870-6a2b-4579-8849-833513fe8c1f",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_ea7bd870-6a2b-4579-8849-833513fe8c1f/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_bologna_ea7bd870-6a2b-4579-8849-833513fe8c1f",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_ea7bd870-6a2b-4579-8849-833513fe8c1f/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "randstad-infermiere-appiano-gentile-04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1",
+      "publicationStatus": "published",
+      "title": "infermiere",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Appiano Gentile, Italia",
+      "coordinates": {
+        "lat": 45.7346371,
+        "lng": 8.979101
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo indeterminato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "28.000 € - 34.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Appiano Gentile. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo indeterminato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "28.000 € - 34.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Appiano Gentile, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1/",
+      "checked": "28 giugno 2026 alle ore 11:30",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1/",
+          "checked": "28 giugno 2026 alle ore 11:30"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -3452,19 +3452,133 @@
       },
       "source": "Randstad Italia - infermiere-mfnb_milano_8c4c4540-f03f-48fe-97fc-ca43826c4f1e",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_milano_8c4c4540-f03f-48fe-97fc-ca43826c4f1e/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-mfnb_milano_8c4c4540-f03f-48fe-97fc-ca43826c4f1e",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_milano_8c4c4540-f03f-48fe-97fc-ca43826c4f1e/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "randstad-infermiere-matera-c5b85020-22ff-4853-9b02-bf7a8e0b19c3",
+      "publicationStatus": "published",
+      "title": "infermiere",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Matera, Italia",
+      "coordinates": {
+        "lat": 40.4476419,
+        "lng": 16.4735738
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo indeterminato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "22.000 € - 28.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Matera. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo indeterminato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "22.000 € - 28.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Matera, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_matera_c5b85020-22ff-4853-9b02-bf7a8e0b19c3/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere_matera_c5b85020-22ff-4853-9b02-bf7a8e0b19c3",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_matera_c5b85020-22ff-4853-9b02-bf7a8e0b19c3/",
+      "checked": "28 giugno 2026 alle ore 11:30",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere_matera_c5b85020-22ff-4853-9b02-bf7a8e0b19c3",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere_matera_c5b85020-22ff-4853-9b02-bf7a8e0b19c3/",
+          "checked": "28 giugno 2026 alle ore 11:30"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -3566,19 +3680,19 @@
       },
       "source": "Randstad Italia - infermiere_cesena_d7b3a1f8-b8f2-428f-9323-3dcb525b14bd",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_cesena_d7b3a1f8-b8f2-428f-9323-3dcb525b14bd/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_cesena_d7b3a1f8-b8f2-428f-9323-3dcb525b14bd",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_cesena_d7b3a1f8-b8f2-428f-9323-3dcb525b14bd/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -3680,19 +3794,19 @@
       },
       "source": "Randstad Italia - infermiere_orvieto_0af1a061-fece-41ca-8076-8561abc66ff0",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_orvieto_0af1a061-fece-41ca-8076-8561abc66ff0/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_orvieto_0af1a061-fece-41ca-8076-8561abc66ff0",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_orvieto_0af1a061-fece-41ca-8076-8561abc66ff0/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -3794,19 +3908,19 @@
       },
       "source": "Randstad Italia - infermieri_cecina_59ffb51d-549c-4802-95bf-6d5614891135",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri_cecina_59ffb51d-549c-4802-95bf-6d5614891135/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:30",
       "sources": [
         {
           "name": "Randstad Italia - infermieri_cecina_59ffb51d-549c-4802-95bf-6d5614891135",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri_cecina_59ffb51d-549c-4802-95bf-6d5614891135/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:30"
         }
       ],
       "media": {
@@ -3908,247 +4022,19 @@
       },
       "source": "Randstad Italia - infermiere-per-cure-domiciliari_collegno_3fe3fcee-9fe4-4e2a-a271-f812435f5e87",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-cure-domiciliari_collegno_3fe3fcee-9fe4-4e2a-a271-f812435f5e87/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-cure-domiciliari_collegno_3fe3fcee-9fe4-4e2a-a271-f812435f5e87",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-cure-domiciliari_collegno_3fe3fcee-9fe4-4e2a-a271-f812435f5e87/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      }
-    },
-    {
-      "id": "randstad-infermiere-per-rsa-capriate-san-gervasio-44ac560b-9a82-40cb-bd22-3e67daab8438",
-      "publicationStatus": "published",
-      "title": "infermiere per rsa",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Capriate San Gervasio, Italia",
-      "coordinates": {
-        "lat": 45.6090529,
-        "lng": 9.5335574
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo indeterminato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "22.000 € - 28.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Capriate San Gervasio. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo indeterminato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "22.000 € - 28.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Capriate San Gervasio, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere per rsa. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438/",
-      "checked": "29 giugno 2026 alle ore 18:48",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      }
-    },
-    {
-      "id": "randstad-infermiere-per-presidio-ospedaliero-torino-torino-2e885f60-d776-40b6-a215-cd98b7e01a38",
-      "publicationStatus": "published",
-      "title": "infermiere per presidio ospedaliero torino",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Torino, Italia",
-      "coordinates": {
-        "lat": 45.0677551,
-        "lng": 7.6824892
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo indeterminato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "22.000 € - 28.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Torino. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo indeterminato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "22.000 € - 28.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Torino, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere per presidio ospedaliero torino. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38/",
-      "checked": "29 giugno 2026 alle ore 18:48",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38/",
-          "checked": "29 giugno 2026 alle ore 18:48"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -4250,19 +4136,19 @@
       },
       "source": "Randstad Italia - infermiere_cotignola_06e526e3-d90f-41f2-af71-5a2e7653a282",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_cotignola_06e526e3-d90f-41f2-af71-5a2e7653a282/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_cotignola_06e526e3-d90f-41f2-af71-5a2e7653a282",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_cotignola_06e526e3-d90f-41f2-af71-5a2e7653a282/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -4274,27 +4160,27 @@
       }
     },
     {
-      "id": "randstad-infermiere-firenze-97704e0d-3f10-4cfc-9502-59beadba6a9c",
+      "id": "randstad-infermiere-per-rsa-capriate-san-gervasio-44ac560b-9a82-40cb-bd22-3e67daab8438",
       "publicationStatus": "published",
-      "title": "infermiere",
+      "title": "infermiere per rsa",
       "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Firenze, Italia",
+      "location": "Capriate San Gervasio, Italia",
       "coordinates": {
-        "lat": 43.7697955,
-        "lng": 11.2556404
+        "lat": 45.6090529,
+        "lng": 9.5335574
       },
       "coordinatePrecision": "city",
       "contract": "Tempo indeterminato",
       "schedule": "Part-time",
-      "shifts": "Turni da verificare",
+      "shifts": "Tre turni",
       "nights": null,
       "deadline": null,
       "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "18000€ - 22000€",
+      "salary": "22.000 € - 28.000 € annuale",
       "match": 84,
       "type": "Selezione tramite agenzia",
       "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Firenze. Condizioni e candidatura sono sulla fonte originale.",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Capriate San Gervasio. Condizioni e candidatura sono sulla fonte originale.",
       "reasons": [
         "Ruolo sanitario dichiarato",
         "Fonte pubblica Randstad",
@@ -4322,11 +4208,11 @@
         ],
         [
           "Turni",
-          "Turni da verificare"
+          "Tre turni"
         ],
         [
           "Retribuzione",
-          "18000€ - 22000€"
+          "22.000 € - 28.000 € annuale"
         ],
         [
           "Scadenza",
@@ -4336,7 +4222,7 @@
       "shiftDetails": [
         [
           "Organizzazione",
-          "Turni da verificare"
+          "Tre turni"
         ],
         [
           "Notti",
@@ -4344,7 +4230,7 @@
         ],
         [
           "Sede",
-          "Firenze, Italia"
+          "Capriate San Gervasio, Italia"
         ],
         [
           "Fonte",
@@ -4353,30 +4239,30 @@
       ],
       "application": {
         "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c/",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438/",
         "contactEmail": null,
         "documents": [
           "CV",
           "Dati profilo richiesti dal portale"
         ],
         "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere per rsa. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
       },
-      "source": "Randstad Italia - infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "source": "Randstad Italia - infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438/",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
-          "name": "Randstad Italia - infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c",
+          "name": "Randstad Italia - infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438",
           "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438/",
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -4388,27 +4274,27 @@
       }
     },
     {
-      "id": "randstad-infermiere-legnago-43bf24a9-f336-4c14-82f1-fd5d30369235",
+      "id": "randstad-infermiere-per-presidio-ospedaliero-torino-torino-2e885f60-d776-40b6-a215-cd98b7e01a38",
       "publicationStatus": "published",
-      "title": "infermiere",
+      "title": "infermiere per presidio ospedaliero torino",
       "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Legnago, Italia",
+      "location": "Torino, Italia",
       "coordinates": {
-        "lat": 45.1547873,
-        "lng": 11.2994214
+        "lat": 45.0677551,
+        "lng": 7.6824892
       },
       "coordinatePrecision": "city",
-      "contract": "Tempo determinato",
+      "contract": "Tempo indeterminato",
       "schedule": "Part-time",
       "shifts": "Tre turni",
       "nights": null,
       "deadline": null,
       "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "9 € - 10 € oraria",
+      "salary": "22.000 € - 28.000 € annuale",
       "match": 84,
       "type": "Selezione tramite agenzia",
       "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Legnago. Condizioni e candidatura sono sulla fonte originale.",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Torino. Condizioni e candidatura sono sulla fonte originale.",
       "reasons": [
         "Ruolo sanitario dichiarato",
         "Fonte pubblica Randstad",
@@ -4428,7 +4314,7 @@
       "contractDetails": [
         [
           "Contratto",
-          "Tempo determinato"
+          "Tempo indeterminato"
         ],
         [
           "Orario",
@@ -4440,7 +4326,7 @@
         ],
         [
           "Retribuzione",
-          "9 € - 10 € oraria"
+          "22.000 € - 28.000 € annuale"
         ],
         [
           "Scadenza",
@@ -4458,7 +4344,7 @@
         ],
         [
           "Sede",
-          "Legnago, Italia"
+          "Torino, Italia"
         ],
         [
           "Fonte",
@@ -4467,30 +4353,30 @@
       ],
       "application": {
         "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235/",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38/",
         "contactEmail": null,
         "documents": [
           "CV",
           "Dati profilo richiesti dal portale"
         ],
         "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere per presidio ospedaliero torino. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
       },
-      "source": "Randstad Italia - infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235/",
-      "checked": "29 giugno 2026 alle ore 18:48",
+      "source": "Randstad Italia - infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38/",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
-          "name": "Randstad Italia - infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235",
+          "name": "Randstad Italia - infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38",
           "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38/",
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:48"
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -4592,19 +4478,247 @@
       },
       "source": "Randstad Italia - infermieri-fmnb_orbassano_fdd99969-0501-41ed-af30-bf7e388202b4",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb_orbassano_fdd99969-0501-41ed-af30-bf7e388202b4/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-fmnb_orbassano_fdd99969-0501-41ed-af30-bf7e388202b4",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb_orbassano_fdd99969-0501-41ed-af30-bf7e388202b4/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "randstad-infermiere-legnago-43bf24a9-f336-4c14-82f1-fd5d30369235",
+      "publicationStatus": "published",
+      "title": "infermiere",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Legnago, Italia",
+      "coordinates": {
+        "lat": 45.1547873,
+        "lng": 11.2994214
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo determinato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": true,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "9 € - 10 € oraria",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Legnago. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo determinato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "9 € - 10 € oraria"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Previste"
+        ],
+        [
+          "Sede",
+          "Legnago, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235/",
+      "checked": "28 giugno 2026 alle ore 11:31",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235/",
+          "checked": "28 giugno 2026 alle ore 11:31"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
+          "checked": "28 giugno 2026 alle ore 11:31"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "randstad-infermiere-firenze-97704e0d-3f10-4cfc-9502-59beadba6a9c",
+      "publicationStatus": "published",
+      "title": "infermiere",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Firenze, Italia",
+      "coordinates": {
+        "lat": 43.7697955,
+        "lng": 11.2556404
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo indeterminato",
+      "schedule": "Part-time",
+      "shifts": "Turni da verificare",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "18000€ - 22000€",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Firenze. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo indeterminato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Turni da verificare"
+        ],
+        [
+          "Retribuzione",
+          "18000€ - 22000€"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Turni da verificare"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Firenze, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c/",
+      "checked": "28 giugno 2026 alle ore 11:31",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c/",
+          "checked": "28 giugno 2026 alle ore 11:31"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -4706,19 +4820,19 @@
       },
       "source": "Randstad Italia - infermiere-per-ospedale-pubblico_bologna_54c7d484-38ae-4f9e-852c-de00a6e9606b",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico_bologna_54c7d484-38ae-4f9e-852c-de00a6e9606b/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-ospedale-pubblico_bologna_54c7d484-38ae-4f9e-852c-de00a6e9606b",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico_bologna_54c7d484-38ae-4f9e-852c-de00a6e9606b/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -4736,11 +4850,11 @@
       "company": "Struttura sanitaria tramite Randstad Healthcare",
       "location": "Susa, Italia",
       "coordinates": {
-        "lat": 45.1383808,
-        "lng": 7.0493387
+        "lat": 45.1372115,
+        "lng": 7.0539789
       },
       "coordinatePrecision": "city",
-      "contract": "Tempo determinato",
+      "contract": "Tempo indeterminato",
       "schedule": "Part-time",
       "shifts": "Tre turni",
       "nights": null,
@@ -4770,7 +4884,7 @@
       "contractDetails": [
         [
           "Contratto",
-          "Tempo determinato"
+          "Tempo indeterminato"
         ],
         [
           "Orario",
@@ -4820,19 +4934,129 @@
       },
       "source": "Randstad Italia - infermiere-ospedale-pubblico-susa_susa_ec0f24dc-1ccc-476c-bb1a-91743cf610a9",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico-susa_susa_ec0f24dc-1ccc-476c-bb1a-91743cf610a9/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-ospedale-pubblico-susa_susa_ec0f24dc-1ccc-476c-bb1a-91743cf610a9",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico-susa_susa_ec0f24dc-1ccc-476c-bb1a-91743cf610a9/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "randstad-infermieri-asl-teramo-teramo-18964115-c4d1-4d50-9f05-bb0e7dfc18b0",
+      "publicationStatus": "published",
+      "title": "infermieri asl teramo",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Teramo, Italia",
+      "coordinates": {
+        "lat": 42.658118,
+        "lng": 13.6978746
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo indeterminato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "22.000 € - 28.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Teramo. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo indeterminato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "22.000 € - 28.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Teramo, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermieri-asl-teramo_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermieri asl teramo. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermieri-asl-teramo_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-asl-teramo_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0/",
+      "checked": "28 giugno 2026 alle ore 11:31",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermieri-asl-teramo_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermieri-asl-teramo_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0/",
+          "checked": "28 giugno 2026 alle ore 11:31"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -4930,129 +5154,19 @@
       },
       "source": "Randstad Italia - infermieri-disponibilita-alloggio_cortina-d-ampezzo_ae7c18ac-f6c1-434f-9c92-b68098ffcc6e",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-disponibilita-alloggio_cortina-d-ampezzo_ae7c18ac-f6c1-434f-9c92-b68098ffcc6e/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-disponibilita-alloggio_cortina-d-ampezzo_ae7c18ac-f6c1-434f-9c92-b68098ffcc6e",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-disponibilita-alloggio_cortina-d-ampezzo_ae7c18ac-f6c1-434f-9c92-b68098ffcc6e/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      }
-    },
-    {
-      "id": "randstad-infermieri-asl-teramo-mfnb-teramo-18964115-c4d1-4d50-9f05-bb0e7dfc18b0",
-      "publicationStatus": "published",
-      "title": "infermieri asl teramo m/f/nb",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Teramo, Italia",
-      "coordinates": {
-        "lat": 42.658118,
-        "lng": 13.6978746
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo determinato",
-      "schedule": "Part-time",
-      "shifts": "Non dichiarati",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "22.000 € - 28.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Teramo. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo determinato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Non dichiarati"
-        ],
-        [
-          "Retribuzione",
-          "22.000 € - 28.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Non dichiarati"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Teramo, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermieri-asl-teramo-mfnb_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermieri asl teramo m/f/nb. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermieri-asl-teramo-mfnb_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-asl-teramo-mfnb_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0/",
-      "checked": "29 giugno 2026 alle ore 18:49",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermieri-asl-teramo-mfnb_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermieri-asl-teramo-mfnb_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0/",
-          "checked": "29 giugno 2026 alle ore 18:49"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -5154,19 +5268,19 @@
       },
       "source": "Randstad Italia - infermiere-per-ospedale-pubblico_bologna_d0072925-d4dc-465e-a42b-cf510f21a564",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico_bologna_d0072925-d4dc-465e-a42b-cf510f21a564/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-ospedale-pubblico_bologna_d0072925-d4dc-465e-a42b-cf510f21a564",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico_bologna_d0072925-d4dc-465e-a42b-cf510f21a564/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -5268,19 +5382,19 @@
       },
       "source": "Randstad Italia - infermiere-sala-operatoria-ospedale-pubblico-monza-brianza_vimercate_f40d4c2a-97ce-41ff-a05d-a2465f1844a0",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-sala-operatoria-ospedale-pubblico-monza-brianza_vimercate_f40d4c2a-97ce-41ff-a05d-a2465f1844a0/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-sala-operatoria-ospedale-pubblico-monza-brianza_vimercate_f40d4c2a-97ce-41ff-a05d-a2465f1844a0",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-sala-operatoria-ospedale-pubblico-monza-brianza_vimercate_f40d4c2a-97ce-41ff-a05d-a2465f1844a0/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -5386,19 +5500,19 @@
       },
       "source": "Randstad Italia - infermiere-per-struttura-riabilitativa-torino-fmnb_torino_c274766e-30a7-4e51-a784-b52eb07b1758",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-struttura-riabilitativa-torino-fmnb_torino_c274766e-30a7-4e51-a784-b52eb07b1758/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-struttura-riabilitativa-torino-fmnb_torino_c274766e-30a7-4e51-a784-b52eb07b1758",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-struttura-riabilitativa-torino-fmnb_torino_c274766e-30a7-4e51-a784-b52eb07b1758/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -5500,19 +5614,19 @@
       },
       "source": "Randstad Italia - infermiere_costa-masnaga_82df9c0b-d415-454c-9af8-51803038602b",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_costa-masnaga_82df9c0b-d415-454c-9af8-51803038602b/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_costa-masnaga_82df9c0b-d415-454c-9af8-51803038602b",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_costa-masnaga_82df9c0b-d415-454c-9af8-51803038602b/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -5614,19 +5728,137 @@
       },
       "source": "Randstad Italia - infermiere-per-rsa_bedonia_681f1176-44e5-4696-8d32-0d971c61243e",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa_bedonia_681f1176-44e5-4696-8d32-0d971c61243e/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-rsa_bedonia_681f1176-44e5-4696-8d32-0d971c61243e",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa_bedonia_681f1176-44e5-4696-8d32-0d971c61243e/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "randstad-infermiere-per-hospice-torino-b94bcb46-4d96-424c-832d-4b8ac562091c",
+      "publicationStatus": "published",
+      "title": "infermiere per hospice",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Torino, Italia",
+      "coordinates": {
+        "lat": 45.0677551,
+        "lng": 7.6824892
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo indeterminato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "22.000 € - 28.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Torino. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Automunito/a",
+          "Richiesto dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo indeterminato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "22.000 € - 28.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Torino, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice_torino_b94bcb46-4d96-424c-832d-4b8ac562091c/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere per hospice. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere-per-hospice_torino_b94bcb46-4d96-424c-832d-4b8ac562091c",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice_torino_b94bcb46-4d96-424c-832d-4b8ac562091c/",
+      "checked": "28 giugno 2026 alle ore 11:31",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere-per-hospice_torino_b94bcb46-4d96-424c-832d-4b8ac562091c",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice_torino_b94bcb46-4d96-424c-832d-4b8ac562091c/",
+          "checked": "28 giugno 2026 alle ore 11:31"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -5728,137 +5960,19 @@
       },
       "source": "Randstad Italia - infermiere-per-presidio-ospedaliero-pinerolo_collegno_6517fefa-45d7-483d-aa06-68514abfd463",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-pinerolo_collegno_6517fefa-45d7-483d-aa06-68514abfd463/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-presidio-ospedaliero-pinerolo_collegno_6517fefa-45d7-483d-aa06-68514abfd463",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-pinerolo_collegno_6517fefa-45d7-483d-aa06-68514abfd463/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      }
-    },
-    {
-      "id": "randstad-infermiere-per-hospice-fmnb-torino-b94bcb46-4d96-424c-832d-4b8ac562091c",
-      "publicationStatus": "published",
-      "title": "infermiere per hospice (f/m/nb)",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Torino, Italia",
-      "coordinates": {
-        "lat": 45.0677551,
-        "lng": 7.6824892
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo indeterminato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "22.000 € - 28.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Torino. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Automunito/a",
-          "Richiesto dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo indeterminato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "22.000 € - 28.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Torino, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice-fmnb_torino_b94bcb46-4d96-424c-832d-4b8ac562091c/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere per hospice (f/m/nb). Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere-per-hospice-fmnb_torino_b94bcb46-4d96-424c-832d-4b8ac562091c",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice-fmnb_torino_b94bcb46-4d96-424c-832d-4b8ac562091c/",
-      "checked": "29 giugno 2026 alle ore 18:49",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere-per-hospice-fmnb_torino_b94bcb46-4d96-424c-832d-4b8ac562091c",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice-fmnb_torino_b94bcb46-4d96-424c-832d-4b8ac562091c/",
-          "checked": "29 giugno 2026 alle ore 18:49"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -5960,19 +6074,133 @@
       },
       "source": "Randstad Italia - infermiere-per-poliambulatorio-torino_torino_2c2ce764-00d4-4214-94da-b7bb8c37e7bd",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-poliambulatorio-torino_torino_2c2ce764-00d4-4214-94da-b7bb8c37e7bd/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-poliambulatorio-torino_torino_2c2ce764-00d4-4214-94da-b7bb8c37e7bd",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-poliambulatorio-torino_torino_2c2ce764-00d4-4214-94da-b7bb8c37e7bd/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      }
+    },
+    {
+      "id": "randstad-infermiere-montesegale-dcf87ee1-ec4d-4779-b873-aea149c05d70",
+      "publicationStatus": "published",
+      "title": "infermiere",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Montesegale, Italia",
+      "coordinates": {
+        "lat": 44.906251,
+        "lng": 9.1270728
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo indeterminato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "22.000 € - 28.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Montesegale. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo indeterminato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "22.000 € - 28.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Montesegale, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_montesegale_dcf87ee1-ec4d-4779-b873-aea149c05d70/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere_montesegale_dcf87ee1-ec4d-4779-b873-aea149c05d70",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_montesegale_dcf87ee1-ec4d-4779-b873-aea149c05d70/",
+      "checked": "28 giugno 2026 alle ore 11:31",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere_montesegale_dcf87ee1-ec4d-4779-b873-aea149c05d70",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere_montesegale_dcf87ee1-ec4d-4779-b873-aea149c05d70/",
+          "checked": "28 giugno 2026 alle ore 11:31"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -6074,19 +6302,19 @@
       },
       "source": "Randstad Italia - infermiere-per-rsa-zona-beinasco_beinasco_a0db5526-c3d8-49b7-984e-8dd4388d89a5",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa-zona-beinasco_beinasco_a0db5526-c3d8-49b7-984e-8dd4388d89a5/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-rsa-zona-beinasco_beinasco_a0db5526-c3d8-49b7-984e-8dd4388d89a5",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa-zona-beinasco_beinasco_a0db5526-c3d8-49b7-984e-8dd4388d89a5/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -6188,19 +6416,19 @@
       },
       "source": "Randstad Italia - infermiere-in-rsa-pubblica_schio_63156c14-86c8-4154-87f3-22b846b5a300",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-in-rsa-pubblica_schio_63156c14-86c8-4154-87f3-22b846b5a300/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-in-rsa-pubblica_schio_63156c14-86c8-4154-87f3-22b846b5a300",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-in-rsa-pubblica_schio_63156c14-86c8-4154-87f3-22b846b5a300/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -6302,19 +6530,19 @@
       },
       "source": "Randstad Italia - infermiere-ornago-mb_ornago_10cea7f5-59e1-46a0-9908-c7f752bc9168",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ornago-mb_ornago_10cea7f5-59e1-46a0-9908-c7f752bc9168/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-ornago-mb_ornago_10cea7f5-59e1-46a0-9908-c7f752bc9168",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-ornago-mb_ornago_10cea7f5-59e1-46a0-9908-c7f752bc9168/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -6416,19 +6644,19 @@
       },
       "source": "Randstad Italia - infermiere-per-poliambulatorio-zona-alba-cn_alba_889ece6f-a30e-4cbf-9b69-f4be3f8b554a",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-poliambulatorio-zona-alba-cn_alba_889ece6f-a30e-4cbf-9b69-f4be3f8b554a/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-poliambulatorio-zona-alba-cn_alba_889ece6f-a30e-4cbf-9b69-f4be3f8b554a",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-poliambulatorio-zona-alba-cn_alba_889ece6f-a30e-4cbf-9b69-f4be3f8b554a/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -6530,19 +6758,19 @@
       },
       "source": "Randstad Italia - infermiere-area-disabilitaturni-diurni-faenza-fmnb_faenza_876442b0-f93d-4287-aca1-dfa71c54f593",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-area-disabilitaturni-diurni-faenza-fmnb_faenza_876442b0-f93d-4287-aca1-dfa71c54f593/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-area-disabilitaturni-diurni-faenza-fmnb_faenza_876442b0-f93d-4287-aca1-dfa71c54f593",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-area-disabilitaturni-diurni-faenza-fmnb_faenza_876442b0-f93d-4287-aca1-dfa71c54f593/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -6644,19 +6872,19 @@
       },
       "source": "Randstad Italia - infermiere-strumentista-per-poliambulatorio-genova_genova_10ea3a80-29e4-41be-9f70-8fed8072ed58",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-strumentista-per-poliambulatorio-genova_genova_10ea3a80-29e4-41be-9f70-8fed8072ed58/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-strumentista-per-poliambulatorio-genova_genova_10ea3a80-29e4-41be-9f70-8fed8072ed58",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-strumentista-per-poliambulatorio-genova_genova_10ea3a80-29e4-41be-9f70-8fed8072ed58/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -6754,19 +6982,19 @@
       },
       "source": "Randstad Italia - infermiere_milano_a8a59cbb-911f-4fd7-8adf-acbc8bf70690",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_milano_a8a59cbb-911f-4fd7-8adf-acbc8bf70690/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_milano_a8a59cbb-911f-4fd7-8adf-acbc8bf70690",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_milano_a8a59cbb-911f-4fd7-8adf-acbc8bf70690/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -6868,19 +7096,19 @@
       },
       "source": "Randstad Italia - infermiere-terapia-intensiva_bologna_73a277a0-85ec-4ba0-8026-c90c46817575",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-terapia-intensiva_bologna_73a277a0-85ec-4ba0-8026-c90c46817575/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-terapia-intensiva_bologna_73a277a0-85ec-4ba0-8026-c90c46817575",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-terapia-intensiva_bologna_73a277a0-85ec-4ba0-8026-c90c46817575/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {
@@ -6982,243 +7210,19 @@
       },
       "source": "Randstad Italia - infermiere-strumentista-per-poliambulatorio-cagliari_cagliari_22c002db-1eaf-4f73-95bc-1271d817b62f",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-strumentista-per-poliambulatorio-cagliari_cagliari_22c002db-1eaf-4f73-95bc-1271d817b62f/",
-      "checked": "29 giugno 2026 alle ore 18:49",
+      "checked": "28 giugno 2026 alle ore 11:31",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-strumentista-per-poliambulatorio-cagliari_cagliari_22c002db-1eaf-4f73-95bc-1271d817b62f",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-strumentista-per-poliambulatorio-cagliari_cagliari_22c002db-1eaf-4f73-95bc-1271d817b62f/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      }
-    },
-    {
-      "id": "randstad-infermiere-neolaureato-per-ospedale-con-alloggio-a-bologna-bologna-e603f075-13ab-4c3d-9483-94b210ec432e",
-      "publicationStatus": "published",
-      "title": "infermiere neolaureato per ospedale con alloggio a bologna",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Bologna, Italia",
-      "coordinates": {
-        "lat": 44.4938203,
-        "lng": 11.3426327
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo indeterminato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "22.000 € - 28.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Bologna. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo indeterminato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "22.000 € - 28.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Bologna, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-neolaureato-per-ospedale-con-alloggio-a-bologna_bologna_e603f075-13ab-4c3d-9483-94b210ec432e/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere neolaureato per ospedale con alloggio a bologna. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere-neolaureato-per-ospedale-con-alloggio-a-bologna_bologna_e603f075-13ab-4c3d-9483-94b210ec432e",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-neolaureato-per-ospedale-con-alloggio-a-bologna_bologna_e603f075-13ab-4c3d-9483-94b210ec432e/",
-      "checked": "29 giugno 2026 alle ore 18:49",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere-neolaureato-per-ospedale-con-alloggio-a-bologna_bologna_e603f075-13ab-4c3d-9483-94b210ec432e",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere-neolaureato-per-ospedale-con-alloggio-a-bologna_bologna_e603f075-13ab-4c3d-9483-94b210ec432e/",
-          "checked": "29 giugno 2026 alle ore 18:49"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      }
-    },
-    {
-      "id": "randstad-infermiere-strumentista-per-ospedale-privato-roma-b2aadfaa-b38b-4353-b940-e62291cf0924",
-      "publicationStatus": "published",
-      "title": "infermiere strumentista per ospedale privato",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Roma, Italia",
-      "coordinates": {
-        "lat": 41.8933203,
-        "lng": 12.4829321
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo indeterminato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "22.000 € - 28.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Roma. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo indeterminato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "22.000 € - 28.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Roma, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-strumentista-per-ospedale-privato_roma_b2aadfaa-b38b-4353-b940-e62291cf0924/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere strumentista per ospedale privato. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere-strumentista-per-ospedale-privato_roma_b2aadfaa-b38b-4353-b940-e62291cf0924",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-strumentista-per-ospedale-privato_roma_b2aadfaa-b38b-4353-b940-e62291cf0924/",
-      "checked": "29 giugno 2026 alle ore 18:49",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere-strumentista-per-ospedale-privato_roma_b2aadfaa-b38b-4353-b940-e62291cf0924",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere-strumentista-per-ospedale-privato_roma_b2aadfaa-b38b-4353-b940-e62291cf0924/",
-          "checked": "29 giugno 2026 alle ore 18:49"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "29 giugno 2026 alle ore 18:49"
+          "checked": "28 giugno 2026 alle ore 11:31"
         }
       ],
       "media": {

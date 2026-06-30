@@ -10,7 +10,7 @@
   <title>RadarSanità</title>
   <script>
     (() => {
-      const targetVersion = 58;
+      const targetVersion = 59;
       const params = new URLSearchParams(window.location.search);
       const currentVersion = Number(params.get("v"));
       if (currentVersion && currentVersion < targetVersion) {
@@ -19,7 +19,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=58">
+  <link rel="stylesheet" href="styles.css?v=59">
 </head>
 <body>
   <div class="app-shell">
@@ -109,14 +109,14 @@
             </p>
             <img class="brand-hero-visual" src="assets/function-visuals/radarsanita-signature.svg" alt="Radar sanitario stilizzato con impulso, bussola e punti di ricerca">
             <div class="intro-signal-strip" aria-label="Segnali principali">
-              <span><strong>Media tracciabili</strong> foto o loghi solo dalla fonte</span>
-              <span><strong>Fonti visibili</strong> enti, portali e albi</span>
-              <span><strong>Decisione rapida</strong> turni, distanza, contratto</span>
+              <span><strong>Ricerca personale</strong> ruolo, distanza e disponibilita</span>
+              <span><strong>Mercato leggibile</strong> tariffe e condizioni confrontate</span>
+              <span><strong>Decisione rapida</strong> salva o candidati dalla fonte</span>
             </div>
             <div class="risk-mode-strip" aria-label="Modalità pilota a rischio minimo">
               <span><strong>Beta privata</strong> prime funzioni disponibili a Utente 0</span>
-              <span><strong>Nessuna intermediazione</strong> invio finale sempre personale</span>
-              <span><strong>Zero API obbligatorie</strong> prompt copiabili nei modelli già disponibili</span>
+              <span><strong>Nessuna bacheca generica</strong> risultati solo dopo la ricerca</span>
+              <span><strong>Invio sotto controllo</strong> candidatura sul sito ufficiale</span>
             </div>
             <div class="intro-actions">
               <button class="primary-button" data-route="home">Cerca offerte</button>
@@ -134,7 +134,7 @@
               <div class="radar-card-brand">
                 <span class="radar-live-dot" aria-hidden="true"></span>
                 <strong>Radar attivo</strong>
-                <small>fonti, tariffe e segnali letti insieme</small>
+                <small>offerte, mercato e reputazione in un solo flusso</small>
               </div>
               <span class="radar-card-status">Beta reale</span>
             </div>
@@ -153,22 +153,22 @@
                       <stop offset="100%" stop-color="#0f766e" stop-opacity="0"></stop>
                     </linearGradient>
                   </defs>
-                  <circle class="radar-disc" cx="130" cy="130" r="96"></circle>
-                  <circle class="radar-ring" cx="130" cy="130" r="33"></circle>
-                  <circle class="radar-ring" cx="130" cy="130" r="63"></circle>
-                  <path class="radar-cross" d="M130 34v192M34 130h192"></path>
-                  <path class="radar-sweep" d="M130 130 L130 35 A95 95 0 0 1 213 177 Z"></path>
-                  <path class="radar-pulse" d="M68 146h31l11-27 19 55 15-39h20"></path>
-                  <circle class="radar-point point-a" cx="94" cy="96" r="7"></circle>
-                  <circle class="radar-point point-b" cx="168" cy="82" r="6"></circle>
-                  <circle class="radar-point point-c" cx="181" cy="160" r="8"></circle>
+                  <circle class="hero-radar-disc" cx="130" cy="130" r="82"></circle>
+                  <circle class="hero-radar-ring" cx="130" cy="130" r="28"></circle>
+                  <circle class="hero-radar-ring" cx="130" cy="130" r="54"></circle>
+                  <path class="hero-radar-cross" d="M130 48v164M48 130h164"></path>
+                  <path class="hero-radar-sweep" d="M130 130 L130 48 A82 82 0 0 1 202 170 Z"></path>
+                  <path class="hero-radar-pulse" d="M76 143h28l10-23 18 45 15-34h31"></path>
+                  <circle class="hero-radar-point point-a" cx="98" cy="99" r="6"></circle>
+                  <circle class="hero-radar-point point-b" cx="166" cy="87" r="5"></circle>
+                  <circle class="hero-radar-point point-c" cx="177" cy="158" r="7"></circle>
                 </svg>
               </div>
 
               <div class="radar-signal-list">
-                <span><strong>Fonti</strong><small>portali e siti ufficiali</small></span>
-                <span><strong>Tariffe</strong><small>range estratti dalle offerte</small></span>
-                <span><strong>Luoghi</strong><small>foto reali o logo fonte</small></span>
+                <span><strong>Offerte</strong><small>solo coerenti con la tua ricerca</small></span>
+                <span><strong>Mercato</strong><small>tariffe lette nel perimetro</small></span>
+                <span><strong>Reputazione</strong><small>segnali professionali utili</small></span>
               </div>
             </div>
 
@@ -178,14 +178,14 @@
               <div><strong id="radarSalaryCount">55</strong><span>tariffe rilevate</span></div>
             </div>
 
-            <div class="radar-source-orbit" aria-label="Esempi di fonti consultate">
-              <span>Fonti reali</span>
-              <div>
-                <img src="https://www.google.com/s2/favicons?domain=randstad.it&amp;sz=64" alt="Randstad">
-                <img src="https://www.google.com/s2/favicons?domain=manpower.it&amp;sz=64" alt="Manpower">
-                <img src="https://www.google.com/s2/favicons?domain=indeed.com&amp;sz=64" alt="Indeed">
-                <img src="https://www.google.com/s2/favicons?domain=linkedin.com&amp;sz=64" alt="LinkedIn">
-              </div>
+            <div class="radar-flow-note" aria-label="Flusso della ricerca">
+              <span>Profilo</span>
+              <i></i>
+              <span>Ricerca</span>
+              <i></i>
+              <span>Offerte</span>
+              <i></i>
+              <span>Candidatura</span>
             </div>
           </aside>
         </div>
@@ -204,7 +204,7 @@
             <div>
               <span class="route-icon">i</span>
               <strong>Capisci il metodo</strong>
-              <p>Vedi come vengono separati dati ufficiali, segnali di contesto e criticità.</p>
+              <p>Vedi condizioni, reputazione professionale e punti da chiarire prima di candidarti.</p>
             </div>
           </article>
           <article data-route="feedback">
@@ -224,9 +224,9 @@
             <span class="eyebrow">Come funziona</span>
             <h1>Poche informazioni, ma utili alla scelta.</h1>
             <p>
-              RadarSanità cerca offerte reali, mostra le fonti consultate, calcola
-              la borsa dalle retribuzioni pubblicate e tiene separate le esperienze
-              professionali dalle recensioni di pazienti o parenti.
+              RadarSanità ti guida da una ricerca personale a poche offerte leggibili:
+              condizioni, distanza, reputazione professionale e andamento delle tariffe
+              nel territorio scelto.
             </p>
           </div>
           <img class="section-visual" src="assets/function-visuals/radar-scan.svg" alt="Radar stilizzato che collega fonti sanitarie">
@@ -243,14 +243,14 @@
             <article class="principle-card value">
               <span class="principle-kicker">02</span>
               <img class="function-visual" src="assets/function-visuals/rate-market-clean.svg" alt="Grafico delle tariffe">
-              <h3>Borsa da dati pubblicati</h3>
-              <p>Il range nasce dalle retribuzioni lette nelle offerte consultate, non da esempi grafici.</p>
+              <h3>Stima mercato tariffe</h3>
+              <p>Confronta le retribuzioni pubblicate nelle offerte trovate nel tuo perimetro.</p>
             </article>
             <article class="principle-card proof">
               <span class="principle-kicker">03</span>
               <img class="function-visual" src="assets/function-visuals/trust-stars.svg" alt="Stelle e verifica">
-              <h3>Fonti e operatori separati</h3>
-              <p>Loghi e link delle fonti restano visibili; le opinioni valgono solo se professionali.</p>
+              <h3>Reputazione professionale</h3>
+              <p>Quando disponibili, le valutazioni aiutano a capire clima, organizzazione e affidabilita.</p>
             </article>
           </div>
         </section>
@@ -258,9 +258,9 @@
         <section class="source-registry-section" id="sourceRegistry" aria-labelledby="sourceRegistryTitle">
           <div class="source-registry-heading">
             <div>
-              <span class="eyebrow">Fonti consultate</span>
-              <h2 id="sourceRegistryTitle">Ogni fonte deve essere apribile.</h2>
-              <p>I loghi nelle schede derivano dai domini reali consultati. Nessuna legenda astratta sostituisce il sito originale.</p>
+              <span class="eyebrow">Origine dei dati</span>
+              <h2 id="sourceRegistryTitle">Controlla da dove nasce ogni offerta.</h2>
+              <p>Ogni scheda mantiene il collegamento alla pagina da cui arriva l'annuncio, cosi puoi verificare prima di candidarti.</p>
             </div>
             <img src="assets/function-visuals/radar-scan.svg" alt="Radar stilizzato che collega fonti diverse">
           </div>
@@ -691,10 +691,12 @@
           </div>
 
           <div class="feedback-actions">
-            <button class="primary-button" type="button" data-action="copy-feedback">Copia risposte</button>
+            <p class="local-save-note">In questa beta le risposte vengono salvate solo su questo dispositivo. Puoi copiarle quando vuoi per tenerle o condividerle.</p>
+            <button class="primary-button" type="button" data-action="copy-feedback">Salva e copia risposte</button>
             <button class="secondary-button" type="reset">Ripulisci</button>
           </div>
         </form>
+        <section class="local-submissions-panel" id="feedbackRegistry" aria-live="polite"></section>
       </section>
 
       <section class="view" id="view-employers" data-view="employers">
@@ -745,13 +747,14 @@
               </div>
             </div>
             <div class="sponsor-note">
-              La richiesta non altera i risultati organici: serve a valutare una posizione in evidenza dichiarata e compatibile, senza costi tecnici aggiuntivi nella fase pilota.
+              La richiesta non altera i risultati organici. In questa beta viene salvata solo su questo dispositivo e puoi copiarla per inviarla o conservarla.
             </div>
             <div class="sponsor-actions">
-              <button class="primary-button" type="button" data-action="copy-sponsor-request">Copia richiesta</button>
+              <button class="primary-button" type="button" data-action="copy-sponsor-request">Salva e copia richiesta</button>
               <button class="secondary-button" type="reset">Ripulisci</button>
             </div>
           </form>
+          <section class="local-submissions-panel" id="sponsorRegistry" aria-live="polite"></section>
         </div>
       </section>
     </main>
@@ -786,7 +789,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=58"></script>
-  <script src="app.js?v=58"></script>
+  <script src="data.js?v=59"></script>
+  <script src="app.js?v=59"></script>
 </body>
 </html>
