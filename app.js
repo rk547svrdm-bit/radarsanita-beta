@@ -744,8 +744,14 @@ function updateLiveSourceCounters(count) {
   const safeCount = Number(count) || 13;
   const introCount = document.getElementById("introSourceCount");
   const radarCount = document.getElementById("radarSourceCount");
+  const radarShortCount = document.getElementById("radarSourceCountShort");
+  const radarOfferCount = document.getElementById("radarOfferCount");
+  const radarSalaryCount = document.getElementById("radarSalaryCount");
   if (introCount) introCount.textContent = String(safeCount);
   if (radarCount) radarCount.textContent = `${safeCount} fonti controllate`;
+  if (radarShortCount) radarShortCount.textContent = String(safeCount);
+  if (radarOfferCount) radarOfferCount.textContent = String(jobs.length || 0);
+  if (radarSalaryCount) radarSalaryCount.textContent = String(salaryObservationsForJobs(jobs).length || 0);
 }
 
 function getJob(id) {
@@ -3131,7 +3137,7 @@ function setSearchOriginFromPreset(target) {
 function requestSearchLocation({ automatic = false, force = false } = {}) {
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
-  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=56";
+  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=57";
 
   if (state.locationRequestInFlight || (automatic && state.locationRequestAttempted)) return;
   if (state.searchOrigin && !force) {

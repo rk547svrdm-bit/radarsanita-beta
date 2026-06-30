@@ -10,7 +10,7 @@
   <title>RadarSanità</title>
   <script>
     (() => {
-      const targetVersion = 54;
+      const targetVersion = 57;
       const params = new URLSearchParams(window.location.search);
       const currentVersion = Number(params.get("v"));
       if (currentVersion && currentVersion < targetVersion) {
@@ -19,7 +19,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=56">
+  <link rel="stylesheet" href="styles.css?v=57">
 </head>
 <body>
   <div class="app-shell">
@@ -129,40 +129,63 @@
             </div>
           </div>
 
-          <aside class="intro-panel product-preview" aria-label="Anteprima scheda offerta">
-            <div class="preview-window-bar">
-              <span></span><span></span><span></span>
-              <strong>Dossier offerta</strong>
+          <aside class="intro-panel product-preview brand-radar-card" aria-label="RadarSanita in funzione">
+            <div class="radar-card-top">
+              <div class="radar-card-brand">
+                <span class="radar-live-dot" aria-hidden="true"></span>
+                <strong>Radar attivo</strong>
+                <small>fonti, tariffe e segnali letti insieme</small>
+              </div>
+              <span class="radar-card-status">Beta reale</span>
             </div>
-            <div class="preview-job">
-              <span class="job-type">Molto adatta</span>
-              <strong>Infermiere ambulatoriale · Torino</strong>
-              <small>8 km · niente notti · part-time 30 ore</small>
+
+            <div class="radar-composition">
+              <div class="radar-screen" aria-hidden="true">
+                <svg viewBox="0 0 260 260">
+                  <defs>
+                    <radialGradient id="radarGlow" cx="50%" cy="50%" r="55%">
+                      <stop offset="0%" stop-color="#ffffff"></stop>
+                      <stop offset="62%" stop-color="#d9f2ec"></stop>
+                      <stop offset="100%" stop-color="#0f766e"></stop>
+                    </radialGradient>
+                    <linearGradient id="radarSweep" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#0f766e" stop-opacity="0.74"></stop>
+                      <stop offset="100%" stop-color="#0f766e" stop-opacity="0"></stop>
+                    </linearGradient>
+                  </defs>
+                  <circle class="radar-disc" cx="130" cy="130" r="96"></circle>
+                  <circle class="radar-ring" cx="130" cy="130" r="33"></circle>
+                  <circle class="radar-ring" cx="130" cy="130" r="63"></circle>
+                  <path class="radar-cross" d="M130 34v192M34 130h192"></path>
+                  <path class="radar-sweep" d="M130 130 L130 35 A95 95 0 0 1 213 177 Z"></path>
+                  <path class="radar-pulse" d="M68 146h31l11-27 19 55 15-39h20"></path>
+                  <circle class="radar-point point-a" cx="94" cy="96" r="7"></circle>
+                  <circle class="radar-point point-b" cx="168" cy="82" r="6"></circle>
+                  <circle class="radar-point point-c" cx="181" cy="160" r="8"></circle>
+                </svg>
+              </div>
+
+              <div class="radar-signal-list">
+                <span><strong>Fonti</strong><small>portali e siti ufficiali</small></span>
+                <span><strong>Tariffe</strong><small>range estratti dalle offerte</small></span>
+                <span><strong>Luoghi</strong><small>foto reali o logo fonte</small></span>
+              </div>
             </div>
-            <div class="preview-decision-row">
-              <div><small>Fiducia</small><strong>Alta</strong></div>
-              <div><small>Candidatura</small><strong>bozza pronta</strong></div>
-              <div><small>Da chiarire</small><strong>1 dato</strong></div>
+
+            <div class="radar-evidence-row" aria-label="Copertura letta dalla beta">
+              <div><strong id="radarSourceCountShort">68</strong><span>fonti controllate</span></div>
+              <div><strong id="radarOfferCount">61</strong><span>offerte lette</span></div>
+              <div><strong id="radarSalaryCount">55</strong><span>tariffe rilevate</span></div>
             </div>
-            <div class="preview-accordion">
-              <span>Contratto e stipendio</span><strong>chiaro</strong>
-            </div>
-            <div class="preview-accordion">
-              <span>Turni e criticità</span><strong>2 avvisi</strong>
-            </div>
-            <div class="preview-accordion">
-              <span>Recensioni colleghi</span><strong>3,9/5</strong>
-            </div>
-            <div class="preview-market-line">
-              <span>Borsa tariffe</span>
-              <svg viewBox="0 0 180 52" aria-hidden="true">
-                <path d="M6 39 C34 28, 47 34, 70 23 S112 17, 132 25 S158 29, 174 14"></path>
-              </svg>
-            </div>
-            <div class="preview-trust-strip">
-              <span>Fonte primaria</span>
-              <span>Controllata oggi</span>
-              <span>Duplicati uniti</span>
+
+            <div class="radar-source-orbit" aria-label="Esempi di fonti consultate">
+              <span>Fonti reali</span>
+              <div>
+                <img src="https://www.google.com/s2/favicons?domain=randstad.it&amp;sz=64" alt="Randstad">
+                <img src="https://www.google.com/s2/favicons?domain=manpower.it&amp;sz=64" alt="Manpower">
+                <img src="https://www.google.com/s2/favicons?domain=indeed.com&amp;sz=64" alt="Indeed">
+                <img src="https://www.google.com/s2/favicons?domain=linkedin.com&amp;sz=64" alt="LinkedIn">
+              </div>
             </div>
           </aside>
         </div>
@@ -741,7 +764,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=56"></script>
-  <script src="app.js?v=56"></script>
+  <script src="data.js?v=57"></script>
+  <script src="app.js?v=57"></script>
 </body>
 </html>
