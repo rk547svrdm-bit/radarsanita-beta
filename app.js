@@ -2612,6 +2612,134 @@ function professionalOpinionLinks(job) {
   `;
 }
 
+function webSearchUrl(query) {
+  return `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+}
+
+function mapSearchUrl(query) {
+  return `https://www.google.com/maps/search/${encodeURIComponent(query)}`;
+}
+
+function isAnonymousStructure(job) {
+  return /nome non pubblicato|struttura.*non pubblicat|struttura socio-sanitaria/i.test(`${job.company} ${job.summary}`);
+}
+
+function renderDossierLinks(links = []) {
+  const safeLinks = links
+    .filter((link) => link?.href)
+    .slice(0, 4);
+  if (!safeLinks.length) return "";
+  return `
+    <div class="web-dossier-links">
+      ${safeLinks.map((link) => `
+        <a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer noopener">${escapeHtml(link.label)}</a>
+      `).join("")}
+    </div>
+  `;
+}
+
+function crossWebBranches(job) {
+  const workplace = workplaceFor(job);
+  const entries = sourceEntries(job);
+  const sourceUrl = jobSourceUrl(job);
+  const sourceDomainLabel = sourceDomain(sourceUrl) || job.source || "fonte";
+  const reviews = professionalReviewsFor(job);
+  const anonymousStructure = isAnonymousStructure(job);
+  const observations = marketObservationsForJob(job);
+  const market = marketSummaryFromObservations(observations);
+  const placeTerms = `${job.location} ${job.title} ${job.category === "oss" ? "OSS" : "infermiere"}`;
+  const structureTerms = anonymousStructure
+    ? `${job.title} ${job.location} ${sourceDomainLabel}`
+    : `${job.company} ${job.location}`;
+  const reputationTerms = anonymousStructure
+    ? `${sourceDomainLabel} ${job.location} opinioni lavoro infermieri OSS`
+    : `${job.company} ${job.location} opinioni lavoro infermieri OSS dipendenti`;
+  const wageTerms = `${job.category === "oss" ? "OSS" : "infermiere"} ${job.location} stipendio retribuzione offerta lavoro`;
+
+  return [
+    {
+      tone: "source",
+      title: "Annuncio e candidatura",
+      status: sourceUrl ? "Fonte apribile" : "Fonte da verificare",
+      text: sourceUrl
+        ? `L'offerta parte da ${job.source || sourceDomainLabel}. Il pulsante Candidati apre il canale originale.`
+        : "La fonte dell'annuncio non espone un link sicuro apribile dalla scheda.",
+      links: [
+        sourceUrl ? { label: "Apri annuncio", href: sourceUrl } : null,
+        ...entries.filter((entry) => entry.url && entry.url !== sourceUrl).map((entry) => ({ label: entry.name, href: entry.url }))
+      ].filter(Boolean)
+    },
+    {
+      tone: anonymousStructure ? "warning" : "structure",
+      title: "Struttura o datore",
+      status: anonymousStructure ? "Nome struttura non pubblicato" : "Nome disponibile",
+      text: anonymousStructure
+        ? `La fonte indica sede e ruolo, ma non pubblica il nome della struttura. La ricerca incrociata puo quindi partire da localita, ruolo e fonte, non da una struttura certa.`
+        : `La scheda incrocia l'offerta con ricerche su ${job.company}, sede dichiarata e canali pubblici collegati.`,
+      links: [
+        { label: "Cerca struttura/datore", href: webSearchUrl(structureTerms) },
+        { label: "Cerca su Maps", href: mapSearchUrl(anonymousStructure ? job.location : `${job.company} ${job.location}`) }
+      ]
+    },
+    {
+      tone: "reputation",
+      title: "Reputazione professionale",
+      status: reviews.length ? `${reviews.length} segnali collegati` : "Da raccogliere",
+      text: reviews.length
+        ? `Sono presenti valutazioni professionali collegate alla scheda. Prima della candidatura puoi comunque aprire ricerche esterne sul datore e sul luogo.`
+        : "Non risultano ancora valutazioni professionali raccolte per questa struttura/offerta. La scheda prepara ricerche mirate su esperienze di lavoro, datore e luogo.",
+      links: [
+        { label: "Opinioni lavoro", href: webSearchUrl(reputationTerms) },
+        { label: "Segnali su datore", href: webSearchUrl(`${job.company} recensioni lavoro operatori sanitari`) }
+      ]
+    },
+    {
+      tone: "place",
+      title: "Zona e ambiente",
+      status: job.coordinates ? "Sede geolocalizzata" : "Sede dichiarata",
+      text: `${workplace.facts?.[0] || `Sede dichiarata: ${job.location}`}. Valuta tragitto, contesto, parcheggi e servizi della zona prima di candidarti.`,
+      links: [
+        { label: "Apri zona su Maps", href: mapSearchUrl(job.location) },
+        { label: "Cerca contesto zona", href: webSearchUrl(`${placeTerms} zona trasporti parcheggi`) }
+      ]
+    },
+    {
+      tone: "market",
+      title: "Tariffe e mercato",
+      status: market ? `${formatHourlyRange(market.min, market.max)} osservato` : "Dato non sufficiente",
+      text: market
+        ? `Il confronto usa ${market.count} retribuzioni pubblicate in offerte simili nel perimetro della ricerca. Serve a capire se la proposta e in linea, sotto o sopra il mercato osservato.`
+        : "Le offerte simili non pubblicano abbastanza retribuzioni leggibili per costruire un confronto affidabile.",
+      links: [
+        { label: "Cerca tariffe simili", href: webSearchUrl(wageTerms) },
+        { label: "Cerca offerte concorrenti", href: webSearchUrl(`${job.category === "oss" ? "OSS" : "infermiere"} ${job.location} offerte lavoro`) }
+      ]
+    }
+  ];
+}
+
+function renderCrossWebDossier(job) {
+  const branches = crossWebBranches(job);
+  return `
+    <div class="cross-web-dossier">
+      <div class="cross-web-intro">
+        <strong>Dossier ramificato sull'offerta</strong>
+        <p>La scheda non legge solo l'annuncio: apre rami di controllo su fonte, datore o struttura, reputazione professionale, zona e tariffe pubblicate.</p>
+      </div>
+      <div class="cross-web-grid">
+        ${branches.map((branch) => `
+          <article class="web-research-card tone-${branch.tone}">
+            <small>${escapeHtml(branch.status)}</small>
+            <h3>${escapeHtml(branch.title)}</h3>
+            <p>${escapeHtml(branch.text)}</p>
+            ${renderDossierLinks(branch.links)}
+          </article>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
 function renderDetail(jobId) {
   const job = getJob(jobId);
   const workplace = workplaceFor(job);
@@ -2639,11 +2767,11 @@ function renderDetail(jobId) {
           `).join("")}
         </div>
         ${professionalOpinionLinks(job)}
-      `, { icon: "7", tone: "reviews", meta: "Esperienze professionali collegate" })
+      `, { icon: "8", tone: "reviews", meta: "Esperienze professionali collegate" })
     : detailSection("Reputazione professionale", `
         <p class="content-note">Per questa offerta non sono ancora presenti valutazioni professionali collegate alla struttura. Puoi approfondire i segnali online sul datore o sul luogo prima di candidarti.</p>
         ${professionalOpinionLinks(job)}
-      `, { icon: "7", tone: "reviews", meta: "Da approfondire prima della decisione" });
+      `, { icon: "8", tone: "reviews", meta: "Da approfondire prima della decisione" });
   jobDetail.innerHTML = `
     <div class="detail-page">
       <div class="detail-topbar">
@@ -2680,8 +2808,8 @@ function renderDetail(jobId) {
 
         <div class="dossier-proof">
           <div>
-            <strong>Informazioni raccolte da ${sourceCount(job)} fonti</strong>
-            <span>Apri la candidatura sul sito ufficiale e verifica i dettagli prima dell'invio.</span>
+            <strong>Dossier da ${sourceCount(job)} fonti e 5 rami web</strong>
+            <span>Annuncio, struttura, reputazione, zona e tariffe vengono trattati come controlli separati.</span>
           </div>
           ${sourceChips(job)}
           ${sourceUrl ? `<a class="primary-button source-detail-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Candidati sul sito ufficiale</a>` : ""}
@@ -2693,23 +2821,29 @@ function renderDetail(jobId) {
           <p>${job.summary}</p>
           <div class="warning-box">${job.warning}</div>
         `, { open: true, icon: "1", tone: "overview", meta: "Il riassunto operativo prima dei dettagli" })}
-        ${detailSection("Contratto e condizioni", dataGrid(withoutMoneyRows(job.contractDetails)), {
+        ${detailSection("Dossier web incrociato", renderCrossWebDossier(job), {
+          open: true,
           icon: "2",
+          tone: "source",
+          meta: "Fonte, struttura, reputazione, zona e mercato"
+        })}
+        ${detailSection("Contratto e condizioni", dataGrid(withoutMoneyRows(job.contractDetails)), {
+          icon: "3",
           tone: "money",
           meta: "Condizioni formali dichiarate"
         })}
         ${detailSection("Stima mercato tariffe", marketPanel(job), {
-          icon: "3",
+          icon: "4",
           tone: "market",
           meta: "Retribuzioni pubblicate nel perimetro"
         })}
         ${detailSection("Orari e turni", dataGrid(job.shiftDetails), {
-          icon: "4",
+          icon: "5",
           tone: "time",
           meta: "Carico prevedibile, notti e festivi"
         })}
         ${detailSection("Requisiti", dataGrid(job.requirements, { evidence: true }), {
-          icon: "5",
+          icon: "6",
           tone: "requirements",
           meta: "Cosa risulta presente e cosa va confermato"
         })}
@@ -2721,7 +2855,7 @@ function renderDetail(jobId) {
             Usa questi dati per capire se la sede e l'organizzazione dichiarata
             sono compatibili con i tuoi vincoli prima di candidarti.
           </p>
-        `, { icon: "6", tone: "place", meta: "Logistica e contesto non ufficiale" })}
+        `, { icon: "7", tone: "place", meta: "Logistica e contesto non ufficiale" })}
         ${colleagueSection}
         ${detailSection("Fonte e aggiornamento", `
           ${sourceTrustPanel(job)}

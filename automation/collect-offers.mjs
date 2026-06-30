@@ -147,6 +147,102 @@ function htmlText(value) {
   return decodeEntities(String(value || "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ")).trim();
 }
 
+function safeHttpsUrl(value) {
+  try {
+    const url = new URL(String(value || ""));
+    return url.protocol === "https:" ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
+function domainFromUrl(value) {
+  const url = safeHttpsUrl(value);
+  if (!url) return "";
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+}
+
+function webSearchUrl(query) {
+  return `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+}
+
+function mapsSearchUrl(query) {
+  return `https://www.google.com/maps/search/${encodeURIComponent(query)}`;
+}
+
+function anonymousStructure(job) {
+  return /nome non pubblicato|struttura.*non pubblicat|struttura socio-sanitaria/i.test(`${job.company} ${job.summary}`);
+}
+
+function crossResearchFor(job) {
+  const sourceUrl = safeHttpsUrl(job.sourceUrl) || safeHttpsUrl(job.application?.destinationUrl);
+  const sourceDomain = domainFromUrl(sourceUrl) || job.source || "fonte";
+  const isAnonymous = anonymousStructure(job);
+  const role = job.category === "oss" ? "OSS" : "infermiere";
+  const structureTerms = isAnonymous
+    ? `${job.title} ${job.location} ${sourceDomain}`
+    : `${job.company} ${job.location}`;
+
+  return {
+    status: "partial",
+    checked: checkedLabel(),
+    principle: "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+    branches: [
+      {
+        id: "offer-source",
+        label: "Annuncio e candidatura",
+        status: sourceUrl ? "source-openable" : "source-missing",
+        evidence: sourceUrl ? [sourceUrl] : [],
+        searches: sourceUrl ? [] : [webSearchUrl(`${job.title} ${job.location} annuncio lavoro`)]
+      },
+      {
+        id: "structure-employer",
+        label: "Struttura o datore",
+        status: isAnonymous ? "structure-name-hidden" : "structure-name-available",
+        evidence: isAnonymous ? [] : [job.company, job.location].filter(Boolean),
+        searches: [
+          webSearchUrl(structureTerms),
+          mapsSearchUrl(isAnonymous ? job.location : `${job.company} ${job.location}`)
+        ]
+      },
+      {
+        id: "professional-reputation",
+        label: "Reputazione professionale",
+        status: "needs-cross-check",
+        evidence: [],
+        searches: [
+          webSearchUrl(`${structureTerms} opinioni lavoro ${role} dipendenti operatori sanitari`),
+          webSearchUrl(`${job.company} recensioni lavoro operatori sanitari`)
+        ]
+      },
+      {
+        id: "area-environment",
+        label: "Zona e ambiente",
+        status: job.coordinates ? "geolocated" : "declared-location",
+        evidence: [job.location].filter(Boolean),
+        searches: [
+          mapsSearchUrl(job.location),
+          webSearchUrl(`${job.location} ${role} lavoro sanita trasporti parcheggi`)
+        ]
+      },
+      {
+        id: "market-rates",
+        label: "Tariffe e offerte concorrenti",
+        status: "computed-in-app-from-published-wages",
+        evidence: [job.salary].filter((value) => value && !/non pubblic/i.test(value)),
+        searches: [
+          webSearchUrl(`${role} ${job.location} stipendio retribuzione offerta lavoro`),
+          webSearchUrl(`${role} ${job.location} offerte lavoro sanita`)
+        ]
+      }
+    ]
+  };
+}
+
 function isHealthcareRole(title) {
   const value = normalized(title);
   return /\binfermier\w*/.test(value) || /\boss(?:[\s/\-]|$)/.test(value);
@@ -537,7 +633,10 @@ const knownIds = new Set(verifiedSeeds.map((job) => job.id));
 const discoveredManpowerJobs = await discoverCatalogJobs(knownIds);
 const randstadJobs = await discoverRandstadJobs(knownIds);
 const discoveredJobs = [...discoveredManpowerJobs, ...randstadJobs];
-const jobs = [...verifiedSeeds, ...discoveredJobs];
+const jobs = [...verifiedSeeds, ...discoveredJobs].map((job) => ({
+  ...job,
+  webDossier: crossResearchFor(job)
+}));
 const sourceUrlsChecked = new Set([
   ...seedJobs.map((job) => job.sourceUrl).filter(Boolean),
   ...discoveryCatalogs.map((catalog) => catalog.url),

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "updatedAt": "2026-06-30T12:33:47.486Z",
   "checkedLabel": "30 giugno 2026 alle ore 14:33",
   "method": "Verifica automatica di pagine pubbliche e discovery multi-fonte RadarSanita",
@@ -426,6 +426,64 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "L'annuncio non pubblica una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/infermierea-per-hospice-a-torino/995101"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-hidden",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Infermiere%2Fa%20per%20Hospice%20Carignano%20(TO)%20manpower.it",
+              "https://www.google.com/maps/search/Carignano%20(TO)"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Infermiere%2Fa%20per%20Hospice%20Carignano%20(TO)%20manpower.it%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20socio-sanitaria%20(nome%20non%20pubblicato%20nell'annuncio)%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Carignano (TO)"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Carignano%20(TO)",
+              "https://www.google.com/search?q=Carignano%20(TO)%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Carignano%20(TO)%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Carignano%20(TO)%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -543,6 +601,67 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "Nessuna foto ufficiale della struttura e della candidatura e stata aggiunta alla scheda."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.sancamillotorino.net/lavora-con-noi"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Presidio Sanitario San Camillo",
+              "Strada Santa Margherita 136, Torino"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Presidio%20Sanitario%20San%20Camillo%20Strada%20Santa%20Margherita%20136%2C%20Torino",
+              "https://www.google.com/maps/search/Presidio%20Sanitario%20San%20Camillo%20Strada%20Santa%20Margherita%20136%2C%20Torino"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Presidio%20Sanitario%20San%20Camillo%20Strada%20Santa%20Margherita%20136%2C%20Torino%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Presidio%20Sanitario%20San%20Camillo%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Strada Santa Margherita 136, Torino"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Strada%20Santa%20Margherita%20136%2C%20Torino",
+              "https://www.google.com/search?q=Strada%20Santa%20Margherita%20136%2C%20Torino%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Strada%20Santa%20Margherita%20136%2C%20Torino%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Strada%20Santa%20Margherita%20136%2C%20Torino%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -660,6 +779,67 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "Nessuna foto ufficiale della struttura e della candidatura e stata aggiunta alla scheda."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.sancamillotorino.net/lavora-con-noi"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Presidio Sanitario San Camillo",
+              "Strada Santa Margherita 136, Torino"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Presidio%20Sanitario%20San%20Camillo%20Strada%20Santa%20Margherita%20136%2C%20Torino",
+              "https://www.google.com/maps/search/Presidio%20Sanitario%20San%20Camillo%20Strada%20Santa%20Margherita%20136%2C%20Torino"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Presidio%20Sanitario%20San%20Camillo%20Strada%20Santa%20Margherita%20136%2C%20Torino%20opinioni%20lavoro%20OSS%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Presidio%20Sanitario%20San%20Camillo%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Strada Santa Margherita 136, Torino"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Strada%20Santa%20Margherita%20136%2C%20Torino",
+              "https://www.google.com/search?q=Strada%20Santa%20Margherita%20136%2C%20Torino%20OSS%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=OSS%20Strada%20Santa%20Margherita%20136%2C%20Torino%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=OSS%20Strada%20Santa%20Margherita%20136%2C%20Torino%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -769,6 +949,67 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "Nessuna foto verificabile della struttura e pubblicata nella scheda."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss/1016466"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Azienda cliente non nominata nell'annuncio",
+              "Friuli-Venezia Giulia, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Azienda%20cliente%20non%20nominata%20nell'annuncio%20Friuli-Venezia%20Giulia%2C%20Italia",
+              "https://www.google.com/maps/search/Azienda%20cliente%20non%20nominata%20nell'annuncio%20Friuli-Venezia%20Giulia%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Azienda%20cliente%20non%20nominata%20nell'annuncio%20Friuli-Venezia%20Giulia%2C%20Italia%20opinioni%20lavoro%20OSS%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Azienda%20cliente%20non%20nominata%20nell'annuncio%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Friuli-Venezia Giulia, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Friuli-Venezia%20Giulia%2C%20Italia",
+              "https://www.google.com/search?q=Friuli-Venezia%20Giulia%2C%20Italia%20OSS%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=OSS%20Friuli-Venezia%20Giulia%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=OSS%20Friuli-Venezia%20Giulia%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -879,6 +1120,67 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "Nessuna foto verificabile della struttura e pubblicata nella scheda."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierea-pescara-e-provincia/1000000"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Azienda cliente non nominata nell'annuncio",
+              "Pescara, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Azienda%20cliente%20non%20nominata%20nell'annuncio%20Pescara%2C%20Italia",
+              "https://www.google.com/maps/search/Azienda%20cliente%20non%20nominata%20nell'annuncio%20Pescara%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Azienda%20cliente%20non%20nominata%20nell'annuncio%20Pescara%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Azienda%20cliente%20non%20nominata%20nell'annuncio%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Pescara, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Pescara%2C%20Italia",
+              "https://www.google.com/search?q=Pescara%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Pescara%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Pescara%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -997,6 +1299,67 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "Nessuna foto verificabile della struttura e pubblicata nella scheda."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Azienda cliente non nominata nell'annuncio",
+              "Alessandria, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Azienda%20cliente%20non%20nominata%20nell'annuncio%20Alessandria%2C%20Italia",
+              "https://www.google.com/maps/search/Azienda%20cliente%20non%20nominata%20nell'annuncio%20Alessandria%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Azienda%20cliente%20non%20nominata%20nell'annuncio%20Alessandria%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Azienda%20cliente%20non%20nominata%20nell'annuncio%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Alessandria, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Alessandria%2C%20Italia",
+              "https://www.google.com/search?q=Alessandria%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Alessandria%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Alessandria%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1111,6 +1474,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_pavia_82efd43c-0392-4d5d-9c01-a56704b78cda/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Pavia, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Pavia%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Pavia%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Pavia%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Pavia, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Pavia%2C%20Italia",
+              "https://www.google.com/search?q=Pavia%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Pavia%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Pavia%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1221,6 +1647,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-torino_collegno_ac94db14-8bd8-4b5f-812f-078a3e75a43e/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Collegno, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Collegno, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Collegno%2C%20Italia",
+              "https://www.google.com/search?q=Collegno%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Collegno%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Collegno%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1335,6 +1824,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_ferrara_756055dd-300d-430f-81f5-4f3ebadebf5c/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Ferrara, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Ferrara%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Ferrara%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Ferrara%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Ferrara, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Ferrara%2C%20Italia",
+              "https://www.google.com/search?q=Ferrara%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "10 € - 11 € oraria"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Ferrara%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Ferrara%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1445,6 +1997,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico-di-torino_torino_4e3d14fa-32db-493f-8e5b-414b3a0adb98/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Torino%2C%20Italia",
+              "https://www.google.com/search?q=Torino%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1559,6 +2174,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermieri_torrita-di-siena_13012be0-6fac-439a-9957-6e7aa006c09d/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Torrita Di Siena, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torrita%20Di%20Siena%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torrita%20Di%20Siena%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torrita%20Di%20Siena%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Torrita Di Siena, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Torrita%20Di%20Siena%2C%20Italia",
+              "https://www.google.com/search?q=Torrita%20Di%20Siena%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Torrita%20Di%20Siena%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Torrita%20Di%20Siena%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1673,6 +2351,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_imola_3b7fad0b-5b6e-4744-a4e2-48c140096c0c/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Imola, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Imola%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Imola%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Imola%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Imola, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Imola%2C%20Italia",
+              "https://www.google.com/search?q=Imola%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Imola%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Imola%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1787,6 +2528,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Ferrara, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Ferrara%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Ferrara%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Ferrara%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Ferrara, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Ferrara%2C%20Italia",
+              "https://www.google.com/search?q=Ferrara%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Ferrara%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Ferrara%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1901,6 +2705,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_genova_0e029c4d-8b4a-4b41-abb6-db761d026e59/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Genova, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Genova%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Genova%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Genova%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Genova, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Genova%2C%20Italia",
+              "https://www.google.com/search?q=Genova%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Genova%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Genova%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -2011,6 +2878,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico-torino_torino_842abe1c-ad02-493c-b279-7c32465c0080/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Torino%2C%20Italia",
+              "https://www.google.com/search?q=Torino%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -2125,6 +3055,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_triggiano_a01917d4-4484-45d2-a25c-6733b1736f17/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Triggiano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Triggiano%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Triggiano%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Triggiano%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Triggiano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Triggiano%2C%20Italia",
+              "https://www.google.com/search?q=Triggiano%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Triggiano%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Triggiano%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -2235,6 +3228,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_rozzano_87f86104-7603-422b-b880-4903abc95a92/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Rozzano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Rozzano%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Rozzano%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Rozzano%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Rozzano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Rozzano%2C%20Italia",
+              "https://www.google.com/search?q=Rozzano%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Rozzano%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Rozzano%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -2349,6 +3405,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_cortemaggiore_0cdc7063-76fe-47e9-9e8b-cc571d5aa527/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Cortemaggiore, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cortemaggiore%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cortemaggiore%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cortemaggiore%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Cortemaggiore, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Cortemaggiore%2C%20Italia",
+              "https://www.google.com/search?q=Cortemaggiore%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Cortemaggiore%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Cortemaggiore%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -2463,6 +3582,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_brescia_5ff458cd-1ec9-4ba4-9a90-68b473632cdd/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Brescia, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Brescia%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Brescia%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Brescia%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Brescia, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Brescia%2C%20Italia",
+              "https://www.google.com/search?q=Brescia%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Brescia%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Brescia%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -2573,6 +3755,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-ausl-aosta_aosta_9404ac0c-f73b-4b47-aa3c-e57e13c871e3/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Aosta, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Aosta%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Aosta%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Aosta%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Aosta, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Aosta%2C%20Italia",
+              "https://www.google.com/search?q=Aosta%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Aosta%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Aosta%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -2687,6 +3932,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_laces_6813b467-49e5-4733-b37f-c71ae2286b84/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Laces, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Laces%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Laces%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Laces%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Laces, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Laces%2C%20Italia",
+              "https://www.google.com/search?q=Laces%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "34.000 € - 40.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Laces%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Laces%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -2801,6 +4109,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermieri_mantova_3138734a-73a7-40d5-a485-e953c5284416/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Mantova, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Mantova%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Mantova%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Mantova%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Mantova, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Mantova%2C%20Italia",
+              "https://www.google.com/search?q=Mantova%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "11 € - 13 € oraria"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Mantova%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Mantova%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -2911,6 +4282,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_appiano-gentile_04e5bbdd-d87c-47dd-bfb8-8c1e6b1a91e1/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Appiano Gentile, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Appiano%20Gentile%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Appiano%20Gentile%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Appiano%20Gentile%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Appiano Gentile, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Appiano%20Gentile%2C%20Italia",
+              "https://www.google.com/search?q=Appiano%20Gentile%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Appiano%20Gentile%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Appiano%20Gentile%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -3021,6 +4455,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico_collegno_e5e49563-611e-4066-b668-b781504492d3/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Collegno, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Collegno, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Collegno%2C%20Italia",
+              "https://www.google.com/search?q=Collegno%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Collegno%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Collegno%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -3131,6 +4628,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_milano_8c4c4540-f03f-48fe-97fc-ca43826c4f1e/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Milano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Milano%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Milano%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Milano%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Milano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Milano%2C%20Italia",
+              "https://www.google.com/search?q=Milano%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Milano%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Milano%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -3245,6 +4805,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_codigoro_65af6fd8-f0ab-4177-adfe-18aea46483f9/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Codigoro, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Codigoro%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Codigoro%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Codigoro%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Codigoro, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Codigoro%2C%20Italia",
+              "https://www.google.com/search?q=Codigoro%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "10 € - 11 € oraria"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Codigoro%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Codigoro%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -3359,6 +4982,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_bologna_ea7bd870-6a2b-4579-8849-833513fe8c1f/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Bologna%2C%20Italia",
+              "https://www.google.com/search?q=Bologna%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -3473,6 +5159,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_bologna_2488678a-3298-479d-b233-bf742bd4cc72/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Bologna%2C%20Italia",
+              "https://www.google.com/search?q=Bologna%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -3587,6 +5336,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermieri_cecina_59ffb51d-549c-4802-95bf-6d5614891135/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Cecina, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cecina%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cecina%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cecina%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Cecina, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Cecina%2C%20Italia",
+              "https://www.google.com/search?q=Cecina%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "11 € - 13 € oraria"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Cecina%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Cecina%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -3701,6 +5513,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_cesena_d7b3a1f8-b8f2-428f-9323-3dcb525b14bd/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Cesena, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cesena%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cesena%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cesena%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Cesena, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Cesena%2C%20Italia",
+              "https://www.google.com/search?q=Cesena%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "18.000 € - 22.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Cesena%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Cesena%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -3815,6 +5690,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_orvieto_0af1a061-fece-41ca-8076-8561abc66ff0/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Orvieto, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Orvieto%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Orvieto%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Orvieto%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Orvieto, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Orvieto%2C%20Italia",
+              "https://www.google.com/search?q=Orvieto%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "11 € - 13 € oraria"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Orvieto%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Orvieto%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -3929,6 +5867,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_cotignola_06e526e3-d90f-41f2-af71-5a2e7653a282/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Cotignola, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cotignola%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cotignola%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cotignola%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Cotignola, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Cotignola%2C%20Italia",
+              "https://www.google.com/search?q=Cotignola%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Cotignola%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Cotignola%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -4043,6 +6044,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-presidio-ospedaliero-milano_milano_56ed2b2a-29a7-48b2-a427-110b05d844a8/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Milano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Milano%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Milano%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Milano%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Milano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Milano%2C%20Italia",
+              "https://www.google.com/search?q=Milano%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Milano%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Milano%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -4157,6 +6221,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa_capriate-san-gervasio_44ac560b-9a82-40cb-bd22-3e67daab8438/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Capriate San Gervasio, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Capriate%20San%20Gervasio%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Capriate%20San%20Gervasio%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Capriate%20San%20Gervasio%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Capriate San Gervasio, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Capriate%20San%20Gervasio%2C%20Italia",
+              "https://www.google.com/search?q=Capriate%20San%20Gervasio%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Capriate%20San%20Gervasio%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Capriate%20San%20Gervasio%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -4271,6 +6398,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Torino%2C%20Italia",
+              "https://www.google.com/search?q=Torino%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -4385,6 +6575,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-cure-domiciliari_collegno_3fe3fcee-9fe4-4e2a-a271-f812435f5e87/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Collegno, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Collegno, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Collegno%2C%20Italia",
+              "https://www.google.com/search?q=Collegno%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Collegno%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Collegno%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -4499,6 +6752,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_legnago_43bf24a9-f336-4c14-82f1-fd5d30369235/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Legnago, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Legnago%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Legnago%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Legnago%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Legnago, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Legnago%2C%20Italia",
+              "https://www.google.com/search?q=Legnago%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "9 € - 10 € oraria"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Legnago%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Legnago%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -4613,6 +6929,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Firenze, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Firenze%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Firenze%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Firenze%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Firenze, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Firenze%2C%20Italia",
+              "https://www.google.com/search?q=Firenze%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "18000€ - 22000€"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Firenze%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Firenze%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -4727,6 +7106,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermieri-fmnb_orbassano_fdd99969-0501-41ed-af30-bf7e388202b4/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Orbassano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Orbassano%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Orbassano%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Orbassano%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Orbassano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Orbassano%2C%20Italia",
+              "https://www.google.com/search?q=Orbassano%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Orbassano%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Orbassano%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -4841,6 +7283,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico_bologna_54c7d484-38ae-4f9e-852c-de00a6e9606b/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Bologna%2C%20Italia",
+              "https://www.google.com/search?q=Bologna%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "11 € - 13 € oraria"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -4955,6 +7460,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico-susa_susa_ec0f24dc-1ccc-476c-bb1a-91743cf610a9/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Susa, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Susa%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Susa%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Susa%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Susa, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Susa%2C%20Italia",
+              "https://www.google.com/search?q=Susa%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Susa%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Susa%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -5065,6 +7633,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermieri-disponibilita-alloggio_cortina-d-ampezzo_ae7c18ac-f6c1-434f-9c92-b68098ffcc6e/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Cortina D Ampezzo, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cortina%20D%20Ampezzo%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cortina%20D%20Ampezzo%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cortina%20D%20Ampezzo%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Cortina D Ampezzo, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Cortina%20D%20Ampezzo%2C%20Italia",
+              "https://www.google.com/search?q=Cortina%20D%20Ampezzo%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Cortina%20D%20Ampezzo%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Cortina%20D%20Ampezzo%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -5175,6 +7806,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermieri-asl-teramo-mfnb_teramo_18964115-c4d1-4d50-9f05-bb0e7dfc18b0/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Teramo, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Teramo%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Teramo%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Teramo%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Teramo, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Teramo%2C%20Italia",
+              "https://www.google.com/search?q=Teramo%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Teramo%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Teramo%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -5289,6 +7983,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-pubblico_bologna_d0072925-d4dc-465e-a42b-cf510f21a564/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Bologna%2C%20Italia",
+              "https://www.google.com/search?q=Bologna%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "11 € - 13 € oraria"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -5403,6 +8160,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-sala-operatoria-ospedale-pubblico-monza-brianza_vimercate_f40d4c2a-97ce-41ff-a05d-a2465f1844a0/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Vimercate, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Vimercate%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Vimercate%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Vimercate%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Vimercate, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Vimercate%2C%20Italia",
+              "https://www.google.com/search?q=Vimercate%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Vimercate%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Vimercate%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -5521,6 +8341,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-struttura-riabilitativa-torino-fmnb_torino_c274766e-30a7-4e51-a784-b52eb07b1758/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Torino%2C%20Italia",
+              "https://www.google.com/search?q=Torino%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -5635,6 +8518,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_costa-masnaga_82df9c0b-d415-454c-9af8-51803038602b/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Costa Masnaga, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Costa%20Masnaga%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Costa%20Masnaga%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Costa%20Masnaga%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Costa Masnaga, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Costa%20Masnaga%2C%20Italia",
+              "https://www.google.com/search?q=Costa%20Masnaga%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Costa%20Masnaga%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Costa%20Masnaga%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -5749,6 +8695,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa_bedonia_681f1176-44e5-4696-8d32-0d971c61243e/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Bedonia, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bedonia%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bedonia%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bedonia%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Bedonia, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Bedonia%2C%20Italia",
+              "https://www.google.com/search?q=Bedonia%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Bedonia%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Bedonia%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -5867,6 +8876,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice-fmnb_torino_b94bcb46-4d96-424c-832d-4b8ac562091c/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Torino%2C%20Italia",
+              "https://www.google.com/search?q=Torino%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -5981,6 +9053,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-pinerolo_collegno_6517fefa-45d7-483d-aa06-68514abfd463/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Collegno, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Collegno%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Collegno, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Collegno%2C%20Italia",
+              "https://www.google.com/search?q=Collegno%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Collegno%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Collegno%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -6095,6 +9230,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-poliambulatorio-torino_torino_2c2ce764-00d4-4214-94da-b7bb8c37e7bd/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Torino%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Torino, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Torino%2C%20Italia",
+              "https://www.google.com/search?q=Torino%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Torino%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -6209,6 +9407,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa-zona-beinasco_beinasco_a0db5526-c3d8-49b7-984e-8dd4388d89a5/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Beinasco, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Beinasco%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Beinasco%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Beinasco%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Beinasco, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Beinasco%2C%20Italia",
+              "https://www.google.com/search?q=Beinasco%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Beinasco%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Beinasco%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -6323,6 +9584,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-in-rsa-pubblica_schio_63156c14-86c8-4154-87f3-22b846b5a300/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Schio, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Schio%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Schio%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Schio%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Schio, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Schio%2C%20Italia",
+              "https://www.google.com/search?q=Schio%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Schio%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Schio%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -6437,6 +9761,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-ornago-mb_ornago_10cea7f5-59e1-46a0-9908-c7f752bc9168/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Ornago, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Ornago%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Ornago%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Ornago%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Ornago, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Ornago%2C%20Italia",
+              "https://www.google.com/search?q=Ornago%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Ornago%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Ornago%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -6551,6 +9938,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-poliambulatorio-zona-alba-cn_alba_889ece6f-a30e-4cbf-9b69-f4be3f8b554a/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Alba, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Alba%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Alba%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Alba%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Alba, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Alba%2C%20Italia",
+              "https://www.google.com/search?q=Alba%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Alba%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Alba%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -6665,6 +10115,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-area-disabilitaturni-diurni-faenza-fmnb_faenza_876442b0-f93d-4287-aca1-dfa71c54f593/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Faenza, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Faenza%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Faenza%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Faenza%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Faenza, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Faenza%2C%20Italia",
+              "https://www.google.com/search?q=Faenza%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Faenza%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Faenza%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -6779,6 +10292,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-strumentista-per-poliambulatorio-genova_genova_10ea3a80-29e4-41be-9f70-8fed8072ed58/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Genova, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Genova%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Genova%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Genova%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Genova, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Genova%2C%20Italia",
+              "https://www.google.com/search?q=Genova%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Genova%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Genova%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -6889,6 +10465,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere_milano_a8a59cbb-911f-4fd7-8adf-acbc8bf70690/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Milano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Milano%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Milano%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Milano%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Milano, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Milano%2C%20Italia",
+              "https://www.google.com/search?q=Milano%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "28.000 € - 34.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Milano%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Milano%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -7003,6 +10642,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-terapia-intensiva_bologna_73a277a0-85ec-4ba0-8026-c90c46817575/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Bologna%2C%20Italia",
+              "https://www.google.com/search?q=Bologna%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "18.000 € - 22.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -7117,6 +10819,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-strumentista-per-poliambulatorio-cagliari_cagliari_22c002db-1eaf-4f73-95bc-1271d817b62f/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Cagliari, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cagliari%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cagliari%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Cagliari%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Cagliari, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Cagliari%2C%20Italia",
+              "https://www.google.com/search?q=Cagliari%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "34.000 € - 40.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Cagliari%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Cagliari%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     },
     {
@@ -7227,6 +10992,69 @@
         "sourceUrl": null,
         "alt": "",
         "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "30 giugno 2026 alle ore 14:33",
+        "principle": "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-neolaureato-per-ospedale-con-alloggio-a-bologna_bologna_e603f075-13ab-4c3d-9483-94b210ec432e/"
+            ],
+            "searches": []
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia",
+              "https://www.google.com/maps/search/Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia"
+            ]
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "searches": [
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20Bologna%2C%20Italia%20opinioni%20lavoro%20infermiere%20dipendenti%20operatori%20sanitari",
+              "https://www.google.com/search?q=Struttura%20sanitaria%20tramite%20Randstad%20Healthcare%20recensioni%20lavoro%20operatori%20sanitari"
+            ]
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Bologna, Italia"
+            ],
+            "searches": [
+              "https://www.google.com/maps/search/Bologna%2C%20Italia",
+              "https://www.google.com/search?q=Bologna%2C%20Italia%20infermiere%20lavoro%20sanita%20trasporti%20parcheggi"
+            ]
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "searches": [
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20stipendio%20retribuzione%20offerta%20lavoro",
+              "https://www.google.com/search?q=infermiere%20Bologna%2C%20Italia%20offerte%20lavoro%20sanita"
+            ]
+          }
+        ]
       }
     }
   ]
