@@ -10,7 +10,7 @@
   <title>RadarSanità</title>
   <script>
     (() => {
-      const targetVersion = 60;
+      const targetVersion = 61;
       const params = new URLSearchParams(window.location.search);
       const currentVersion = Number(params.get("v"));
       if (currentVersion && currentVersion < targetVersion) {
@@ -19,7 +19,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=60">
+  <link rel="stylesheet" href="styles.css?v=61">
 </head>
 <body>
   <div class="app-shell">
@@ -557,10 +557,15 @@
                 </select>
               </label>
             </div>
-            <div class="result-deck-intro" id="resultDeckIntro">
-              <span>Deck verticale</span>
-              <strong>Una facciata per offerta.</strong>
-              <small>Scorri verso il basso per passare alla proposta successiva, oppure apri la scheda completa.</small>
+            <div class="result-deck-intro hidden" id="resultDeckIntro">
+              <span>Deck offerte</span>
+              <strong>Una proposta alla volta.</strong>
+              <small>Usa i controlli del deck per confrontare le offerte senza perdere il punto.</small>
+            </div>
+            <div class="deck-controls hidden" id="deckControls" aria-label="Controlli deck risultati">
+              <button class="secondary-button" type="button" data-action="deck-prev">Offerta precedente</button>
+              <span id="deckProgress">0 di 0</span>
+              <button class="primary-button" type="button" data-action="deck-next">Prossima offerta</button>
             </div>
             <div class="job-list result-deck" id="jobList" aria-label="Offerte in facciate verticali"></div>
             <div class="empty-state hidden" id="emptyState">
@@ -789,7 +794,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=60"></script>
-  <script src="app.js?v=60"></script>
+  <script src="data.js?v=61"></script>
+  <script src="app.js?v=61"></script>
 </body>
 </html>

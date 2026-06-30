@@ -678,6 +678,7 @@ const state = {
   exactResultsCount: 0,
   softFallbackActive: false,
   searchCompleted: false,
+  resultDeckIndex: 0,
   searchOrigin: null,
   locationRequestInFlight: false,
   locationRequestAttempted: false,
@@ -743,6 +744,7 @@ const sourceRegistryList = document.getElementById("sourceRegistryList");
 const personalMarketPanel = document.getElementById("personalMarketPanel");
 const feedbackRegistry = document.getElementById("feedbackRegistry");
 const sponsorRegistry = document.getElementById("sponsorRegistry");
+const deckProgress = document.getElementById("deckProgress");
 
 function updateLiveSourceCounters(count) {
   const safeCount = Number(count) || 13;
@@ -2196,6 +2198,7 @@ function jobListCard(job, index = 0, total = 1) {
               ${sourceChips(job)}
               <div class="deck-reason-strip">
                 ${job.reasons.slice(0, 2).map((reason) => `<span>${escapeHtml(reason)}</span>`).join("")}
+                <span>Dossier incrociato pronto</span>
               </div>
             </div>
             <button
@@ -2218,7 +2221,7 @@ function jobListCard(job, index = 0, total = 1) {
               </button>
               ${sourceUrl ? `<a class="primary-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Candidati</a>` : ""}
             </div>
-            <small class="deck-card-hint">Scorri verso il basso per la prossima offerta.</small>
+            <small class="deck-card-hint">Usa Prossima offerta per continuare il confronto.</small>
           </div>
         </div>
       </div>
@@ -2350,7 +2353,39 @@ function applyJobFilters() {
     return b.match - a.match;
   });
 
+  state.resultDeckIndex = 0;
   renderResults();
+}
+
+function updateResultDeck() {
+  const cards = Array.from(document.querySelectorAll("#jobList .result-swipe-card"));
+  const count = cards.length;
+  state.resultDeckIndex = count ? Math.max(0, Math.min(state.resultDeckIndex, count - 1)) : 0;
+
+  cards.forEach((card, index) => {
+    const active = index === state.resultDeckIndex;
+    card.classList.toggle("deck-active", active);
+    card.setAttribute("aria-hidden", active ? "false" : "true");
+  });
+
+  if (deckProgress) {
+    deckProgress.textContent = count ? `${state.resultDeckIndex + 1} di ${count}` : "0 di 0";
+  }
+
+  document.querySelectorAll('[data-action="deck-prev"]').forEach((button) => {
+    button.disabled = !count || state.resultDeckIndex === 0;
+  });
+  document.querySelectorAll('[data-action="deck-next"]').forEach((button) => {
+    button.disabled = !count || state.resultDeckIndex >= count - 1;
+  });
+}
+
+function moveResultDeck(delta) {
+  const count = state.filteredJobs.length;
+  if (!count) return;
+  state.resultDeckIndex = Math.max(0, Math.min(state.resultDeckIndex + delta, count - 1));
+  updateResultDeck();
+  document.getElementById("resultDeckIntro")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function selectCategory(category) {
@@ -2371,6 +2406,8 @@ function renderResults() {
   jobList.innerHTML = state.filteredJobs.map((job, index) => jobListCard(job, index, state.filteredJobs.length)).join("");
   empty.classList.toggle("hidden", state.filteredJobs.length > 0);
   document.getElementById("resultDeckIntro")?.classList.toggle("hidden", state.filteredJobs.length === 0);
+  document.getElementById("deckControls")?.classList.toggle("hidden", state.filteredJobs.length === 0);
+  updateResultDeck();
   renderResultsTriage();
   renderScreening();
   renderPersonalMarket();
@@ -2597,42 +2634,17 @@ function withoutMoneyRows(rows = []) {
   return rows.filter(([label]) => !/retribuzione|compenso|stipendio|ral/i.test(String(label || "")));
 }
 
-function professionalOpinionLinks(job) {
-  const workplace = workplaceFor(job);
-  const terms = [job.company, job.location, workplace.name]
-    .filter(Boolean)
-    .join(" ");
-  const workQuery = encodeURIComponent(`${terms} opinioni lavoro infermieri OSS dipendenti`);
-  const employerQuery = encodeURIComponent(`${job.company} recensioni lavoro operatori sanitari`);
-  return `
-    <div class="external-opinion-links" aria-label="Ricerche esterne sulla reputazione professionale">
-      <a href="https://www.google.com/search?q=${workQuery}" target="_blank" rel="noreferrer noopener">Cerca opinioni lavoro</a>
-      <a href="https://www.google.com/search?q=${employerQuery}" target="_blank" rel="noreferrer noopener">Cerca segnali sul datore</a>
-    </div>
-  `;
-}
-
-function webSearchUrl(query) {
-  return `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-}
-
-function mapSearchUrl(query) {
-  return `https://www.google.com/maps/search/${encodeURIComponent(query)}`;
-}
-
 function isAnonymousStructure(job) {
   return /nome non pubblicato|struttura.*non pubblicat|struttura socio-sanitaria/i.test(`${job.company} ${job.summary}`);
 }
 
-function renderDossierLinks(links = []) {
-  const safeLinks = links
-    .filter((link) => link?.href)
-    .slice(0, 4);
-  if (!safeLinks.length) return "";
+function renderDossierEvidence(items = []) {
+  const safeItems = [...new Set(items.filter(Boolean).map((item) => String(item).trim()).filter(Boolean))].slice(0, 5);
+  if (!safeItems.length) return "";
   return `
-    <div class="web-dossier-links">
-      ${safeLinks.map((link) => `
-        <a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer noopener">${escapeHtml(link.label)}</a>
+    <div class="web-dossier-evidence">
+      ${safeItems.map((item) => `
+        <span>${escapeHtml(item)}</span>
       `).join("")}
     </div>
   `;
@@ -2647,73 +2659,93 @@ function crossWebBranches(job) {
   const anonymousStructure = isAnonymousStructure(job);
   const observations = marketObservationsForJob(job);
   const market = marketSummaryFromObservations(observations);
-  const placeTerms = `${job.location} ${job.title} ${job.category === "oss" ? "OSS" : "infermiere"}`;
-  const structureTerms = anonymousStructure
-    ? `${job.title} ${job.location} ${sourceDomainLabel}`
-    : `${job.company} ${job.location}`;
-  const reputationTerms = anonymousStructure
-    ? `${sourceDomainLabel} ${job.location} opinioni lavoro infermieri OSS`
-    : `${job.company} ${job.location} opinioni lavoro infermieri OSS dipendenti`;
-  const wageTerms = `${job.category === "oss" ? "OSS" : "infermiere"} ${job.location} stipendio retribuzione offerta lavoro`;
+  const publishedSalary = salaryObservation(job);
+  const dossier = job.webDossier?.branches || [];
+  const dossierBranch = (id) => dossier.find((branch) => branch.id === id) || {};
+  const dossierText = (id, fallback) => dossierBranch(id).synthesis || fallback;
+  const dossierEvidence = (id) => Array.isArray(dossierBranch(id).evidence) ? dossierBranch(id).evidence : [];
 
   return [
     {
       tone: "source",
       title: "Annuncio e candidatura",
-      status: sourceUrl ? "Fonte apribile" : "Fonte da verificare",
-      text: sourceUrl
-        ? `L'offerta parte da ${job.source || sourceDomainLabel}. Il pulsante Candidati apre il canale originale.`
-        : "La fonte dell'annuncio non espone un link sicuro apribile dalla scheda.",
-      links: [
-        sourceUrl ? { label: "Apri annuncio", href: sourceUrl } : null,
-        ...entries.filter((entry) => entry.url && entry.url !== sourceUrl).map((entry) => ({ label: entry.name, href: entry.url }))
-      ].filter(Boolean)
+      status: sourceUrl ? "Annuncio verificabile" : "Fonte incompleta",
+      text: dossierText("offer-source", sourceUrl
+        ? `L'offerta è stata letta dalla fonte ${job.source || sourceDomainLabel}. La candidatura resta sul canale ufficiale, ma il contenuto della scheda non si limita al testo dell'annuncio.`
+        : "La fonte non espone un link sicuro; il dossier resta utilizzabile solo come traccia da verificare."),
+      evidence: [
+        ...dossierEvidence("offer-source"),
+        `Fonte: ${job.source || sourceDomainLabel}`,
+        `Ultimo controllo: ${job.checked}`,
+        `${entries.length} fonti collegate`,
+        dossierBranch("offer-source").status ? `Stato raccolta: ${dossierBranch("offer-source").status}` : ""
+      ]
     },
     {
       tone: anonymousStructure ? "warning" : "structure",
       title: "Struttura o datore",
-      status: anonymousStructure ? "Nome struttura non pubblicato" : "Nome disponibile",
-      text: anonymousStructure
-        ? `La fonte indica sede e ruolo, ma non pubblica il nome della struttura. La ricerca incrociata puo quindi partire da localita, ruolo e fonte, non da una struttura certa.`
-        : `La scheda incrocia l'offerta con ricerche su ${job.company}, sede dichiarata e canali pubblici collegati.`,
-      links: [
-        { label: "Cerca struttura/datore", href: webSearchUrl(structureTerms) },
-        { label: "Cerca su Maps", href: mapSearchUrl(anonymousStructure ? job.location : `${job.company} ${job.location}`) }
+      status: anonymousStructure ? "Struttura non nominata" : "Datore identificabile",
+      text: dossierText("structure-employer", anonymousStructure
+        ? "La fonte pubblica ruolo e sede, ma non il nome della struttura. Non attribuisco quindi reputazione o caratteristiche a una struttura non certa."
+        : `Il datore indicato è ${job.company}; il dossier usa sede, fonte e dati dichiarati per costruire il profilo dell'offerta.`),
+      evidence: [
+        ...dossierEvidence("structure-employer"),
+        `Datore/fonte: ${job.company}`,
+        `Sede dichiarata: ${job.location}`,
+        anonymousStructure ? "Nome struttura assente nell'annuncio" : "Nome datore presente",
+        dossierBranch("structure-employer").status ? `Stato raccolta: ${dossierBranch("structure-employer").status}` : ""
       ]
     },
     {
       tone: "reputation",
       title: "Reputazione professionale",
-      status: reviews.length ? `${reviews.length} segnali collegati` : "Da raccogliere",
-      text: reviews.length
-        ? `Sono presenti valutazioni professionali collegate alla scheda. Prima della candidatura puoi comunque aprire ricerche esterne sul datore e sul luogo.`
-        : "Non risultano ancora valutazioni professionali raccolte per questa struttura/offerta. La scheda prepara ricerche mirate su esperienze di lavoro, datore e luogo.",
-      links: [
-        { label: "Opinioni lavoro", href: webSearchUrl(reputationTerms) },
-        { label: "Segnali su datore", href: webSearchUrl(`${job.company} recensioni lavoro operatori sanitari`) }
-      ]
+      status: reviews.length ? `${reviews.length} segnali sintetizzati` : "Nessun segnale raccolto",
+      text: dossierText("professional-reputation", reviews.length
+        ? `Le valutazioni professionali disponibili indicano un punteggio medio ${workplace.rating}/5. Le note vengono mostrate sotto, senza rimandare l'utente a ricerche esterne.`
+        : "Nel dataset attuale non sono ancora presenti valutazioni professionali attribuibili con sicurezza a questa offerta o struttura. La scheda lo dichiara invece di inventare un punteggio."),
+      evidence: reviews.length
+        ? [
+            ...dossierEvidence("professional-reputation"),
+            `Punteggio professionale: ${workplace.rating}/5`,
+            `${reviews.length} segnali collegati`,
+            `${workplace.verifiedReviews || reviews.length} verificati`
+          ]
+        : [
+            ...dossierEvidence("professional-reputation"),
+            "Nessuna valutazione professionale collegata",
+            anonymousStructure ? "Struttura non nominata: reputazione non attribuibile" : "Da integrare con raccolta operatori",
+            dossierBranch("professional-reputation").status ? `Stato raccolta: ${dossierBranch("professional-reputation").status}` : ""
+          ]
     },
     {
       tone: "place",
       title: "Zona e ambiente",
       status: job.coordinates ? "Sede geolocalizzata" : "Sede dichiarata",
-      text: `${workplace.facts?.[0] || `Sede dichiarata: ${job.location}`}. Valuta tragitto, contesto, parcheggi e servizi della zona prima di candidarti.`,
-      links: [
-        { label: "Apri zona su Maps", href: mapSearchUrl(job.location) },
-        { label: "Cerca contesto zona", href: webSearchUrl(`${placeTerms} zona trasporti parcheggi`) }
+      text: dossierText("area-environment", `${workplace.facts?.[0] || `Sede dichiarata: ${job.location}`}. Il dato geografico serve a valutare tragitto, raggio reale e compatibilità logistica con la ricerca.`),
+      evidence: [
+        ...dossierEvidence("area-environment"),
+        `Località: ${job.location}`,
+        distanceLabelForJob(job, " da te"),
+        job.coordinates ? "Coordinate presenti" : "Coordinate non disponibili",
+        ...(workplace.facts || []).slice(1, 3)
       ]
     },
     {
       tone: "market",
       title: "Tariffe e mercato",
       status: market ? `${formatHourlyRange(market.min, market.max)} osservato` : "Dato non sufficiente",
-      text: market
-        ? `Il confronto usa ${market.count} retribuzioni pubblicate in offerte simili nel perimetro della ricerca. Serve a capire se la proposta e in linea, sotto o sopra il mercato osservato.`
-        : "Le offerte simili non pubblicano abbastanza retribuzioni leggibili per costruire un confronto affidabile.",
-      links: [
-        { label: "Cerca tariffe simili", href: webSearchUrl(wageTerms) },
-        { label: "Cerca offerte concorrenti", href: webSearchUrl(`${job.category === "oss" ? "OSS" : "infermiere"} ${job.location} offerte lavoro`) }
-      ]
+      text: dossierText("market-rates", market
+        ? `La stima usa retribuzioni pubblicate in offerte simili nel perimetro della ricerca. Questo permette di leggere la proposta rispetto al mercato osservato, senza uscire dalla piattaforma.`
+        : "Le offerte simili non pubblicano abbastanza retribuzioni leggibili per costruire un confronto affidabile."),
+      evidence: market
+        ? [
+            ...dossierEvidence("market-rates"),
+            `${market.count} retribuzioni confrontate`,
+            `Mediana: ${formatHourlyRange(market.median, market.median)}`,
+            `Range: ${formatHourlyRange(market.min, market.max)}`,
+            publishedSalary ? `Questa offerta: ${formatHourlyRange(publishedSalary.low, publishedSalary.high)}` : "Questa offerta non pubblica compenso"
+          ]
+        : [...dossierEvidence("market-rates"), "Compensi insufficienti nelle fonti", job.salary || "Retribuzione non pubblicata"]
     }
   ];
 }
@@ -2724,7 +2756,7 @@ function renderCrossWebDossier(job) {
     <div class="cross-web-dossier">
       <div class="cross-web-intro">
         <strong>Dossier ramificato sull'offerta</strong>
-        <p>La scheda non legge solo l'annuncio: apre rami di controllo su fonte, datore o struttura, reputazione professionale, zona e tariffe pubblicate.</p>
+        <p>La scheda non rimanda l'utente a Google: mostra qui la sintesi dei controlli disponibili su fonte, datore o struttura, reputazione professionale, zona e tariffe pubblicate.</p>
       </div>
       <div class="cross-web-grid">
         ${branches.map((branch) => `
@@ -2732,7 +2764,7 @@ function renderCrossWebDossier(job) {
             <small>${escapeHtml(branch.status)}</small>
             <h3>${escapeHtml(branch.title)}</h3>
             <p>${escapeHtml(branch.text)}</p>
-            ${renderDossierLinks(branch.links)}
+            ${renderDossierEvidence(branch.evidence)}
           </article>
         `).join("")}
       </div>
@@ -2766,11 +2798,9 @@ function renderDetail(jobId) {
             </article>
           `).join("")}
         </div>
-        ${professionalOpinionLinks(job)}
       `, { icon: "8", tone: "reviews", meta: "Esperienze professionali collegate" })
     : detailSection("Reputazione professionale", `
-        <p class="content-note">Per questa offerta non sono ancora presenti valutazioni professionali collegate alla struttura. Puoi approfondire i segnali online sul datore o sul luogo prima di candidarti.</p>
-        ${professionalOpinionLinks(job)}
+        <p class="content-note">Per questa offerta non sono ancora presenti valutazioni professionali collegate alla struttura. RadarSanita non inventa un punteggio: segnala il vuoto e lo separa dagli altri dati dell'offerta.</p>
       `, { icon: "8", tone: "reviews", meta: "Da approfondire prima della decisione" });
   jobDetail.innerHTML = `
     <div class="detail-page">
@@ -3503,7 +3533,7 @@ function moveSearchGuide(targetIndex) {
   const currentIndex = steps.findIndex((step) => step.classList.contains("active-step"));
   if (currentIndex > -1 && boundedIndex > currentIndex && !validateSearchGuideStep(currentIndex)) return;
   updateSearchGuideProgress(boundedIndex);
-  steps[boundedIndex]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  document.getElementById("searchForm")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function setupSearchVerticalFlow() {
@@ -3521,16 +3551,6 @@ function setupSearchVerticalFlow() {
     step.appendChild(actions);
   });
   updateSearchGuideProgress(0);
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!visible) return;
-      updateSearchGuideProgress(Number(visible.target.dataset.guideIndex || 0));
-    }, { threshold: [0.55], root: document.getElementById("searchForm") });
-    steps.forEach((step) => observer.observe(step));
-  }
 }
 
 document.addEventListener("click", (event) => {
@@ -3584,6 +3604,10 @@ document.addEventListener("click", (event) => {
   } else if (action === "detail") {
     state.selectedJobId = jobId;
     navigate("detail");
+  } else if (action === "deck-prev") {
+    moveResultDeck(-1);
+  } else if (action === "deck-next") {
+    moveResultDeck(1);
   } else if (action === "guide-next" || action === "guide-prev") {
     moveSearchGuide(actionTarget.dataset.guideIndex);
   } else if (action === "apply") {

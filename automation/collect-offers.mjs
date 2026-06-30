@@ -166,14 +166,6 @@ function domainFromUrl(value) {
   }
 }
 
-function webSearchUrl(query) {
-  return `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-}
-
-function mapsSearchUrl(query) {
-  return `https://www.google.com/maps/search/${encodeURIComponent(query)}`;
-}
-
 function anonymousStructure(job) {
   return /nome non pubblicato|struttura.*non pubblicat|struttura socio-sanitaria/i.test(`${job.company} ${job.summary}`);
 }
@@ -183,61 +175,50 @@ function crossResearchFor(job) {
   const sourceDomain = domainFromUrl(sourceUrl) || job.source || "fonte";
   const isAnonymous = anonymousStructure(job);
   const role = job.category === "oss" ? "OSS" : "infermiere";
-  const structureTerms = isAnonymous
-    ? `${job.title} ${job.location} ${sourceDomain}`
-    : `${job.company} ${job.location}`;
 
   return {
     status: "partial",
     checked: checkedLabel(),
-    principle: "Dossier generato per ramificare la verifica oltre il singolo annuncio.",
+    principle: "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
     branches: [
       {
         id: "offer-source",
         label: "Annuncio e candidatura",
         status: sourceUrl ? "source-openable" : "source-missing",
         evidence: sourceUrl ? [sourceUrl] : [],
-        searches: sourceUrl ? [] : [webSearchUrl(`${job.title} ${job.location} annuncio lavoro`)]
+        synthesis: sourceUrl
+          ? `Annuncio letto da ${job.source || sourceDomain}; candidatura sul canale originale.`
+          : "La fonte non espone un link sicuro apribile dalla scheda."
       },
       {
         id: "structure-employer",
         label: "Struttura o datore",
         status: isAnonymous ? "structure-name-hidden" : "structure-name-available",
         evidence: isAnonymous ? [] : [job.company, job.location].filter(Boolean),
-        searches: [
-          webSearchUrl(structureTerms),
-          mapsSearchUrl(isAnonymous ? job.location : `${job.company} ${job.location}`)
-        ]
+        synthesis: isAnonymous
+          ? "La struttura non è nominata: non attribuire reputazione o ambiente a un luogo non certo."
+          : `Datore indicato: ${job.company}; sede dichiarata: ${job.location}.`
       },
       {
         id: "professional-reputation",
         label: "Reputazione professionale",
         status: "needs-cross-check",
         evidence: [],
-        searches: [
-          webSearchUrl(`${structureTerms} opinioni lavoro ${role} dipendenti operatori sanitari`),
-          webSearchUrl(`${job.company} recensioni lavoro operatori sanitari`)
-        ]
+        synthesis: "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
       },
       {
         id: "area-environment",
         label: "Zona e ambiente",
         status: job.coordinates ? "geolocated" : "declared-location",
         evidence: [job.location].filter(Boolean),
-        searches: [
-          mapsSearchUrl(job.location),
-          webSearchUrl(`${job.location} ${role} lavoro sanita trasporti parcheggi`)
-        ]
+        synthesis: `${job.location || "Sede non dichiarata"} è la base logistica usata per distanza, raggio e compatibilità con la ricerca.`
       },
       {
         id: "market-rates",
         label: "Tariffe e offerte concorrenti",
         status: "computed-in-app-from-published-wages",
         evidence: [job.salary].filter((value) => value && !/non pubblic/i.test(value)),
-        searches: [
-          webSearchUrl(`${role} ${job.location} stipendio retribuzione offerta lavoro`),
-          webSearchUrl(`${role} ${job.location} offerte lavoro sanita`)
-        ]
+        synthesis: `Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo ${role}.`
       }
     ]
   };

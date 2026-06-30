@@ -2748,7 +2748,7 @@ fieldset {
   background: #fffaf2;
 }
 
-.web-dossier-links {
+.web-dossier-evidence {
   position: relative;
   z-index: 1;
   display: flex;
@@ -2757,7 +2757,7 @@ fieldset {
   margin-top: 12px;
 }
 
-.web-dossier-links a {
+.web-dossier-evidence span {
   display: inline-flex;
   align-items: center;
   min-height: 32px;
@@ -2768,7 +2768,6 @@ fieldset {
   background: rgba(255, 255, 255, 0.88);
   font-size: 11px;
   font-weight: 850;
-  text-decoration: none;
 }
 
 .why-box strong {
@@ -8937,5 +8936,152 @@ a.source-registry-item:focus-visible {
 
   .result-swipe-card .list-actions {
     grid-template-columns: 1fr;
+  }
+}
+
+/* v61: guided deck mode. One active step/card at a time, no nested snap scrolling. */
+@keyframes deckCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-vertical-flow {
+  max-height: none !important;
+  overflow: visible !important;
+  scroll-snap-type: none !important;
+  overscroll-behavior: auto;
+}
+
+.search-vertical-flow .search-intake-heading,
+.vertical-guide-strip {
+  position: static !important;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.vertical-guide-strip {
+  flex-wrap: nowrap;
+  margin: 0 0 16px;
+  padding: 0 0 4px;
+}
+
+.search-vertical-flow .search-intake-grid {
+  display: contents;
+}
+
+.search-vertical-flow .search-intake-step {
+  display: none !important;
+  min-height: auto !important;
+  margin-bottom: 0;
+  scroll-snap-align: none !important;
+}
+
+.search-vertical-flow .search-intake-step.active-step {
+  display: grid !important;
+  animation: deckCardIn 220ms ease;
+}
+
+.journey-step-actions {
+  position: static !important;
+  grid-column: 2;
+  margin-top: 18px;
+  padding: 0;
+  background: transparent;
+}
+
+.deck-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  margin: 0 0 14px;
+  padding: 10px;
+  border: 1px solid rgba(15, 118, 110, 0.13);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.deck-controls.hidden {
+  display: none !important;
+}
+
+.deck-controls span {
+  color: var(--teal-900);
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.deck-controls button {
+  min-height: 42px;
+}
+
+.deck-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+}
+
+.result-deck {
+  max-height: none !important;
+  padding-right: 0;
+  overflow: visible !important;
+  scroll-snap-type: none !important;
+  overscroll-behavior: auto;
+}
+
+.result-swipe-card {
+  display: none;
+  min-height: auto !important;
+  scroll-snap-align: none !important;
+}
+
+.result-swipe-card.deck-active {
+  display: block;
+  animation: deckCardIn 220ms ease;
+}
+
+.result-swipe-card .job-list-layout {
+  min-height: auto !important;
+}
+
+@media (max-width: 760px) {
+  .search-vertical-flow {
+    margin: 0;
+    padding: 0;
+  }
+
+  .search-vertical-flow .search-intake-heading {
+    margin: 0 0 14px;
+    padding: 0;
+  }
+
+  .search-vertical-flow .search-intake-step.active-step {
+    grid-template-columns: 40px minmax(0, 1fr);
+    padding: 16px;
+  }
+
+  .journey-step-actions {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .deck-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-controls span {
+    order: -1;
+  }
+
+  .result-swipe-card.deck-active {
+    padding: 16px;
   }
 }
