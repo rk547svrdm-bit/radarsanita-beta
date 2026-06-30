@@ -2164,12 +2164,16 @@ function jobCard(job) {
   `;
 }
 
-function jobListCard(job) {
+function jobListCard(job, index = 0, total = 1) {
   const saved = state.saved.has(job.id);
   const workplace = workplaceFor(job);
   const sourceUrl = jobSourceUrl(job);
   return `
-    <article class="job-list-card">
+    <article class="job-list-card result-swipe-card" data-deck-index="${index}" aria-label="Offerta ${index + 1} di ${total}: ${escapeHtml(job.title)}">
+      <div class="deck-card-kicker">
+        <span>${index + 1} di ${total}</span>
+        <strong>${state.softFallbackActive ? "Da verificare" : "Compatibile"}</strong>
+      </div>
       <div class="job-list-layout">
         ${renderOfferMedia(job, "list")}
         <div class="job-list-main">
@@ -2183,6 +2187,9 @@ function jobListCard(job) {
               ${sourceProvenance(job)}
               ${operatorFeedbackBadge(job)}
               ${sourceChips(job)}
+              <div class="deck-reason-strip">
+                ${job.reasons.slice(0, 2).map((reason) => `<span>${escapeHtml(reason)}</span>`).join("")}
+              </div>
             </div>
             <button
               class="save-button ${saved ? "saved" : ""}"
@@ -2193,7 +2200,6 @@ function jobListCard(job) {
           </div>
           <div class="list-card-body">
             <div class="list-facts">
-              ${matchTrail(job)}
               <span class="fact-pill">${job.contract}</span>
               <span class="fact-pill">${job.schedule}</span>
               <span class="fact-pill">${job.shifts}</span>
@@ -2201,10 +2207,11 @@ function jobListCard(job) {
             </div>
             <div class="list-actions">
               <button class="secondary-button" data-action="detail" data-job-id="${job.id}">
-                Apri dettagli
+                Entra nella scheda
               </button>
               ${sourceUrl ? `<a class="primary-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Apri fonte</a>` : ""}
             </div>
+            <small class="deck-card-hint">Scorri verso il basso per la prossima offerta.</small>
           </div>
         </div>
       </div>
@@ -2354,8 +2361,9 @@ function renderResults() {
   resultCount.textContent = state.softFallbackActive
     ? `${state.filteredJobs.length} ${state.filteredJobs.length === 1 ? "scheda da verificare" : "schede da verificare"}`
     : `${state.filteredJobs.length} ${state.filteredJobs.length === 1 ? "offerta" : "offerte"}`;
-  jobList.innerHTML = state.filteredJobs.map(jobListCard).join("");
+  jobList.innerHTML = state.filteredJobs.map((job, index) => jobListCard(job, index, state.filteredJobs.length)).join("");
   empty.classList.toggle("hidden", state.filteredJobs.length > 0);
+  document.getElementById("resultDeckIntro")?.classList.toggle("hidden", state.filteredJobs.length === 0);
   renderResultsTriage();
   renderScreening();
   renderPersonalMarket();
@@ -3137,7 +3145,7 @@ function setSearchOriginFromPreset(target) {
 function requestSearchLocation({ automatic = false, force = false } = {}) {
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
-  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=57";
+  const publicAppUrl = "https://rk547svrdm-bit.github.io/radarsanita-beta/?v=58";
 
   if (state.locationRequestInFlight || (automatic && state.locationRequestAttempted)) return;
   if (state.searchOrigin && !force) {
@@ -3192,6 +3200,88 @@ function requestSearchLocation({ automatic = false, force = false } = {}) {
   );
 }
 
+function searchGuideSteps() {
+  return Array.from(document.querySelectorAll("#searchForm .search-intake-step"));
+}
+
+function updateSearchGuideProgress(activeIndex = 0) {
+  document.querySelectorAll(".vertical-guide-strip span").forEach((item, index) => {
+    item.classList.toggle("active", index === activeIndex);
+    item.classList.toggle("done", index < activeIndex);
+  });
+  searchGuideSteps().forEach((step, index) => {
+    step.classList.toggle("active-step", index === activeIndex);
+  });
+}
+
+function validateSearchGuideStep(index) {
+  const role = document.getElementById("searchRole")?.value;
+  const distance = Number(document.getElementById("searchDistance")?.value);
+  const shifts = compactChoices(readCheckedValues("searchShift"));
+  const availability = compactChoices(readCheckedValues("searchAvailability"));
+  const origin = validCoordinates(state.searchOrigin);
+
+  if (index === 0 && !role) {
+    showToast("Scegli prima il profilo");
+    document.getElementById("searchRole")?.focus();
+    return false;
+  }
+  if (index === 1) {
+    if (!distance) {
+      showToast("Scegli il raggio di ricerca");
+      document.getElementById("searchDistance")?.focus();
+      return false;
+    }
+    if (distance < 9999 && !origin) {
+      showToast("Imposta una posizione o scegli tutta Italia");
+      document.getElementById("searchPlace")?.focus();
+      return false;
+    }
+  }
+  if (index === 2 && (!shifts.length || !availability.length)) {
+    showToast("Scegli turni e disponibilità");
+    document.querySelector('input[name="searchShift"]')?.focus();
+    return false;
+  }
+  return true;
+}
+
+function moveSearchGuide(targetIndex) {
+  const steps = searchGuideSteps();
+  const boundedIndex = Math.max(0, Math.min(Number(targetIndex), steps.length - 1));
+  const currentIndex = steps.findIndex((step) => step.classList.contains("active-step"));
+  if (currentIndex > -1 && boundedIndex > currentIndex && !validateSearchGuideStep(currentIndex)) return;
+  updateSearchGuideProgress(boundedIndex);
+  steps[boundedIndex]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function setupSearchVerticalFlow() {
+  const steps = searchGuideSteps();
+  if (!steps.length) return;
+  steps.forEach((step, index) => {
+    step.dataset.guideIndex = String(index);
+    if (step.querySelector(".journey-step-actions")) return;
+    const actions = document.createElement("div");
+    actions.className = "journey-step-actions";
+    actions.innerHTML = `
+      ${index > 0 ? `<button class="secondary-button" type="button" data-action="guide-prev" data-guide-index="${index - 1}">Indietro</button>` : ""}
+      ${index < steps.length - 1 ? `<button class="primary-button" type="button" data-action="guide-next" data-guide-index="${index + 1}">Avanti</button>` : `<span class="journey-end-note">Ultimo passo: elabora la ricerca.</span>`}
+    `;
+    step.appendChild(actions);
+  });
+  updateSearchGuideProgress(0);
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      updateSearchGuideProgress(Number(visible.target.dataset.guideIndex || 0));
+    }, { threshold: [0.55], root: document.getElementById("searchForm") });
+    steps.forEach((step) => observer.observe(step));
+  }
+}
+
 document.addEventListener("click", (event) => {
   const ratePeriodTarget = event.target.closest("[data-rate-period]");
   if (ratePeriodTarget) {
@@ -3243,6 +3333,8 @@ document.addEventListener("click", (event) => {
   } else if (action === "detail") {
     state.selectedJobId = jobId;
     navigate("detail");
+  } else if (action === "guide-next" || action === "guide-prev") {
+    moveSearchGuide(actionTarget.dataset.guideIndex);
   } else if (action === "apply") {
     state.selectedJobId = jobId;
     state.wizardStep = 1;
@@ -3395,7 +3487,9 @@ document.getElementById("searchForm").addEventListener("submit", (event) => {
   syncResultControlsFromSearch();
   document.getElementById("resultsSummary").textContent = resultsSummaryForProfile();
   navigate("results");
-  window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+  window.requestAnimationFrame(() => {
+    document.getElementById("resultDeckIntro")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 });
 
 document.getElementById("offerReviewForm")?.addEventListener("submit", (event) => {
@@ -3447,6 +3541,7 @@ document.getElementById("resetFilters").addEventListener("click", resetFilters);
 document.getElementById("emptyReset").addEventListener("click", () => navigate("home"));
 document.getElementById("italyMap")?.addEventListener("click", setSearchOriginFromMapEvent);
 
+setupSearchVerticalFlow();
 renderCoverageDashboard();
 renderSourceRegistry();
 renderRateMarket();

@@ -10,7 +10,7 @@
   <title>RadarSanità</title>
   <script>
     (() => {
-      const targetVersion = 57;
+      const targetVersion = 58;
       const params = new URLSearchParams(window.location.search);
       const currentVersion = Number(params.get("v"));
       if (currentVersion && currentVersion < targetVersion) {
@@ -19,7 +19,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=57">
+  <link rel="stylesheet" href="styles.css?v=58">
 </head>
 <body>
   <div class="app-shell">
@@ -281,10 +281,17 @@
           </div>
 
           <div class="search-workbench">
-            <form class="search-panel" id="searchForm">
+            <form class="search-panel search-vertical-flow" id="searchForm">
               <div class="search-intake-heading">
                 <span class="eyebrow">La tua ricerca</span>
                 <strong>Completa tutti i passaggi per vedere risultati.</strong>
+              </div>
+              <div class="vertical-guide-strip" aria-label="Avanzamento ricerca">
+                <span class="active">Profilo</span>
+                <span>Distanza</span>
+                <span>Vincoli</span>
+                <span>Contratto</span>
+                <span>Conferma</span>
               </div>
 
               <div class="search-intake-grid">
@@ -403,20 +410,31 @@
                 </section>
               </div>
 
-              <fieldset class="intake-contracts">
-                <legend>Contratto che valuti</legend>
-                <label class="check-row"><input type="checkbox" value="Tempo indeterminato" name="intakeContract"> Tempo indeterminato</label>
-                <label class="check-row"><input type="checkbox" value="Tempo determinato" name="intakeContract"> Tempo determinato</label>
-                <label class="check-row"><input type="checkbox" value="Partita IVA / libera professione" name="intakeContract"> Partita IVA</label>
-              </fieldset>
+              <section class="search-intake-step search-contract-step">
+                <span>04</span>
+                <div>
+                  <h2>Contratto</h2>
+                  <fieldset class="intake-contracts">
+                    <legend>Quali contratti valuti?</legend>
+                    <label class="check-row"><input type="checkbox" value="Tempo indeterminato" name="intakeContract"> Tempo indeterminato</label>
+                    <label class="check-row"><input type="checkbox" value="Tempo determinato" name="intakeContract"> Tempo determinato</label>
+                    <label class="check-row"><input type="checkbox" value="Partita IVA / libera professione" name="intakeContract"> Partita IVA</label>
+                  </fieldset>
+                </div>
+              </section>
 
-              <label class="search-label" for="searchNotes">Cosa vuoi evitare o trovare? <span>facoltativo</span></label>
-              <textarea id="searchNotes" rows="3" autocomplete="off" placeholder="Es. festivi solo occasionali, preferisco ambulatorio, auto disponibile..."></textarea>
-
-              <button class="primary-button search-button intake-submit" type="submit">
-                Elabora la mia ricerca
-              </button>
-            <p class="search-intake-note">Nessuna bacheca generale: vedrai solo risultati nel raggio e con i criteri scelti.</p>
+              <section class="search-intake-step search-confirm-step">
+                <span>05</span>
+                <div>
+                  <h2>Conferma</h2>
+                  <label class="search-label" for="searchNotes">Cosa vuoi evitare o trovare? <span>facoltativo</span></label>
+                  <textarea id="searchNotes" rows="3" autocomplete="off" placeholder="Es. festivi solo occasionali, preferisco ambulatorio, auto disponibile..."></textarea>
+                  <button class="primary-button search-button intake-submit" type="submit">
+                    Elabora la mia ricerca
+                  </button>
+                  <p class="search-intake-note">Nessuna bacheca generale: vedrai solo risultati nel raggio e con i criteri scelti.</p>
+                </div>
+              </section>
             </form>
 
             <aside class="live-radar-panel" aria-label="Radar ricerca">
@@ -528,15 +546,6 @@
           </aside>
 
           <div class="results-content">
-            <section class="screening-panel" aria-labelledby="screeningTitle">
-              <div>
-                <span class="eyebrow">Scrematura guidata</span>
-                <h2 id="screeningTitle">Perché vedi questi risultati</h2>
-                <p id="screeningSummary">RadarSanità applica filtri dichiarati e accorpa le offerte uguali trovate su più fonti.</p>
-              </div>
-              <div class="screening-grid" id="screeningGrid"></div>
-            </section>
-
             <div class="results-toolbar">
               <strong id="resultCount">0 offerte</strong>
               <label>
@@ -548,7 +557,12 @@
                 </select>
               </label>
             </div>
-            <div class="job-list" id="jobList"></div>
+            <div class="result-deck-intro" id="resultDeckIntro">
+              <span>Deck verticale</span>
+              <strong>Una facciata per offerta.</strong>
+              <small>Scorri verso il basso per passare alla proposta successiva, oppure apri la scheda completa.</small>
+            </div>
+            <div class="job-list result-deck" id="jobList" aria-label="Offerte in facciate verticali"></div>
             <div class="empty-state hidden" id="emptyState">
               <span class="empty-icon">⌕</span>
               <h2>Nessuna offerta verificata per la tua ricerca</h2>
@@ -557,6 +571,14 @@
               <button class="secondary-button" id="emptyReset">Modifica la ricerca</button>
             </div>
             <section class="personal-market-panel" id="personalMarketPanel" aria-live="polite"></section>
+            <section class="screening-panel" aria-labelledby="screeningTitle">
+              <div>
+                <span class="eyebrow">Scrematura guidata</span>
+                <h2 id="screeningTitle">Perché vedi questi risultati</h2>
+                <p id="screeningSummary">RadarSanità applica filtri dichiarati e accorpa le offerte uguali trovate su più fonti.</p>
+              </div>
+              <div class="screening-grid" id="screeningGrid"></div>
+            </section>
           </div>
         </div>
       </section>
@@ -764,7 +786,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=57"></script>
-  <script src="app.js?v=57"></script>
+  <script src="data.js?v=58"></script>
+  <script src="app.js?v=58"></script>
 </body>
 </html>
