@@ -10,7 +10,7 @@
   <title>RadarSanità</title>
   <script>
     (() => {
-      const targetVersion = 61;
+      const targetVersion = 62;
       const params = new URLSearchParams(window.location.search);
       const currentVersion = Number(params.get("v"));
       if (currentVersion && currentVersion < targetVersion) {
@@ -19,7 +19,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=61">
+  <link rel="stylesheet" href="styles.css?v=62">
 </head>
 <body>
   <div class="app-shell">
@@ -286,6 +286,17 @@
                 <span class="eyebrow">La tua ricerca</span>
                 <strong>Completa tutti i passaggi per vedere risultati.</strong>
               </div>
+              <div class="saved-search-panel" id="savedSearchPanel" aria-live="polite">
+                <div>
+                  <span>Profilo ricerca</span>
+                  <strong id="savedSearchSummary">Nessun profilo salvato</strong>
+                </div>
+                <div class="saved-search-actions">
+                  <button class="secondary-button" type="button" data-action="load-search-profile">Carica</button>
+                  <button class="primary-button" type="button" data-action="save-search-profile">Salva</button>
+                  <button class="text-button" type="button" data-action="clear-search-profile">Elimina</button>
+                </div>
+              </div>
               <div class="vertical-guide-strip" aria-label="Avanzamento ricerca">
                 <span class="active">Profilo</span>
                 <span>Distanza</span>
@@ -375,14 +386,14 @@
                       </div>
                     </div>
                     <label for="searchDistance">Entro quale distanza vuoi cercare?</label>
-                    <select id="searchDistance" required>
-                      <option value="">Scegli una distanza</option>
-                      <option value="10">Entro 10 km</option>
-                      <option value="15">Entro 15 km</option>
-                      <option value="30">Entro 30 km</option>
-                      <option value="50">Entro 50 km</option>
-                      <option value="9999">In tutta Italia</option>
-                    </select>
+                    <div class="distance-input-row">
+                      <input id="searchDistance" type="number" min="1" max="9998" step="1" inputmode="numeric" placeholder="Es. 22">
+                      <span>km</span>
+                    </div>
+                    <label class="check-row distance-national-toggle">
+                      <input id="searchNational" type="checkbox">
+                      Cerca in tutta Italia
+                    </label>
                   </div>
                 </section>
 
@@ -497,14 +508,14 @@
             </select>
 
             <label class="field-label spaced-label" for="distanceFilter">Distanza massima</label>
-            <select id="distanceFilter">
-              <option value="100">Qualsiasi</option>
-              <option value="30" selected>30 km</option>
-              <option value="15">15 km</option>
-              <option value="10">10 km</option>
-              <option value="50">50 km</option>
-              <option value="9999">Nessun limite nazionale</option>
-            </select>
+            <div class="distance-input-row compact-distance">
+              <input id="distanceFilter" type="number" min="1" max="9998" step="1" inputmode="numeric" value="30">
+              <span>km</span>
+            </div>
+            <label class="check-row distance-national-toggle">
+              <input id="distanceFilterNational" type="checkbox">
+              Nessun limite nazionale
+            </label>
 
             <fieldset>
               <legend>Contratto</legend>
@@ -794,7 +805,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=61"></script>
-  <script src="app.js?v=61"></script>
+  <script src="data.js?v=62"></script>
+  <script src="app.js?v=62"></script>
 </body>
 </html>

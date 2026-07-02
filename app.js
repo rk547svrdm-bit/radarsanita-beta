@@ -602,6 +602,7 @@ var workplaceProfiles = window.RADAR_DATA?.workplaceProfiles || {
 
 const LOCAL_STORAGE_KEYS = {
   profile: "radarSanita.profile.v1",
+  searchProfile: "radarSanita.searchProfile.v1",
   applications: "radarSanita.applications.v1",
   feedbackSubmissions: "radarSanita.feedbackSubmissions.v1",
   sponsorRequests: "radarSanita.sponsorRequests.v1"
@@ -665,6 +666,21 @@ function loadApplicationRecords() {
     }));
 }
 
+function loadSavedSearchProfile() {
+  const profile = readLocalJson(LOCAL_STORAGE_KEYS.searchProfile, null);
+  if (!profile || typeof profile !== "object") return null;
+  return {
+    role: ["infermiere", "oss"].includes(profile.role) ? profile.role : "",
+    distance: Number(profile.distance) || 0,
+    origin: validCoordinates(profile.origin) ? { ...profile.origin, label: cleanLocalText(profile.origin.label || "posizione salvata") } : null,
+    shifts: choiceArray(profile.shifts).length ? choiceArray(profile.shifts) : ["any"],
+    availability: choiceArray(profile.availability).length ? choiceArray(profile.availability) : ["any"],
+    contracts: choiceArray(profile.contracts),
+    notes: cleanLocalText(profile.notes || ""),
+    updatedAt: profile.updatedAt || null
+  };
+}
+
 const state = {
   route: "intro",
   selectedJobId: "aurora",
@@ -691,6 +707,7 @@ const state = {
     contracts: [],
     notes: ""
   },
+  savedSearchProfile: loadSavedSearchProfile(),
   lastReviewPrompt: "",
   localProfile: loadLocalProfile(),
   applicationRecords: loadApplicationRecords(),
@@ -745,6 +762,7 @@ const personalMarketPanel = document.getElementById("personalMarketPanel");
 const feedbackRegistry = document.getElementById("feedbackRegistry");
 const sponsorRegistry = document.getElementById("sponsorRegistry");
 const deckProgress = document.getElementById("deckProgress");
+const savedSearchSummary = document.getElementById("savedSearchSummary");
 
 function updateLiveSourceCounters(count) {
   const safeCount = Number(count) || 13;
@@ -1767,6 +1785,144 @@ function choicesLabel(values, labels, fallback) {
   return selected.map((value) => labels[value]).filter(Boolean).join(", ");
 }
 
+function isNationalDistance(distance) {
+  return Number(distance) >= 9999;
+}
+
+function readDistanceControl(inputId, nationalId) {
+  const national = document.getElementById(nationalId)?.checked;
+  if (national) return 9999;
+  return Number(document.getElementById(inputId)?.value) || 0;
+}
+
+function readResultDistanceControl() {
+  return readDistanceControl("distanceFilter", "distanceFilterNational") || 9999;
+}
+
+function setDistanceControlValue(inputId, nationalId, distance) {
+  const input = document.getElementById(inputId);
+  const national = document.getElementById(nationalId);
+  const value = Number(distance) || 0;
+  if (national) national.checked = isNationalDistance(value);
+  if (input) {
+    input.value = isNationalDistance(value) ? "" : (value ? String(value) : "");
+  }
+  syncDistanceMode(inputId, nationalId);
+}
+
+function syncDistanceMode(inputId, nationalId) {
+  const input = document.getElementById(inputId);
+  const national = document.getElementById(nationalId);
+  if (!input || !national) return;
+  input.disabled = national.checked;
+  input.required = !national.checked;
+}
+
+function collectSearchProfileFromForm() {
+  const role = document.getElementById("searchRole")?.value || "";
+  const distance = readDistanceControl("searchDistance", "searchNational");
+  const shifts = compactChoices(readCheckedValues("searchShift"));
+  const availability = compactChoices(readCheckedValues("searchAvailability"));
+  const contracts = Array.from(document.querySelectorAll('input[name="intakeContract"]:checked')).map((input) => input.value);
+  const notes = document.getElementById("searchNotes")?.value.trim() || "";
+  const origin = validCoordinates(state.searchOrigin);
+  return {
+    role,
+    distance,
+    origin: origin ? { ...origin, label: state.searchOrigin.label } : null,
+    shifts,
+    availability,
+    contracts,
+    notes
+  };
+}
+
+function validateSearchProfile(profile) {
+  const requiredFields = [
+    [profile.role, "il profilo professionale", "searchRole"],
+    [profile.distance, "la distanza massima", "searchDistance"],
+    [profile.shifts.length, "l'organizzazione dei turni", "searchShift"],
+    [profile.availability.length, "la disponibilità", "searchAvailability"]
+  ];
+  const missingField = requiredFields.find(([value]) => !value);
+  if (missingField) {
+    showToast(`Completa ${missingField[1]}`);
+    document.getElementById(missingField[2])?.focus();
+    document.querySelector(`input[name="${missingField[2]}"]`)?.focus();
+    return false;
+  }
+  if (!isNationalDistance(profile.distance) && !profile.origin) {
+    showToast("Imposta una posizione o scegli tutta Italia");
+    document.getElementById("searchPlace")?.focus();
+    return false;
+  }
+  return true;
+}
+
+function savedSearchLabel(profile = state.savedSearchProfile) {
+  if (!profile) return "Nessun profilo salvato";
+  return [
+    searchRoleLabels[profile.role] || "Profilo",
+    searchDistanceLabel(profile),
+    shiftPreferenceLabel(profile.shifts),
+    availabilityPreferenceLabel(profile.availability)
+  ].filter(Boolean).join(" · ");
+}
+
+function renderSavedSearchProfile() {
+  if (!savedSearchSummary) return;
+  savedSearchSummary.textContent = savedSearchLabel();
+  document.getElementById("savedSearchPanel")?.classList.toggle("has-profile", Boolean(state.savedSearchProfile));
+  document.querySelectorAll('[data-action="load-search-profile"], [data-action="clear-search-profile"]').forEach((button) => {
+    button.disabled = !state.savedSearchProfile;
+  });
+}
+
+function applySearchProfileToForm(profile, options = {}) {
+  if (!profile) return false;
+  document.getElementById("searchRole").value = profile.role || "";
+  setDistanceControlValue("searchDistance", "searchNational", profile.distance);
+  state.searchOrigin = profile.origin ? { ...profile.origin } : null;
+  const locationInput = document.getElementById("searchLocation");
+  const locationHint = document.getElementById("searchLocationHint");
+  const placeInput = document.getElementById("searchPlace");
+  if (isNationalDistance(profile.distance)) {
+    if (locationInput) locationInput.value = "Ricerca in tutta Italia";
+    if (placeInput) placeInput.value = "";
+    if (locationHint) locationHint.textContent = "Ricerca nazionale: non richiede la posizione del dispositivo.";
+    updateSelectedPlaceCard("Tutta Italia", "Nessun raggio locale: vengono mostrate le offerte pubblicate nella raccolta nazionale.");
+  } else if (profile.origin) {
+    if (locationInput) locationInput.value = profile.origin.label || "posizione salvata";
+    if (placeInput) placeInput.value = profile.origin.label || "";
+    if (locationHint) locationHint.textContent = `Raggio pronto: i km partiranno da ${profile.origin.label || "posizione salvata"}.`;
+    updateSelectedPlaceCard(profile.origin.label || "posizione salvata", `Coordinate impostate: ${profile.origin.lat.toFixed(3)}, ${profile.origin.lng.toFixed(3)}.`);
+  }
+  setCheckedValues("searchShift", profile.shifts);
+  setCheckedValues("searchAvailability", profile.availability);
+  const contracts = new Set(choiceArray(profile.contracts).map(normalizeContractValue));
+  document.querySelectorAll('input[name="intakeContract"]').forEach((input) => {
+    input.checked = contracts.has(normalizeContractValue(input.value));
+  });
+  const notes = document.getElementById("searchNotes");
+  if (notes) notes.value = profile.notes || "";
+  updateSearchGuideProgress(0);
+  if (!options.silent) showToast("Profilo ricerca caricato");
+  return true;
+}
+
+function saveSearchProfile(profile = collectSearchProfileFromForm(), options = {}) {
+  if (!validateSearchProfile(profile)) return false;
+  const next = { ...profile, updatedAt: new Date().toISOString() };
+  if (!writeLocalJson(LOCAL_STORAGE_KEYS.searchProfile, next)) {
+    showToast("Non riesco a salvare su questo dispositivo");
+    return false;
+  }
+  state.savedSearchProfile = next;
+  renderSavedSearchProfile();
+  if (!options.silent) showToast("Profilo ricerca salvato");
+  return true;
+}
+
 function shiftPreferenceLabel(values) {
   return choicesLabel(values, shiftPreferenceLabels, "turni aperti");
 }
@@ -1967,7 +2123,7 @@ function syncResultControlsFromSearch() {
   const selectedContracts = new Set(profile.contracts.map(normalizeContractValue));
   selectCategory(roleCategory);
   document.getElementById("categoryFilter").value = roleCategory;
-  document.getElementById("distanceFilter").value = String(profile.distance);
+  setDistanceControlValue("distanceFilter", "distanceFilterNational", profile.distance);
   setCheckedValues("shiftFilter", profile.shifts);
   setCheckedValues("availabilityFilter", profile.availability);
   document.querySelectorAll('input[name="contract"]').forEach((input) => {
@@ -1990,7 +2146,7 @@ function renderScreening() {
   if (!screeningGrid) return;
   const publishedJobs = jobs.filter((job) => job.publicationStatus === "published");
   const excludedByNight = publishedJobs.filter((job) => job.nights).length;
-  const activeDistance = Number(document.getElementById("distanceFilter").value);
+  const activeDistance = readResultDistanceControl();
   const outsideDistance = activeDistance >= 9999 ? 0 : publishedJobs.filter((job) => {
     const distance = distanceFromSearchOrigin(job);
     return distance === null || distance > activeDistance;
@@ -2316,7 +2472,7 @@ function applyJobFilters() {
     state.softFallbackActive = false;
     return;
   }
-  const maxDistance = Number(document.getElementById("distanceFilter").value);
+  const maxDistance = readResultDistanceControl();
   const contracts = Array.from(document.querySelectorAll('input[name="contract"]:checked'))
     .map((input) => input.value);
   const shiftPreference = readCheckedValues("shiftFilter");
@@ -3382,10 +3538,13 @@ function useNationalSearchFallback(message = "Ricerca nazionale pronta: non rich
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
   const distanceInput = document.getElementById("searchDistance");
+  const nationalInput = document.getElementById("searchNational");
   const placeInput = document.getElementById("searchPlace");
   if (locationInput) locationInput.value = "Ricerca in tutta Italia";
   if (placeInput) placeInput.value = "";
-  if (distanceInput) distanceInput.value = "9999";
+  if (nationalInput) nationalInput.checked = true;
+  if (distanceInput) distanceInput.value = "";
+  syncDistanceMode("searchDistance", "searchNational");
   if (locationHint) locationHint.textContent = message;
   updateSelectedPlaceCard("Tutta Italia", "Nessun raggio locale: vengono mostrate le offerte pubblicate nella raccolta nazionale.");
   showToast("Ricerca nazionale impostata");
@@ -3398,6 +3557,13 @@ function setSearchOrigin(lat, lng, label, pin = null) {
   const locationInput = document.getElementById("searchLocation");
   const locationHint = document.getElementById("searchLocationHint");
   const placeInput = document.getElementById("searchPlace");
+  const nationalInput = document.getElementById("searchNational");
+  const distanceInput = document.getElementById("searchDistance");
+  if (nationalInput?.checked) {
+    nationalInput.checked = false;
+    if (distanceInput && !distanceInput.value) distanceInput.value = "30";
+    syncDistanceMode("searchDistance", "searchNational");
+  }
   if (locationInput) locationInput.value = label;
   if (placeInput && label !== "la tua posizione attuale") placeInput.value = label;
   if (locationHint) locationHint.textContent = `Raggio pronto: i km partiranno da ${label}.`;
@@ -3497,7 +3663,7 @@ function updateSearchGuideProgress(activeIndex = 0) {
 
 function validateSearchGuideStep(index) {
   const role = document.getElementById("searchRole")?.value;
-  const distance = Number(document.getElementById("searchDistance")?.value);
+  const distance = readDistanceControl("searchDistance", "searchNational");
   const shifts = compactChoices(readCheckedValues("searchShift"));
   const availability = compactChoices(readCheckedValues("searchAvailability"));
   const origin = validCoordinates(state.searchOrigin);
@@ -3513,7 +3679,7 @@ function validateSearchGuideStep(index) {
       document.getElementById("searchDistance")?.focus();
       return false;
     }
-    if (distance < 9999 && !origin) {
+    if (!isNationalDistance(distance) && !origin) {
       showToast("Imposta una posizione o scegli tutta Italia");
       document.getElementById("searchPlace")?.focus();
       return false;
@@ -3707,6 +3873,19 @@ document.addEventListener("click", (event) => {
   } else if (action === "open-sources") {
     navigate("info");
     window.setTimeout(() => document.getElementById("sourceRegistry")?.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
+  } else if (action === "save-search-profile") {
+    saveSearchProfile();
+  } else if (action === "load-search-profile") {
+    if (!state.savedSearchProfile) {
+      showToast("Nessun profilo ricerca salvato");
+      return;
+    }
+    applySearchProfileToForm(state.savedSearchProfile);
+  } else if (action === "clear-search-profile") {
+    window.localStorage.removeItem(LOCAL_STORAGE_KEYS.searchProfile);
+    state.savedSearchProfile = null;
+    renderSavedSearchProfile();
+    showToast("Profilo ricerca eliminato");
   } else if (action === "locate-search") {
     requestSearchLocation({ force: true });
   } else if (action === "use-national-search") {
@@ -3736,51 +3915,46 @@ document.addEventListener("change", (event) => {
   if (["searchShift", "searchAvailability", "shiftFilter", "availabilityFilter"].includes(target.name)) {
     keepAnyChoiceExclusive(target.name, target);
   }
+  if (target.id === "searchNational") {
+    if (target.checked) {
+      useNationalSearchFallback();
+    } else {
+      const distanceInput = document.getElementById("searchDistance");
+      if (distanceInput && !distanceInput.value) distanceInput.value = "30";
+      syncDistanceMode("searchDistance", "searchNational");
+    }
+  }
+  if (target.id === "distanceFilterNational") {
+    if (!target.checked) {
+      const distanceInput = document.getElementById("distanceFilter");
+      if (distanceInput && !distanceInput.value) distanceInput.value = String(state.searchProfile.distance && !isNationalDistance(state.searchProfile.distance) ? state.searchProfile.distance : 30);
+    }
+    syncDistanceMode("distanceFilter", "distanceFilterNational");
+    applyJobFilters();
+  }
+});
+
+document.addEventListener("input", (event) => {
+  const target = event.target;
+  if (!(target instanceof HTMLInputElement)) return;
+  if (target.id === "distanceFilter") {
+    document.getElementById("distanceFilterNational").checked = false;
+    syncDistanceMode("distanceFilter", "distanceFilterNational");
+    applyJobFilters();
+  }
 });
 
 document.getElementById("searchForm").addEventListener("submit", (event) => {
   event.preventDefault();
-  const role = document.getElementById("searchRole").value;
-  const distance = Number(document.getElementById("searchDistance").value);
-  const shifts = compactChoices(readCheckedValues("searchShift"));
-  const availability = compactChoices(readCheckedValues("searchAvailability"));
-  const contracts = Array.from(document.querySelectorAll('input[name="intakeContract"]:checked')).map((input) => input.value);
-  const notes = document.getElementById("searchNotes").value.trim();
-  const origin = validCoordinates(state.searchOrigin);
+  const profile = collectSearchProfileFromForm();
+  if (!validateSearchProfile(profile)) return;
 
-  const requiredFields = [
-    [role, "il profilo professionale", "searchRole"],
-    [distance, "la distanza massima", "searchDistance"],
-    [shifts.length, "l'organizzazione dei turni", "searchShift"],
-    [availability.length, "la disponibilità", "searchAvailability"]
-  ];
-  const missingField = requiredFields.find(([value]) => !value);
-  if (missingField) {
-    showToast(`Completa ${missingField[1]}`);
-    document.getElementById(missingField[2])?.focus();
-    document.querySelector(`input[name="${missingField[2]}"]`)?.focus();
-    return;
-  }
-
-  if (!origin && distance < 9999) {
-    showToast("Attendi o autorizza la posizione per calcolare il raggio");
-    document.querySelector('[data-action="locate-search"]')?.focus();
-    return;
-  }
-
-  state.searchProfile = {
-    role,
-    distance,
-    origin: origin ? { ...origin, label: state.searchOrigin.label } : null,
-    shifts,
-    availability,
-    contracts,
-    notes
-  };
+  state.searchProfile = profile;
   state.searchCompleted = true;
   state.searchQuery = resultsSummaryForProfile();
-  state.localProfile = { role: searchRoleLabels[role], area: "Ricerca per distanza" };
+  state.localProfile = { role: searchRoleLabels[profile.role], area: searchDistanceLabel(profile) };
   writeLocalJson(LOCAL_STORAGE_KEYS.profile, state.localProfile);
+  saveSearchProfile(profile, { silent: true });
   syncResultControlsFromSearch();
   document.getElementById("resultsSummary").textContent = resultsSummaryForProfile();
   navigate("results");
@@ -3839,6 +4013,10 @@ document.getElementById("emptyReset").addEventListener("click", () => navigate("
 document.getElementById("italyMap")?.addEventListener("click", setSearchOriginFromMapEvent);
 
 setupSearchVerticalFlow();
+syncDistanceMode("searchDistance", "searchNational");
+syncDistanceMode("distanceFilter", "distanceFilterNational");
+renderSavedSearchProfile();
+if (state.savedSearchProfile) applySearchProfileToForm(state.savedSearchProfile, { silent: true });
 renderCoverageDashboard();
 renderSourceRegistry();
 renderRateMarket();
