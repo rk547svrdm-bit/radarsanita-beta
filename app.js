@@ -1923,6 +1923,28 @@ function saveSearchProfile(profile = collectSearchProfileFromForm(), options = {
   return true;
 }
 
+function resultControlsProfile() {
+  const contracts = Array.from(document.querySelectorAll('input[name="contract"]:checked')).map((input) => input.value);
+  return {
+    ...state.searchProfile,
+    distance: readResultDistanceControl(),
+    shifts: compactChoices(readCheckedValues("shiftFilter")),
+    availability: compactChoices(readCheckedValues("availabilityFilter")),
+    contracts
+  };
+}
+
+function toggleResultsFilters(forceOpen = null) {
+  const panel = document.getElementById("resultsFilters");
+  const button = document.getElementById("toggleResultsFilters");
+  if (!panel) return;
+  const shouldOpen = forceOpen === null ? panel.classList.contains("hidden") : Boolean(forceOpen);
+  panel.classList.toggle("hidden", !shouldOpen);
+  panel.closest(".results-layout")?.classList.toggle("filters-collapsed", !shouldOpen);
+  if (button) button.textContent = shouldOpen ? "Chiudi filtri" : "Filtri";
+  if (shouldOpen) panel.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function shiftPreferenceLabel(values) {
   return choicesLabel(values, shiftPreferenceLabels, "turni aperti");
 }
@@ -2541,7 +2563,7 @@ function moveResultDeck(delta) {
   if (!count) return;
   state.resultDeckIndex = Math.max(0, Math.min(state.resultDeckIndex + delta, count - 1));
   updateResultDeck();
-  document.getElementById("resultDeckIntro")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  document.getElementById("jobList")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function selectCategory(category) {
@@ -2561,7 +2583,6 @@ function renderResults() {
     : `${state.filteredJobs.length} ${state.filteredJobs.length === 1 ? "offerta" : "offerte"}`;
   jobList.innerHTML = state.filteredJobs.map((job, index) => jobListCard(job, index, state.filteredJobs.length)).join("");
   empty.classList.toggle("hidden", state.filteredJobs.length > 0);
-  document.getElementById("resultDeckIntro")?.classList.toggle("hidden", state.filteredJobs.length === 0);
   document.getElementById("deckControls")?.classList.toggle("hidden", state.filteredJobs.length === 0);
   updateResultDeck();
   renderResultsTriage();
@@ -2911,8 +2932,8 @@ function renderCrossWebDossier(job) {
   return `
     <div class="cross-web-dossier">
       <div class="cross-web-intro">
-        <strong>Dossier ramificato sull'offerta</strong>
-        <p>La scheda non rimanda l'utente a Google: mostra qui la sintesi dei controlli disponibili su fonte, datore o struttura, reputazione professionale, zona e tariffe pubblicate.</p>
+        <strong>Dossier offerta</strong>
+        <p>Qui trovi i dati utili per valutare la proposta: fonte, datore, reputazione professionale, sede e andamento delle tariffe nel perimetro della ricerca.</p>
       </div>
       <div class="cross-web-grid">
         ${branches.map((branch) => `
@@ -3886,6 +3907,14 @@ document.addEventListener("click", (event) => {
     state.savedSearchProfile = null;
     renderSavedSearchProfile();
     showToast("Profilo ricerca eliminato");
+  } else if (action === "toggle-results-filters") {
+    toggleResultsFilters();
+  } else if (action === "save-current-search-profile") {
+    if (!state.searchCompleted) {
+      showToast("Prima completa una ricerca");
+      return;
+    }
+    saveSearchProfile(resultControlsProfile());
   } else if (action === "locate-search") {
     requestSearchLocation({ force: true });
   } else if (action === "use-national-search") {
@@ -3959,7 +3988,7 @@ document.getElementById("searchForm").addEventListener("submit", (event) => {
   document.getElementById("resultsSummary").textContent = resultsSummaryForProfile();
   navigate("results");
   window.requestAnimationFrame(() => {
-    document.getElementById("resultDeckIntro")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById("jobList")?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
 
@@ -3989,7 +4018,10 @@ document.querySelectorAll(".filter-chip").forEach((chip) => {
 });
 
 document.getElementById("showAllJobs")?.addEventListener("click", () => navigate("results"));
-document.getElementById("applyFilters").addEventListener("click", applyJobFilters);
+document.getElementById("applyFilters").addEventListener("click", () => {
+  applyJobFilters();
+  toggleResultsFilters(false);
+});
 document.getElementById("sortJobs").addEventListener("change", applyJobFilters);
 document.querySelectorAll('input[name="shiftFilter"], input[name="availabilityFilter"]').forEach((input) => {
   input.addEventListener("change", applyJobFilters);

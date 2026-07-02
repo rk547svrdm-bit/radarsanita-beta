@@ -10,7 +10,7 @@
   <title>RadarSanità</title>
   <script>
     (() => {
-      const targetVersion = 62;
+      const targetVersion = 63;
       const params = new URLSearchParams(window.location.search);
       const currentVersion = Number(params.get("v"));
       if (currentVersion && currentVersion < targetVersion) {
@@ -19,7 +19,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=62">
+  <link rel="stylesheet" href="styles.css?v=63">
 </head>
 <body>
   <div class="app-shell">
@@ -485,14 +485,14 @@
           </div>
         </div>
 
-        <div class="triage-strip" id="resultsTriage" aria-label="Sintesi della tua ricerca">
+        <div class="triage-strip hidden" id="resultsTriage" aria-label="Sintesi della tua ricerca">
           <div><small>Prima scelta</small><strong>Ambulatoriale</strong><span>Massima compatibilità</span></div>
           <div><small>Da leggere</small><strong>2 criticità</strong><span>Retribuzione e festivi</span></div>
           <div><small>Scartate</small><strong>31 offerte</strong><span>Fuori profilo o distanza</span></div>
         </div>
 
-        <div class="results-layout">
-          <aside class="filters-panel">
+        <div class="results-layout filters-collapsed">
+          <aside class="filters-panel hidden" id="resultsFilters">
             <div class="filter-panel-header">
               <h2>Filtri</h2>
               <button class="text-button" id="resetFilters">Azzera</button>
@@ -567,11 +567,16 @@
                   <option value="deadline">Scadenza</option>
                 </select>
               </label>
+              <div class="results-toolbar-actions">
+                <button class="secondary-button" type="button" data-action="toggle-results-filters" id="toggleResultsFilters">Filtri</button>
+                <button class="secondary-button" type="button" data-route="home">Modifica ricerca</button>
+                <button class="text-button" type="button" data-action="save-current-search-profile">Salva profilo</button>
+              </div>
             </div>
             <div class="result-deck-intro hidden" id="resultDeckIntro">
-              <span>Deck offerte</span>
-              <strong>Una proposta alla volta.</strong>
-              <small>Usa i controlli del deck per confrontare le offerte senza perdere il punto.</small>
+              <span>Offerte</span>
+              <strong>Valuta una proposta alla volta.</strong>
+              <small>Passa alla proposta successiva quando vuoi confrontarla con quella attuale.</small>
             </div>
             <div class="deck-controls hidden" id="deckControls" aria-label="Controlli deck risultati">
               <button class="secondary-button" type="button" data-action="deck-prev">Offerta precedente</button>
@@ -586,8 +591,8 @@
               <div class="search-analysis" id="searchAnalysis"></div>
               <button class="secondary-button" id="emptyReset">Modifica la ricerca</button>
             </div>
-            <section class="personal-market-panel" id="personalMarketPanel" aria-live="polite"></section>
-            <section class="screening-panel" aria-labelledby="screeningTitle">
+            <section class="personal-market-panel hidden" id="personalMarketPanel" aria-live="polite"></section>
+            <section class="screening-panel hidden" aria-labelledby="screeningTitle">
               <div>
                 <span class="eyebrow">Scrematura guidata</span>
                 <h2 id="screeningTitle">Perché vedi questi risultati</h2>
@@ -805,7 +810,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=62"></script>
-  <script src="app.js?v=62"></script>
+  <script src="data.js?v=63"></script>
+  <script src="app.js?v=63"></script>
 </body>
 </html>
