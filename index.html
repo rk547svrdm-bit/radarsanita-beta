@@ -10,7 +10,7 @@
   <title>RadarSanità</title>
   <script>
     (() => {
-      const targetVersion = 63;
+      const targetVersion = 64;
       const params = new URLSearchParams(window.location.search);
       const currentVersion = Number(params.get("v"));
       if (currentVersion && currentVersion < targetVersion) {
@@ -19,7 +19,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=63">
+  <link rel="stylesheet" href="styles.css?v=64">
 </head>
 <body>
   <div class="app-shell">
@@ -810,7 +810,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js?v=63"></script>
-  <script src="app.js?v=63"></script>
+  <script src="data.js?v=64"></script>
+  <script src="app.js?v=64"></script>
 </body>
 </html>

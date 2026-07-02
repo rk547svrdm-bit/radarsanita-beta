@@ -1610,9 +1610,7 @@ function professionalReviewsFor(job) {
 
 function operatorFeedbackBadge(job) {
   const reviews = professionalReviewsFor(job);
-  if (!reviews.length) {
-    return `<span class="workplace-score empty-operator-score">Reputazione professionale da approfondire</span>`;
-  }
+  if (!reviews.length) return "";
   const workplace = workplaceFor(job);
   return `<span class="workplace-score">${workplace.rating} ★ · ${reviews.length} segnali professionali</span>`;
 }
@@ -1626,7 +1624,9 @@ function decisionStrip(job) {
   const cells = [
     ["trust", "Fiducia dati", trust.value, trust.note, trust.level],
     ["value", "Mercato", value.value, value.note, value.level],
-    ["effort", "Reputazione", operatorReviews.length ? `${operatorReviews.length} segnali` : "Da approfondire", operatorReviews.length ? "Esperienze professionali disponibili" : "Nessun segnale professionale collegato", operatorReviews.length ? "medium" : "low"],
+    ...(operatorReviews.length
+      ? [["effort", "Reputazione", `${operatorReviews.length} segnali`, "Esperienze professionali disponibili", "medium"]]
+      : []),
     ["urgency", "Urgenza", urgency.value, urgency.note, urgency.level]
   ];
 
@@ -1645,6 +1645,15 @@ function decisionStrip(job) {
 
 function infoMap(job, workplace) {
   const operatorReviews = professionalReviewsFor(job);
+  const reputationTile = operatorReviews.length
+    ? `
+      <div class="info-map-item effort">
+        <span>Reputazione</span>
+        <strong>${operatorReviews.length} segnali</strong>
+        <small>Esperienze professionali</small>
+      </div>
+    `
+    : "";
   return `
     <div class="info-map" aria-label="Mappa delle informazioni principali">
       <div class="info-map-item money">
@@ -1662,11 +1671,7 @@ function infoMap(job, workplace) {
         <strong>${distanceLabelForJob(job, " da te")}</strong>
         <small>${workplace.facts[0]}</small>
       </div>
-      <div class="info-map-item effort">
-        <span>Reputazione</span>
-        <strong>${operatorReviews.length ? `${operatorReviews.length} segnali` : "non raccolti"}</strong>
-        <small>Esperienze professionali</small>
-      </div>
+      ${reputationTile}
     </div>
   `;
 }
@@ -2827,6 +2832,21 @@ function renderDossierEvidence(items = []) {
   `;
 }
 
+function dossierBranchHasUsefulResult(branch) {
+  if (!branch) return false;
+  if (branch.tone === "reputation") return /segnali sintetizzati/i.test(branch.status || "");
+  if (branch.tone === "warning") return false;
+  if (branch.tone === "structure") return !/non nominata|assente|hidden/i.test(`${branch.status} ${branch.text}`);
+  if (branch.tone === "market") return !/dato non sufficiente|insufficienti/i.test(`${branch.status} ${branch.text}`);
+  const evidence = Array.isArray(branch.evidence) ? branch.evidence : [];
+  const meaningfulEvidence = evidence.filter((item) => {
+    const text = String(item || "").toLowerCase();
+    return text
+      && !/nessuna|non raccolt|non disponibile|non presenti|da integrare|insufficient/i.test(text);
+  });
+  return meaningfulEvidence.length > 0;
+}
+
 function crossWebBranches(job) {
   const workplace = workplaceFor(job);
   const entries = sourceEntries(job);
@@ -2876,10 +2896,10 @@ function crossWebBranches(job) {
     {
       tone: "reputation",
       title: "Reputazione professionale",
-      status: reviews.length ? `${reviews.length} segnali sintetizzati` : "Nessun segnale raccolto",
-      text: dossierText("professional-reputation", reviews.length
-        ? `Le valutazioni professionali disponibili indicano un punteggio medio ${workplace.rating}/5. Le note vengono mostrate sotto, senza rimandare l'utente a ricerche esterne.`
-        : "Nel dataset attuale non sono ancora presenti valutazioni professionali attribuibili con sicurezza a questa offerta o struttura. La scheda lo dichiara invece di inventare un punteggio."),
+      status: reviews.length ? `${reviews.length} segnali sintetizzati` : "",
+      text: reviews.length
+        ? dossierText("professional-reputation", `Le valutazioni professionali disponibili indicano un punteggio medio ${workplace.rating}/5.`)
+        : "",
       evidence: reviews.length
         ? [
             ...dossierEvidence("professional-reputation"),
@@ -2887,12 +2907,7 @@ function crossWebBranches(job) {
             `${reviews.length} segnali collegati`,
             `${workplace.verifiedReviews || reviews.length} verificati`
           ]
-        : [
-            ...dossierEvidence("professional-reputation"),
-            "Nessuna valutazione professionale collegata",
-            anonymousStructure ? "Struttura non nominata: reputazione non attribuibile" : "Da integrare con raccolta operatori",
-            dossierBranch("professional-reputation").status ? `Stato raccolta: ${dossierBranch("professional-reputation").status}` : ""
-          ]
+        : []
     },
     {
       tone: "place",
@@ -2924,16 +2939,18 @@ function crossWebBranches(job) {
           ]
         : [...dossierEvidence("market-rates"), "Compensi insufficienti nelle fonti", job.salary || "Retribuzione non pubblicata"]
     }
-  ];
+  ].filter(dossierBranchHasUsefulResult);
 }
 
 function renderCrossWebDossier(job) {
   const branches = crossWebBranches(job);
+  if (!branches.length) return "";
+  const readableTopics = branches.map((branch) => branch.title.toLowerCase()).join(", ");
   return `
     <div class="cross-web-dossier">
       <div class="cross-web-intro">
         <strong>Dossier offerta</strong>
-        <p>Qui trovi i dati utili per valutare la proposta: fonte, datore, reputazione professionale, sede e andamento delle tariffe nel perimetro della ricerca.</p>
+        <p>Dati disponibili per valutare la proposta: ${escapeHtml(readableTopics)}.</p>
       </div>
       <div class="cross-web-grid">
         ${branches.map((branch) => `
@@ -2976,9 +2993,16 @@ function renderDetail(jobId) {
           `).join("")}
         </div>
       `, { icon: "8", tone: "reviews", meta: "Esperienze professionali collegate" })
-    : detailSection("Reputazione professionale", `
-        <p class="content-note">Per questa offerta non sono ancora presenti valutazioni professionali collegate alla struttura. RadarSanita non inventa un punteggio: segnala il vuoto e lo separa dagli altri dati dell'offerta.</p>
-      `, { icon: "8", tone: "reviews", meta: "Da approfondire prima della decisione" });
+    : "";
+  const crossDossierMarkup = renderCrossWebDossier(job);
+  const crossDossierSection = crossDossierMarkup
+    ? detailSection("Dati verificati", crossDossierMarkup, {
+        open: true,
+        icon: "2",
+        tone: "source",
+        meta: "Solo informazioni disponibili"
+      })
+    : "";
   jobDetail.innerHTML = `
     <div class="detail-page">
       <div class="detail-topbar">
@@ -3015,8 +3039,8 @@ function renderDetail(jobId) {
 
         <div class="dossier-proof">
           <div>
-            <strong>Dossier da ${sourceCount(job)} fonti e 5 rami web</strong>
-            <span>Annuncio, struttura, reputazione, zona e tariffe vengono trattati come controlli separati.</span>
+            <strong>Dati da ${sourceCount(job)} ${sourceCount(job) === 1 ? "fonte" : "fonti"}</strong>
+            <span>Mostriamo solo informazioni disponibili e collegate alla scheda.</span>
           </div>
           ${sourceChips(job)}
           ${sourceUrl ? `<a class="primary-button source-detail-button" href="${sourceUrl}" target="_blank" rel="noreferrer noopener">Candidati sul sito ufficiale</a>` : ""}
@@ -3028,12 +3052,7 @@ function renderDetail(jobId) {
           <p>${job.summary}</p>
           <div class="warning-box">${job.warning}</div>
         `, { open: true, icon: "1", tone: "overview", meta: "Il riassunto operativo prima dei dettagli" })}
-        ${detailSection("Dossier web incrociato", renderCrossWebDossier(job), {
-          open: true,
-          icon: "2",
-          tone: "source",
-          meta: "Fonte, struttura, reputazione, zona e mercato"
-        })}
+        ${crossDossierSection}
         ${detailSection("Contratto e condizioni", dataGrid(withoutMoneyRows(job.contractDetails)), {
           icon: "3",
           tone: "money",
