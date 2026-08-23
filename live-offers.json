@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-22T05:44:08.000Z",
-  "checkedLabel": "22 agosto 2026 alle ore 07:44",
+  "updatedAt": "2026-08-23T05:46:59.175Z",
+  "checkedLabel": "23 agosto 2026 alle ore 07:46",
   "method": "Verifica automatica di pagine pubbliche e discovery multi-fonte RadarSanita",
   "sourcesChecked": 69,
   "outcomes": [
@@ -67,11 +67,6 @@
     },
     {
       "id": "randstad-infermiere-casa-di-comunita-vigone-fmnb-vigone-10ab1fe3-a23e-4b58-a8b6-9b683a835884",
-      "status": "discovered-randstad",
-      "error": null
-    },
-    {
-      "id": "randstad-infermiere-ferrara-4c925f52-bcb4-4c2e-bdee-9775344495ce",
       "status": "discovered-randstad",
       "error": null
     },
@@ -187,11 +182,6 @@
     },
     {
       "id": "randstad-infermiere-per-hospice-fmnb-torino-ed641df8-8f1d-4711-99b9-ab7f341c22fb",
-      "status": "discovered-randstad",
-      "error": null
-    },
-    {
-      "id": "randstad-infermiere-fmnb-viareggio-viareggio-0be6e21a-f728-4714-94cd-379aefdde5dc",
       "status": "discovered-randstad",
       "error": null
     },
@@ -314,6 +304,16 @@
       "id": "randstad-infermiere-cra-zona-lugo-no-notte-fmnb-imola-266ac0a2-f313-4fef-95da-31fd5a4ee35e",
       "status": "discovered-randstad",
       "error": null
+    },
+    {
+      "id": "randstad-infermieri-per-ospedale-rivoli-537e8a87-e7e4-4306-a140-869a08d82857",
+      "status": "discovered-randstad",
+      "error": null
+    },
+    {
+      "id": "randstad-infermiere-mfnb-terranuova-bracciolini-9d989bc5-32e7-45d1-95f1-2ed7d0a3a458",
+      "status": "discovered-randstad",
+      "error": null
     }
   ],
   "jobs": [
@@ -411,19 +411,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "22 agosto 2026 alle ore 07:41",
+      "checked": "23 agosto 2026 alle ore 07:44",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "22 agosto 2026 alle ore 07:41"
+          "checked": "23 agosto 2026 alle ore 07:44"
         },
         {
           "name": "Modulo ufficiale autocandidatura infermieri",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-infermiere",
-          "checked": "22 agosto 2026 alle ore 07:41"
+          "checked": "23 agosto 2026 alle ore 07:44"
         }
       ],
       "media": {
@@ -435,7 +435,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -577,19 +577,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "22 agosto 2026 alle ore 07:41",
+      "checked": "23 agosto 2026 alle ore 07:44",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "22 agosto 2026 alle ore 07:41"
+          "checked": "23 agosto 2026 alle ore 07:44"
         },
         {
           "name": "Modulo ufficiale autocandidatura OSS",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-oss",
-          "checked": "22 agosto 2026 alle ore 07:41"
+          "checked": "23 agosto 2026 alle ore 07:44"
         }
       ],
       "media": {
@@ -601,7 +601,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -735,19 +735,19 @@
       },
       "source": "Manpower Italia - annuncio 1021279",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-operatore-socio-sanitario/1021279",
-      "checked": "22 agosto 2026 alle ore 07:41",
+      "checked": "23 agosto 2026 alle ore 07:44",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1021279",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-operatore-socio-sanitario/1021279",
-          "checked": "22 agosto 2026 alle ore 07:41"
+          "checked": "23 agosto 2026 alle ore 07:44"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "22 agosto 2026 alle ore 07:41"
+          "checked": "23 agosto 2026 alle ore 07:44"
         }
       ],
       "media": {
@@ -759,7 +759,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -893,19 +893,19 @@
       },
       "source": "Manpower Italia - annuncio 1027564",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/oss-operatore-socio-sanitario/1027564",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:44",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1027564",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/oss-operatore-socio-sanitario/1027564",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:44"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:44"
         }
       ],
       "media": {
@@ -917,7 +917,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1060,19 +1060,19 @@
       },
       "source": "Manpower Italia - annuncio 1007740",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:44",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1007740",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermieri-per-asl-alessandria/1007740",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:44"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:44"
         }
       ],
       "media": {
@@ -1084,7 +1084,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1218,19 +1218,19 @@
       },
       "source": "Manpower Italia - annuncio 1021177",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-operatore-socio-sanitario/1021177",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:44",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1021177",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-operatore-socio-sanitario/1021177",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:44"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:44"
         }
       ],
       "media": {
@@ -1242,7 +1242,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1381,19 +1381,19 @@
       },
       "source": "Randstad Italia - infermiere_bologna_f69e9814-717e-4285-bf88-834dc215bcd5",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_f69e9814-717e-4285-bf88-834dc215bcd5/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_bologna_f69e9814-717e-4285-bf88-834dc215bcd5",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_f69e9814-717e-4285-bf88-834dc215bcd5/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -1405,7 +1405,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1542,19 +1542,19 @@
       },
       "source": "Randstad Italia - infermiere-ospedale-pubblico-pinerolo-fmnb_collegno_4939538f-b9b3-4a96-a04c-3b99a4b813f7",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico-pinerolo-fmnb_collegno_4939538f-b9b3-4a96-a04c-3b99a4b813f7/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-ospedale-pubblico-pinerolo-fmnb_collegno_4939538f-b9b3-4a96-a04c-3b99a4b813f7",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico-pinerolo-fmnb_collegno_4939538f-b9b3-4a96-a04c-3b99a4b813f7/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -1566,7 +1566,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1703,19 +1703,19 @@
       },
       "source": "Randstad Italia - infermiere-per-ospedale-di-comunita-venaria_collegno_6232a989-d452-474a-b066-d1e5c6e63104",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-di-comunita-venaria_collegno_6232a989-d452-474a-b066-d1e5c6e63104/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-ospedale-di-comunita-venaria_collegno_6232a989-d452-474a-b066-d1e5c6e63104",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-di-comunita-venaria_collegno_6232a989-d452-474a-b066-d1e5c6e63104/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -1727,7 +1727,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1868,19 +1868,19 @@
       },
       "source": "Randstad Italia - infermiere_brescia_05180c7b-99dd-4bbe-9380-091b1ceb33be",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_brescia_05180c7b-99dd-4bbe-9380-091b1ceb33be/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_brescia_05180c7b-99dd-4bbe-9380-091b1ceb33be",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_brescia_05180c7b-99dd-4bbe-9380-091b1ceb33be/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -1892,7 +1892,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2033,19 +2033,19 @@
       },
       "source": "Randstad Italia - infermiere_imola_3b7fad0b-5b6e-4744-a4e2-48c140096c0c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_imola_3b7fad0b-5b6e-4744-a4e2-48c140096c0c/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_imola_3b7fad0b-5b6e-4744-a4e2-48c140096c0c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_imola_3b7fad0b-5b6e-4744-a4e2-48c140096c0c/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -2057,7 +2057,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2194,19 +2194,19 @@
       },
       "source": "Randstad Italia - infermiere-casa-di-comunita-vigone-fmnb_vigone_10ab1fe3-a23e-4b58-a8b6-9b683a835884",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-casa-di-comunita-vigone-fmnb_vigone_10ab1fe3-a23e-4b58-a8b6-9b683a835884/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-casa-di-comunita-vigone-fmnb_vigone_10ab1fe3-a23e-4b58-a8b6-9b683a835884",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-casa-di-comunita-vigone-fmnb_vigone_10ab1fe3-a23e-4b58-a8b6-9b683a835884/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -2218,7 +2218,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2255,171 +2255,6 @@
               "Vigone, Italia"
             ],
             "synthesis": "Vigone, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
-          },
-          {
-            "id": "market-rates",
-            "label": "Tariffe e offerte concorrenti",
-            "status": "computed-in-app-from-published-wages",
-            "evidence": [
-              "28.000 € - 34.000 € annuale"
-            ],
-            "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
-          }
-        ]
-      }
-    },
-    {
-      "id": "randstad-infermiere-ferrara-4c925f52-bcb4-4c2e-bdee-9775344495ce",
-      "publicationStatus": "published",
-      "title": "infermiere",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Ferrara, Italia",
-      "coordinates": {
-        "lat": 44.7667642,
-        "lng": 11.827939
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo determinato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": true,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "28.000 € - 34.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Ferrara. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo determinato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "28.000 € - 34.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Previste"
-        ],
-        [
-          "Sede",
-          "Ferrara, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce/",
-      "checked": "22 agosto 2026 alle ore 07:42",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce/",
-          "checked": "22 agosto 2026 alle ore 07:42"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      },
-      "webDossier": {
-        "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
-        "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
-        "branches": [
-          {
-            "id": "offer-source",
-            "label": "Annuncio e candidatura",
-            "status": "source-openable",
-            "evidence": [
-              "https://www.randstad.it/offerte-lavoro/infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce/"
-            ],
-            "synthesis": "Annuncio letto da Randstad Italia - infermiere_ferrara_4c925f52-bcb4-4c2e-bdee-9775344495ce; candidatura sul canale originale."
-          },
-          {
-            "id": "structure-employer",
-            "label": "Struttura o datore",
-            "status": "structure-name-available",
-            "evidence": [
-              "Struttura sanitaria tramite Randstad Healthcare",
-              "Ferrara, Italia"
-            ],
-            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Ferrara, Italia."
-          },
-          {
-            "id": "professional-reputation",
-            "label": "Reputazione professionale",
-            "status": "needs-cross-check",
-            "evidence": [],
-            "synthesis": "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
-          },
-          {
-            "id": "area-environment",
-            "label": "Zona e ambiente",
-            "status": "geolocated",
-            "evidence": [
-              "Ferrara, Italia"
-            ],
-            "synthesis": "Ferrara, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
           },
           {
             "id": "market-rates",
@@ -2524,19 +2359,19 @@
       },
       "source": "Randstad Italia - infermiere_cortemaggiore_0cdc7063-76fe-47e9-9e8b-cc571d5aa527",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_cortemaggiore_0cdc7063-76fe-47e9-9e8b-cc571d5aa527/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_cortemaggiore_0cdc7063-76fe-47e9-9e8b-cc571d5aa527",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_cortemaggiore_0cdc7063-76fe-47e9-9e8b-cc571d5aa527/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -2548,7 +2383,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2689,19 +2524,19 @@
       },
       "source": "Randstad Italia - infermiere_bologna_c754ea2e-4157-474e-80bc-b869d0206dba",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_c754ea2e-4157-474e-80bc-b869d0206dba/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_bologna_c754ea2e-4157-474e-80bc-b869d0206dba",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_c754ea2e-4157-474e-80bc-b869d0206dba/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -2713,7 +2548,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2850,19 +2685,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-ausl-aosta_aosta_c3042f52-a0dc-4285-9a4a-ffe56e13adeb",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-ausl-aosta_aosta_c3042f52-a0dc-4285-9a4a-ffe56e13adeb/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-ausl-aosta_aosta_c3042f52-a0dc-4285-9a4a-ffe56e13adeb",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-ausl-aosta_aosta_c3042f52-a0dc-4285-9a4a-ffe56e13adeb/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -2874,7 +2709,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3015,19 +2850,19 @@
       },
       "source": "Randstad Italia - infermiere_bologna_2488678a-3298-479d-b233-bf742bd4cc72",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_2488678a-3298-479d-b233-bf742bd4cc72/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_bologna_2488678a-3298-479d-b233-bf742bd4cc72",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_2488678a-3298-479d-b233-bf742bd4cc72/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -3039,7 +2874,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3180,19 +3015,19 @@
       },
       "source": "Randstad Italia - infermiere-ospedaliero-fmnb_brescia_d828cc02-5e59-404c-b13d-fcc77bb52dab",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ospedaliero-fmnb_brescia_d828cc02-5e59-404c-b13d-fcc77bb52dab/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-ospedaliero-fmnb_brescia_d828cc02-5e59-404c-b13d-fcc77bb52dab",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-ospedaliero-fmnb_brescia_d828cc02-5e59-404c-b13d-fcc77bb52dab/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -3204,7 +3039,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3345,19 +3180,19 @@
       },
       "source": "Randstad Italia - infermiere-pediatrico_teramo_e8fcfd9f-d64f-4a8c-a2b6-44df207c96d9",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-pediatrico_teramo_e8fcfd9f-d64f-4a8c-a2b6-44df207c96d9/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-pediatrico_teramo_e8fcfd9f-d64f-4a8c-a2b6-44df207c96d9",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-pediatrico_teramo_e8fcfd9f-d64f-4a8c-a2b6-44df207c96d9/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -3369,7 +3204,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3506,19 +3341,19 @@
       },
       "source": "Randstad Italia - infermiere-mfnb_milano_8c4c4540-f03f-48fe-97fc-ca43826c4f1e",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_milano_8c4c4540-f03f-48fe-97fc-ca43826c4f1e/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-mfnb_milano_8c4c4540-f03f-48fe-97fc-ca43826c4f1e",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_milano_8c4c4540-f03f-48fe-97fc-ca43826c4f1e/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -3530,7 +3365,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3667,19 +3502,19 @@
       },
       "source": "Randstad Italia - infermiere-con-possibilita-di-alloggio-mfnb_milano_24a81218-1dbb-4d61-851b-477e45b4f9ff",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-con-possibilita-di-alloggio-mfnb_milano_24a81218-1dbb-4d61-851b-477e45b4f9ff/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-con-possibilita-di-alloggio-mfnb_milano_24a81218-1dbb-4d61-851b-477e45b4f9ff",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-con-possibilita-di-alloggio-mfnb_milano_24a81218-1dbb-4d61-851b-477e45b4f9ff/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -3691,7 +3526,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3832,19 +3667,19 @@
       },
       "source": "Randstad Italia - infermiere_forli_6fdcbdfa-49be-4465-b812-9a3e0a1c041d",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_forli_6fdcbdfa-49be-4465-b812-9a3e0a1c041d/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_forli_6fdcbdfa-49be-4465-b812-9a3e0a1c041d",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_forli_6fdcbdfa-49be-4465-b812-9a3e0a1c041d/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -3856,7 +3691,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3997,19 +3832,19 @@
       },
       "source": "Randstad Italia - infermiere-mfnb_laterza_d800e9d8-67f8-4f14-bc81-dcbb71cf147c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_laterza_d800e9d8-67f8-4f14-bc81-dcbb71cf147c/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-mfnb_laterza_d800e9d8-67f8-4f14-bc81-dcbb71cf147c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_laterza_d800e9d8-67f8-4f14-bc81-dcbb71cf147c/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -4021,7 +3856,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4162,19 +3997,19 @@
       },
       "source": "Randstad Italia - infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38/",
-      "checked": "22 agosto 2026 alle ore 07:42",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-presidio-ospedaliero-torino_torino_2e885f60-d776-40b6-a215-cd98b7e01a38/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:42"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -4186,7 +4021,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4327,19 +4162,19 @@
       },
       "source": "Randstad Italia - infermiere-area-medica-chirurgica-tempo-indeterminato-bologna-mfnb_bologna_ca1385b2-f2f1-40bb-8330-0bcf8615c8fe",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-area-medica-chirurgica-tempo-indeterminato-bologna-mfnb_bologna_ca1385b2-f2f1-40bb-8330-0bcf8615c8fe/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-area-medica-chirurgica-tempo-indeterminato-bologna-mfnb_bologna_ca1385b2-f2f1-40bb-8330-0bcf8615c8fe",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-area-medica-chirurgica-tempo-indeterminato-bologna-mfnb_bologna_ca1385b2-f2f1-40bb-8330-0bcf8615c8fe/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -4351,7 +4186,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4492,19 +4327,19 @@
       },
       "source": "Randstad Italia - infermiere-mfnb_cecina_f2523980-3885-4b8d-b88f-2d394e488786",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_cecina_f2523980-3885-4b8d-b88f-2d394e488786/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-mfnb_cecina_f2523980-3885-4b8d-b88f-2d394e488786",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_cecina_f2523980-3885-4b8d-b88f-2d394e488786/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -4516,7 +4351,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4573,8 +4408,8 @@
       "company": "Struttura sanitaria tramite Randstad Healthcare",
       "location": "Susa, Italia",
       "coordinates": {
-        "lat": 45.1383808,
-        "lng": 7.0493387
+        "lat": 45.1372115,
+        "lng": 7.0539789
       },
       "coordinatePrecision": "city",
       "contract": "Tempo determinato",
@@ -4657,19 +4492,19 @@
       },
       "source": "Randstad Italia - infermiere-ospedale-pubblico-susa_susa_ec0f24dc-1ccc-476c-bb1a-91743cf610a9",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico-susa_susa_ec0f24dc-1ccc-476c-bb1a-91743cf610a9/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-ospedale-pubblico-susa_susa_ec0f24dc-1ccc-476c-bb1a-91743cf610a9",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico-susa_susa_ec0f24dc-1ccc-476c-bb1a-91743cf610a9/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -4681,7 +4516,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4748,7 +4583,7 @@
       "nights": null,
       "deadline": null,
       "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "28.000 € - 34.000 € annuale",
+      "salary": "22.000 € - 28.000 € annuale",
       "match": 84,
       "type": "Selezione tramite agenzia",
       "category": "privato",
@@ -4784,7 +4619,7 @@
         ],
         [
           "Retribuzione",
-          "28.000 € - 34.000 € annuale"
+          "22.000 € - 28.000 € annuale"
         ],
         [
           "Scadenza",
@@ -4822,19 +4657,19 @@
       },
       "source": "Randstad Italia - infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_74a71a53-c311-4a3e-8c0e-c92cad3ce72c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_74a71a53-c311-4a3e-8c0e-c92cad3ce72c/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_74a71a53-c311-4a3e-8c0e-c92cad3ce72c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_74a71a53-c311-4a3e-8c0e-c92cad3ce72c/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -4846,7 +4681,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4889,7 +4724,7 @@
             "label": "Tariffe e offerte concorrenti",
             "status": "computed-in-app-from-published-wages",
             "evidence": [
-              "28.000 € - 34.000 € annuale"
+              "22.000 € - 28.000 € annuale"
             ],
             "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
           }
@@ -4987,19 +4822,19 @@
       },
       "source": "Randstad Italia - infermiere-mfnb_giulianova_73fa8691-2d4d-47a4-98dd-b332e749cf76",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_giulianova_73fa8691-2d4d-47a4-98dd-b332e749cf76/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-mfnb_giulianova_73fa8691-2d4d-47a4-98dd-b332e749cf76",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_giulianova_73fa8691-2d4d-47a4-98dd-b332e749cf76/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -5011,7 +4846,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5152,19 +4987,19 @@
       },
       "source": "Randstad Italia - infermiere-sala-operatoria-ospedale-pubblico-monza-brianza_vimercate_f40d4c2a-97ce-41ff-a05d-a2465f1844a0",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-sala-operatoria-ospedale-pubblico-monza-brianza_vimercate_f40d4c2a-97ce-41ff-a05d-a2465f1844a0/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-sala-operatoria-ospedale-pubblico-monza-brianza_vimercate_f40d4c2a-97ce-41ff-a05d-a2465f1844a0",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-sala-operatoria-ospedale-pubblico-monza-brianza_vimercate_f40d4c2a-97ce-41ff-a05d-a2465f1844a0/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -5176,7 +5011,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5317,19 +5152,19 @@
       },
       "source": "Randstad Italia - infermieri-fmnb_orbassano_fdd99969-0501-41ed-af30-bf7e388202b4",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb_orbassano_fdd99969-0501-41ed-af30-bf7e388202b4/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-fmnb_orbassano_fdd99969-0501-41ed-af30-bf7e388202b4",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb_orbassano_fdd99969-0501-41ed-af30-bf7e388202b4/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -5341,7 +5176,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5478,19 +5313,19 @@
       },
       "source": "Randstad Italia - infermiere-mfb_teramo_e49981ae-846f-49e8-955e-91e316f3d15c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfb_teramo_e49981ae-846f-49e8-955e-91e316f3d15c/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-mfb_teramo_e49981ae-846f-49e8-955e-91e316f3d15c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-mfb_teramo_e49981ae-846f-49e8-955e-91e316f3d15c/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -5502,7 +5337,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5639,19 +5474,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-con-alloggio_cortina-d-ampezzo_2b37aa52-3aca-4d1d-8fca-5aa1bfc5a663",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-con-alloggio_cortina-d-ampezzo_2b37aa52-3aca-4d1d-8fca-5aa1bfc5a663/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:45",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-con-alloggio_cortina-d-ampezzo_2b37aa52-3aca-4d1d-8fca-5aa1bfc5a663",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-con-alloggio_cortina-d-ampezzo_2b37aa52-3aca-4d1d-8fca-5aa1bfc5a663/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:45"
         }
       ],
       "media": {
@@ -5663,7 +5498,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5804,19 +5639,19 @@
       },
       "source": "Randstad Italia - infermiere-per-casa-di-cura-neuropsichiatrica-provincia-di-cuneo-mfnb_bra_917030d9-da5f-400d-8073-7017b643af56",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-casa-di-cura-neuropsichiatrica-provincia-di-cuneo-mfnb_bra_917030d9-da5f-400d-8073-7017b643af56/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-casa-di-cura-neuropsichiatrica-provincia-di-cuneo-mfnb_bra_917030d9-da5f-400d-8073-7017b643af56",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-casa-di-cura-neuropsichiatrica-provincia-di-cuneo-mfnb_bra_917030d9-da5f-400d-8073-7017b643af56/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -5828,7 +5663,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5969,19 +5804,19 @@
       },
       "source": "Randstad Italia - infermiere_poggibonsi_058da330-d786-467c-b327-f0ce829ba8e6",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_poggibonsi_058da330-d786-467c-b327-f0ce829ba8e6/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_poggibonsi_058da330-d786-467c-b327-f0ce829ba8e6",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_poggibonsi_058da330-d786-467c-b327-f0ce829ba8e6/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -5993,7 +5828,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -6138,19 +5973,19 @@
       },
       "source": "Randstad Italia - infermiere-per-hospice-fmnb_torino_ed641df8-8f1d-4711-99b9-ab7f341c22fb",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice-fmnb_torino_ed641df8-8f1d-4711-99b9-ab7f341c22fb/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-hospice-fmnb_torino_ed641df8-8f1d-4711-99b9-ab7f341c22fb",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice-fmnb_torino_ed641df8-8f1d-4711-99b9-ab7f341c22fb/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -6162,7 +5997,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -6206,171 +6041,6 @@
             "status": "computed-in-app-from-published-wages",
             "evidence": [
               "22.000 € - 28.000 € annuale"
-            ],
-            "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
-          }
-        ]
-      }
-    },
-    {
-      "id": "randstad-infermiere-fmnb-viareggio-viareggio-0be6e21a-f728-4714-94cd-379aefdde5dc",
-      "publicationStatus": "published",
-      "title": "infermiere (f/m/nb) - viareggio",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Viareggio, Italia",
-      "coordinates": {
-        "lat": 43.8672392,
-        "lng": 10.2506055
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo indeterminato",
-      "schedule": "Part-time",
-      "shifts": "Turni da verificare",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "18.000 € - 22.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Viareggio. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo indeterminato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Turni da verificare"
-        ],
-        [
-          "Retribuzione",
-          "18.000 € - 22.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Turni da verificare"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Viareggio, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-viareggio_viareggio_0be6e21a-f728-4714-94cd-379aefdde5dc/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere (f/m/nb) - viareggio. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere-fmnb-viareggio_viareggio_0be6e21a-f728-4714-94cd-379aefdde5dc",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-viareggio_viareggio_0be6e21a-f728-4714-94cd-379aefdde5dc/",
-      "checked": "22 agosto 2026 alle ore 07:43",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere-fmnb-viareggio_viareggio_0be6e21a-f728-4714-94cd-379aefdde5dc",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-viareggio_viareggio_0be6e21a-f728-4714-94cd-379aefdde5dc/",
-          "checked": "22 agosto 2026 alle ore 07:43"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      },
-      "webDossier": {
-        "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
-        "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
-        "branches": [
-          {
-            "id": "offer-source",
-            "label": "Annuncio e candidatura",
-            "status": "source-openable",
-            "evidence": [
-              "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-viareggio_viareggio_0be6e21a-f728-4714-94cd-379aefdde5dc/"
-            ],
-            "synthesis": "Annuncio letto da Randstad Italia - infermiere-fmnb-viareggio_viareggio_0be6e21a-f728-4714-94cd-379aefdde5dc; candidatura sul canale originale."
-          },
-          {
-            "id": "structure-employer",
-            "label": "Struttura o datore",
-            "status": "structure-name-available",
-            "evidence": [
-              "Struttura sanitaria tramite Randstad Healthcare",
-              "Viareggio, Italia"
-            ],
-            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Viareggio, Italia."
-          },
-          {
-            "id": "professional-reputation",
-            "label": "Reputazione professionale",
-            "status": "needs-cross-check",
-            "evidence": [],
-            "synthesis": "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
-          },
-          {
-            "id": "area-environment",
-            "label": "Zona e ambiente",
-            "status": "geolocated",
-            "evidence": [
-              "Viareggio, Italia"
-            ],
-            "synthesis": "Viareggio, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
-          },
-          {
-            "id": "market-rates",
-            "label": "Tariffe e offerte concorrenti",
-            "status": "computed-in-app-from-published-wages",
-            "evidence": [
-              "18.000 € - 22.000 € annuale"
             ],
             "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
           }
@@ -6468,19 +6138,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-cecina-li_cecina_c3a62781-2bd4-42ed-93a7-19c316b04429",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-cecina-li_cecina_c3a62781-2bd4-42ed-93a7-19c316b04429/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-cecina-li_cecina_c3a62781-2bd4-42ed-93a7-19c316b04429",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-cecina-li_cecina_c3a62781-2bd4-42ed-93a7-19c316b04429/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -6492,7 +6162,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -6633,19 +6303,19 @@
       },
       "source": "Randstad Italia - infermiere-in-rsa-pubblica_schio_63156c14-86c8-4154-87f3-22b846b5a300",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-in-rsa-pubblica_schio_63156c14-86c8-4154-87f3-22b846b5a300/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-in-rsa-pubblica_schio_63156c14-86c8-4154-87f3-22b846b5a300",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-in-rsa-pubblica_schio_63156c14-86c8-4154-87f3-22b846b5a300/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -6657,7 +6327,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -6798,19 +6468,19 @@
       },
       "source": "Randstad Italia - infermiere-struttura-sanitaria-riabilitativa-fmnb_brescia_a0ef4bea-59e2-4d97-b436-08ac18a44d17",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-struttura-sanitaria-riabilitativa-fmnb_brescia_a0ef4bea-59e2-4d97-b436-08ac18a44d17/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-struttura-sanitaria-riabilitativa-fmnb_brescia_a0ef4bea-59e2-4d97-b436-08ac18a44d17",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-struttura-sanitaria-riabilitativa-fmnb_brescia_a0ef4bea-59e2-4d97-b436-08ac18a44d17/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -6822,7 +6492,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -6963,19 +6633,19 @@
       },
       "source": "Randstad Italia - infermiere-centro-riabilitazione-fmnb_bellaria-igea-marina_45221ed5-a0e4-433b-8dcd-6b7dd83a688f",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-centro-riabilitazione-fmnb_bellaria-igea-marina_45221ed5-a0e4-433b-8dcd-6b7dd83a688f/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-centro-riabilitazione-fmnb_bellaria-igea-marina_45221ed5-a0e4-433b-8dcd-6b7dd83a688f",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-centro-riabilitazione-fmnb_bellaria-igea-marina_45221ed5-a0e4-433b-8dcd-6b7dd83a688f/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -6987,7 +6657,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7124,19 +6794,19 @@
       },
       "source": "Randstad Italia - infermiere-isola-delba-mfnb_portoferraio_c294d5ad-9a60-43ff-b81b-f5563f71b0b7",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-isola-delba-mfnb_portoferraio_c294d5ad-9a60-43ff-b81b-f5563f71b0b7/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-isola-delba-mfnb_portoferraio_c294d5ad-9a60-43ff-b81b-f5563f71b0b7",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-isola-delba-mfnb_portoferraio_c294d5ad-9a60-43ff-b81b-f5563f71b0b7/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -7148,7 +6818,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7289,19 +6959,19 @@
       },
       "source": "Randstad Italia - infermiere-per-ospedale-a-tempo-indeterminato-da-settembre-mfnb_bologna_496fe8ef-9ea8-437d-96a1-1d94bf0f7c15",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-a-tempo-indeterminato-da-settembre-mfnb_bologna_496fe8ef-9ea8-437d-96a1-1d94bf0f7c15/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-ospedale-a-tempo-indeterminato-da-settembre-mfnb_bologna_496fe8ef-9ea8-437d-96a1-1d94bf0f7c15",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-a-tempo-indeterminato-da-settembre-mfnb_bologna_496fe8ef-9ea8-437d-96a1-1d94bf0f7c15/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -7313,7 +6983,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7454,19 +7124,19 @@
       },
       "source": "Randstad Italia - infermiere-area-medica-per-ospedale-a-tempo-indeterminato-mfnb_bologna_f2720073-b4a4-4739-a851-bf15efa90b24",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-area-medica-per-ospedale-a-tempo-indeterminato-mfnb_bologna_f2720073-b4a4-4739-a851-bf15efa90b24/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-area-medica-per-ospedale-a-tempo-indeterminato-mfnb_bologna_f2720073-b4a4-4739-a851-bf15efa90b24",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-area-medica-per-ospedale-a-tempo-indeterminato-mfnb_bologna_f2720073-b4a4-4739-a851-bf15efa90b24/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -7478,7 +7148,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7619,19 +7289,19 @@
       },
       "source": "Randstad Italia - infermiere-ospedale-fmnb_ravenna_f8fb23eb-eb59-4717-9677-c6d4921ea67c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-fmnb_ravenna_f8fb23eb-eb59-4717-9677-c6d4921ea67c/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-ospedale-fmnb_ravenna_f8fb23eb-eb59-4717-9677-c6d4921ea67c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-fmnb_ravenna_f8fb23eb-eb59-4717-9677-c6d4921ea67c/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -7643,7 +7313,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7780,19 +7450,19 @@
       },
       "source": "Randstad Italia - infermiere-strumentista_roma_da5886fc-1ba3-46cc-aa45-2952149f6de1",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-strumentista_roma_da5886fc-1ba3-46cc-aa45-2952149f6de1/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-strumentista_roma_da5886fc-1ba3-46cc-aa45-2952149f6de1",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-strumentista_roma_da5886fc-1ba3-46cc-aa45-2952149f6de1/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -7804,7 +7474,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7945,19 +7615,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-figline-valdarno_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-figline-valdarno_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-figline-valdarno_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-figline-valdarno_firenze_97704e0d-3f10-4cfc-9502-59beadba6a9c/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -7969,7 +7639,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8110,19 +7780,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-terranuova-bracciolini_terranuova-bracciolini_2d1df666-e7ad-4083-9446-6ce5cc3ae91f",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-terranuova-bracciolini_terranuova-bracciolini_2d1df666-e7ad-4083-9446-6ce5cc3ae91f/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-terranuova-bracciolini_terranuova-bracciolini_2d1df666-e7ad-4083-9446-6ce5cc3ae91f",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-terranuova-bracciolini_terranuova-bracciolini_2d1df666-e7ad-4083-9446-6ce5cc3ae91f/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -8134,7 +7804,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8275,19 +7945,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-per-rsa-pubblica-di-bassano-del-grappa-vi-di_bassano-del-grappa_b1ebce38-a722-4e11-81cf-5e895b0ae0f2",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-per-rsa-pubblica-di-bassano-del-grappa-vi-di_bassano-del-grappa_b1ebce38-a722-4e11-81cf-5e895b0ae0f2/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-per-rsa-pubblica-di-bassano-del-grappa-vi-di_bassano-del-grappa_b1ebce38-a722-4e11-81cf-5e895b0ae0f2",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-per-rsa-pubblica-di-bassano-del-grappa-vi-di_bassano-del-grappa_b1ebce38-a722-4e11-81cf-5e895b0ae0f2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -8299,7 +7969,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8440,19 +8110,19 @@
       },
       "source": "Randstad Italia - infermiere-cesena-fmnb_cesena_088dbf06-6ca9-43f7-ab27-2a931b0173dd",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-cesena-fmnb_cesena_088dbf06-6ca9-43f7-ab27-2a931b0173dd/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-cesena-fmnb_cesena_088dbf06-6ca9-43f7-ab27-2a931b0173dd",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-cesena-fmnb_cesena_088dbf06-6ca9-43f7-ab27-2a931b0173dd/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -8464,7 +8134,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8601,19 +8271,19 @@
       },
       "source": "Randstad Italia - infermiere-neolaureato-per-ospedale-con-alloggio-mfnb_bologna_13d9ddb9-89a8-4b78-9f78-113fb5d5ecc9",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-neolaureato-per-ospedale-con-alloggio-mfnb_bologna_13d9ddb9-89a8-4b78-9f78-113fb5d5ecc9/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-neolaureato-per-ospedale-con-alloggio-mfnb_bologna_13d9ddb9-89a8-4b78-9f78-113fb5d5ecc9",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-neolaureato-per-ospedale-con-alloggio-mfnb_bologna_13d9ddb9-89a8-4b78-9f78-113fb5d5ecc9/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -8625,7 +8295,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8766,19 +8436,19 @@
       },
       "source": "Randstad Italia - infermiere-per-ospedale-privato-torino-fmnb_torino_cd3d7bcf-7cc6-4f32-81c7-bf00e1006009",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-privato-torino-fmnb_torino_cd3d7bcf-7cc6-4f32-81c7-bf00e1006009/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-ospedale-privato-torino-fmnb_torino_cd3d7bcf-7cc6-4f32-81c7-bf00e1006009",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-privato-torino-fmnb_torino_cd3d7bcf-7cc6-4f32-81c7-bf00e1006009/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -8790,7 +8460,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8931,19 +8601,19 @@
       },
       "source": "Randstad Italia - infermiere-adi-mfnb_matera_2d69436e-7547-442c-b31e-86c050b96406",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-adi-mfnb_matera_2d69436e-7547-442c-b31e-86c050b96406/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-adi-mfnb_matera_2d69436e-7547-442c-b31e-86c050b96406",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-adi-mfnb_matera_2d69436e-7547-442c-b31e-86c050b96406/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -8955,7 +8625,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9096,19 +8766,19 @@
       },
       "source": "Randstad Italia - infermiere-per-ospedale-a-bologna-tempo-indeterminato-da-settembre_bologna_72ccb8bf-d950-4b51-9780-e4031c56fc6c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-a-bologna-tempo-indeterminato-da-settembre_bologna_72ccb8bf-d950-4b51-9780-e4031c56fc6c/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-ospedale-a-bologna-tempo-indeterminato-da-settembre_bologna_72ccb8bf-d950-4b51-9780-e4031c56fc6c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-a-bologna-tempo-indeterminato-da-settembre_bologna_72ccb8bf-d950-4b51-9780-e4031c56fc6c/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -9120,7 +8790,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9257,19 +8927,19 @@
       },
       "source": "Randstad Italia - infermiere-per-ospedale-tempo-indeterminato-a-casalecchio-di-reno-bo-mfnb_bologna_225cb570-151a-4b3c-8ce3-eb2c510309c8",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-tempo-indeterminato-a-casalecchio-di-reno-bo-mfnb_bologna_225cb570-151a-4b3c-8ce3-eb2c510309c8/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-ospedale-tempo-indeterminato-a-casalecchio-di-reno-bo-mfnb_bologna_225cb570-151a-4b3c-8ce3-eb2c510309c8",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-tempo-indeterminato-a-casalecchio-di-reno-bo-mfnb_bologna_225cb570-151a-4b3c-8ce3-eb2c510309c8/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -9281,7 +8951,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9422,19 +9092,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-per-rsa-pubblica-di-badia-polesine_badia-polesine_6cd00774-b4f5-47ad-aa24-1ffdedcddd05",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-per-rsa-pubblica-di-badia-polesine_badia-polesine_6cd00774-b4f5-47ad-aa24-1ffdedcddd05/",
-      "checked": "22 agosto 2026 alle ore 07:43",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-per-rsa-pubblica-di-badia-polesine_badia-polesine_6cd00774-b4f5-47ad-aa24-1ffdedcddd05",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-per-rsa-pubblica-di-badia-polesine_badia-polesine_6cd00774-b4f5-47ad-aa24-1ffdedcddd05/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:43"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -9446,7 +9116,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9587,19 +9257,19 @@
       },
       "source": "Randstad Italia - infermiere-turni-diurnicra-faenza-fmnb_faenza_bbc2f47f-81f2-4635-8e0c-18563de6a68a",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-turni-diurnicra-faenza-fmnb_faenza_bbc2f47f-81f2-4635-8e0c-18563de6a68a/",
-      "checked": "22 agosto 2026 alle ore 07:44",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-turni-diurnicra-faenza-fmnb_faenza_bbc2f47f-81f2-4635-8e0c-18563de6a68a",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-turni-diurnicra-faenza-fmnb_faenza_bbc2f47f-81f2-4635-8e0c-18563de6a68a/",
-          "checked": "22 agosto 2026 alle ore 07:44"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:44"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -9611,7 +9281,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9752,19 +9422,19 @@
       },
       "source": "Randstad Italia - infermiere-per-clinica-privata-di-novara-mfnb_novara_c90b189d-7472-42e6-b11d-bdfae6554aad",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-clinica-privata-di-novara-mfnb_novara_c90b189d-7472-42e6-b11d-bdfae6554aad/",
-      "checked": "22 agosto 2026 alle ore 07:44",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-clinica-privata-di-novara-mfnb_novara_c90b189d-7472-42e6-b11d-bdfae6554aad",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-clinica-privata-di-novara-mfnb_novara_c90b189d-7472-42e6-b11d-bdfae6554aad/",
-          "checked": "22 agosto 2026 alle ore 07:44"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:44"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -9776,7 +9446,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9917,19 +9587,19 @@
       },
       "source": "Randstad Italia - infermiere-mfnb_viareggio_8dffa255-1e7f-4342-8be8-5f395e24e71f",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_viareggio_8dffa255-1e7f-4342-8be8-5f395e24e71f/",
-      "checked": "22 agosto 2026 alle ore 07:44",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-mfnb_viareggio_8dffa255-1e7f-4342-8be8-5f395e24e71f",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_viareggio_8dffa255-1e7f-4342-8be8-5f395e24e71f/",
-          "checked": "22 agosto 2026 alle ore 07:44"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:44"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -9941,7 +9611,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -10082,19 +9752,19 @@
       },
       "source": "Randstad Italia - infermiere_milano_08d47d18-2cc0-4ce1-85d4-7de22889ec82",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_milano_08d47d18-2cc0-4ce1-85d4-7de22889ec82/",
-      "checked": "22 agosto 2026 alle ore 07:44",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_milano_08d47d18-2cc0-4ce1-85d4-7de22889ec82",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_milano_08d47d18-2cc0-4ce1-85d4-7de22889ec82/",
-          "checked": "22 agosto 2026 alle ore 07:44"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:44"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -10106,7 +9776,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -10247,19 +9917,19 @@
       },
       "source": "Randstad Italia - infermiere-cra-zona-lugo-no-notte-fmnb_imola_266ac0a2-f313-4fef-95da-31fd5a4ee35e",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-cra-zona-lugo-no-notte-fmnb_imola_266ac0a2-f313-4fef-95da-31fd5a4ee35e/",
-      "checked": "22 agosto 2026 alle ore 07:44",
+      "checked": "23 agosto 2026 alle ore 07:46",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-cra-zona-lugo-no-notte-fmnb_imola_266ac0a2-f313-4fef-95da-31fd5a4ee35e",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-cra-zona-lugo-no-notte-fmnb_imola_266ac0a2-f313-4fef-95da-31fd5a4ee35e/",
-          "checked": "22 agosto 2026 alle ore 07:44"
+          "checked": "23 agosto 2026 alle ore 07:46"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "22 agosto 2026 alle ore 07:44"
+          "checked": "23 agosto 2026 alle ore 07:46"
         }
       ],
       "media": {
@@ -10271,7 +9941,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "22 agosto 2026 alle ore 07:44",
+        "checked": "23 agosto 2026 alle ore 07:46",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -10308,6 +9978,332 @@
               "Imola, Italia"
             ],
             "synthesis": "Imola, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
+          }
+        ]
+      }
+    },
+    {
+      "id": "randstad-infermieri-per-ospedale-rivoli-537e8a87-e7e4-4306-a140-869a08d82857",
+      "publicationStatus": "published",
+      "title": "infermieri per ospedale",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Rivoli, Italia",
+      "coordinates": {
+        "lat": 45.0697151,
+        "lng": 7.5176764
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo determinato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "22.000 € - 28.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Rivoli. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo determinato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "22.000 € - 28.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Rivoli, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermieri-per-ospedale_rivoli_537e8a87-e7e4-4306-a140-869a08d82857/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermieri per ospedale. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermieri-per-ospedale_rivoli_537e8a87-e7e4-4306-a140-869a08d82857",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-per-ospedale_rivoli_537e8a87-e7e4-4306-a140-869a08d82857/",
+      "checked": "23 agosto 2026 alle ore 07:46",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermieri-per-ospedale_rivoli_537e8a87-e7e4-4306-a140-869a08d82857",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermieri-per-ospedale_rivoli_537e8a87-e7e4-4306-a140-869a08d82857/",
+          "checked": "23 agosto 2026 alle ore 07:46"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
+          "checked": "23 agosto 2026 alle ore 07:46"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "23 agosto 2026 alle ore 07:46",
+        "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermieri-per-ospedale_rivoli_537e8a87-e7e4-4306-a140-869a08d82857/"
+            ],
+            "synthesis": "Annuncio letto da Randstad Italia - infermieri-per-ospedale_rivoli_537e8a87-e7e4-4306-a140-869a08d82857; candidatura sul canale originale."
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Rivoli, Italia"
+            ],
+            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Rivoli, Italia."
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "synthesis": "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Rivoli, Italia"
+            ],
+            "synthesis": "Rivoli, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "22.000 € - 28.000 € annuale"
+            ],
+            "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
+          }
+        ]
+      }
+    },
+    {
+      "id": "randstad-infermiere-mfnb-terranuova-bracciolini-9d989bc5-32e7-45d1-95f1-2ed7d0a3a458",
+      "publicationStatus": "published",
+      "title": "infermiere (m/f/nb)",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Terranuova Bracciolini, Italia",
+      "coordinates": {
+        "lat": 43.5588759,
+        "lng": 11.6086495
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo indeterminato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "22.000 € - 28.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Terranuova Bracciolini. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo indeterminato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "22.000 € - 28.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Terranuova Bracciolini, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_terranuova-bracciolini_9d989bc5-32e7-45d1-95f1-2ed7d0a3a458/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere (m/f/nb). Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere-mfnb_terranuova-bracciolini_9d989bc5-32e7-45d1-95f1-2ed7d0a3a458",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_terranuova-bracciolini_9d989bc5-32e7-45d1-95f1-2ed7d0a3a458/",
+      "checked": "23 agosto 2026 alle ore 07:46",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere-mfnb_terranuova-bracciolini_9d989bc5-32e7-45d1-95f1-2ed7d0a3a458",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_terranuova-bracciolini_9d989bc5-32e7-45d1-95f1-2ed7d0a3a458/",
+          "checked": "23 agosto 2026 alle ore 07:46"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
+          "checked": "23 agosto 2026 alle ore 07:46"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "23 agosto 2026 alle ore 07:46",
+        "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_terranuova-bracciolini_9d989bc5-32e7-45d1-95f1-2ed7d0a3a458/"
+            ],
+            "synthesis": "Annuncio letto da Randstad Italia - infermiere-mfnb_terranuova-bracciolini_9d989bc5-32e7-45d1-95f1-2ed7d0a3a458; candidatura sul canale originale."
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Terranuova Bracciolini, Italia"
+            ],
+            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Terranuova Bracciolini, Italia."
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "synthesis": "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Terranuova Bracciolini, Italia"
+            ],
+            "synthesis": "Terranuova Bracciolini, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
           },
           {
             "id": "market-rates",
