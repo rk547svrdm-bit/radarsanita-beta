@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21T13:30:28.179Z",
-  "checkedLabel": "21 novembre 2026 alle ore 14:30",
+  "updatedAt": "2026-11-22T13:22:48.350Z",
+  "checkedLabel": "22 novembre 2026 alle ore 14:22",
   "method": "Verifica automatica di pagine pubbliche e discovery multi-fonte RadarSanita",
   "sourcesChecked": 73,
   "outcomes": [
@@ -141,7 +141,7 @@
       "error": null
     },
     {
-      "id": "randstad-infermiere-rsa-fmnb-rovigo-ro-frassinelle-polesine-6fd741dd-0746-4072-ae6d-c4b25beff032",
+      "id": "randstad-infermiere-mfnb-giulianova-c3519b50-0f1b-4f74-8871-4bb51a490c11",
       "status": "discovered-randstad",
       "error": null
     },
@@ -151,7 +151,12 @@
       "error": null
     },
     {
-      "id": "randstad-infermiere-mfnb-giulianova-c3519b50-0f1b-4f74-8871-4bb51a490c11",
+      "id": "randstad-infermiere-rsa-fmnb-rovigo-ro-frassinelle-polesine-6fd741dd-0746-4072-ae6d-c4b25beff032",
+      "status": "discovered-randstad",
+      "error": null
+    },
+    {
+      "id": "randstad-infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia-reggio-nell-emilia-2526a02f-9fcd-4975-8159-15070bd87e06",
       "status": "discovered-randstad",
       "error": null
     },
@@ -171,17 +176,12 @@
       "error": null
     },
     {
-      "id": "randstad-infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia-reggio-nell-emilia-2526a02f-9fcd-4975-8159-15070bd87e06",
+      "id": "randstad-infermieri-mfnb-per-importante-ospedale-privato-a-cotignola-cotignola-122d8673-42b8-4504-a7f2-8d9a44a45fff",
       "status": "discovered-randstad",
       "error": null
     },
     {
       "id": "randstad-infermieri-mfnb-per-importante-ospedale-privato-a-bologna-bologna-90e81f20-cd7e-4d58-9a18-13ce500ddde1",
-      "status": "discovered-randstad",
-      "error": null
-    },
-    {
-      "id": "randstad-infermieri-mfnb-per-importante-ospedale-privato-a-cotignola-cotignola-122d8673-42b8-4504-a7f2-8d9a44a45fff",
       "status": "discovered-randstad",
       "error": null
     },
@@ -431,19 +431,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "21 novembre 2026 alle ore 14:27",
+      "checked": "22 novembre 2026 alle ore 14:20",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "21 novembre 2026 alle ore 14:27"
+          "checked": "22 novembre 2026 alle ore 14:20"
         },
         {
           "name": "Modulo ufficiale autocandidatura infermieri",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-infermiere",
-          "checked": "21 novembre 2026 alle ore 14:27"
+          "checked": "22 novembre 2026 alle ore 14:20"
         }
       ],
       "media": {
@@ -455,7 +455,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -597,19 +597,19 @@
       },
       "source": "Presidio Sanitario San Camillo - Lavora con noi",
       "sourceUrl": "https://www.sancamillotorino.net/lavora-con-noi",
-      "checked": "21 novembre 2026 alle ore 14:27",
+      "checked": "22 novembre 2026 alle ore 14:20",
       "sources": [
         {
           "name": "Presidio Sanitario San Camillo - Lavora con noi",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi",
-          "checked": "21 novembre 2026 alle ore 14:27"
+          "checked": "22 novembre 2026 alle ore 14:20"
         },
         {
           "name": "Modulo ufficiale autocandidatura OSS",
           "kind": "primaria",
           "url": "https://www.sancamillotorino.net/lavora-con-noi/autocandidature-oss",
-          "checked": "21 novembre 2026 alle ore 14:27"
+          "checked": "22 novembre 2026 alle ore 14:20"
         }
       ],
       "media": {
@@ -621,7 +621,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -764,19 +764,19 @@
       },
       "source": "Manpower Italia - annuncio 1060673",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermiere-a-per-asl-alessandria/1060673",
-      "checked": "21 novembre 2026 alle ore 14:27",
+      "checked": "22 novembre 2026 alle ore 14:20",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1060673",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/infermiere-a-per-asl-alessandria/1060673",
-          "checked": "21 novembre 2026 alle ore 14:27"
+          "checked": "22 novembre 2026 alle ore 14:20"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "21 novembre 2026 alle ore 14:27"
+          "checked": "22 novembre 2026 alle ore 14:20"
         }
       ],
       "media": {
@@ -788,7 +788,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -922,19 +922,19 @@
       },
       "source": "Manpower Italia - annuncio 1021279",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-operatore-socio-sanitario/1021279",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:20",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1021279",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/oss-operatore-socio-sanitario/1021279",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:20"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:20"
         }
       ],
       "media": {
@@ -946,7 +946,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1084,19 +1084,19 @@
       },
       "source": "Manpower Italia - annuncio 1059132",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermiere-strumentista-di-sala-operatoria-in-p-iva-40h-o-ass-a-tempo-indeterminato/1059132",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:20",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1059132",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermiere-strumentista-di-sala-operatoria-in-p-iva-40h-o-ass-a-tempo-indeterminato/1059132",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:20"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:20"
         }
       ],
       "media": {
@@ -1108,7 +1108,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1242,19 +1242,19 @@
       },
       "source": "Manpower Italia - annuncio 1056782",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/consulenza-servizi/customer-care/oss-operatore-socio-sanitario/1056782",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:20",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1056782",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/consulenza-servizi/customer-care/oss-operatore-socio-sanitario/1056782",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:20"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:20"
         }
       ],
       "media": {
@@ -1266,7 +1266,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1400,19 +1400,19 @@
       },
       "source": "Manpower Italia - annuncio 1027564",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/oss-operatore-socio-sanitario/1027564",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:20",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1027564",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/oss-operatore-socio-sanitario/1027564",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:20"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:20"
         }
       ],
       "media": {
@@ -1424,7 +1424,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1562,19 +1562,19 @@
       },
       "source": "Manpower Italia - annuncio 1051513",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierie-a-tempo-indeterminato/1051513",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:20",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1051513",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/biomedical-healthcare/sanit/infermierie-a-tempo-indeterminato/1051513",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:20"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:20"
         }
       ],
       "media": {
@@ -1586,7 +1586,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1720,19 +1720,19 @@
       },
       "source": "Manpower Italia - annuncio 1044744",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/oss-operatore-socio-sanitario/1044744",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1044744",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/pubblica-amministrazione/sanit/oss-operatore-socio-sanitario/1044744",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -1744,7 +1744,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -1878,19 +1878,19 @@
       },
       "source": "Manpower Italia - annuncio 1039694",
       "sourceUrl": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/asaoss-per-rsa-full-time/1039694",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Manpower Italia - annuncio 1039694",
           "kind": "primaria",
           "url": "https://www.manpower.it/it/annuncio-lavoro/servizi-sociali/sanit/asaoss-per-rsa-full-time/1039694",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Manpower Italia - catalogo pubblico",
           "kind": "duplicato",
           "url": "https://www.manpower.it/it/all-jobs",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -1902,7 +1902,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2037,19 +2037,19 @@
       },
       "source": "Randstad Italia - infermiere-ospedale-pubblico-a-torino-fmnb_torino_b2a6bc95-06e2-473a-868d-8d6f9eba8d33",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico-a-torino-fmnb_torino_b2a6bc95-06e2-473a-868d-8d6f9eba8d33/",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-ospedale-pubblico-a-torino-fmnb_torino_b2a6bc95-06e2-473a-868d-8d6f9eba8d33",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-ospedale-pubblico-a-torino-fmnb_torino_b2a6bc95-06e2-473a-868d-8d6f9eba8d33/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -2061,7 +2061,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2202,19 +2202,19 @@
       },
       "source": "Randstad Italia - infermiere-laureando-di-ottobre-mfnb-con-alloggio-per-ospedale-a-bologna_bologna_54d90cb8-d251-424f-af4a-4cc0c84255b8",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-laureando-di-ottobre-mfnb-con-alloggio-per-ospedale-a-bologna_bologna_54d90cb8-d251-424f-af4a-4cc0c84255b8/",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-laureando-di-ottobre-mfnb-con-alloggio-per-ospedale-a-bologna_bologna_54d90cb8-d251-424f-af4a-4cc0c84255b8",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-laureando-di-ottobre-mfnb-con-alloggio-per-ospedale-a-bologna_bologna_54d90cb8-d251-424f-af4a-4cc0c84255b8/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -2226,7 +2226,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2367,19 +2367,19 @@
       },
       "source": "Randstad Italia - infermiere_ravenna_6f1c4136-f826-4c5b-a4fd-949706488f44",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_ravenna_6f1c4136-f826-4c5b-a4fd-949706488f44/",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_ravenna_6f1c4136-f826-4c5b-a4fd-949706488f44",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_ravenna_6f1c4136-f826-4c5b-a4fd-949706488f44/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -2391,7 +2391,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2532,19 +2532,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb_bologna_464fd093-a355-4022-a72d-474bab7a531b",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb_bologna_464fd093-a355-4022-a72d-474bab7a531b/",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb_bologna_464fd093-a355-4022-a72d-474bab7a531b",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb_bologna_464fd093-a355-4022-a72d-474bab7a531b/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -2556,7 +2556,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2701,19 +2701,19 @@
       },
       "source": "Randstad Italia - infermiere-per-rsa-genova-mfnb_genova_987f07ac-f2c2-4f2a-a953-0279adcd2184",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa-genova-mfnb_genova_987f07ac-f2c2-4f2a-a953-0279adcd2184/",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-rsa-genova-mfnb_genova_987f07ac-f2c2-4f2a-a953-0279adcd2184",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa-genova-mfnb_genova_987f07ac-f2c2-4f2a-a953-0279adcd2184/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -2725,7 +2725,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -2870,19 +2870,19 @@
       },
       "source": "Randstad Italia - infermiere_torino_f8de1863-8f32-4251-b3f2-615511c126f6",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_torino_f8de1863-8f32-4251-b3f2-615511c126f6/",
-      "checked": "21 novembre 2026 alle ore 14:28",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_torino_f8de1863-8f32-4251-b3f2-615511c126f6",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_torino_f8de1863-8f32-4251-b3f2-615511c126f6/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:28"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -2894,7 +2894,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3035,19 +3035,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb_messina_0f0503ce-3d35-47db-885b-e37f3fead2f3",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb_messina_0f0503ce-3d35-47db-885b-e37f3fead2f3/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb_messina_0f0503ce-3d35-47db-885b-e37f3fead2f3",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb_messina_0f0503ce-3d35-47db-885b-e37f3fead2f3/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -3059,7 +3059,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3200,19 +3200,19 @@
       },
       "source": "Randstad Italia - infermiere_bologna_268af0cb-3c39-46b7-9384-57e096d94ffb",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_268af0cb-3c39-46b7-9384-57e096d94ffb/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere_bologna_268af0cb-3c39-46b7-9384-57e096d94ffb",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere_bologna_268af0cb-3c39-46b7-9384-57e096d94ffb/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -3224,7 +3224,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3361,19 +3361,19 @@
       },
       "source": "Randstad Italia - infermiere-con-possibilita-di-alloggio-mfnb_milano_e5c76abd-9a43-4b94-89f2-887c2788eef7",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-con-possibilita-di-alloggio-mfnb_milano_e5c76abd-9a43-4b94-89f2-887c2788eef7/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-con-possibilita-di-alloggio-mfnb_milano_e5c76abd-9a43-4b94-89f2-887c2788eef7",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-con-possibilita-di-alloggio-mfnb_milano_e5c76abd-9a43-4b94-89f2-887c2788eef7/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -3385,7 +3385,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3526,19 +3526,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb_imola_2f269362-dd52-405e-8057-63e6af9413de",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb_imola_2f269362-dd52-405e-8057-63e6af9413de/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb_imola_2f269362-dd52-405e-8057-63e6af9413de",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb_imola_2f269362-dd52-405e-8057-63e6af9413de/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -3550,7 +3550,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3691,19 +3691,19 @@
       },
       "source": "Randstad Italia - infermiere-per-clinica-privata-fmnb_roma_062acff0-cb5a-4cf4-801a-6361a6631d08",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-clinica-privata-fmnb_roma_062acff0-cb5a-4cf4-801a-6361a6631d08/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-clinica-privata-fmnb_roma_062acff0-cb5a-4cf4-801a-6361a6631d08",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-clinica-privata-fmnb_roma_062acff0-cb5a-4cf4-801a-6361a6631d08/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -3715,7 +3715,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -3856,19 +3856,19 @@
       },
       "source": "Randstad Italia - infermiere-mfnb_cecina_04d58437-1682-4771-83f9-57863cd08716",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_cecina_04d58437-1682-4771-83f9-57863cd08716/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-mfnb_cecina_04d58437-1682-4771-83f9-57863cd08716",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_cecina_04d58437-1682-4771-83f9-57863cd08716/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -3880,7 +3880,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4021,19 +4021,19 @@
       },
       "source": "Randstad Italia - infermiere-pinerolo-fmnb_collegno_0b005bd9-f359-4484-96cc-216a6a5a27a8",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-pinerolo-fmnb_collegno_0b005bd9-f359-4484-96cc-216a6a5a27a8/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-pinerolo-fmnb_collegno_0b005bd9-f359-4484-96cc-216a6a5a27a8",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-pinerolo-fmnb_collegno_0b005bd9-f359-4484-96cc-216a6a5a27a8/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -4045,7 +4045,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4186,19 +4186,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-centro-riabilitativo-costa-masnaga-lc_costa-masnaga_116cad13-384f-4b81-94e9-49b6780923d8",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-centro-riabilitativo-costa-masnaga-lc_costa-masnaga_116cad13-384f-4b81-94e9-49b6780923d8/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-centro-riabilitativo-costa-masnaga-lc_costa-masnaga_116cad13-384f-4b81-94e9-49b6780923d8",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-centro-riabilitativo-costa-masnaga-lc_costa-masnaga_116cad13-384f-4b81-94e9-49b6780923d8/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -4210,7 +4210,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4351,19 +4351,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_32cebd87-de21-4319-b89a-7b99659eb3dc",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_32cebd87-de21-4319-b89a-7b99659eb3dc/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_32cebd87-de21-4319-b89a-7b99659eb3dc",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_32cebd87-de21-4319-b89a-7b99659eb3dc/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -4375,7 +4375,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4516,19 +4516,19 @@
       },
       "source": "Randstad Italia - infermiere-per-comunita-terapeutica-fmnb_romano-di-lombardia_b5d98a2e-ce9c-4b31-8826-094b908d017a",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-comunita-terapeutica-fmnb_romano-di-lombardia_b5d98a2e-ce9c-4b31-8826-094b908d017a/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-comunita-terapeutica-fmnb_romano-di-lombardia_b5d98a2e-ce9c-4b31-8826-094b908d017a",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-comunita-terapeutica-fmnb_romano-di-lombardia_b5d98a2e-ce9c-4b31-8826-094b908d017a/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -4540,7 +4540,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -4584,336 +4584,6 @@
             "status": "computed-in-app-from-published-wages",
             "evidence": [
               "24.000 € - 25.000 € annuale"
-            ],
-            "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
-          }
-        ]
-      }
-    },
-    {
-      "id": "randstad-infermiere-rsa-fmnb-rovigo-ro-frassinelle-polesine-6fd741dd-0746-4072-ae6d-c4b25beff032",
-      "publicationStatus": "published",
-      "title": "infermiere rsa (f/m/nb) - rovigo (ro)",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Frassinelle Polesine, Italia",
-      "coordinates": {
-        "lat": 44.9817404,
-        "lng": 11.6909402
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo determinato",
-      "schedule": "Part-time",
-      "shifts": "Turni da verificare",
-      "nights": true,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "CCNL AIOP Residenze Sanitarie Assistenziali mostra i dettagli 6 novembre 2026 <div class=\"\" st",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Frassinelle Polesine. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo determinato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Turni da verificare"
-        ],
-        [
-          "Retribuzione",
-          "CCNL AIOP Residenze Sanitarie Assistenziali mostra i dettagli 6 novembre 2026 <div class=\"\" st"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Turni da verificare"
-        ],
-        [
-          "Notti",
-          "Previste"
-        ],
-        [
-          "Sede",
-          "Frassinelle Polesine, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere rsa (f/m/nb) - rovigo (ro). Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032/",
-      "checked": "21 novembre 2026 alle ore 14:29",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032/",
-          "checked": "21 novembre 2026 alle ore 14:29"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      },
-      "webDossier": {
-        "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
-        "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
-        "branches": [
-          {
-            "id": "offer-source",
-            "label": "Annuncio e candidatura",
-            "status": "source-openable",
-            "evidence": [
-              "https://www.randstad.it/offerte-lavoro/infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032/"
-            ],
-            "synthesis": "Annuncio letto da Randstad Italia - infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032; candidatura sul canale originale."
-          },
-          {
-            "id": "structure-employer",
-            "label": "Struttura o datore",
-            "status": "structure-name-available",
-            "evidence": [
-              "Struttura sanitaria tramite Randstad Healthcare",
-              "Frassinelle Polesine, Italia"
-            ],
-            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Frassinelle Polesine, Italia."
-          },
-          {
-            "id": "professional-reputation",
-            "label": "Reputazione professionale",
-            "status": "needs-cross-check",
-            "evidence": [],
-            "synthesis": "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
-          },
-          {
-            "id": "area-environment",
-            "label": "Zona e ambiente",
-            "status": "geolocated",
-            "evidence": [
-              "Frassinelle Polesine, Italia"
-            ],
-            "synthesis": "Frassinelle Polesine, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
-          },
-          {
-            "id": "market-rates",
-            "label": "Tariffe e offerte concorrenti",
-            "status": "computed-in-app-from-published-wages",
-            "evidence": [
-              "CCNL AIOP Residenze Sanitarie Assistenziali mostra i dettagli 6 novembre 2026 <div class=\"\" st"
-            ],
-            "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
-          }
-        ]
-      }
-    },
-    {
-      "id": "randstad-infermiere-per-ospedale-susa-fmnb-collegno-0edea81b-4564-4b32-affc-c37426d46cf0",
-      "publicationStatus": "published",
-      "title": "infermiere per ospedale - susa (f/m/nb)",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Collegno, Italia",
-      "coordinates": {
-        "lat": 45.0775473,
-        "lng": 7.5724262
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo determinato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "25.000 € - 30.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Collegno. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo determinato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "25.000 € - 30.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Collegno, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere per ospedale - susa (f/m/nb). Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0/",
-      "checked": "21 novembre 2026 alle ore 14:29",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0/",
-          "checked": "21 novembre 2026 alle ore 14:29"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      },
-      "webDossier": {
-        "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
-        "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
-        "branches": [
-          {
-            "id": "offer-source",
-            "label": "Annuncio e candidatura",
-            "status": "source-openable",
-            "evidence": [
-              "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0/"
-            ],
-            "synthesis": "Annuncio letto da Randstad Italia - infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0; candidatura sul canale originale."
-          },
-          {
-            "id": "structure-employer",
-            "label": "Struttura o datore",
-            "status": "structure-name-available",
-            "evidence": [
-              "Struttura sanitaria tramite Randstad Healthcare",
-              "Collegno, Italia"
-            ],
-            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Collegno, Italia."
-          },
-          {
-            "id": "professional-reputation",
-            "label": "Reputazione professionale",
-            "status": "needs-cross-check",
-            "evidence": [],
-            "synthesis": "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
-          },
-          {
-            "id": "area-environment",
-            "label": "Zona e ambiente",
-            "status": "geolocated",
-            "evidence": [
-              "Collegno, Italia"
-            ],
-            "synthesis": "Collegno, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
-          },
-          {
-            "id": "market-rates",
-            "label": "Tariffe e offerte concorrenti",
-            "status": "computed-in-app-from-published-wages",
-            "evidence": [
-              "25.000 € - 30.000 € annuale"
             ],
             "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
           }
@@ -5011,19 +4681,19 @@
       },
       "source": "Randstad Italia - infermiere-mfnb_giulianova_c3519b50-0f1b-4f74-8871-4bb51a490c11",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_giulianova_c3519b50-0f1b-4f74-8871-4bb51a490c11/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-mfnb_giulianova_c3519b50-0f1b-4f74-8871-4bb51a490c11",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-mfnb_giulianova_c3519b50-0f1b-4f74-8871-4bb51a490c11/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -5035,7 +4705,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5079,6 +4749,501 @@
             "status": "computed-in-app-from-published-wages",
             "evidence": [
               "22.000 € - 28.000 € annuale"
+            ],
+            "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
+          }
+        ]
+      }
+    },
+    {
+      "id": "randstad-infermiere-per-ospedale-susa-fmnb-collegno-0edea81b-4564-4b32-affc-c37426d46cf0",
+      "publicationStatus": "published",
+      "title": "infermiere per ospedale - susa (f/m/nb)",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Collegno, Italia",
+      "coordinates": {
+        "lat": 45.0775473,
+        "lng": 7.5724262
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo determinato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "25.000 € - 30.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Collegno. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo determinato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "25.000 € - 30.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Collegno, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere per ospedale - susa (f/m/nb). Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0/",
+      "checked": "22 novembre 2026 alle ore 14:21",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0/",
+          "checked": "22 novembre 2026 alle ore 14:21"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "22 novembre 2026 alle ore 14:21"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "22 novembre 2026 alle ore 14:22",
+        "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0/"
+            ],
+            "synthesis": "Annuncio letto da Randstad Italia - infermiere-per-ospedale-susa-fmnb_collegno_0edea81b-4564-4b32-affc-c37426d46cf0; candidatura sul canale originale."
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Collegno, Italia"
+            ],
+            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Collegno, Italia."
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "synthesis": "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Collegno, Italia"
+            ],
+            "synthesis": "Collegno, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "25.000 € - 30.000 € annuale"
+            ],
+            "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
+          }
+        ]
+      }
+    },
+    {
+      "id": "randstad-infermiere-rsa-fmnb-rovigo-ro-frassinelle-polesine-6fd741dd-0746-4072-ae6d-c4b25beff032",
+      "publicationStatus": "published",
+      "title": "infermiere rsa (f/m/nb) - rovigo (ro)",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Frassinelle Polesine, Italia",
+      "coordinates": {
+        "lat": 44.9817404,
+        "lng": 11.6909402
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo determinato",
+      "schedule": "Part-time",
+      "shifts": "Turni da verificare",
+      "nights": true,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "CCNL AIOP Residenze Sanitarie Assistenziali mostra i dettagli 6 novembre 2026 <div class=\"\" st",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Frassinelle Polesine. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo determinato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Turni da verificare"
+        ],
+        [
+          "Retribuzione",
+          "CCNL AIOP Residenze Sanitarie Assistenziali mostra i dettagli 6 novembre 2026 <div class=\"\" st"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Turni da verificare"
+        ],
+        [
+          "Notti",
+          "Previste"
+        ],
+        [
+          "Sede",
+          "Frassinelle Polesine, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermiere rsa (f/m/nb) - rovigo (ro). Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032/",
+      "checked": "22 novembre 2026 alle ore 14:21",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032/",
+          "checked": "22 novembre 2026 alle ore 14:21"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "22 novembre 2026 alle ore 14:21"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "22 novembre 2026 alle ore 14:22",
+        "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032/"
+            ],
+            "synthesis": "Annuncio letto da Randstad Italia - infermiere-rsa-fmnb-rovigo-ro_frassinelle-polesine_6fd741dd-0746-4072-ae6d-c4b25beff032; candidatura sul canale originale."
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Frassinelle Polesine, Italia"
+            ],
+            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Frassinelle Polesine, Italia."
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "synthesis": "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Frassinelle Polesine, Italia"
+            ],
+            "synthesis": "Frassinelle Polesine, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "CCNL AIOP Residenze Sanitarie Assistenziali mostra i dettagli 6 novembre 2026 <div class=\"\" st"
+            ],
+            "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
+          }
+        ]
+      }
+    },
+    {
+      "id": "randstad-infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia-reggio-nell-emilia-2526a02f-9fcd-4975-8159-15070bd87e06",
+      "publicationStatus": "published",
+      "title": "infermieri (f/m/nb) per importante ospedale privato a reggio emilia",
+      "company": "Struttura sanitaria tramite Randstad Healthcare",
+      "location": "Reggio Nell Emilia, Italia",
+      "coordinates": {
+        "lat": 44.7112929,
+        "lng": 10.6411043
+      },
+      "coordinatePrecision": "city",
+      "contract": "Tempo determinato",
+      "schedule": "Part-time",
+      "shifts": "Tre turni",
+      "nights": null,
+      "deadline": null,
+      "deadlineLabel": "Scadenza non dichiarata",
+      "salary": "24.000 € - 26.000 € annuale",
+      "match": 84,
+      "type": "Selezione tramite agenzia",
+      "category": "privato",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Reggio Nell Emilia. Condizioni e candidatura sono sulla fonte originale.",
+      "reasons": [
+        "Ruolo sanitario dichiarato",
+        "Fonte pubblica Randstad",
+        "Candidatura sul canale originale"
+      ],
+      "warning": "Retribuzione estratta dalla fonte pubblica.",
+      "requirements": [
+        [
+          "Laurea in Infermieristica",
+          "Richiesta dalla fonte"
+        ],
+        [
+          "Iscrizione OPI",
+          "Richiesta dalla fonte"
+        ]
+      ],
+      "contractDetails": [
+        [
+          "Contratto",
+          "Tempo determinato"
+        ],
+        [
+          "Orario",
+          "Part-time"
+        ],
+        [
+          "Turni",
+          "Tre turni"
+        ],
+        [
+          "Retribuzione",
+          "24.000 € - 26.000 € annuale"
+        ],
+        [
+          "Scadenza",
+          "Non dichiarata"
+        ]
+      ],
+      "shiftDetails": [
+        [
+          "Organizzazione",
+          "Tre turni"
+        ],
+        [
+          "Notti",
+          "Da verificare"
+        ],
+        [
+          "Sede",
+          "Reggio Nell Emilia, Italia"
+        ],
+        [
+          "Fonte",
+          "Dettaglio annuncio Randstad"
+        ]
+      ],
+      "application": {
+        "channel": "Candidatura sul portale Randstad",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06/",
+        "contactEmail": null,
+        "documents": [
+          "CV",
+          "Dati profilo richiesti dal portale"
+        ],
+        "missing": "Completare login Randstad e confermare disponibilita",
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermieri (f/m/nb) per importante ospedale privato a reggio emilia. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+      },
+      "source": "Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06/",
+      "checked": "22 novembre 2026 alle ore 14:21",
+      "sources": [
+        {
+          "name": "Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06",
+          "kind": "primaria",
+          "url": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06/",
+          "checked": "22 novembre 2026 alle ore 14:21"
+        },
+        {
+          "name": "Randstad Italia - ricerca pubblica",
+          "kind": "duplicato",
+          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
+          "checked": "22 novembre 2026 alle ore 14:21"
+        }
+      ],
+      "media": {
+        "type": "none",
+        "url": null,
+        "sourceUrl": null,
+        "alt": "",
+        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
+      },
+      "webDossier": {
+        "status": "partial",
+        "checked": "22 novembre 2026 alle ore 14:22",
+        "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
+        "branches": [
+          {
+            "id": "offer-source",
+            "label": "Annuncio e candidatura",
+            "status": "source-openable",
+            "evidence": [
+              "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06/"
+            ],
+            "synthesis": "Annuncio letto da Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06; candidatura sul canale originale."
+          },
+          {
+            "id": "structure-employer",
+            "label": "Struttura o datore",
+            "status": "structure-name-available",
+            "evidence": [
+              "Struttura sanitaria tramite Randstad Healthcare",
+              "Reggio Nell Emilia, Italia"
+            ],
+            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Reggio Nell Emilia, Italia."
+          },
+          {
+            "id": "professional-reputation",
+            "label": "Reputazione professionale",
+            "status": "needs-cross-check",
+            "evidence": [],
+            "synthesis": "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
+          },
+          {
+            "id": "area-environment",
+            "label": "Zona e ambiente",
+            "status": "geolocated",
+            "evidence": [
+              "Reggio Nell Emilia, Italia"
+            ],
+            "synthesis": "Reggio Nell Emilia, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
+          },
+          {
+            "id": "market-rates",
+            "label": "Tariffe e offerte concorrenti",
+            "status": "computed-in-app-from-published-wages",
+            "evidence": [
+              "24.000 € - 26.000 € annuale"
             ],
             "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
           }
@@ -5176,19 +5341,19 @@
       },
       "source": "Randstad Italia - infermiere-per-casa-di-cura-mfb_cremona_e5463a96-1d33-4874-9049-84acbd9b458b",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-casa-di-cura-mfb_cremona_e5463a96-1d33-4874-9049-84acbd9b458b/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-casa-di-cura-mfb_cremona_e5463a96-1d33-4874-9049-84acbd9b458b",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-casa-di-cura-mfb_cremona_e5463a96-1d33-4874-9049-84acbd9b458b/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -5200,7 +5365,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5341,19 +5506,19 @@
       },
       "source": "Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-di-cotignola_cotignola_c05de76f-984a-43ec-8d6e-6d5e86569e1c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-di-cotignola_cotignola_c05de76f-984a-43ec-8d6e-6d5e86569e1c/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-di-cotignola_cotignola_c05de76f-984a-43ec-8d6e-6d5e86569e1c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-di-cotignola_cotignola_c05de76f-984a-43ec-8d6e-6d5e86569e1c/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -5365,7 +5530,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5506,19 +5671,19 @@
       },
       "source": "Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-di-bologna_bologna_0bb48c7a-6752-4c17-a15d-e055f5ce104a",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-di-bologna_bologna_0bb48c7a-6752-4c17-a15d-e055f5ce104a/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-di-bologna_bologna_0bb48c7a-6752-4c17-a15d-e055f5ce104a",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-di-bologna_bologna_0bb48c7a-6752-4c17-a15d-e055f5ce104a/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -5530,7 +5695,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5581,14 +5746,14 @@
       }
     },
     {
-      "id": "randstad-infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia-reggio-nell-emilia-2526a02f-9fcd-4975-8159-15070bd87e06",
+      "id": "randstad-infermieri-mfnb-per-importante-ospedale-privato-a-cotignola-cotignola-122d8673-42b8-4504-a7f2-8d9a44a45fff",
       "publicationStatus": "published",
-      "title": "infermieri (f/m/nb) per importante ospedale privato a reggio emilia",
+      "title": "infermieri (m/f/nb) per importante ospedale privato a cotignola",
       "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Reggio Nell Emilia, Italia",
+      "location": "Cotignola, Italia",
       "coordinates": {
-        "lat": 44.7045119,
-        "lng": 10.6571668
+        "lat": 44.3846325,
+        "lng": 11.9423791
       },
       "coordinatePrecision": "city",
       "contract": "Tempo determinato",
@@ -5601,7 +5766,7 @@
       "match": 84,
       "type": "Selezione tramite agenzia",
       "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Reggio Nell Emilia. Condizioni e candidatura sono sulla fonte originale.",
+      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Cotignola. Condizioni e candidatura sono sulla fonte originale.",
       "reasons": [
         "Ruolo sanitario dichiarato",
         "Fonte pubblica Randstad",
@@ -5651,7 +5816,7 @@
         ],
         [
           "Sede",
-          "Reggio Nell Emilia, Italia"
+          "Cotignola, Italia"
         ],
         [
           "Fonte",
@@ -5660,30 +5825,30 @@
       ],
       "application": {
         "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06/",
+        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff/",
         "contactEmail": null,
         "documents": [
           "CV",
           "Dati profilo richiesti dal portale"
         ],
         "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermieri (f/m/nb) per importante ospedale privato a reggio emilia. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
+        "message": "Buongiorno, desidero candidarmi alla posizione di infermieri (m/f/nb) per importante ospedale privato a cotignola. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
       },
-      "source": "Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff",
+      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff/",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
-          "name": "Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06",
+          "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff",
           "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff/",
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -5695,7 +5860,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5703,9 +5868,9 @@
             "label": "Annuncio e candidatura",
             "status": "source-openable",
             "evidence": [
-              "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06/"
+              "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff/"
             ],
-            "synthesis": "Annuncio letto da Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2526a02f-9fcd-4975-8159-15070bd87e06; candidatura sul canale originale."
+            "synthesis": "Annuncio letto da Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff; candidatura sul canale originale."
           },
           {
             "id": "structure-employer",
@@ -5713,9 +5878,9 @@
             "status": "structure-name-available",
             "evidence": [
               "Struttura sanitaria tramite Randstad Healthcare",
-              "Reggio Nell Emilia, Italia"
+              "Cotignola, Italia"
             ],
-            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Reggio Nell Emilia, Italia."
+            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Cotignola, Italia."
           },
           {
             "id": "professional-reputation",
@@ -5729,9 +5894,9 @@
             "label": "Zona e ambiente",
             "status": "geolocated",
             "evidence": [
-              "Reggio Nell Emilia, Italia"
+              "Cotignola, Italia"
             ],
-            "synthesis": "Reggio Nell Emilia, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
+            "synthesis": "Cotignola, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
           },
           {
             "id": "market-rates",
@@ -5836,19 +6001,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_90e81f20-cd7e-4d58-9a18-13ce500ddde1",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_90e81f20-cd7e-4d58-9a18-13ce500ddde1/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_90e81f20-cd7e-4d58-9a18-13ce500ddde1",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_90e81f20-cd7e-4d58-9a18-13ce500ddde1/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -5860,7 +6025,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -5897,171 +6062,6 @@
               "Bologna, Italia"
             ],
             "synthesis": "Bologna, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
-          },
-          {
-            "id": "market-rates",
-            "label": "Tariffe e offerte concorrenti",
-            "status": "computed-in-app-from-published-wages",
-            "evidence": [
-              "24.000 € - 26.000 € annuale"
-            ],
-            "synthesis": "Confronto tariffario calcolato in app da retribuzioni pubblicate per ruolo infermiere."
-          }
-        ]
-      }
-    },
-    {
-      "id": "randstad-infermieri-mfnb-per-importante-ospedale-privato-a-cotignola-cotignola-122d8673-42b8-4504-a7f2-8d9a44a45fff",
-      "publicationStatus": "published",
-      "title": "infermieri (m/f/nb) per importante ospedale privato a cotignola",
-      "company": "Struttura sanitaria tramite Randstad Healthcare",
-      "location": "Cotignola, Italia",
-      "coordinates": {
-        "lat": 44.3846325,
-        "lng": 11.9423791
-      },
-      "coordinatePrecision": "city",
-      "contract": "Tempo determinato",
-      "schedule": "Part-time",
-      "shifts": "Tre turni",
-      "nights": null,
-      "deadline": null,
-      "deadlineLabel": "Scadenza non dichiarata",
-      "salary": "24.000 € - 26.000 € annuale",
-      "match": 84,
-      "type": "Selezione tramite agenzia",
-      "category": "privato",
-      "summary": "Annuncio Randstad per infermiere/a con sede indicata a Cotignola. Condizioni e candidatura sono sulla fonte originale.",
-      "reasons": [
-        "Ruolo sanitario dichiarato",
-        "Fonte pubblica Randstad",
-        "Candidatura sul canale originale"
-      ],
-      "warning": "Retribuzione estratta dalla fonte pubblica.",
-      "requirements": [
-        [
-          "Laurea in Infermieristica",
-          "Richiesta dalla fonte"
-        ],
-        [
-          "Iscrizione OPI",
-          "Richiesta dalla fonte"
-        ]
-      ],
-      "contractDetails": [
-        [
-          "Contratto",
-          "Tempo determinato"
-        ],
-        [
-          "Orario",
-          "Part-time"
-        ],
-        [
-          "Turni",
-          "Tre turni"
-        ],
-        [
-          "Retribuzione",
-          "24.000 € - 26.000 € annuale"
-        ],
-        [
-          "Scadenza",
-          "Non dichiarata"
-        ]
-      ],
-      "shiftDetails": [
-        [
-          "Organizzazione",
-          "Tre turni"
-        ],
-        [
-          "Notti",
-          "Da verificare"
-        ],
-        [
-          "Sede",
-          "Cotignola, Italia"
-        ],
-        [
-          "Fonte",
-          "Dettaglio annuncio Randstad"
-        ]
-      ],
-      "application": {
-        "channel": "Candidatura sul portale Randstad",
-        "destinationUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff/",
-        "contactEmail": null,
-        "documents": [
-          "CV",
-          "Dati profilo richiesti dal portale"
-        ],
-        "missing": "Completare login Randstad e confermare disponibilita",
-        "message": "Buongiorno, desidero candidarmi alla posizione di infermieri (m/f/nb) per importante ospedale privato a cotignola. Allego il curriculum e resto disponibile per un colloquio. Cordiali saluti."
-      },
-      "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff",
-      "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff/",
-      "checked": "21 novembre 2026 alle ore 14:29",
-      "sources": [
-        {
-          "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff",
-          "kind": "primaria",
-          "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff/",
-          "checked": "21 novembre 2026 alle ore 14:29"
-        },
-        {
-          "name": "Randstad Italia - ricerca pubblica",
-          "kind": "duplicato",
-          "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
-        }
-      ],
-      "media": {
-        "type": "none",
-        "url": null,
-        "sourceUrl": null,
-        "alt": "",
-        "reason": "La fonte pubblica non espone una foto verificabile della struttura."
-      },
-      "webDossier": {
-        "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
-        "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
-        "branches": [
-          {
-            "id": "offer-source",
-            "label": "Annuncio e candidatura",
-            "status": "source-openable",
-            "evidence": [
-              "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff/"
-            ],
-            "synthesis": "Annuncio letto da Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_122d8673-42b8-4504-a7f2-8d9a44a45fff; candidatura sul canale originale."
-          },
-          {
-            "id": "structure-employer",
-            "label": "Struttura o datore",
-            "status": "structure-name-available",
-            "evidence": [
-              "Struttura sanitaria tramite Randstad Healthcare",
-              "Cotignola, Italia"
-            ],
-            "synthesis": "Datore indicato: Struttura sanitaria tramite Randstad Healthcare; sede dichiarata: Cotignola, Italia."
-          },
-          {
-            "id": "professional-reputation",
-            "label": "Reputazione professionale",
-            "status": "needs-cross-check",
-            "evidence": [],
-            "synthesis": "Non sono state raccolte valutazioni professionali certe in questa passata: non generare punteggio reputazionale."
-          },
-          {
-            "id": "area-environment",
-            "label": "Zona e ambiente",
-            "status": "geolocated",
-            "evidence": [
-              "Cotignola, Italia"
-            ],
-            "synthesis": "Cotignola, Italia è la base logistica usata per distanza, raggio e compatibilità con la ricerca."
           },
           {
             "id": "market-rates",
@@ -6166,19 +6166,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_c6f1d489-131b-41b8-a28e-9ed8d28d8dbc",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_c6f1d489-131b-41b8-a28e-9ed8d28d8dbc/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_c6f1d489-131b-41b8-a28e-9ed8d28d8dbc",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_c6f1d489-131b-41b8-a28e-9ed8d28d8dbc/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -6190,7 +6190,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -6331,19 +6331,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-faenza_faenza_c7fbde0b-8f1f-4390-9b0b-5342d8ff9478",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-faenza_faenza_c7fbde0b-8f1f-4390-9b0b-5342d8ff9478/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:21",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-faenza_faenza_c7fbde0b-8f1f-4390-9b0b-5342d8ff9478",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-faenza_faenza_c7fbde0b-8f1f-4390-9b0b-5342d8ff9478/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:21"
         }
       ],
       "media": {
@@ -6355,7 +6355,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -6496,19 +6496,19 @@
       },
       "source": "Randstad Italia - infermierea-per-importante-ospedale-privato-a-bologna-mfnb_bologna_b9f03b8a-3fb3-43f9-b58b-3516fe19d4d7",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermierea-per-importante-ospedale-privato-a-bologna-mfnb_bologna_b9f03b8a-3fb3-43f9-b58b-3516fe19d4d7/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermierea-per-importante-ospedale-privato-a-bologna-mfnb_bologna_b9f03b8a-3fb3-43f9-b58b-3516fe19d4d7",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermierea-per-importante-ospedale-privato-a-bologna-mfnb_bologna_b9f03b8a-3fb3-43f9-b58b-3516fe19d4d7/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -6520,7 +6520,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -6661,19 +6661,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_5a708781-a206-4e15-844b-ece2cf1aef17",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_5a708781-a206-4e15-844b-ece2cf1aef17/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_5a708781-a206-4e15-844b-ece2cf1aef17",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_5a708781-a206-4e15-844b-ece2cf1aef17/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -6685,7 +6685,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -6826,19 +6826,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_371751eb-0910-4977-851b-e5a117954f02",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_371751eb-0910-4977-851b-e5a117954f02/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_371751eb-0910-4977-851b-e5a117954f02",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-bologna_bologna_371751eb-0910-4977-851b-e5a117954f02/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -6850,7 +6850,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -6991,19 +6991,19 @@
       },
       "source": "Randstad Italia - infermiere-per-rsa-castellamonte_castellamonte_3a27677c-9d33-4c1f-b0be-8e148c7d3225",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa-castellamonte_castellamonte_3a27677c-9d33-4c1f-b0be-8e148c7d3225/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-rsa-castellamonte_castellamonte_3a27677c-9d33-4c1f-b0be-8e148c7d3225",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa-castellamonte_castellamonte_3a27677c-9d33-4c1f-b0be-8e148c7d3225/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -7015,7 +7015,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7156,19 +7156,19 @@
       },
       "source": "Randstad Italia - infermierea-fmnb-per-importante-ospedale-privato_cotignola_b7434114-7c09-4f47-aaff-85fbcc55f1b5",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermierea-fmnb-per-importante-ospedale-privato_cotignola_b7434114-7c09-4f47-aaff-85fbcc55f1b5/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermierea-fmnb-per-importante-ospedale-privato_cotignola_b7434114-7c09-4f47-aaff-85fbcc55f1b5",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermierea-fmnb-per-importante-ospedale-privato_cotignola_b7434114-7c09-4f47-aaff-85fbcc55f1b5/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -7180,7 +7180,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7321,19 +7321,19 @@
       },
       "source": "Randstad Italia - infermiere-per-rsa-vercelli-fmnb_vercelli_b02da770-7de7-4bb7-9617-87046a3eab96",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa-vercelli-fmnb_vercelli_b02da770-7de7-4bb7-9617-87046a3eab96/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-rsa-vercelli-fmnb_vercelli_b02da770-7de7-4bb7-9617-87046a3eab96",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-rsa-vercelli-fmnb_vercelli_b02da770-7de7-4bb7-9617-87046a3eab96/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -7345,7 +7345,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7486,19 +7486,19 @@
       },
       "source": "Randstad Italia - infermierea-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_65fe9c20-157d-441f-a6b5-b42e345b9686",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermierea-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_65fe9c20-157d-441f-a6b5-b42e345b9686/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermierea-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_65fe9c20-157d-441f-a6b5-b42e345b9686",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermierea-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_65fe9c20-157d-441f-a6b5-b42e345b9686/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -7510,7 +7510,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7651,19 +7651,19 @@
       },
       "source": "Randstad Italia - infermierea-mfnb-per-importante-ospedale-privato-a-bologna_bologna_64b2fe55-fb39-4af4-ac21-f1dd97d2d6f8",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermierea-mfnb-per-importante-ospedale-privato-a-bologna_bologna_64b2fe55-fb39-4af4-ac21-f1dd97d2d6f8/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermierea-mfnb-per-importante-ospedale-privato-a-bologna_bologna_64b2fe55-fb39-4af4-ac21-f1dd97d2d6f8",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermierea-mfnb-per-importante-ospedale-privato-a-bologna_bologna_64b2fe55-fb39-4af4-ac21-f1dd97d2d6f8/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -7675,7 +7675,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7816,19 +7816,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-di-bologna_bologna_199d94ee-4b6d-41cb-8248-adc2549f6c8b",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-di-bologna_bologna_199d94ee-4b6d-41cb-8248-adc2549f6c8b/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-di-bologna_bologna_199d94ee-4b6d-41cb-8248-adc2549f6c8b",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-di-bologna_bologna_199d94ee-4b6d-41cb-8248-adc2549f6c8b/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -7840,7 +7840,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -7981,19 +7981,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-figline-valdarno_firenze_242f4928-696d-4bf0-a43c-511492c1a42c",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-figline-valdarno_firenze_242f4928-696d-4bf0-a43c-511492c1a42c/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-figline-valdarno_firenze_242f4928-696d-4bf0-a43c-511492c1a42c",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-figline-valdarno_firenze_242f4928-696d-4bf0-a43c-511492c1a42c/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -8005,7 +8005,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8150,19 +8150,19 @@
       },
       "source": "Randstad Italia - infermiere-per-hospice-mfnb_torino_861c3eb5-f489-4fdd-ae30-43d4728bb7ff",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice-mfnb_torino_861c3eb5-f489-4fdd-ae30-43d4728bb7ff/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-hospice-mfnb_torino_861c3eb5-f489-4fdd-ae30-43d4728bb7ff",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-hospice-mfnb_torino_861c3eb5-f489-4fdd-ae30-43d4728bb7ff/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -8174,7 +8174,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8315,19 +8315,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-cecina-li_cecina_f68a2f14-6429-4d95-be92-f698bf50958b",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-cecina-li_cecina_f68a2f14-6429-4d95-be92-f698bf50958b/",
-      "checked": "21 novembre 2026 alle ore 14:29",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-cecina-li_cecina_f68a2f14-6429-4d95-be92-f698bf50958b",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-cecina-li_cecina_f68a2f14-6429-4d95-be92-f698bf50958b/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:29"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -8339,7 +8339,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8396,8 +8396,8 @@
       "company": "Struttura sanitaria tramite Randstad Healthcare",
       "location": "Reggio Nell Emilia, Italia",
       "coordinates": {
-        "lat": 44.7045119,
-        "lng": 10.6571668
+        "lat": 44.7112929,
+        "lng": 10.6411043
       },
       "coordinatePrecision": "city",
       "contract": "Tempo determinato",
@@ -8480,19 +8480,19 @@
       },
       "source": "Randstad Italia - infermierea-mfnb-per-importante-ospedale-privato-di-reggio-emilia_reggio-nell-emilia_f2271dea-ced3-491d-ba39-1bab13e484f8",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermierea-mfnb-per-importante-ospedale-privato-di-reggio-emilia_reggio-nell-emilia_f2271dea-ced3-491d-ba39-1bab13e484f8/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermierea-mfnb-per-importante-ospedale-privato-di-reggio-emilia_reggio-nell-emilia_f2271dea-ced3-491d-ba39-1bab13e484f8",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermierea-mfnb-per-importante-ospedale-privato-di-reggio-emilia_reggio-nell-emilia_f2271dea-ced3-491d-ba39-1bab13e484f8/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -8504,7 +8504,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8561,8 +8561,8 @@
       "company": "Struttura sanitaria tramite Randstad Healthcare",
       "location": "Reggio Nell Emilia, Italia",
       "coordinates": {
-        "lat": 44.7045119,
-        "lng": 10.6571668
+        "lat": 44.7112929,
+        "lng": 10.6411043
       },
       "coordinatePrecision": "city",
       "contract": "Tempo determinato",
@@ -8645,19 +8645,19 @@
       },
       "source": "Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2172d8e7-d270-441a-ba64-25c05b24c9c3",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2172d8e7-d270-441a-ba64-25c05b24c9c3/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2172d8e7-d270-441a-ba64-25c05b24c9c3",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-fmnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_2172d8e7-d270-441a-ba64-25c05b24c9c3/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -8669,7 +8669,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8726,8 +8726,8 @@
       "company": "Struttura sanitaria tramite Randstad Healthcare",
       "location": "Reggio Nell Emilia, Italia",
       "coordinates": {
-        "lat": 44.7045119,
-        "lng": 10.6571668
+        "lat": 44.7112929,
+        "lng": 10.6411043
       },
       "coordinatePrecision": "city",
       "contract": "Tempo determinato",
@@ -8810,19 +8810,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_b8bad1ca-f77d-42e0-9cb9-0da9f6d5b7db",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_b8bad1ca-f77d-42e0-9cb9-0da9f6d5b7db/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_b8bad1ca-f77d-42e0-9cb9-0da9f6d5b7db",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_b8bad1ca-f77d-42e0-9cb9-0da9f6d5b7db/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -8834,7 +8834,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -8975,19 +8975,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-di-faenza_faenza_caf85a19-4d3b-427e-a2bb-2776cdd0d095",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-di-faenza_faenza_caf85a19-4d3b-427e-a2bb-2776cdd0d095/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-di-faenza_faenza_caf85a19-4d3b-427e-a2bb-2776cdd0d095",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-di-faenza_faenza_caf85a19-4d3b-427e-a2bb-2776cdd0d095/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -8999,7 +8999,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9140,19 +9140,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-di-bologna_bologna_759ea26c-0f8d-45cd-8cd1-a6fa39092876",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-di-bologna_bologna_759ea26c-0f8d-45cd-8cd1-a6fa39092876/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-di-bologna_bologna_759ea26c-0f8d-45cd-8cd1-a6fa39092876",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-di-bologna_bologna_759ea26c-0f8d-45cd-8cd1-a6fa39092876/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -9164,7 +9164,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9305,19 +9305,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_21ac0494-8ad8-47cd-a1d3-a80fcbb903ac",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_21ac0494-8ad8-47cd-a1d3-a80fcbb903ac/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_21ac0494-8ad8-47cd-a1d3-a80fcbb903ac",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-cotignola_cotignola_21ac0494-8ad8-47cd-a1d3-a80fcbb903ac/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -9329,7 +9329,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9470,19 +9470,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb_bergamo_bef9e7d0-48e2-423e-ba6a-053d0e021643",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb_bergamo_bef9e7d0-48e2-423e-ba6a-053d0e021643/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb_bergamo_bef9e7d0-48e2-423e-ba6a-053d0e021643",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb_bergamo_bef9e7d0-48e2-423e-ba6a-053d0e021643/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -9494,7 +9494,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9635,19 +9635,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-viareggio_viareggio_5807fda2-5644-4482-ab25-855a4fdfac57",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-viareggio_viareggio_5807fda2-5644-4482-ab25-855a4fdfac57/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-viareggio_viareggio_5807fda2-5644-4482-ab25-855a4fdfac57",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-viareggio_viareggio_5807fda2-5644-4482-ab25-855a4fdfac57/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -9659,7 +9659,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9800,19 +9800,19 @@
       },
       "source": "Randstad Italia - infermiere-per-centro-la-melagrana_impruneta_98a10416-422c-4214-b21a-24fc6097a24e",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-centro-la-melagrana_impruneta_98a10416-422c-4214-b21a-24fc6097a24e/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-centro-la-melagrana_impruneta_98a10416-422c-4214-b21a-24fc6097a24e",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-centro-la-melagrana_impruneta_98a10416-422c-4214-b21a-24fc6097a24e/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -9824,7 +9824,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -9881,8 +9881,8 @@
       "company": "Struttura sanitaria tramite Randstad Healthcare",
       "location": "Reggio Nell Emilia, Italia",
       "coordinates": {
-        "lat": 44.7045119,
-        "lng": 10.6571668
+        "lat": 44.7112929,
+        "lng": 10.6411043
       },
       "coordinatePrecision": "city",
       "contract": "Tempo determinato",
@@ -9965,19 +9965,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_4a987efa-4ff5-4688-9733-4afbbb3b5946",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_4a987efa-4ff5-4688-9733-4afbbb3b5946/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_4a987efa-4ff5-4688-9733-4afbbb3b5946",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_4a987efa-4ff5-4688-9733-4afbbb3b5946/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -9989,7 +9989,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -10046,8 +10046,8 @@
       "company": "Struttura sanitaria tramite Randstad Healthcare",
       "location": "Reggio Nell Emilia, Italia",
       "coordinates": {
-        "lat": 44.7045119,
-        "lng": 10.6571668
+        "lat": 44.7112929,
+        "lng": 10.6411043
       },
       "coordinatePrecision": "city",
       "contract": "Tempo determinato",
@@ -10130,19 +10130,19 @@
       },
       "source": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_dd894d81-e0db-414c-8276-760d241e5549",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_dd894d81-e0db-414c-8276-760d241e5549/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_dd894d81-e0db-414c-8276-760d241e5549",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermieri-mfnb-per-importante-ospedale-privato-a-reggio-emilia_reggio-nell-emilia_dd894d81-e0db-414c-8276-760d241e5549/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -10154,7 +10154,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -10295,19 +10295,19 @@
       },
       "source": "Randstad Italia - infermiere-per-cra-di-formigine_formigine_2d1ee5cf-2bb1-4f2b-9ac3-977578be09e1",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-cra-di-formigine_formigine_2d1ee5cf-2bb1-4f2b-9ac3-977578be09e1/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-cra-di-formigine_formigine_2d1ee5cf-2bb1-4f2b-9ac3-977578be09e1",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-cra-di-formigine_formigine_2d1ee5cf-2bb1-4f2b-9ac3-977578be09e1/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -10319,7 +10319,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -10460,19 +10460,19 @@
       },
       "source": "Randstad Italia - infermiere-per-centro-la-melagrana_rubiera_21c4c857-1a82-4688-aeff-4420c10cf90a",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-centro-la-melagrana_rubiera_21c4c857-1a82-4688-aeff-4420c10cf90a/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-centro-la-melagrana_rubiera_21c4c857-1a82-4688-aeff-4420c10cf90a",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-centro-la-melagrana_rubiera_21c4c857-1a82-4688-aeff-4420c10cf90a/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -10484,7 +10484,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -10625,19 +10625,19 @@
       },
       "source": "Randstad Italia - infermiere-fmnb-como-co_como_47496652-6f47-47ab-8174-0bc5242ef381",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-como-co_como_47496652-6f47-47ab-8174-0bc5242ef381/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-fmnb-como-co_como_47496652-6f47-47ab-8174-0bc5242ef381",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-fmnb-como-co_como_47496652-6f47-47ab-8174-0bc5242ef381/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -10649,7 +10649,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -10790,19 +10790,19 @@
       },
       "source": "Randstad Italia - infermiere-per-centro-trattamento-dca_soriano-nel-cimino_6c5d9488-8889-4857-ab37-6332ddd56cf5",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-centro-trattamento-dca_soriano-nel-cimino_6c5d9488-8889-4857-ab37-6332ddd56cf5/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-centro-trattamento-dca_soriano-nel-cimino_6c5d9488-8889-4857-ab37-6332ddd56cf5",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-centro-trattamento-dca_soriano-nel-cimino_6c5d9488-8889-4857-ab37-6332ddd56cf5/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -10814,7 +10814,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
@@ -10955,19 +10955,19 @@
       },
       "source": "Randstad Italia - infermiere-per-ospedale-mfnb_milano_f53c09e5-2fb8-4245-9b12-93c0feafdcab",
       "sourceUrl": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-mfnb_milano_f53c09e5-2fb8-4245-9b12-93c0feafdcab/",
-      "checked": "21 novembre 2026 alle ore 14:30",
+      "checked": "22 novembre 2026 alle ore 14:22",
       "sources": [
         {
           "name": "Randstad Italia - infermiere-per-ospedale-mfnb_milano_f53c09e5-2fb8-4245-9b12-93c0feafdcab",
           "kind": "primaria",
           "url": "https://www.randstad.it/offerte-lavoro/infermiere-per-ospedale-mfnb_milano_f53c09e5-2fb8-4245-9b12-93c0feafdcab/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         },
         {
           "name": "Randstad Italia - ricerca pubblica",
           "kind": "duplicato",
           "url": "https://www.randstad.it/offerte-lavoro/q-infermiere/page-2/",
-          "checked": "21 novembre 2026 alle ore 14:30"
+          "checked": "22 novembre 2026 alle ore 14:22"
         }
       ],
       "media": {
@@ -10979,7 +10979,7 @@
       },
       "webDossier": {
         "status": "partial",
-        "checked": "21 novembre 2026 alle ore 14:30",
+        "checked": "22 novembre 2026 alle ore 14:22",
         "principle": "Dossier generato per sintetizzare controlli interni oltre il singolo annuncio, senza rimandare l'utente a motori di ricerca.",
         "branches": [
           {
